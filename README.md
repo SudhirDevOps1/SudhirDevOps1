@@ -160,37 +160,28 @@ Here are some ideas to get you started:
 
 ```yaml
 ┌─────────────────────────────────────────────────────────┐
-│                    👤 PROFILE                           │
+│                    👤 SUDHIR SINGH                      │
 ├─────────────────────────────────────────────────────────┤
-│  name         : Sudhir Singh                            │
 │  located_in   : Bihar, India 🇮🇳                        │
-│  current_role : BCA Student                             │
+│  current_role : BCA Student & Self-taught Developer     │
+│  online       : [GitHub](https://github.com/SudhirDevOps1)
 ├─────────────────────────────────────────────────────────┤
 │                  💡 INTERESTS                           │
 ├─────────────────────────────────────────────────────────┤
-│  • Full-Stack Development                               │
-│  • AI & Machine Learning                                │
-│  • Cyber Security                                       │
-│  • Cloud Computing                                      │
-│  • Open Source                                          │
+│  • Full-Stack Development (MERN)                        │
+│  • AI & Machine Learning Basics                         │
+│  • Cloud Computing (AWS, Cloudflare)                    │
+│  • Open Source Contributions                            │
 ├─────────────────────────────────────────────────────────┤
-│                  📚 LEARNING                            │
+│                  🚀 2026 GOALS                          │
 ├─────────────────────────────────────────────────────────┤
-│  • React.js                                             │
-│  • Node.js                                              │
-│  • AWS                                                  │
-├─────────────────────────────────────────────────────────┤
-│                  🎯 2024 GOALS                          │
-├─────────────────────────────────────────────────────────┤
-│  • Master MERN Stack                                    │
-│  • Contribute to OSS                                    │
-│  • Build SaaS Products                                  │
-├─────────────────────────────────────────────────────────┤
-│                  🎮 HOBBIES                             │
-├─────────────────────────────────────────────────────────┤
-│  • Coding  •  Gaming  •  Reading Tech Blogs             │
+│  ✓ Master React + Node.js                               │
+│  ✓ Deploy 5 live projects                               │
+│  ✓ Get first Open Source PR merged                      │
+│  ✓ Build a small SaaS tool                              │
 ├─────────────────────────────────────────────────────────┤
 │  fun_fact : "Bugs are just features in disguise! 🐛✨"  │
+│  motto     : "Code, Deploy, Repeat 🔁"                  │
 └─────────────────────────────────────────────────────────┘
 ```
 
