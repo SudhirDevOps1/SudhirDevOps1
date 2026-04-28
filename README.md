@@ -1167,3 +1167,203 @@ flowchart LR
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,25:4ECDC4,50:FFDD00,75:F778BA,100:6E40C9&height=140&section=footer&text=Keep%20Building%20%7C%20Keep%20Learning%20%7C%20Keep%20Shipping&fontSize=24&fontAlignY=70&animation=twinkling&fontColor=ffffff" width="100%" alt="Keep building footer" />
 
 </div>
+
+---
+
+<!-- ╔══════════════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                                                                          ║ -->
+<!-- ║                  🔎 REAL GITHUB PROFILE DATA SNAPSHOT                    ║ -->
+<!-- ║                                                                          ║ -->
+<!-- ╚══════════════════════════════════════════════════════════════════════════╝ -->
+
+## 🔎 Verified GitHub Profile Snapshot
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=25&duration=2500&pause=800&color=36BCF7&center=true&vCenter=true&width=900&height=70&lines=Real+GitHub+data+added+from+SudhirDevOps1;%F0%9F%93%8A+Profile+metrics+%2B+recent+repos+%2B+live+links;%E2%9C%85+Nothing+removed%2C+only+more+professional+sections+added" alt="Real GitHub Data" />
+
+<br/><br/>
+
+<img src="https://avatars.githubusercontent.com/u/234449571?v=4" width="145" alt="Sudhir Singh GitHub Avatar" />
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/GitHub-SudhirDevOps1-181717?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Public%20Repos-77-36BCF7?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Followers-4-4ECDC4?style=for-the-badge&logo=githubsponsors&logoColor=white" />
+<img src="https://img.shields.io/badge/Following-9-F778BA?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Public%20Gists-0-FFDD00?style=for-the-badge&logo=gist&logoColor=black" />
+
+<br/><br/>
+
+| Field | Real Value From GitHub |
+|:---:|:---|
+| 👤 Name | Sudhir Singh |
+| 🧑‍💻 Username | [SudhirDevOps1](https://github.com/SudhirDevOps1) |
+| 🆔 GitHub ID | `234449571` |
+| 🌐 Portfolio / Blog | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
+| 📝 Bio | BCA Student, aspiring full-stack developer, passionate about coding, problem-solving, AI, Python, JavaScript and ethical hacking |
+| 📍 Profile Mentions | Bihar |
+| 📦 Public Repositories | 77 |
+| 👥 Followers | 4 |
+| ➡️ Following | 9 |
+| 🧾 Public Gists | 0 |
+| 🗓️ Joined GitHub | 25 September 2025 |
+| 🔄 Profile Updated | 27 April 2026 |
+| ✅ Data Checked | 28 April 2026 |
+
+</div>
+
+---
+
+## 🛰️ Real-Time GitHub Badges
+
+<div align="center">
+
+<img src="https://img.shields.io/github/followers/SudhirDevOps1?label=Live%20Followers&style=for-the-badge&color=4ECDC4&logo=github" alt="Live followers" />
+<img src="https://img.shields.io/github/stars/SudhirDevOps1?label=Live%20Stars&style=for-the-badge&color=FFDD00&logo=github" alt="Live stars" />
+<img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&logo=git&label=Profile%20README%20Update" alt="Profile README last commit" />
+<img src="https://img.shields.io/github/repo-size/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=F778BA&logo=github&label=Profile%20Repo%20Size" alt="Profile repo size" />
+
+<br/><br/>
+
+<img src="https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&custom_title=Live%20GitHub%20Snapshot" width="49%" alt="Live GitHub snapshot" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=github_dark&hide_border=true&custom_title=Live%20Language%20Snapshot" width="49%" alt="Live language snapshot" />
+
+</div>
+
+---
+
+## 🚀 Real Recent Projects From My GitHub
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2600&pause=700&color=7EE787&center=true&vCenter=true&width=900&height=60&lines=Latest+real+repositories+found+on+my+GitHub;%F0%9F%94%97+Repo+links+%2B+live+demos+%2B+languages+%2B+stars;%F0%9F%93%8C+Data+captured+from+public+GitHub+API" alt="Real Recent Projects" />
+
+<br/><br/>
+
+| Project | Real Description / Purpose | Main Tech | Stars | Live / Repo |
+|:---:|:---|:---:|:---:|:---:|
+| [SwarWave-Player](https://github.com/SudhirDevOps1/SwarWave-Player) | Recently created music player project | TypeScript | 1 | [Live](https://swarwave-player.pages.dev/) |
+| [swar-wave-test](https://github.com/SudhirDevOps1/swar-wave-test) | Test deployment for SwarWave style project | TypeScript | 0 | [Live](https://swar-wave-test.pages.dev/) |
+| [PassVault-Cleaner](https://github.com/SudhirDevOps1/PassVault-Cleaner) | Fresh repository created for password/vault utility work | Not detected yet | 0 | [Repo](https://github.com/SudhirDevOps1/PassVault-Cleaner) |
+| [PrivMITLab-Music-Radio](https://github.com/SudhirDevOps1/PrivMITLab-Music-Radio) | Privacy-first music and radio streaming app with offline-ready features, 500+ stations, mood playlists and no tracking | TypeScript | 1 | [Live](https://radio-personal.pages.dev/) |
+| [code-to-image-generator](https://github.com/SudhirDevOps1/code-to-image-generator) | Transform code snippets into beautiful shareable images with syntax highlighting and PWA support | HTML | 2 | [Live](https://sudhirdevops1.github.io/code-to-image-generator/) |
+| [LEARN-WEBDEVELOPEMENT](https://github.com/SudhirDevOps1/LEARN-WEBDEVELOPEMENT) | Web development learning repository | HTML | 1 | [Live](https://sudhirdevops1.github.io/LEARN-HTML/) |
+
+<br/>
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=SudhirDevOps1&repo=code-to-image-generator&theme=tokyonight&hide_border=true" width="49%" alt="code-to-image-generator repo card" />
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=SudhirDevOps1&repo=PrivMITLab-Music-Radio&theme=tokyonight&hide_border=true" width="49%" alt="PrivMITLab Music Radio repo card" />
+
+<br/><br/>
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=SudhirDevOps1&repo=SwarWave-Player&theme=tokyonight&hide_border=true" width="49%" alt="SwarWave Player repo card" />
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=SudhirDevOps1&repo=LEARN-WEBDEVELOPEMENT&theme=tokyonight&hide_border=true" width="49%" alt="Learn Web Development repo card" />
+
+</div>
+
+---
+
+## 📊 Real Repository Language Breakdown
+
+<div align="center">
+
+| Repository | Language Data From GitHub API |
+|:---:|:---|
+| [SwarWave-Player](https://github.com/SudhirDevOps1/SwarWave-Player) | TypeScript `285,645` bytes, CSS `5,864`, HTML `3,876`, JavaScript `2,370` |
+| [PrivMITLab-Music-Radio](https://github.com/SudhirDevOps1/PrivMITLab-Music-Radio) | TypeScript `236,990` bytes, CSS `8,375`, JavaScript `4,419`, HTML `2,739` |
+| [swar-wave-test](https://github.com/SudhirDevOps1/swar-wave-test) | TypeScript `276,717` bytes, CSS `5,864`, HTML `3,876`, JavaScript `3,126` |
+| [code-to-image-generator](https://github.com/SudhirDevOps1/code-to-image-generator) | HTML `158,141` bytes |
+| [LEARN-WEBDEVELOPEMENT](https://github.com/SudhirDevOps1/LEARN-WEBDEVELOPEMENT) | HTML `36,616` bytes, JavaScript `3,119` |
+| [PassVault-Cleaner](https://github.com/SudhirDevOps1/PassVault-Cleaner) | No language detected yet |
+
+<br/>
+
+<img src="https://img.shields.io/github/languages/top/SudhirDevOps1/SwarWave-Player?style=for-the-badge&color=3178C6&logo=typescript&label=SwarWave%20Top%20Language" alt="SwarWave top language" />
+<img src="https://img.shields.io/github/languages/top/SudhirDevOps1/PrivMITLab-Music-Radio?style=for-the-badge&color=3178C6&logo=typescript&label=Radio%20Top%20Language" alt="Music radio top language" />
+<img src="https://img.shields.io/github/languages/top/SudhirDevOps1/code-to-image-generator?style=for-the-badge&color=E34F26&logo=html5&label=Code%20Image%20Top%20Language" alt="Code to image top language" />
+<img src="https://img.shields.io/github/languages/top/SudhirDevOps1/LEARN-WEBDEVELOPEMENT?style=for-the-badge&color=E34F26&logo=html5&label=Learn%20Web%20Top%20Language" alt="Learn web top language" />
+
+</div>
+
+---
+
+## ⚡ Latest Public Activity Snapshot
+
+<div align="center">
+
+| Time UTC | Activity | Repository |
+|:---:|:---:|:---:|
+| 2026-04-28 13:56 | Push event | [SudhirDevOps1/SudhirDevOps1](https://github.com/SudhirDevOps1/SudhirDevOps1) |
+| 2026-04-28 13:40 | Starred / watched own project | [SwarWave-Player](https://github.com/SudhirDevOps1/SwarWave-Player) |
+| 2026-04-28 13:32 | Created main branch | [SwarWave-Player](https://github.com/SudhirDevOps1/SwarWave-Player) |
+| 2026-04-28 12:42 | Push event | [swar-wave-test](https://github.com/SudhirDevOps1/swar-wave-test) |
+| 2026-04-27 14:15 | Push event | [PassVault-Cleaner](https://github.com/SudhirDevOps1/PassVault-Cleaner) |
+| 2026-04-27 13:54 | Push event | [PrivMITLab-Music-Radio](https://github.com/SudhirDevOps1/PrivMITLab-Music-Radio) |
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=22&duration=2600&pause=700&color=FFDD00&center=true&vCenter=true&width=850&height=55&lines=Recent+activity+shows+active+building+and+shipping;%F0%9F%9A%80+Music+apps%2C+profile+README%2C+tools+and+deployments;%E2%9C%A8+Consistency+is+the+real+superpower" alt="Latest activity typing" />
+
+</div>
+
+---
+
+## 🏅 Real Project Highlights
+
+<div align="center">
+
+| Highlight | Proof |
+|:---:|:---|
+| Most starred project found | [code-to-image-generator](https://github.com/SudhirDevOps1/code-to-image-generator) with 2 stars |
+| Recent TypeScript focus | SwarWave-Player, swar-wave-test and PrivMITLab-Music-Radio are TypeScript-heavy |
+| Live Cloudflare Pages apps | [SwarWave Player](https://swarwave-player.pages.dev/), [Swar Wave Test](https://swar-wave-test.pages.dev/), [Radio Personal](https://radio-personal.pages.dev/) |
+| GitHub Pages apps | [Portfolio](https://sudhirdevops1.github.io), [Code to Image Generator](https://sudhirdevops1.github.io/code-to-image-generator/), [Learn HTML](https://sudhirdevops1.github.io/LEARN-HTML/) |
+| License used in real repos | MIT License on code-to-image-generator and LEARN-WEBDEVELOPEMENT |
+| Profile repository | [SudhirDevOps1/SudhirDevOps1](https://github.com/SudhirDevOps1/SudhirDevOps1) powers this GitHub profile README |
+
+<br/>
+
+<img src="https://img.shields.io/github/stars/SudhirDevOps1/code-to-image-generator?style=for-the-badge&color=FFDD00&logo=github&label=Code%20To%20Image%20Stars" alt="Code to image stars" />
+<img src="https://img.shields.io/github/license/SudhirDevOps1/code-to-image-generator?style=for-the-badge&color=7EE787&label=Code%20To%20Image%20License" alt="Code to image license" />
+<img src="https://img.shields.io/github/last-commit/SudhirDevOps1/PrivMITLab-Music-Radio?style=for-the-badge&color=F778BA&label=Radio%20Last%20Commit" alt="Radio last commit" />
+<img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SwarWave-Player?style=for-the-badge&color=36BCF7&label=SwarWave%20Last%20Commit" alt="SwarWave last commit" />
+
+</div>
+
+---
+
+## 🎯 Profile Upgrade Notes
+
+<div align="center">
+
+```yaml
+real_profile_upgrade:
+  data_source: "GitHub public API and public repository pages"
+  checked_on: "2026-04-28"
+  username: "SudhirDevOps1"
+  public_repositories: 77
+  followers: 4
+  following: 9
+  portfolio: "https://sudhirdevops1.github.io"
+  visible_focus:
+    - TypeScript apps
+    - HTML/CSS/JavaScript utilities
+    - Music and radio web apps
+    - Code-to-image generator
+    - GitHub profile branding
+  promise: "Nothing removed. More real data, animation, and professional presentation added."
+```
+
+<img src="https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif" width="260" alt="Profile upgrade animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="260" alt="GitHub animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" width="260" alt="Celebration animation" />
+
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,50:161B22,100:0D1117&height=90&section=footer&text=Real%20Data%20Added%20%7C%20Profile%20Made%20Stronger%20%7C%20Keep%20Shipping&fontSize=22&fontColor=7EE787&animation=twinkling" width="100%" alt="Real data footer" />
+
+</div>
