@@ -1,12 +1,6 @@
-## Hi there 👋
+# 🚀 Hi there, I'm Sudhir Singh! 👨‍💻
 
-<!--
-**SudhirDevOps1/SudhirDevOps1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...<div align="center">
+<div align="center">
 
 <!-- ╔══════════════════════════════════════════════════════════════════════════╗ -->
 <!-- ║                                                                          ║ -->
@@ -104,7 +98,7 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/🌐_Portfolio-FF6B6B?style=for-the-badge&logoColor=white" />
 </a>
 &nbsp;&nbsp;
-<a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME">
+<a href="https://linkedin.com/in/your-linkedin-username">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 &nbsp;&nbsp;
@@ -116,7 +110,7 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 &nbsp;&nbsp;
-<a href="https://twitter.com/YOUR_TWITTER">
+<a href="https://twitter.com/your-twitter">
   <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
 </a>
 
@@ -217,7 +211,7 @@ Here are some ideas to get you started:
   </tr>
   <tr>
     <td><img src="https://media.giphy.com/media/dxn6fRlTIShoeBr69N/giphy.gif" width="25"></td>
-    <td><b>2024 Goal:</b></td>
+    <td><b>2026 Goal:</b></td>
     <td>Master React.js & Node.js and contribute to Open Source</td>
   </tr>
 </table>
@@ -531,7 +525,7 @@ Here are some ideas to get you started:
 <!-- ╚══════════════════════════════════════════════════════════════════════════╝ -->
 
 <h2>
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGVmOWN5Z3JnbzlqcWZtaWRtaXI4Z3A0cXZ2YjA4eGJtY3JqaWRseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tqfS3mgQU28ko/giphy.gif" width="35">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3BmOWN5Z3JnbzlqcWZtaWRtaXI4Z3A0cXZ2YjA4eGJtY3JqaWRseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tqfS3mgQU28ko/giphy.gif" width="35">
   &nbsp;
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=1DB954&vCenter=true&width=300&height=40&lines=Now+Playing+%F0%9F%8E%B5" alt="Spotify" />
 </h2>
@@ -579,7 +573,7 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=google-chrome&logoColor=white" />
 </a>
 &nbsp;&nbsp;
-<a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME">
+<a href="https://linkedin.com/in/your-linkedin-username">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 &nbsp;&nbsp;
@@ -587,11 +581,11 @@ Here are some ideas to get you started:
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 &nbsp;&nbsp;
-<a href="https://twitter.com/YOUR_TWITTER">
+<a href="https://twitter.com/your-twitter">
   <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
 </a>
 &nbsp;&nbsp;
-<a href="https://instagram.com/YOUR_INSTAGRAM">
+<a href="https://instagram.com/your-instagram">
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
 </a>
 &nbsp;&nbsp;
@@ -791,10 +785,385 @@ Here are some ideas to get you started:
 
 </div>
 
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 📫 Quick Contact
+
+| Platform | Link |
+|----------|------|
+| 🌐 **Portfolio** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io/) |
+| 💼 **LinkedIn** | [Connect](https://linkedin.com/in/your-linkedin-username) |
+| 📧 **Email** | [Contact](mailto:your-email@example.com) |
+| 🐦 **Twitter** | [Follow](https://twitter.com/your-twitter) |
+| 📸 **Instagram** | [Follow](https://instagram.com/your-instagram) |
+| 💬 **Discord** | [Join](https://discord.gg/YOUR_DISCORD) |
+
+---
+
+## 📚 What I'm Currently Learning
+
+<div align="center">
+
+| 📖 Learning | 🎯 Goal | 📅 Timeline |
+|------------|---------|-------------|
+| React Advanced Patterns | Build complex SPAs | Q1 2026 |
+| Node.js & Express | Create REST APIs | Q1 2026 |
+| AWS Cloud Services | Deploy scalable apps | Q2 2026 |
+| Docker & Kubernetes | Containerize apps | Q2 2026 |
+| Machine Learning | Build AI models | Q3 2026 |
+
+</div>
+
+---
+
+## 🏆 Achievements
+
+<div align="center">
+
+| Achievement | Badge |
+|------------|-------|
+| ⭐ GitHub Profile Views | <img src="https://komarev.com/ghpvc/?username=SudhirDevOps1&label=Views&color=36BCF7&style=flat-square" /> |
+| 🔥 Current Streak | <img src="https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=algolia&hide_border=true&border_radius=5" /> |
+| 💻 Total Commits | <img src="https://img.shields.io/github/commit-activity/m/SudhirDevOps1/SudhirDevOps1?style=flat-square&color=F778BA" /> |
+| 📦 Repositories | <img src="https://img.shields.io/github/repos/SudhirDevOps1?style=flat-square&color=4ECDC4" /> |
+
+</div>
+
+---
+
+## 🎯 2026 Goals Checklist
+
+- [ ] 🚀 Deploy 5+ production-ready projects
+- [ ] 🤝 Contribute to 10+ open-source projects
+- [ ] 📝 Write 20+ technical blog posts
+- [ ] 🎓 Complete 3+ advanced online courses
+- [ ] 💼 Land my first developer internship
+- [ ] 🏗️ Build a SaaS product
+- [ ] 🐙 Achieve 1000+ GitHub followers
+- [ ] 📈 Reach 10,000+ profile views
+
+---
+
+<div align="center">
+
+### 🌟 Let's Build Something Amazing Together! 🌟
+
+<img src="https://media.giphy.com/media/26BRyO7bq97j84zRS/giphy.gif" width="400"/>
+
+</div>
+
+---
+
+<!-- ╔══════════════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                                                                          ║ -->
+<!-- ║                    ✨ EXTRA PROFESSIONAL ANIMATION PACK ✨                ║ -->
+<!-- ║                                                                          ║ -->
+<!-- ╚══════════════════════════════════════════════════════════════════════════╝ -->
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:36BCF7,50:6E40C9,100:F778BA&height=220&section=header&text=Sudhir%20DevOps%20Lab&fontSize=48&fontColor=ffffff&animation=fadeIn&desc=Build%20%7C%20Learn%20%7C%20Ship%20%7C%20Repeat&descSize=18&descAlignY=62" width="100%" alt="Sudhir DevOps Lab" />
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=28&duration=2500&pause=700&color=7EE787&center=true&vCenter=true&width=900&height=80&lines=%F0%9F%92%BB+Turning+Ideas+Into+Production+Ready+Apps;%E2%9A%99%EF%B8%8F+Automating+Workflows+With+Code;%F0%9F%9A%80+Learning+DevOps%2C+Cloud+%26+Full+Stack;%F0%9F%8C%9F+Open+Source+Mindset+%7C+Growth+Everyday" alt="Animated developer headline" />
+
+<br/><br/>
+
+<img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="260" alt="Coding animation" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/coxQHKASG60HrHtvkt/giphy.gif" width="260" alt="Developer animation" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="260" alt="Programmer animation" />
+
+<br/><br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=22&duration=3000&pause=700&color=FFDD00&center=true&vCenter=true&width=850&height=55&lines=%E2%9C%A8+Welcome+to+the+extra+animated+zone+%E2%9C%A8;%F0%9F%94%A5+More+widgets%2C+more+badges%2C+more+energy+%F0%9F%94%A5;%F0%9F%A7%A0+Clean+code+%2B+Creative+UI+%2B+DevOps+thinking" alt="Extra animated zone" />
+
+</div>
+
+---
+
+## 🧬 Developer DNA
+
+<div align="center">
+
+| 💡 Mindset | ⚙️ Execution | 🚀 Outcome |
+|:---:|:---:|:---:|
+| Curious Learner | Builds small, ships fast | Real-world projects |
+| Problem Solver | Automates boring tasks | More productivity |
+| Full-Stack Explorer | Connects UI, API, DB | Complete apps |
+| DevOps Beginner | Learns cloud and CI/CD | Better deployments |
+| Open Source Fan | Reads, forks, improves | Stronger collaboration |
+
+<br/>
+
+<img src="https://img.shields.io/badge/Mindset-Growth%20Everyday-7EE787?style=for-the-badge&logo=target&logoColor=black" />
+<img src="https://img.shields.io/badge/Focus-Full%20Stack%20%2B%20DevOps-36BCF7?style=for-the-badge&logo=rocket&logoColor=white" />
+<img src="https://img.shields.io/badge/Goal-Production%20Ready%20Projects-F778BA?style=for-the-badge&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/Vibe-Code%20Deploy%20Repeat-FFDD00?style=for-the-badge&logo=javascript&logoColor=black" />
+
+</div>
+
+---
+
+## 🪄 Animated Skill Universe
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2200&pause=600&color=36BCF7&center=true&vCenter=true&width=850&height=55&lines=Frontend+%E2%9E%9C+HTML+%7C+CSS+%7C+JavaScript+%7C+React;Backend+%E2%9E%9C+Node.js+%7C+Express+%7C+Python+%7C+Django;Database+%E2%9E%9C+MongoDB+%7C+MySQL+%7C+PostgreSQL;DevOps+%E2%9E%9C+Git+%7C+Docker+%7C+Linux+%7C+AWS" alt="Animated skill universe" />
+
+<br/><br/>
+
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=vite,vercel,netlify,cloudflare,nginx,graphql,prisma,selenium,opencv,tensorflow,pytorch,notion,md,regex,powershell&perline=8" alt="More skill icons" />
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/UI%2FUX-Modern%20Layouts-FF6B6B?style=for-the-badge&logo=figma&logoColor=white" />
+<img src="https://img.shields.io/badge/API-REST%20Architecture-4ECDC4?style=for-the-badge&logo=postman&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloud-Deployment%20Ready-36BCF7?style=for-the-badge&logo=amazonaws&logoColor=white" />
+<img src="https://img.shields.io/badge/Security-Basics%20%26%20Best%20Practices-6E40C9?style=for-the-badge&logo=hackthebox&logoColor=white" />
+
+</div>
+
+---
+
+## 🧭 My Build Workflow
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    A[Idea 💡] --> B[Plan 📝]
+    B --> C[Design 🎨]
+    C --> D[Code 💻]
+    D --> E[Test 🧪]
+    E --> F[Deploy 🚀]
+    F --> G[Improve 📈]
+    G --> A
+```
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=600&color=4ECDC4&center=true&vCenter=true&width=750&height=45&lines=Plan+clearly+%E2%9E%9C+Code+cleanly+%E2%9E%9C+Deploy+confidently;Small+steps+every+day+create+big+results" alt="Workflow typing" />
+
+</div>
+
+---
+
+## 🏗️ Project Factory
+
+<div align="center">
+
+| 🚀 Project Type | 🧩 Features I Like Building | 🛠️ Preferred Stack | 🎯 Status |
+|:---:|:---:|:---:|:---:|
+| Utility Tools | PDF tools, converters, generators | HTML, Tailwind, JS, Python | 🟢 Active |
+| Portfolio Sites | Responsive UI, animations, contact forms | React, Tailwind, Vite | 🟢 Active |
+| Dashboards | Charts, filters, auth, CRUD | MERN, REST APIs | 🟡 Learning |
+| Automation Bots | File automation, scraping, reports | Python, Bash, APIs | 🟢 Active |
+| AI Experiments | Chat tools, prompt helpers, mini ML apps | Python, JS, APIs | 🟡 Exploring |
+
+<br/>
+
+<img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" width="180" alt="Rocket animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="220" alt="Coding desk animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="220" alt="Developer setup animation" />
+
+</div>
+
+---
+
+## ⚙️ DevOps & Cloud Roadmap
+
+<div align="center">
+
+| Step | Topic | Tools | Progress |
+|:---:|:---|:---:|:---:|
+| 1 | Linux fundamentals and shell scripting | Linux, Bash | ████████░░ 80% |
+| 2 | Git, branching and open-source workflow | Git, GitHub | ███████░░░ 70% |
+| 3 | App deployment and hosting | Vercel, Netlify, GitHub Pages | ███████░░░ 70% |
+| 4 | Containers and local environments | Docker | █████░░░░░ 50% |
+| 5 | CI/CD pipelines | GitHub Actions | ████░░░░░░ 40% |
+| 6 | Cloud fundamentals | AWS, Cloudflare | ████░░░░░░ 40% |
+
+<br/>
+
+<img src="https://img.shields.io/badge/Linux-Terminal%20Friendly-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD%20Learner-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-Container%20Explorer-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS-Cloud%20Basics-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
+
+</div>
+
+---
+
+## 🎮 Fun Developer Mode
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=18&duration=2600&pause=800&color=FF6B6B&center=true&vCenter=true&width=850&height=60&lines=PLAYER%3A+SUDHIR+SINGH;CLASS%3A+FULL+STACK+EXPLORER;MISSION%3A+BUILD+%26+DEPLOY;XP%3A+INCREASING+EVERYDAY" alt="Game mode typing" />
+
+<br/><br/>
+
+| 🕹️ Attribute | Level |
+|:---:|:---:|
+| Debugging Patience | ⭐⭐⭐⭐☆ |
+| UI Creativity | ⭐⭐⭐⭐☆ |
+| Backend Logic | ⭐⭐⭐☆☆ |
+| Cloud Curiosity | ⭐⭐⭐☆☆ |
+| Consistency | ⭐⭐⭐⭐☆ |
+| Learning Speed | ⭐⭐⭐⭐☆ |
+
+<br/>
+
+<img src="https://media.giphy.com/media/VTtANKl0beDFQRLDTh/giphy.gif" width="210" alt="Keyboard animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/QTfX9Ejfra3ZmNxh6B/giphy.gif" width="210" alt="Coding animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" width="210" alt="Tech animation" />
+
+</div>
+
+---
+
+## 🧠 Ask Me About
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Ask%20Me%20About-HTML%20%26%20CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/Ask%20Me%20About-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/Ask%20Me%20About-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/Ask%20Me%20About-Git%20%26%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Ask%20Me%20About-Project%20Ideas-F778BA?style=for-the-badge&logo=googlegemini&logoColor=white" />
+
+<br/><br/>
+
+```text
+💬 Good topics to start a conversation:
+
+1. Building beginner-friendly full-stack projects
+2. Creating useful PDF, image and automation tools
+3. Improving GitHub profile README designs
+4. Hosting websites on GitHub Pages, Vercel or Netlify
+5. Learning roadmap for React, Node.js, Python and DevOps
+```
+
+</div>
+
+---
+
+## 🌈 More Animated Badges
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Code-HTML%20%7C%20CSS%20%7C%20JS-FF6B6B?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
+<img src="https://img.shields.io/badge/Build-React%20%7C%20Node%20%7C%20Python-4ECDC4?style=for-the-badge&logo=react&logoColor=white" />
+<img src="https://img.shields.io/badge/Deploy-GitHub%20Pages%20%7C%20Vercel-36BCF7?style=for-the-badge&logo=vercel&logoColor=white" />
+<img src="https://img.shields.io/badge/Learn-AWS%20%7C%20Docker%20%7C%20CI%2FCD-6E40C9?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Create-Useful%20Tools%20%7C%20Clean%20UI-F778BA?style=for-the-badge&logo=sparkfun&logoColor=white" />
+
+<br/><br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Righteous&size=24&duration=2000&pause=500&color=F778BA&center=true&vCenter=true&width=800&height=60&lines=%F0%9F%8C%88+More+colors+%2B+more+motion+%2B+more+personality;%F0%9F%93%8C+Professional+look+with+developer+energy;%F0%9F%92%AB+README+that+feels+alive" alt="More animated badges" />
+
+</div>
+
+---
+
+## 🧾 Developer Checklist
+
+<div align="center">
+
+| ✅ Habit | Why It Matters |
+|:---:|:---|
+| Write readable code | Future me should understand it quickly |
+| Keep commits meaningful | Projects look professional and easy to review |
+| Build reusable components | Faster development and cleaner UI |
+| Test before deployment | Fewer bugs and better user experience |
+| Document important steps | Helps teammates and open-source users |
+| Learn in public | Shows consistency and progress |
+
+</div>
+
+---
+
+## 🛰️ Live Profile Widgets
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SudhirDevOps1&theme=tokyonight" width="32%" alt="Stats summary" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SudhirDevOps1&theme=tokyonight&utcOffset=5.5" width="32%" alt="Productive time" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SudhirDevOps1&theme=tokyonight" width="32%" alt="Most commit language" />
+
+<br/><br/>
+
+<img src="https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&custom_title=Sudhir%27s%20GitHub%20Power%20Panel" width="49%" alt="GitHub power panel" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=donut&theme=tokyonight&hide_border=true&custom_title=Language%20Orbit" width="49%" alt="Language orbit" />
+
+</div>
+
+---
+
+## 🔥 Motivation Wall
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Pacifico&size=28&duration=3500&pause=800&color=FFDD00&center=true&vCenter=true&width=850&height=70&lines=Every+expert+was+once+a+beginner;Consistency+beats+motivation;Build+small%2C+learn+fast%2C+ship+often;Dream+in+features%2C+deploy+in+reality" alt="Motivation wall" />
+
+<br/><br/>
+
+> 🌟 "Code is not just syntax; it is a way to turn imagination into something people can use."
+
+<br/>
+
+<img src="https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif" width="220" alt="Motivation animation" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" width="220" alt="Idea animation" />
+
+</div>
+
+---
+
+## 🧩 Mini Portfolio Snapshot
+
+<div align="center">
+
+| Section | What You Will Find |
+|:---:|:---|
+| 🌐 Portfolio | Projects, skills, contact and personal brand |
+| 📄 PDF Tools | Utilities for productivity and document workflows |
+| 🖼️ Code Visuals | Tools that make code shareable and beautiful |
+| 🤖 Automation | Scripts that save time and reduce manual work |
+| 📚 Learning Logs | Notes, experiments and progress tracking |
+
+<br/>
+
+<a href="https://sudhirdevops1.github.io/">
+  <img src="https://img.shields.io/badge/Visit%20My%20Portfolio-sudhirdevops1.github.io-36BCF7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit Portfolio" />
+</a>
+
+</div>
+
+---
+
+## 🎇 Final Animated Footer Plus
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=34&duration=3000&pause=1000&color=7EE787&center=true&vCenter=true&width=900&height=80&lines=Thanks+for+scrolling+this+far!;%F0%9F%92%99+Your+visit+means+a+lot;%E2%AD%90+Star+something+if+you+like+my+work;%F0%9F%9A%80+More+projects+coming+soon" alt="Final animated footer plus" />
+
+<br/><br/>
+
+<img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="240" alt="Thank you animation" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" width="240" alt="Awesome animation" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/xUPGcguWZHRC2HyBRS/giphy.gif" width="240" alt="Celebration animation" />
+
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,25:4ECDC4,50:FFDD00,75:F778BA,100:6E40C9&height=140&section=footer&text=Keep%20Building%20%7C%20Keep%20Learning%20%7C%20Keep%20Shipping&fontSize=24&fontAlignY=70&animation=twinkling&fontColor=ffffff" width="100%" alt="Keep building footer" />
+
+</div>
