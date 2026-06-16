@@ -128,7 +128,7 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Languages (real) */}
-        <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
+        <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl card-3d">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
             <div className="space-y-1">
               <h3 className="font-bold text-lg text-white flex items-center gap-2"><Terminal className="w-5 h-5 text-cyan-400" /><span>Repository Languages</span></h3>
@@ -168,7 +168,7 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
         </div>
 
         {/* Top starred (real) */}
-        <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-xl">
+        <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-xl card-3d">
           <div className="space-y-1 border-b border-slate-800 pb-4">
             <h3 className="font-bold text-lg text-white flex items-center gap-2"><Star className="w-5 h-5 text-amber-400" /><span>Top Starred Repositories</span></h3>
             <p className="text-xs text-slate-400">Your most-starred real projects</p>
@@ -193,7 +193,7 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
       </div>
 
       {/* Live API stat images */}
-      <div className="bg-gradient-to-br from-slate-900 via-blue-950/20 to-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+      <div className="bg-gradient-to-br from-slate-900 via-blue-950/20 to-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl card-3d">
         <div className="flex items-center justify-between border-b border-slate-800 pb-4">
           <h3 className="font-bold text-lg text-white flex items-center gap-2"><Sparkles className="w-5 h-5 text-amber-400" /><span>Live Profile Cards & Trophies</span></h3>
           <span className="text-xs text-slate-400 font-mono flex items-center gap-1"><Award className="w-3.5 h-3.5" />Auto-rendered</span>

@@ -142,9 +142,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-300 cursor-pointer active:scale-95 ${
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-300 cursor-pointer press-3d ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 scale-105'
+                    ? 'bg-gradient-to-r from-cyan-500 via-violet-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 scale-105'
                     : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 hover:scale-105'
                 }`}
               >
@@ -178,7 +178,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={handleDownload}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 cursor-pointer hover:scale-105 active:scale-95"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 via-violet-500 to-pink-500 text-white hover:from-cyan-400 hover:via-violet-400 hover:to-pink-400 transition-all duration-300 shadow-lg shadow-cyan-500/25 cursor-pointer hover:scale-105 active:scale-95 press-3d"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Download</span>

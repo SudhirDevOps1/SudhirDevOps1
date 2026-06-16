@@ -179,20 +179,44 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
 
           {/* Right: Live Stats */}
           <div className="lg:col-span-4 bg-[#161b22] border border-[#30363d] rounded-2xl p-6 flex flex-col items-center text-center justify-between space-y-6 shadow-lg animate-slide-in-right hover:border-cyan-500/30 transition-colors duration-500">
-            <div className="relative animate-float">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-md opacity-50 animate-glow-pulse"></div>
-              <img 
-                src={user?.avatar_url ?? PROFILE_INFO.avatar} 
-                alt={displayName}
-                className="relative w-36 h-36 rounded-full border-4 border-[#0d1117] object-cover shadow-xl transition-transform duration-500 hover:scale-105" 
-              />
-              <span className="absolute bottom-1 right-2 bg-emerald-500 border-2 border-[#161b22] text-white p-1.5 rounded-full" title="Verified live">
-                <CheckCircle2 className="w-4 h-4" />
-              </span>
+            <div className="relative">
+              {/* Aurora Multi-color Glow behind avatar */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-2xl animate-aurora-glow"></div>
+              {/* Orbital ring 1 */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-44 h-44 rounded-full border border-cyan-400/20 border-dashed animate-spin-slow"></div>
+              </div>
+              {/* Orbital ring 2 */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-52 h-52 rounded-full border border-violet-400/15 border-dashed animate-spin-reverse"></div>
+              </div>
+              {/* Orbiting particles */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-cyan-400 absolute animate-orbit shadow-lg shadow-cyan-400/50"></div>
+                <div className="w-2 h-2 rounded-full bg-violet-400 absolute animate-orbit-2 shadow-lg shadow-violet-400/50"></div>
+                <div className="w-2 h-2 rounded-full bg-amber-400 absolute" style={{ animation: 'orbit2 10s linear infinite, particleFloat 2s ease-in-out infinite' }}></div>
+              </div>
+              {/* Scattered particles */}
+              <div className="w-1.5 h-1.5 rounded-full bg-cyan-300 absolute top-2 right-4 animate-particle shadow-sm" style={{ animationDelay: '0s' }}></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-violet-300 absolute bottom-4 left-2 animate-particle shadow-sm" style={{ animationDelay: '1.2s' }}></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-pink-300 absolute top-6 left-0 animate-particle shadow-sm" style={{ animationDelay: '2.4s' }}></div>
+              {/* Main Avatar */}
+              <div className="relative animate-float">
+                <div className="absolute -inset-1 bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 rounded-full blur-md opacity-60 animate-aurora-glow"></div>
+                <img 
+                  src={user?.avatar_url ?? PROFILE_INFO.avatar} 
+                  alt={displayName}
+                  className="relative w-36 h-36 rounded-full border-4 border-[#0d1117] object-cover shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-3 cursor-pointer" 
+                />
+                {/* Verified badge */}
+                <span className="absolute bottom-1 right-2 bg-gradient-to-br from-emerald-400 to-cyan-500 border-2 border-[#161b22] text-white p-1.5 rounded-full shadow-lg shadow-emerald-500/30 z-10 animate-glow-pulse" title="Live Verified">
+                  <CheckCircle2 className="w-4 h-4" />
+                </span>
+              </div>
             </div>
 
             <div className="space-y-1">
-              <h3 className="text-xl font-bold text-white">{displayName}</h3>
+              <h3 className="text-xl font-bold animate-rainbow-text">{displayName}</h3>
               <p className="text-sm font-mono text-cyan-400">@{PROFILE_INFO.username}</p>
             </div>
 
@@ -262,19 +286,19 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             <div className="flex items-center gap-2">
               <button 
                 onClick={() => setActiveSubTab('overview')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${activeSubTab === 'overview' ? 'bg-cyan-500 text-white' : 'bg-[#21262d] text-slate-300 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer press-3d ${activeSubTab === 'overview' ? 'bg-cyan-500 text-white shadow-md' : 'bg-[#21262d] text-slate-300 hover:text-white'}`}
               >
                 Top Starred
               </button>
               <button 
                 onClick={() => setActiveSubTab('recent')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${activeSubTab === 'recent' ? 'bg-cyan-500 text-white' : 'bg-[#21262d] text-slate-300 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer press-3d ${activeSubTab === 'recent' ? 'bg-cyan-500 text-white shadow-md' : 'bg-[#21262d] text-slate-300 hover:text-white'}`}
               >
                 Recently Updated
               </button>
               <button 
                 onClick={() => setActiveTab('repos-showcase')}
-                className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90 transition-opacity cursor-pointer"
+                className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90 transition-all duration-200 cursor-pointer press-3d shadow-lg shadow-cyan-500/20"
               >
                 View All
               </button>
@@ -285,7 +309,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             {(activeSubTab === 'overview' ? featuredRepos : recentRepos).map((repo, idx) => {
               const live = getLiveUrl(repo);
               return (
-                <div key={repo.id} className="bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-500/10 group animate-fade-in-up" style={{ animationDelay: `${idx * 80}ms`, opacity: 0 }}>
+                <div key={repo.id} className="bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl card-3d group animate-fade-in-up relative overflow-hidden" style={{ animationDelay: `${idx * 80}ms`, opacity: 0 }}>
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2 min-w-0">
@@ -330,14 +354,14 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleClone(repo)}
-                        className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg font-mono text-[11px] transition-all cursor-pointer ${copiedClone === repo.name ? 'bg-emerald-500 text-white' : 'bg-[#0d1117] text-slate-300 border border-[#30363d] hover:text-white'}`}
+                        className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg font-mono text-[11px] transition-all duration-200 cursor-pointer press-3d ${copiedClone === repo.name ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20' : 'bg-[#0d1117] text-slate-300 border border-[#30363d] hover:text-white hover:border-cyan-500'}`}
                         title={`git clone ${repo.clone_url}`}
                       >
                         {copiedClone === repo.name ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3 text-cyan-400" />}
                         <span>Clone</span>
                       </button>
                       {live && (
-                        <a href={live} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 transition-all">
+                        <a href={live} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 transition-all duration-200 press-3d">
                           <Eye className="w-3 h-3" /><span>Live</span>
                         </a>
                       )}

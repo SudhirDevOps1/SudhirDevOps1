@@ -1,14 +1,13 @@
 <!--
 ================================================================================
-  📄 README.md — SudhirDevOps1 Profile  
+  📄 strict .md — SudhirDevOps1
   👤 Author      : Sudhir Singh  
-  📊 Data Source : GitHub REST API v3 (PUBLIC) — 100% REAL LIVE DATA  
+  📊 Data Source : GitHub REST API v3 (PUBLIC) — 100% REAL
   ✅ Verified on : 16 June 2026  
   🔗 Live Studio : https://sudhirdevops1.github.io  
   
-  ⚠️  NOTE: This README is auto-generated from LIVE GitHub API data.
-       Stars, forks, followers, and repository counts are REAL-TIME values.
-       No fake data, no cached information — everything is fetched fresh.
+  ⚠️  NOTE: All stats — stars, forks, followers, repos — are REAL-TIME values.
+       Zero fake data. Everything fetched fresh from the GitHub API.
 ================================================================================
 -->
 
@@ -200,6 +199,6 @@ I've built a **professional web application** that fetches live data from the Gi
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=140&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=22&fontColor=ffffff&animation=fadeIn&fontAlignY=70" width="100%" alt="Footer"/>
 </a>
 
-<sub>📅 Data fetched <strong>LIVE</strong> from GitHub REST API | Verified: <strong>16 June 2026</strong> | 🚀 Built with 💙 by Sudhir Singh</sub>
+<sub>📅 strict .md • Data <strong>LIVE</strong> from GitHub API | <strong>16 June 2026</strong> | Built with 💙 by Sudhir Singh</sub>
 
 </div>

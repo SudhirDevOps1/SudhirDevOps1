@@ -73,14 +73,13 @@ export const generateMarkdown = (
 
   return `<!--
 ================================================================================
-  📄 README.md — SudhirDevOps1 Profile
+  📄 strict .md — SudhirDevOps1
   👤 Author      : Sudhir Singh
   📊 Data Source : GitHub REST API (PUBLIC) — 100% REAL LIVE DATA
   ✅ Verified on : ${VERIFIED_DATE}
   🔗 Live Studio : https://sudhirdevops1.github.io
   
-  ⚠️  NOTE: This README is auto-generated from LIVE GitHub API data.
-       Stars, forks, and repository counts are REAL-TIME values.
+  ⚠️  NOTE: All stats (stars, forks, repos) are REAL-TIME from GitHub API.
 ================================================================================
 -->
 
@@ -275,7 +274,7 @@ ${projectRows}
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=140&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=22&fontColor=ffffff&animation=fadeIn&fontAlignY=70" width="100%" alt="Footer"/>
 </a>
 
-<sub>📅 Data fetched <strong>LIVE</strong> from GitHub API | Verified: <strong>${VERIFIED_DATE}</strong> | 🚀 Built with 💙 by Sudhir Singh</sub>
+<sub>📅 strict .md • <strong>LIVE</strong> from GitHub API | <strong>${VERIFIED_DATE}</strong> | With 💙 by Sudhir Singh</sub>
 
 </div>`;
 };

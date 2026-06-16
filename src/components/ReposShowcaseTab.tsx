@@ -166,7 +166,7 @@ export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone,
         {filteredRepos.map((repo, idx) => {
           const live = getLiveUrl(repo);
           return (
-            <div key={repo.id} className="bg-slate-900 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-500/10 group relative overflow-hidden animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 40, 600)}ms`, opacity: 0 }}>
+            <div key={repo.id} className="bg-slate-900 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-xl card-3d group animate-fade-in-up relative overflow-hidden" style={{ animationDelay: `${Math.min(idx * 40, 600)}ms`, opacity: 0 }}>
               {live && (
                 <div className="absolute top-0 right-0 bg-gradient-to-l from-emerald-500 to-teal-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl shadow-md flex items-center gap-1">
                   <Eye className="w-2.5 h-2.5" /><span>LIVE</span>
@@ -203,18 +203,18 @@ export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone,
                 <div className="flex items-center gap-2">
                   <button
                     onClick={(e) => handleCloneCopy(repo, e)}
-                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg font-mono text-[11px] transition-all cursor-pointer ${copiedCloneId === repo.id ? 'bg-emerald-500 text-white' : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-slate-700 hover:text-white'}`}
+                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg font-mono text-[11px] transition-all duration-200 cursor-pointer press-3d ${copiedCloneId === repo.id ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20' : 'bg-slate-950 text-slate-300 border border-slate-800 hover:border-cyan-500 hover:text-white'}`}
                     title={`git clone ${repo.clone_url}`}
                   >
                     {copiedCloneId === repo.id ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3 text-cyan-400" />}
                     <span>Clone</span>
                   </button>
                   {live && (
-                    <a href={live} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 transition-all">
+                    <a href={live} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 hover:scale-105 transition-all duration-200 press-3d">
                       <Eye className="w-3 h-3" /><span>Live App</span>
                     </a>
                   )}
-                  <a href={repo.html_url} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-200 hover:bg-slate-700 transition-all ml-auto">
+                  <a href={repo.html_url} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-200 hover:bg-slate-700 hover:scale-105 transition-all duration-200 press-3d ml-auto">
                     <span>GitHub</span><ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
