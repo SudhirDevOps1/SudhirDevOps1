@@ -23,6 +23,7 @@ import { PROFILE_INFO, TECH_STACK_ICONS } from '../data/profileData';
 import { GitHubUser, GitHubRepo, getLiveUrl, getTotalStars, getTotalForks, formatDate, timeAgo, getLanguageColor, formatBytes } from '../data/github';
 import { TabId } from './Navbar';
 import { AnimatedCounter } from './AnimatedCounter';
+import { TiltCard } from './TiltCard';
 
 interface LivePreviewTabProps {
   theme: string;
@@ -89,8 +90,10 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
   }
 
   return (
-    <div className="min-h-screen bg-[#0d1117] text-[#c9d1d9] pb-12">
-      <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
+    <div className="min-h-screen mesh-bg text-[#c9d1d9] pb-12 relative">
+      {/* Animated colorful grid overlay */}
+      <div className="fixed inset-0 grid-bg pointer-events-none opacity-40"></div>
+      <div className="max-w-7xl mx-auto px-4 py-8 space-y-12 relative z-10">
         {/* Header with typing animation */}
         <div className="rounded-2xl overflow-hidden shadow-2xl border border-[#30363d] bg-gradient-to-b from-[#161b22] to-[#0d1117] animate-scale-in hover:border-cyan-500/40 transition-colors duration-500">
           <a href={PROFILE_INFO.github} target="_blank" rel="noreferrer" className="block">
@@ -131,34 +134,34 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm pt-2">
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] transition-all duration-300 hover:border-amber-500/40 hover:-translate-y-1 hover:shadow-lg">
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-amber-500/50 shadow-3d" intensity={6}>
                 <GraduationCap className="w-5 h-5 text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Currently</span>
                   <strong className="text-white">Pursuing BCA Degree</strong>
                 </div>
-              </div>
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] transition-all duration-300 hover:border-red-500/40 hover:-translate-y-1 hover:shadow-lg">
+              </TiltCard>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-red-500/50 shadow-3d" intensity={6}>
                 <Flame className="w-5 h-5 text-red-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Passionate about</span>
                   <strong className="text-white">Coding, AI & Cyber Labs</strong>
                 </div>
-              </div>
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1 hover:shadow-lg">
+              </TiltCard>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-cyan-500/50 shadow-3d" intensity={6}>
                 <Code className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Learning Stack</span>
                   <strong className="text-white">Python, JS, TS, Ethical Hacking</strong>
                 </div>
-              </div>
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] transition-all duration-300 hover:border-purple-500/40 hover:-translate-y-1 hover:shadow-lg">
+              </TiltCard>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-purple-500/50 shadow-3d" intensity={6}>
                 <MapPin className="w-5 h-5 text-purple-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Location</span>
                   <strong className="text-white">Bihar, India</strong>
                 </div>
-              </div>
+              </TiltCard>
             </div>
 
             <div className="pt-4 border-t border-[#30363d]">
@@ -200,14 +203,16 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-300 absolute top-2 right-4 animate-particle shadow-sm" style={{ animationDelay: '0s' }}></div>
               <div className="w-1.5 h-1.5 rounded-full bg-violet-300 absolute bottom-4 left-2 animate-particle shadow-sm" style={{ animationDelay: '1.2s' }}></div>
               <div className="w-1.5 h-1.5 rounded-full bg-pink-300 absolute top-6 left-0 animate-particle shadow-sm" style={{ animationDelay: '2.4s' }}></div>
-              {/* Main Avatar */}
+              {/* Main Avatar — interactive 3D */}
               <div className="relative animate-float">
-                <div className="absolute -inset-1 bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 rounded-full blur-md opacity-60 animate-aurora-glow"></div>
-                <img 
-                  src={user?.avatar_url ?? PROFILE_INFO.avatar} 
-                  alt={displayName}
-                  className="relative w-36 h-36 rounded-full border-4 border-[#0d1117] object-cover shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-3 cursor-pointer" 
-                />
+                <div className="absolute -inset-2 bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 rounded-full blur-lg opacity-70 animate-aurora-glow"></div>
+                <TiltCard className="rounded-full" intensity={18} scale={1.06}>
+                  <img 
+                    src={user?.avatar_url ?? PROFILE_INFO.avatar} 
+                    alt={displayName}
+                    className="relative w-36 h-36 rounded-full border-4 border-[#0d1117] object-cover shadow-2xl cursor-pointer select-none" 
+                  />
+                </TiltCard>
                 {/* Verified badge */}
                 <span className="absolute bottom-1 right-2 bg-gradient-to-br from-emerald-400 to-cyan-500 border-2 border-[#161b22] text-white p-1.5 rounded-full shadow-lg shadow-emerald-500/30 z-10 animate-glow-pulse" title="Live Verified">
                   <CheckCircle2 className="w-4 h-4" />
@@ -268,10 +273,10 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 pt-2">
             {TECH_STACK_ICONS.map((tech, idx) => (
-              <div key={idx} className={`p-3 rounded-xl bg-gradient-to-br ${tech.color} border ${tech.border} flex flex-col items-center justify-center gap-2 text-center transition-all duration-300 cursor-default hover:scale-110 hover:-translate-y-1 hover:shadow-xl animate-fade-in-up`} style={{ animationDelay: `${idx * 50}ms`, opacity: 0 }}>
-                <img src={`https://skillicons.dev/icons?i=${tech.icon}`} alt={tech.name} className="w-8 h-8 drop-shadow transition-transform duration-300 hover:rotate-6" />
+              <TiltCard key={idx} className={`p-3 rounded-xl bg-gradient-to-br ${tech.color} border ${tech.border} flex flex-col items-center justify-center gap-2 text-center shadow-3d`} intensity={14} scale={1.08}>
+                <img src={`https://skillicons.dev/icons?i=${tech.icon}`} alt={tech.name} className="w-8 h-8 drop-shadow transition-transform duration-300 group-hover:rotate-6" style={{ animationDelay: `${idx * 50}ms` }} />
                 <span className="text-xs font-semibold text-slate-200">{tech.name}</span>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </div>
@@ -309,7 +314,8 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             {(activeSubTab === 'overview' ? featuredRepos : recentRepos).map((repo, idx) => {
               const live = getLiveUrl(repo);
               return (
-                <div key={repo.id} className="bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl card-3d group animate-fade-in-up relative overflow-hidden" style={{ animationDelay: `${idx * 80}ms`, opacity: 0 }}>
+                <div key={repo.id} className="animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 80, 600)}ms`, opacity: 0 }}>
+                <TiltCard className="bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-3d h-full group" intensity={10}>
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2 min-w-0">
@@ -365,11 +371,12 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
                           <Eye className="w-3 h-3" /><span>Live</span>
                         </a>
                       )}
-                      <a href={repo.html_url} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-[#21262d] text-slate-200 border border-[#30363d] hover:bg-[#30363d] transition-all ml-auto">
+                      <a href={repo.html_url} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-[#21262d] text-slate-200 border border-[#30363d] hover:bg-[#30363d] hover:scale-105 transition-all duration-200 press-3d ml-auto">
                         <span>GitHub</span><ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
                   </div>
+                </TiltCard>
                 </div>
               );
             })}
@@ -377,12 +384,12 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
 
           {/* Stats Cards */}
           <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-lg transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1">
+            <TiltCard className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-3d" intensity={6}>
               <img src={`https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=${theme}&hide_border=true&include_all_commits=true&count_private=true`} alt="Stats" className="w-full max-w-[480px] object-contain py-2" />
-            </div>
-            <div className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-lg transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1">
+            </TiltCard>
+            <TiltCard className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-3d" intensity={6}>
               <img src={`https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=${theme}&hide_border=true`} alt="Streak" className="w-full max-w-[480px] object-contain py-2" />
-            </div>
+            </TiltCard>
           </div>
         </div>
 

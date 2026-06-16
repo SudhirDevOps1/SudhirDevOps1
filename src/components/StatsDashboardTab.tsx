@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { GitHubUser, GitHubRepo, getTotalStars, getTotalForks, getLanguageStats, formatDate, getLiveUrl } from '../data/github';
 import { AnimatedCounter } from './AnimatedCounter';
+import { TiltCard } from './TiltCard';
 
 interface StatsDashboardTabProps {
   user: GitHubUser | null;
@@ -63,16 +64,16 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
   const maxLangCount = Math.max(...langStats.map(l => l.count), 1);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 space-y-8 pb-16">
+    <div className="max-w-7xl mx-auto px-4 py-8 space-y-8 pb-16 relative">
       {/* Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950/40 to-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-4 shadow-2xl animate-fade-in-down">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950/40 to-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-4 shadow-2xl animate-fade-in-down gradient-border">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2.5">
               <span className="p-2.5 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
                 <BarChart3 className="w-6 h-6" />
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Live GitHub Analytics</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-shimmer">Live GitHub Analytics</h2>
             </div>
             <p className="text-sm text-slate-400 max-w-2xl">
               Computed live from real API data{user?.updated_at ? ` • profile updated ${formatDate(user.updated_at)}` : ''}.
@@ -82,46 +83,54 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
       </div>
 
       {/* Value Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-lg hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-1">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="animate-fade-in-up stagger-1">
+        <TiltCard className="bg-slate-900 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-4 sm:p-6 flex flex-col justify-between space-y-4 shadow-3d h-full" intensity={7}>
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-bold uppercase tracking-wider font-mono">Public Repos</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider font-mono">Public Repos</span>
             <Folder className="w-5 h-5 text-cyan-400" />
           </div>
-          <div className="flex items-baseline gap-2">
-            <AnimatedCounter value={user?.public_repos ?? repos.length} className="text-4xl font-extrabold text-white font-mono" />
-            <span className="text-xs text-emerald-400 font-bold flex items-center"><TrendingUp className="w-3 h-3 mr-0.5" />Live</span>
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <AnimatedCounter value={user?.public_repos ?? repos.length} className="text-2xl sm:text-4xl font-extrabold text-white font-mono" />
+            <span className="text-[10px] sm:text-xs text-emerald-400 font-bold flex items-center"><TrendingUp className="w-3 h-3 mr-0.5" />Live</span>
           </div>
+        </TiltCard>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-lg hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-2">
+        <div className="animate-fade-in-up stagger-2">
+        <TiltCard className="bg-slate-900 border border-slate-800 hover:border-amber-500/60 rounded-2xl p-4 sm:p-6 flex flex-col justify-between space-y-4 shadow-3d h-full" intensity={7}>
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-bold uppercase tracking-wider font-mono">Total Stars</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider font-mono">Total Stars</span>
             <Star className="w-5 h-5 text-amber-400 fill-current" />
           </div>
-          <div className="flex items-baseline gap-2">
-            <AnimatedCounter value={totalStars} className="text-4xl font-extrabold text-white font-mono" />
-            <span className="text-xs text-amber-400 font-bold">earned</span>
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <AnimatedCounter value={totalStars} className="text-2xl sm:text-4xl font-extrabold text-white font-mono" />
+            <span className="text-[10px] sm:text-xs text-amber-400 font-bold">earned</span>
           </div>
+        </TiltCard>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-lg hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-3">
+        <div className="animate-fade-in-up stagger-3">
+        <TiltCard className="bg-slate-900 border border-slate-800 hover:border-emerald-500/60 rounded-2xl p-4 sm:p-6 flex flex-col justify-between space-y-4 shadow-3d h-full" intensity={7}>
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-bold uppercase tracking-wider font-mono">Total Forks</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider font-mono">Total Forks</span>
             <GitFork className="w-5 h-5 text-emerald-400" />
           </div>
-          <div className="flex items-baseline gap-2">
-            <AnimatedCounter value={totalForks} className="text-4xl font-extrabold text-white font-mono" />
-            <span className="text-xs text-slate-400 font-mono">{liveCount} live</span>
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <AnimatedCounter value={totalForks} className="text-2xl sm:text-4xl font-extrabold text-white font-mono" />
+            <span className="text-[10px] sm:text-xs text-slate-400 font-mono">{liveCount} live</span>
           </div>
+        </TiltCard>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-lg hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-4">
+        <div className="animate-fade-in-up stagger-4">
+        <TiltCard className="bg-slate-900 border border-slate-800 hover:border-purple-500/60 rounded-2xl p-4 sm:p-6 flex flex-col justify-between space-y-4 shadow-3d h-full" intensity={7}>
           <div className="flex items-center justify-between text-slate-400">
-            <span className="text-xs font-bold uppercase tracking-wider font-mono">Followers</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider font-mono">Followers</span>
             <Users className="w-5 h-5 text-purple-400" />
           </div>
-          <div className="flex items-baseline gap-2">
-            <AnimatedCounter value={user?.followers ?? 0} className="text-4xl font-extrabold text-white font-mono" />
-            <span className="text-xs text-slate-400 font-mono">/{user?.following ?? 0} following</span>
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <AnimatedCounter value={user?.followers ?? 0} className="text-2xl sm:text-4xl font-extrabold text-white font-mono" />
+            <span className="text-[10px] sm:text-xs text-slate-400 font-mono">/{user?.following ?? 0} following</span>
           </div>
+        </TiltCard>
         </div>
       </div>
 
@@ -175,7 +184,8 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
           </div>
           <div className="space-y-2.5">
             {topStarred.map((repo, idx) => (
-              <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-amber-500/40 hover:translate-x-1 transition-all duration-300 group animate-slide-in-right" style={{ animationDelay: `${idx * 90}ms`, opacity: 0 }}>
+              <div key={repo.id} className="animate-slide-in-right" style={{ animationDelay: `${idx * 90}ms`, opacity: 0 }}>
+              <TiltCard className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-amber-500/50 group" intensity={5} as="a" href={repo.html_url} target="_blank" rel="noreferrer">
                 <div className="flex items-center gap-3 min-w-0">
                   <span className="text-sm font-mono font-bold text-slate-600 w-5 shrink-0">#{idx + 1}</span>
                   <div className="min-w-0">
@@ -186,7 +196,8 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
                 <div className="flex items-center gap-1 text-amber-400 font-mono text-xs shrink-0">
                   <Star className="w-3.5 h-3.5 fill-current" />{repo.stargazers_count}
                 </div>
-              </a>
+              </TiltCard>
+              </div>
             ))}
           </div>
         </div>

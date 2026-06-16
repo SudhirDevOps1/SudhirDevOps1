@@ -16,6 +16,7 @@ import confetti from 'canvas-confetti';
 import { marked } from 'marked';
 import { generateMarkdown } from '../data/profileData';
 import { GitHubUser, GitHubRepo } from '../data/github';
+import { TiltCard } from './TiltCard';
 
 interface MdCustomizerTabProps {
   theme: string;
@@ -113,11 +114,11 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
           </div>
 
           <div className="flex items-center gap-3">
-            <button onClick={onCopyMd} className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${isCopied ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25' : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700'}`}>
+            <button onClick={onCopyMd} className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer press-3d ${isCopied ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30' : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 hover:border-cyan-500'}`}>
               {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4 text-cyan-400" />}
-              <span>{isCopied ? 'Copied!' : 'Copy strict .md'}</span>
+              <span>{isCopied ? 'Copied!' : 'Copy Markdown'}</span>
             </button>
-            <button onClick={handleDownload} className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 shadow-lg shadow-cyan-500/25 transition-all cursor-pointer">
+            <button onClick={handleDownload} className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-cyan-500 via-violet-500 to-pink-500 text-white hover:opacity-90 shadow-lg shadow-cyan-500/25 transition-all duration-200 cursor-pointer press-3d">
               <Download className="w-4 h-4" />
               <span>Download README.md</span>
             </button>
@@ -138,9 +139,9 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
                 <button
                   key={opt.id}
                   onClick={() => setTheme(opt.id)}
-                  className={`flex items-center gap-2.5 p-3 rounded-xl border text-xs font-medium transition-all text-left cursor-pointer ${theme === opt.id ? 'bg-slate-800 border-cyan-500 text-white shadow-md shadow-cyan-500/10' : 'bg-slate-950/60 border-slate-800/80 text-slate-300 hover:bg-slate-800/50'}`}
+                  className={`flex items-center gap-2.5 p-3 rounded-xl border text-xs font-medium transition-all duration-200 text-left cursor-pointer press-3d ${theme === opt.id ? 'bg-slate-800 border-cyan-500 text-white shadow-md shadow-cyan-500/20 scale-[1.02]' : 'bg-slate-950/60 border-slate-800/80 text-slate-300 hover:bg-slate-800/50 hover:border-slate-600'}`}
                 >
-                  <span className={`w-3.5 h-3.5 rounded-full ${opt.bg} border border-slate-700`}></span>
+                  <span className={`w-3.5 h-3.5 rounded-full ${opt.bg} border border-slate-700 shadow-inner`}></span>
                   <span className="truncate">{opt.name}</span>
                 </button>
               ))}
@@ -168,7 +169,7 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/10 border border-blue-500/20 rounded-2xl p-5 space-y-3">
+          <TiltCard className="bg-gradient-to-br from-blue-900/20 to-cyan-900/10 border border-blue-500/20 rounded-2xl p-5 space-y-3 shadow-3d" intensity={5}>
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <h4 className="text-xs font-bold text-cyan-300">100% Real Data</h4>
@@ -176,23 +177,24 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
             <p className="text-xs text-slate-400 leading-relaxed">
               The catalog table is generated from your live GitHub API repos with real descriptions, languages and homepage/GitHub-Pages live links. No fake entries.
             </p>
-          </div>
+          </TiltCard>
         </div>
 
         {/* Editor + Live Preview */}
         <div className="lg:col-span-8 flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-slide-in-right">
-          <div className="bg-slate-950 px-6 py-3.5 border-b border-slate-800 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
+          <div className="bg-slate-950 px-4 sm:px-6 py-3.5 border-b border-slate-800 flex items-center justify-between gap-3 flex-wrap">
+            <div className="flex items-center gap-2 flex-wrap">
               <Code className="w-4 h-4 text-cyan-400" />
               <span className="text-xs font-bold font-mono text-white">README.md</span>
               {edited && <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono">edited</span>}
+              <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>dark mode</span>
             </div>
             <div className="flex items-center bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs">
-              <button onClick={() => setActiveView('preview')} className={`flex items-center gap-1.5 px-3 py-1 rounded-md font-semibold transition-all cursor-pointer ${activeView === 'preview' ? 'bg-cyan-500 text-white' : 'text-slate-400 hover:text-white'}`}>
-                <Eye className="w-3.5 h-3.5" /><span>Rendered Preview</span>
+              <button onClick={() => setActiveView('preview')} className={`flex items-center gap-1.5 px-3 py-1 rounded-md font-semibold transition-all duration-200 cursor-pointer press-3d ${activeView === 'preview' ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+                <Eye className="w-3.5 h-3.5" /><span className="hidden sm:inline">Rendered</span><span className="sm:hidden">Preview</span>
               </button>
-              <button onClick={() => setActiveView('code')} className={`flex items-center gap-1.5 px-3 py-1 rounded-md font-semibold transition-all cursor-pointer ${activeView === 'code' ? 'bg-cyan-500 text-white' : 'text-slate-400 hover:text-white'}`}>
-                <Code className="w-3.5 h-3.5" /><span>Raw Markdown</span>
+              <button onClick={() => setActiveView('code')} className={`flex items-center gap-1.5 px-3 py-1 rounded-md font-semibold transition-all duration-200 cursor-pointer press-3d ${activeView === 'code' ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+                <Code className="w-3.5 h-3.5" /><span className="hidden sm:inline">Raw</span><span className="sm:hidden">Code</span>
               </button>
             </div>
           </div>
@@ -206,9 +208,9 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
                 className="w-full h-full p-6 bg-slate-950 text-slate-300 font-mono text-xs leading-relaxed resize-none focus:outline-none"
               />
             ) : (
-              <div className="w-full h-full overflow-y-auto bg-white">
+              <div className="w-full h-full overflow-y-auto bg-[#0d1117] border-y border-[#30363d]">
                 <div
-                  className="md-render p-8 text-slate-800"
+                  className="md-render p-8"
                   dangerouslySetInnerHTML={{ __html: renderedHtml }}
                 />
               </div>

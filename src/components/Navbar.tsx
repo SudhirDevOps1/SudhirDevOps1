@@ -166,10 +166,10 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center gap-2.5 ml-auto sm:ml-0">
           <button
             onClick={onCopyMd}
-            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-300 border cursor-pointer hover:scale-105 active:scale-95 ${
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-300 border cursor-pointer press-3d ${
               isCopied
-                ? 'bg-emerald-500 text-white border-emerald-400 shadow-lg shadow-emerald-500/20'
-                : 'bg-slate-900 text-slate-200 border-slate-700 hover:bg-slate-800 hover:border-slate-600'
+                ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white border-emerald-400 shadow-lg shadow-emerald-500/30'
+                : 'bg-slate-900 text-slate-200 border-slate-700 hover:bg-slate-800 hover:border-cyan-500'
             }`}
           >
             {isCopied ? <Check className="w-3.5 h-3.5 animate-bounce" /> : <Copy className="w-3.5 h-3.5 text-cyan-400" />}

@@ -58,10 +58,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-['Inter'] selection:bg-cyan-500 selection:text-white relative">
+    <div className="min-h-screen mesh-bg text-slate-100 flex flex-col font-['Inter'] selection:bg-cyan-500 selection:text-white relative">
+      {/* Animated colorful grid overlay */}
+      <div className="fixed inset-0 grid-bg pointer-events-none opacity-30"></div>
       {/* Toast Notification */}
       {toastMsg && (
-        <div className="fixed top-20 right-6 z-[60] bg-emerald-950 border border-emerald-500/50 text-emerald-200 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 max-w-[90vw] animate-slide-in-right">
+        <div className="fixed top-24 right-4 sm:right-6 z-[60] bg-gradient-to-r from-emerald-900 to-cyan-900 border border-emerald-500/50 text-emerald-100 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 max-w-[90vw] animate-slide-in-right">
           <Sparkles className="w-5 h-5 text-amber-300 shrink-0 animate-spin-slow" />
           <span className="text-xs font-mono font-bold">{toastMsg}</span>
         </div>
@@ -78,7 +80,7 @@ export default function App() {
         onRefresh={refetch}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         {activeTab === 'live-preview' && (
           <LivePreviewTab
             theme={theme}
@@ -118,7 +120,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="bg-slate-950 border-t border-slate-900 py-10 text-slate-400 text-xs mt-auto relative z-30 animate-fade-in">
+      <footer className="bg-slate-950/80 backdrop-blur-md border-t border-slate-900 py-10 text-slate-400 text-xs mt-auto relative z-20 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3 text-center md:text-left">
             <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">

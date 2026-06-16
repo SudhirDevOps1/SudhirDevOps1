@@ -16,6 +16,7 @@ import {
   ArrowUpDown
 } from 'lucide-react';
 import { GitHubRepo, getLiveUrl, getTotalStars, timeAgo } from '../data/github';
+import { TiltCard } from './TiltCard';
 
 interface ReposShowcaseTabProps {
   onCopyClone: (url: string) => void;
@@ -166,7 +167,8 @@ export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone,
         {filteredRepos.map((repo, idx) => {
           const live = getLiveUrl(repo);
           return (
-            <div key={repo.id} className="bg-slate-900 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-xl card-3d group animate-fade-in-up relative overflow-hidden" style={{ animationDelay: `${Math.min(idx * 40, 600)}ms`, opacity: 0 }}>
+            <div key={repo.id} className="animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 40, 600)}ms`, opacity: 0 }}>
+            <TiltCard className="bg-slate-900 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-3d h-full group relative overflow-hidden" intensity={9}>
               {live && (
                 <div className="absolute top-0 right-0 bg-gradient-to-l from-emerald-500 to-teal-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl shadow-md flex items-center gap-1">
                   <Eye className="w-2.5 h-2.5" /><span>LIVE</span>
@@ -219,6 +221,7 @@ export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone,
                   </a>
                 </div>
               </div>
+            </TiltCard>
             </div>
           );
         })}
