@@ -1,6 +1,6 @@
 <!--
 ================================================================================
-  📄 strict .md — SudhirDevOps1
+  📄 markdown.md — SudhirDevOps1
   👤 Author      : Sudhir Singh  
   📊 Data Source : GitHub REST API v3 (PUBLIC) — 100% REAL
   ✅ Verified on : 16 June 2026  
@@ -178,7 +178,7 @@ I've built a **professional web application** that fetches live data from the Gi
 🔧 **Features:**
 - ✅ 100% Real-time data (no fake stats)
 - ✅ Live repository browser with real stars/forks
-- ✅ Strict `.md` file generator & customizer
+- ✅ markdown.md file generator & customizer
 - ✅ Professional analytics dashboard
 - ✅ One-click copy/download
 
@@ -199,6 +199,6 @@ I've built a **professional web application** that fetches live data from the Gi
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=140&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=22&fontColor=ffffff&animation=fadeIn&fontAlignY=70" width="100%" alt="Footer"/>
 </a>
 
-<sub>📅 strict .md • Data <strong>LIVE</strong> from GitHub API | <strong>16 June 2026</strong> | Built with 💙 by Sudhir Singh</sub>
+<sub>📅 markdown.md • Data <strong>LIVE</strong> from GitHub API | <strong>16 June 2026</strong> | Built with 💙 by Sudhir Singh</sub>
 
 </div>

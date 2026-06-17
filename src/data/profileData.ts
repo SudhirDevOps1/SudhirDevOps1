@@ -73,7 +73,7 @@ export const generateMarkdown = (
 
   return `<!--
 ================================================================================
-  📄 strict .md — SudhirDevOps1
+  📄 markdown.md — SudhirDevOps1
   👤 Author      : Sudhir Singh
   📊 Data Source : GitHub REST API (PUBLIC) — 100% REAL LIVE DATA
   ✅ Verified on : ${VERIFIED_DATE}
@@ -274,7 +274,7 @@ ${projectRows}
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=140&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=22&fontColor=ffffff&animation=fadeIn&fontAlignY=70" width="100%" alt="Footer"/>
 </a>
 
-<sub>📅 strict .md • <strong>LIVE</strong> from GitHub API | <strong>${VERIFIED_DATE}</strong> | With 💙 by Sudhir Singh</sub>
+<sub>📅 markdown.md • <strong>LIVE</strong> from GitHub API | <strong>${VERIFIED_DATE}</strong> | With 💙 by Sudhir Singh</sub>
 
 </div>`;
 };

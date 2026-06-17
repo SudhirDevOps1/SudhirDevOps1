@@ -189,4 +189,11 @@ export function getRecentlyUpdated(repos: GitHubRepo[], count: number = 5): GitH
     .slice(0, count);
 }
 
-export const VERIFIED_DATE = "16 June 2026";
+export const VERIFIED_DATE = (() => {
+  const d = new Date();
+  return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+})();

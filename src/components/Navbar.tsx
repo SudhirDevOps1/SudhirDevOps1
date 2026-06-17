@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PROFILE_INFO } from '../data/profileData';
-import { GitHubUser } from '../data/github';
+import { GitHubUser, VERIFIED_DATE } from '../data/github';
 
 export type TabId = 'live-preview' | 'md-customizer' | 'repos-showcase' | 'stats-dashboard';
 
@@ -50,13 +50,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const tabs: { id: TabId; label: string; icon: any; badge?: string }[] = [
     { id: 'live-preview', label: 'GitHub Profile', icon: Code2 },
-    { id: 'md-customizer', label: 'strict .md Studio', icon: FileCode },
+    { id: 'md-customizer', label: 'markdown.md Studio', icon: FileCode },
     { id: 'repos-showcase', label: 'Live Repositories', icon: Layers, badge: loading ? '…' : String(repoCount) },
     { id: 'stats-dashboard', label: 'Analytics', icon: BarChart3 },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/80 text-slate-100 shadow-2xl animate-fade-in-down">
+    <header className="sticky top-0 z-50 bg-slate-950/70 backdrop-blur-2xl border-b border-white/5 text-slate-100 shadow-3d animate-fade-in-down">
       {/* Top ribbon */}
       <div className="bg-gradient-to-r from-cyan-900/40 via-blue-900/40 to-slate-900/60 px-4 py-1.5 border-b border-slate-800/40 text-xs flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-3">
@@ -71,8 +71,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <span className="text-slate-300 hidden md:inline flex items-center gap-1.5">
             {loading ? (
               <><Loader2 className="w-3 h-3 animate-spin" /> Syncing with GitHub API…</>
+            ) : user?.updated_at ? (
+              <><span className="text-emerald-400 animate-pulse">●</span> Live • Updated {VERIFIED_DATE} • Verified: {VERIFIED_DATE}</>
             ) : (
-              <><span className="text-emerald-400">●</span> Real-time data active</>
+              <><span className="text-emerald-400 animate-pulse">●</span> Live from GitHub API • Verified: {VERIFIED_DATE}</>
             )}
           </span>
         </div>

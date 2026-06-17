@@ -15,7 +15,7 @@ import {
   AlertCircle,
   ArrowUpDown
 } from 'lucide-react';
-import { GitHubRepo, getLiveUrl, getTotalStars, timeAgo } from '../data/github';
+import { GitHubRepo, getLiveUrl, getTotalStars, timeAgo, formatDate } from '../data/github';
 import { TiltCard } from './TiltCard';
 
 interface ReposShowcaseTabProps {
@@ -30,7 +30,7 @@ type SortMode = 'stars' | 'updated' | 'name';
 export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone, repos, loading, error }) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedLang, setSelectedLang] = useState<string>('all');
-  const [sortMode, setSortMode] = useState<SortMode>('stars');
+  const [sortMode, setSortMode] = useState<SortMode>('updated'); // DEFAULT: recently updated
   const [onlyLive, setOnlyLive] = useState<boolean>(false);
   const [copiedCloneId, setCopiedCloneId] = useState<number | null>(null);
 
@@ -94,30 +94,31 @@ export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone,
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-8 pb-16">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-blue-950/40 to-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-2xl animate-fade-in-down">
+      <div className="glass border border-white/5 rounded-3xl p-5 sm:p-8 space-y-5 shadow-3d animate-fade-in-down">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2.5">
               <span className="p-2.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400">
                 <Folder className="w-6 h-6" />
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent tracking-tight">
                 {repos.length} Real GitHub Repositories
               </h2>
             </div>
             <p className="text-sm text-slate-400 max-w-2xl">
-              Live from the GitHub API — real stars, forks, languages, <code className="text-cyan-400 font-mono">git clone</code> URLs and live demo links. Nothing fake.
+              Live from the GitHub API — real stars, forks, languages, <code className="text-cyan-400 font-mono">git clone</code> URLs and live demo links.
+              {repos[0] && <span className="text-emerald-300 ml-1 font-mono">● Active push on {formatDate(repos[0].pushed_at)}</span>}
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="bg-slate-950 px-4 py-2 rounded-2xl border border-slate-800 text-center">
+            <div className="glass border border-white/5 px-4 py-2 rounded-2xl text-center shadow-3d">
               <p className="text-lg font-extrabold text-amber-400 font-mono flex items-center gap-1 justify-center"><Star className="w-4 h-4 fill-current" />{totalStars}</p>
-              <p className="text-[10px] text-slate-500 uppercase tracking-wider">Total Stars</p>
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider">Total Stars</p>
             </div>
-            <div className="bg-slate-950 px-4 py-2 rounded-2xl border border-slate-800 text-center">
+            <div className="glass border border-white/5 px-4 py-2 rounded-2xl text-center shadow-3d">
               <p className="text-lg font-extrabold text-emerald-400 font-mono">{liveCount}</p>
-              <p className="text-[10px] text-slate-500 uppercase tracking-wider">Live Demos</p>
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider">Live Demos</p>
             </div>
           </div>
         </div>
@@ -167,8 +168,8 @@ export const ReposShowcaseTab: React.FC<ReposShowcaseTabProps> = ({ onCopyClone,
         {filteredRepos.map((repo, idx) => {
           const live = getLiveUrl(repo);
           return (
-            <div key={repo.id} className="animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 40, 600)}ms`, opacity: 0 }}>
-            <TiltCard className="bg-slate-900 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-3d h-full group relative overflow-hidden" intensity={9}>
+            <div key={repo.id} className="animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 40, 600)}ms` }}>
+            <TiltCard className="glass border border-white/5 rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-5 shadow-3d h-full group relative overflow-hidden" intensity={12} glowColor={idx % 3 === 0 ? '#22d3ee' : idx % 3 === 1 ? '#a855f7' : '#f59e0b'}>
               {live && (
                 <div className="absolute top-0 right-0 bg-gradient-to-l from-emerald-500 to-teal-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl shadow-md flex items-center gap-1">
                   <Eye className="w-2.5 h-2.5" /><span>LIVE</span>

@@ -185,10 +185,13 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
             <h3 className="font-bold text-lg text-white flex items-center gap-2"><Star className="w-5 h-5 text-amber-400" /><span>Top Starred Repositories</span></h3>
             <p className="text-xs text-slate-400">Your most-starred real projects</p>
           </div>
-          <div className="space-y-2.5">
-            {topStarred.map((repo, idx) => (
-              <div key={repo.id} className="animate-slide-in-right" style={{ animationDelay: `${idx * 90}ms`, opacity: 0 }}>
-              <TiltCard className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-amber-500/50 group shadow-md" intensity={8} glowColor="rgba(251, 191, 36," as="a" href={repo.html_url} target="_blank" rel="noreferrer">
+          <div className="space-y-3">
+            {topStarred.length === 0 ? (
+              <p className="text-xs text-slate-500 py-6 text-center font-mono">No repositories available.</p>
+            ) : (
+              topStarred.map((repo, idx) => (
+                <div key={repo.id} className="animate-slide-in-right" style={{ animationDelay: `${idx * 90}ms` }}>
+                <TiltCard className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-950/90 border border-white/10 hover:border-amber-400/50 group shadow-lg" intensity={8} glowColor="#f59e0b" as="a" href={repo.html_url} target="_blank" rel="noreferrer">
                 <div className="flex items-center gap-3 min-w-0">
                   <span className="text-sm font-mono font-bold text-amber-500/70 w-5 shrink-0">#{idx + 1}</span>
                   <div className="min-w-0">
@@ -201,7 +204,7 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
                 </div>
               </TiltCard>
               </div>
-            ))}
+            )))}
           </div>
         </TiltCard>
         </div>

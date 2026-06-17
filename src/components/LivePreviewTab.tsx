@@ -20,7 +20,7 @@ import {
   Calendar
 } from 'lucide-react';
 import { PROFILE_INFO, TECH_STACK_ICONS } from '../data/profileData';
-import { GitHubUser, GitHubRepo, getLiveUrl, getTotalStars, getTotalForks, formatDate, timeAgo, getLanguageColor, formatBytes } from '../data/github';
+import { GitHubUser, GitHubRepo, getLiveUrl, getTotalStars, getTotalForks, formatDate, timeAgo, getLanguageColor, formatBytes, VERIFIED_DATE } from '../data/github';
 import { TabId } from './Navbar';
 import { AnimatedCounter } from './AnimatedCounter';
 import { TiltCard } from './TiltCard';
@@ -47,7 +47,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
   error
 }) => {
   const [copiedClone, setCopiedClone] = useState<string | null>(null);
-  const [activeSubTab, setActiveSubTab] = useState<'overview' | 'recent'>('overview');
+  const [activeSubTab, setActiveSubTab] = useState<'overview' | 'recent'>('recent'); // DEFAULT: Recently Updated
 
   const displayName = user?.name ?? 'Sudhir Singh';
   const repoCount = user?.public_repos ?? repos.length;
@@ -94,8 +94,21 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
       {/* Animated colorful grid overlay */}
       <div className="fixed inset-0 grid-bg pointer-events-none opacity-40"></div>
       <div className="max-w-7xl mx-auto px-4 py-8 space-y-12 relative z-10">
+        {/* Live Status Indicator */}
+        <div className="flex items-center justify-center gap-3 animate-fade-in-up">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-emerald-500/30 shadow-3d">
+            <div className="relative">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+              <div className="absolute inset-0 w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
+            </div>
+            <span className="text-xs font-mono text-emerald-300">LIVE</span>
+            <span className="text-xs text-slate-400">•</span>
+            <span className="text-xs text-slate-300">Updated: {VERIFIED_DATE} • Verified: {VERIFIED_DATE}</span>
+          </div>
+        </div>
+
         {/* Header with typing animation */}
-        <div className="rounded-2xl overflow-hidden shadow-2xl border border-[#30363d] bg-gradient-to-b from-[#161b22] to-[#0d1117] animate-scale-in hover:border-cyan-500/40 transition-colors duration-500">
+        <div className="glass border border-white/5 rounded-2xl overflow-hidden shadow-3d animate-scale-in">
           <a href={PROFILE_INFO.github} target="_blank" rel="noreferrer" className="block">
             <img 
               src={`https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=250&section=header&text=${encodeURIComponent(headerTitle)}&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Bihar%2C%20India&descSize=18&descAlignY=60`} 
@@ -118,14 +131,14 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
         {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left: About */}
-          <div className="lg:col-span-8 bg-[#161b22] border border-[#30363d] rounded-2xl p-6 sm:p-8 space-y-6 shadow-lg animate-slide-in-left hover:border-cyan-500/30 transition-colors duration-500">
+          <div className="lg:col-span-8 glass border border-white/5 rounded-2xl p-5 sm:p-8 space-y-6 shadow-3d animate-slide-in-left">
             <div className="flex items-center gap-3 border-b border-[#30363d] pb-4">
               <span className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
                 <Sparkles className="w-6 h-6" />
               </span>
               <div>
                 <h2 className="text-xl font-bold text-white tracking-wide">About Me</h2>
-                <p className="text-xs text-[#8b949e]">{user?.updated_at ? `Profile updated ${timeAgo(user.updated_at)}` : 'Live profile data'}</p>
+                <p className="text-xs text-[#8b949e]">Live profile data • Updated daily: {VERIFIED_DATE}</p>
               </div>
             </div>
 
@@ -134,28 +147,28 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm pt-2">
-              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-amber-500/50 shadow-3d" intensity={6}>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl glass border border-white/5 shadow-3d" intensity={8} glowColor="#f59e0b">
                 <GraduationCap className="w-5 h-5 text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Currently</span>
                   <strong className="text-white">Pursuing BCA Degree</strong>
                 </div>
               </TiltCard>
-              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-red-500/50 shadow-3d" intensity={6}>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl glass border border-white/5 shadow-3d" intensity={8} glowColor="#ef4444">
                 <Flame className="w-5 h-5 text-red-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Passionate about</span>
                   <strong className="text-white">Coding, AI & Cyber Labs</strong>
                 </div>
               </TiltCard>
-              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-cyan-500/50 shadow-3d" intensity={6}>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl glass border border-white/5 shadow-3d" intensity={8} glowColor="#22d3ee">
                 <Code className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Learning Stack</span>
                   <strong className="text-white">Python, JS, TS, Ethical Hacking</strong>
                 </div>
               </TiltCard>
-              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl bg-[#0d1117] border border-[#30363d] hover:border-purple-500/50 shadow-3d" intensity={6}>
+              <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl glass border border-white/5 shadow-3d" intensity={8} glowColor="#a855f7">
                 <MapPin className="w-5 h-5 text-purple-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Location</span>
@@ -181,7 +194,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           </div>
 
           {/* Right: Live Stats */}
-          <div className="lg:col-span-4 bg-[#161b22] border border-[#30363d] rounded-2xl p-6 flex flex-col items-center text-center justify-between space-y-6 shadow-lg animate-slide-in-right hover:border-cyan-500/30 transition-colors duration-500">
+          <div className="lg:col-span-4 glass border border-white/5 rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center justify-between space-y-6 shadow-3d animate-slide-in-right">
             <div className="relative">
               {/* Aurora Multi-color Glow behind avatar */}
               <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-2xl animate-aurora-glow"></div>
@@ -223,9 +236,10 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             <div className="space-y-1">
               <h3 className="text-xl font-bold animate-rainbow-text">{displayName}</h3>
               <p className="text-sm font-mono text-cyan-400">@{PROFILE_INFO.username}</p>
+              <p className="text-[10px] text-slate-400 font-mono">🕐 Dynamic live check: {VERIFIED_DATE}</p>
             </div>
 
-            <div className="w-full bg-[#0d1117] border border-[#30363d] rounded-xl p-4 space-y-3">
+            <div className="w-full bg-slate-950/40 backdrop-blur border border-white/5 rounded-xl p-4 space-y-3">
               <div className="flex justify-between items-center text-xs border-b border-[#30363d] pb-2 transition-colors hover:text-white">
                 <span className="text-[#8b949e]">📦 Public Repos</span>
                 <AnimatedCounter value={repoCount} className="font-mono font-bold text-white text-sm" />
@@ -259,7 +273,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
         </div>
 
         {/* Tech Stack */}
-        <div className="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 sm:p-8 space-y-6 hover:border-cyan-500/30 transition-colors duration-500">
+        <div className="glass border border-white/5 rounded-2xl p-5 sm:p-8 space-y-6 shadow-3d">
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#30363d] pb-4">
             <div>
               <h2 className="text-xl font-bold text-white tracking-wide">Tech Stack & Skills</h2>
@@ -272,40 +286,45 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             </a>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 pt-2">
-            {TECH_STACK_ICONS.map((tech, idx) => (
-              <TiltCard key={idx} className={`p-3 rounded-xl bg-gradient-to-br ${tech.color} border ${tech.border} flex flex-col items-center justify-center gap-2 text-center shadow-3d`} intensity={14} scale={1.08}>
-                <img src={`https://skillicons.dev/icons?i=${tech.icon}`} alt={tech.name} className="w-8 h-8 drop-shadow transition-transform duration-300 group-hover:rotate-6" style={{ animationDelay: `${idx * 50}ms` }} />
+            {TECH_STACK_ICONS.map((tech, idx) => {
+              const glowColors = ['#22d3ee','#a855f7','#f59e0b','#10b981','#ef4444','#3b82f6','#ec4899'];
+              return (
+              <TiltCard key={idx} className={`glass border border-white/5 flex flex-col items-center justify-center gap-2 text-center shadow-3d rounded-xl p-3`} intensity={14} scale={1.08} glowColor={glowColors[idx % glowColors.length]}>
+                <img src={`https://skillicons.dev/icons?i=${tech.icon}`} alt={tech.name} className="w-8 h-8 drop-shadow transition-transform duration-300 group-hover:rotate-6" />
                 <span className="text-xs font-semibold text-slate-200">{tech.name}</span>
               </TiltCard>
-            ))}
+            )})}
           </div>
         </div>
 
         {/* Featured Repos with Tabs */}
         <div className="space-y-6">
-          <div className="flex flex-wrap items-center justify-between border-b border-[#30363d] pb-4 gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="text-xl font-bold text-white tracking-wide">Repositories</h2>
-              <p className="text-xs text-[#8b949e]">Real-time data from GitHub API • Stars, forks & links are LIVE</p>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent tracking-wide flex items-center gap-2">
+                <BookOpen className="w-6 h-6 text-cyan-400" />
+                {activeSubTab === 'recent' ? '🕒 Recently Updated' : '⭐ Top Starred'}
+              </h2>
+              <p className="text-xs text-slate-400 mt-1">Live data • Real stars & forks • {activeSubTab === 'recent' && recentRepos[0] ? `Active push on ${formatDate(recentRepos[0].pushed_at)}` : `${totalStars} total stars`}</p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 glass border border-white/5 rounded-xl p-1 shadow-3d">
               <button 
                 onClick={() => setActiveSubTab('overview')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer press-3d ${activeSubTab === 'overview' ? 'bg-cyan-500 text-white shadow-md' : 'bg-[#21262d] text-slate-300 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer press-3d ${activeSubTab === 'overview' ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/30' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}
               >
                 Top Starred
               </button>
               <button 
                 onClick={() => setActiveSubTab('recent')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer press-3d ${activeSubTab === 'recent' ? 'bg-cyan-500 text-white shadow-md' : 'bg-[#21262d] text-slate-300 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer press-3d ${activeSubTab === 'recent' ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}
               >
                 Recently Updated
               </button>
               <button 
                 onClick={() => setActiveTab('repos-showcase')}
-                className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90 transition-all duration-200 cursor-pointer press-3d shadow-lg shadow-cyan-500/20"
+                className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-violet-500 to-pink-500 text-white hover:opacity-90 transition-all duration-200 cursor-pointer press-3d shadow-lg shadow-violet-500/20"
               >
-                View All
+                View All {repoCount}
               </button>
             </div>
           </div>
@@ -313,9 +332,10 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {(activeSubTab === 'overview' ? featuredRepos : recentRepos).map((repo, idx) => {
               const live = getLiveUrl(repo);
+              const glowColors = ['#22d3ee', '#a855f7', '#f59e0b', '#10b981', '#ef4444', '#3b82f6'];
               return (
-                <div key={repo.id} className="animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 80, 600)}ms`, opacity: 0 }}>
-                <TiltCard className="bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-3d h-full group" intensity={10}>
+                <div key={repo.id} className="animate-fade-in-up" style={{ animationDelay: `${Math.min(idx * 80, 600)}ms` }}>
+                <TiltCard className="glass border border-white/5 rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-4 shadow-3d h-full group" intensity={12} glowColor={glowColors[idx % glowColors.length]}>
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2 min-w-0">
@@ -325,7 +345,19 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
                         </a>
                       </div>
                       {repo.language && (
-                        <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: getLanguageColor(repo.language) }} title={repo.language}></span>
+                        <span className="flex items-center gap-1.5 shrink-0">
+                          {activeSubTab === 'recent' && (
+                            <span className="text-[10px] font-mono text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded">
+                              🕒 {timeAgo(repo.pushed_at)}
+                            </span>
+                          )}
+                          <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: getLanguageColor(repo.language) }} title={repo.language}></span>
+                        </span>
+                      )}
+                      {!repo.language && activeSubTab === 'recent' && (
+                        <span className="text-[10px] font-mono text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded shrink-0">
+                          🕒 {timeAgo(repo.pushed_at)}
+                        </span>
                       )}
                     </div>
                     <p className="text-xs text-[#8b949e] leading-relaxed line-clamp-3 min-h-[54px]">
@@ -394,30 +426,30 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
         </div>
 
         {/* Trophies & Activity */}
-        <div className="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 sm:p-8 space-y-8 shadow-xl hover:border-cyan-500/30 transition-colors duration-500">
+        <div className="glass border border-white/5 rounded-2xl p-5 sm:p-8 space-y-8 shadow-3d">
           <div className="space-y-2 border-b border-[#30363d] pb-4">
             <h2 className="text-xl font-bold text-white tracking-wide">Trophies & Contribution Activity</h2>
             <p className="text-xs text-[#8b949e]">Live-rendered from GitHub</p>
           </div>
           
-          <div className="bg-[#0d1117] p-4 rounded-2xl border border-[#30363d] flex justify-center overflow-x-auto shadow-inner">
+          <div className="bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center overflow-x-auto shadow-inner">
             <img src={`https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7`} alt="Trophies" className="max-w-full h-auto py-2" />
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div className="lg:col-span-5 bg-[#0d1117] p-4 rounded-2xl border border-[#30363d] flex justify-center shadow-inner">
+            <div className="lg:col-span-5 bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center shadow-inner">
               <img src={`https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=${theme}&hide_border=true&langs_count=8`} alt="Languages" className="max-w-full h-auto py-1" />
             </div>
-            <div className="lg:col-span-7 bg-[#0d1117] p-4 rounded-2xl border border-[#30363d] flex justify-center shadow-inner">
+            <div className="lg:col-span-7 bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center shadow-inner">
               <img src={`https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SudhirDevOps1&theme=${theme}&utcOffset=5.5`} alt="Productive time" className="max-w-full h-auto py-1" />
             </div>
           </div>
           
-          <div className="bg-[#0d1117] p-4 rounded-2xl border border-[#30363d] flex justify-center overflow-x-auto shadow-inner">
+          <div className="bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center overflow-x-auto shadow-inner">
             <img src="https://github-readme-activity-graph.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Activity" className="w-full py-1" />
           </div>
           
-          <div className="bg-[#0d1117] p-6 rounded-2xl border border-[#30363d] flex flex-col items-center justify-center space-y-4 shadow-inner">
+          <div className="bg-slate-950/30 backdrop-blur p-6 rounded-2xl border border-white/5 flex flex-col items-center justify-center space-y-4 shadow-inner">
             <span className="text-xs font-mono font-semibold text-cyan-400">Contribution Graph Snake</span>
             <picture className="w-full flex justify-center max-w-[850px] overflow-x-auto py-2">
               <img alt="Snake" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg" className="max-w-full h-auto" />

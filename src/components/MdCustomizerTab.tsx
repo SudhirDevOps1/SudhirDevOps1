@@ -102,7 +102,7 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
               <span className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 p-2 rounded-xl">
                 <Sliders className="w-5 h-5" />
               </span>
-              <h2 className="text-2xl font-extrabold tracking-tight text-white">strict .md Studio & Live Preview</h2>
+              <h2 className="text-2xl font-extrabold tracking-tight text-white">markdown.md Studio & Live Preview</h2>
             </div>
             <p className="text-sm text-slate-400 max-w-xl flex items-center gap-2">
               {loading ? (
@@ -129,8 +129,8 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Settings Panel */}
         <div className="lg:col-span-4 space-y-6 animate-slide-in-left">
-          <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-6 shadow-xl">
-            <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+          <TiltCard className="glass border border-white/5 rounded-2xl p-5 sm:p-6 space-y-6 shadow-3d" intensity={8} glowColor="#22d3ee">
+            <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-white/5 pb-3">
               <Palette className="w-4 h-4 text-cyan-400" />
               <span>1. Stats Card Theme</span>
             </h3>
@@ -146,9 +146,9 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
                 </button>
               ))}
             </div>
-          </div>
+          </TiltCard>
 
-          <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-6 shadow-xl">
+          <TiltCard className="glass border border-white/5 rounded-2xl p-5 sm:p-6 space-y-6 shadow-3d" intensity={8} glowColor="#f59e0b">
             <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
               <Type className="w-4 h-4 text-amber-400" />
               <span>2. Banner Text Customizer</span>
@@ -167,7 +167,7 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
                 <span>Reset & Re-sync from live data</span>
               </button>
             </div>
-          </div>
+          </TiltCard>
 
           <TiltCard className="bg-gradient-to-br from-blue-900/20 to-cyan-900/10 border border-blue-500/20 rounded-2xl p-5 space-y-3 shadow-3d" intensity={5}>
             <div className="flex items-center gap-2">
@@ -181,7 +181,7 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
         </div>
 
         {/* Editor + Live Preview */}
-        <div className="lg:col-span-8 flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-slide-in-right">
+        <TiltCard className="lg:col-span-8 flex flex-col glass border border-white/5 rounded-2xl shadow-3d overflow-hidden animate-slide-in-right" intensity={4} glowColor="#a855f7">
           <div className="bg-slate-950 px-4 sm:px-6 py-3.5 border-b border-slate-800 flex items-center justify-between gap-3 flex-wrap">
             <div className="flex items-center gap-2 flex-wrap">
               <Code className="w-4 h-4 text-cyan-400" />
@@ -217,11 +217,11 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
             )}
           </div>
 
-          <div className="bg-slate-950 px-6 py-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+          <div className="bg-slate-950 px-6 py-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
             <span>UTF-8 • GitHub-Flavored Markdown • live</span>
             <button onClick={onCopyMd} className="text-cyan-400 hover:underline font-semibold cursor-pointer">Copy complete code</button>
           </div>
-        </div>
+        </TiltCard>
       </div>
     </div>
   );
