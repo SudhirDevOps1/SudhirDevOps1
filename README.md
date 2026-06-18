@@ -182,7 +182,7 @@ I've built a **professional web application** that fetches live data from the Gi
 - ✅ Professional analytics dashboard
 - ✅ One-click copy/download
 
-👉 **[Open the Studio](https://sudhirdevops1.github.io)** • Built with React + TypeScript + Tailwind CSS
+👉 **[Open the Studio](https://sudhirdevops1.pages.dev/)** • Built with React + TypeScript + Tailwind CSS
 
 </div>
 
