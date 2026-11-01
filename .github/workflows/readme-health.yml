@@ -1,0 +1,82 @@
+name: README Health Check
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - scripts/check-readme-health.mjs
+      - .github/workflows/readme-health.yml
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+concurrency:
+  group: readme-health
+  cancel-in-progress: true
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    name: verify every image on the profile
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Load every README image
+        id: check
+        continue-on-error: true
+        run: node scripts/check-readme-health.mjs
+
+      - name: Upload machine-readable report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: readme-health-report
+          path: .github/health/latest.json
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Open or update a failure issue
+        if: steps.check.outcome == 'failure'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const title = '🩺 README health check failed';
+            const { owner, repo } = context.repo;
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+            const body = [
+              `The daily README image check failed at **${new Date().toISOString()}**.`,
+              '',
+              `Full details: ${runUrl}`,
+              '',
+              'The machine-readable report is attached to that run as the `readme-health-report` artifact.',
+              '',
+              '_This issue is created automatically and will be updated on the next failure._',
+            ].join('\n');
+
+            const open = await github.rest.issues.listForRepo({ owner, repo, state: 'open', per_page: 100 });
+            const existing = open.data.find((issue) => issue.title === title);
+
+            if (existing) {
+              await github.rest.issues.createComment({ owner, repo, issue_number: existing.number, body });
+              core.info(`Updated existing issue #${existing.number}`);
+            } else {
+              const created = await github.rest.issues.create({ owner, repo, title, body });
+              core.info(`Opened issue #${created.data.number}`);
+            }
+
+      - name: Fail the run so the badge turns red
+        if: steps.check.outcome == 'failure'
+        run: exit 1

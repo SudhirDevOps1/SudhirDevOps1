@@ -33,9 +33,11 @@
 
   <br/><br/>
 
-  <img src="https://img.shields.io/badge/Commits-2%2C897%2B-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <!-- STATS:HERO:START -->
+  <img src="https://img.shields.io/badge/Commits-2%2C899-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Pull%20Requests-52-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
+  <img src="https://img.shields.io/badge/Pull_Requests-52-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
+<!-- STATS:HERO:END -->
   &nbsp;
   <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=This%20Year" alt="Commit activity"/>
   &nbsp;
@@ -156,6 +158,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 > 🔴 **All data is fetched LIVE from the GitHub REST API v3 + Search API — zero fake numbers.**
 
+<!-- STATS:TABLE:START -->
 | Metric | Value |
 |:--|:--|
 | 👤 **Name** | Sudhir Singh |
@@ -165,14 +168,15 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 📦 **Public Repositories** | **76** *(Live from API)* |
 | ⭐ **Total Stars Earned** | **44** *(Live from API)* |
 | 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **2,897** *(Search API)* |
+| 💻 **Commits Authored** | **2,899** *(Search API)* |
 | 🔀 **Pull Requests** | **52** *(Search API)* |
 | 🐞 **Issues Opened** | **1** *(Search API)* |
 | 👥 **Followers** | **11** *(Live from API)* |
 | ➡️ **Following** | **19** *(Live from API)* |
 | 🗓️ **Joined GitHub** | 25 September 2025 |
-| ✅ **Last Verified** | November 2026 |
+| ✅ **Last Verified** | 01 November 2026 |
 | 🏗️ **Studio Stack** | React 19 · TypeScript 5 · Tailwind CSS 4 · Vite 7 |
+<!-- STATS:TABLE:END -->
 
 <br/>
 
@@ -261,7 +265,9 @@ Built with Tailwind CSS 4 and a design-token mindset.
 <br/>
 
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
-  <img src="https://img.shields.io/badge/Browse%20All%20Repositories-76%20Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+  <!-- STATS:REPOS:START -->
+  <img src="https://img.shields.io/badge/Browse_All_Repositories-76_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+<!-- STATS:REPOS:END -->
 </a>
 
 </div>
@@ -449,18 +455,46 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <div align="center">
 
+<!-- STATS:MILESTONES:START -->
 | 🏆 Milestone | 📈 Detail |
 |:--|:--|
 | 🗓️ **Joined GitHub** | 25 September 2025 |
+| 📅 **Days since joining** | **401** days of shipping code |
 | 📦 **Public repositories** | **76** shipped and open |
-| 💻 **Commits authored** | **2,897+** across all repositories |
+| 💻 **Commits authored** | **2,899** across all repositories |
 | 🔀 **Pull requests** | **52** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
-| 🏗️ **Profile Studio** | Full-stack React 19 + TS app, designed, built, deployed |
+| 🏗️ **Profile Studio** | Full-stack React 19 + TypeScript app, designed, built and deployed |
 | 🐍 **Automation** | Contribution snake + 3D calendar generated daily by GitHub Actions |
 | 🧊 **3D contribution calendar** | Self-hosted, animated, regenerated every night |
-| 📚 **80+ days** | Studying BCA while shipping code daily |
+<!-- STATS:MILESTONES:END -->
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════ AUTOMATION & MONITORING ═══════════════════════ -->
+## 🛰️ Live Automation & Monitoring
+
+<div align="center">
+
+> ⚙️ This profile **maintains itself**. Every workflow below runs on a schedule,
+> pulls real data from the GitHub API, and turns **red on its own** if a source breaks.
+
+| ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
+|:--|:--|:--|:--|
+| **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
+| **README Health Check** | daily · 04:00 UTC | Loads **every image** on this page with 3 retries and fails loudly on error cards | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
+| **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
+| **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
+| **App CI** | on every push / PR | `npm ci` → `tsc --noEmit` → `vite build` for the Studio app | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/ci.yml/badge.svg" alt="CI status"/> |
+
+<br/>
+
+**No demo data. No placeholders. No fake numbers.**
+If a value appears on this page, a workflow fetched it from the GitHub API —
+and if a source stops responding, the badge above goes red instead of quietly lying.
 
 </div>
 
@@ -531,6 +565,8 @@ Built with Tailwind CSS 4 and a design-token mindset.
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=150&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=24&fontColor=ffffff&animation=twinkling&fontAlignY=72" width="100%" alt="Footer Wave"/>
 </a>
 
-<sub>📅 README.md &bull; All data <strong>LIVE</strong> from GitHub REST API v3 &bull; Built with 💙 by <strong>Sudhir Singh</strong> &bull; <em>November 2026</em></sub>
+<!-- STATS:SYNC:START -->
+<sub>🤖 Auto-synced <strong>01 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 01/11/2026, 16:20:35 IST</sub>
+<!-- STATS:SYNC:END -->
 
 </div>
