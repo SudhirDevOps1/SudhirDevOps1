@@ -112,7 +112,7 @@ I love building practical web tools, study utilities, media apps and small produ
 
 - 🎓 **Currently** pursuing **BCA**
 - 💡 **Passionate about** coding, problem-solving and AI
-- 🌱 **Learning** **Python**, **JavaScript** and **Ethical Hacking**
+- 🌱 **Learning** **Python**, **JavaScript** and **Cloud & DevOps**
 - 🛠️ **Working with** HTML, CSS, JavaScript, TypeScript, Python
 - 🌐 **Portfolio** → [sudhirdevops1.github.io](https://sudhirdevops1.github.io)
 - 📫 **Connect** → [LinkedIn](https://linkedin.com/in/SudhirDevOps1) • [Telegram](https://t.me/SudhirDevOps1)

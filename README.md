@@ -12,13 +12,13 @@
 
 <!-- ANIMATED HEADER BANNER -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=280&section=header&text=Sudhir%20Singh&fontSize=68&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Bihar%2C%20India&descSize=20&descAlignY=58&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=280&section=header&text=Sudhir%20Singh&fontSize=68&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Bihar%2C%20India&descSize=20&descAlignY=58&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
 </a>
 
 <!-- TYPING ANIMATION -->
 <div align="center">
   <a href="https://github.com/SudhirDevOps1">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2600&pause=800&color=36BCF7&center=true&vCenter=true&width=940&height=75&lines=Hi+there+%F0%9F%91%8B+I'm+Sudhir+Singh!;%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%F0%9F%94%90+Learning+Ethical+Hacking+%26+Python;%F0%9F%9A%80+Building+with+Real+GitHub+API+Data!" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2400&pause=700&color=36BCF7&center=true&vCenter=true&width=940&height=75&lines=Hi+there+%F0%9F%91%8B+I'm+Sudhir+Singh!;%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%E2%9A%9B%EF%B8%8F+React+19+%2B+TypeScript+%2B+Tailwind+4;%F0%9F%90%8D+Python+Automation+%26+Scripting;%F0%9F%9A%80+Building+with+Real+GitHub+API+Data!" alt="Typing SVG"/>
   </a>
 
   <br/><br/>
@@ -28,6 +28,21 @@
   <img src="https://img.shields.io/badge/Focus-Full--Stack%20Dev-36BCF7?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Focus"/>
   &nbsp;
   <img src="https://komarev.com/ghpvc/?username=SudhirDevOps1&label=Profile+Views&color=36BCF7&style=for-the-badge" alt="Profile views"/>
+
+  <br/><br/>
+
+  <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=Commits%20This%20Year" alt="Commit activity"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=a855f7&label=Last%20Commit" alt="Last commit"/>
+</div>
+
+<br/>
+
+<!-- NEOFETCH TERMINAL CARD -->
+<div align="center">
+  <a href="https://github.com/SudhirDevOps1">
+    <img src="https://neofetch-profile.vercel.app/api?username=SudhirDevOps1&theme=github-dark" width="90%" alt="Neofetch Terminal Card"/>
+  </a>
 </div>
 
 <br/>
@@ -47,8 +62,8 @@ My goal: become a **full-stack developer** who ships real-world products.
 | 🎓 **Degree** | Bachelor of Computer Applications (BCA) |
 | 📍 **Location** | Bihar, India |
 | 💻 **Current Focus** | Full-Stack Web Development |
-| 🔒 **Exploring** | Ethical Hacking & Cyber Security |
-| 🌱 **Learning** | Python, TypeScript, System Design |
+| 🔒 **Exploring** | Cyber Security & System Design |
+| 🌱 **Learning** | Python, TypeScript, Cloud & DevOps |
 | 🤖 **Interested in** | AI/ML, Automation, Open Source |
 | 🌐 **Portfolio** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
 | 📫 **Contact** | Available on [LinkedIn](https://linkedin.com/in/SudhirDevOps1) |
@@ -198,6 +213,15 @@ My goal: become a **full-stack developer** who ships real-world products.
 <a href="https://github.com/SudhirDevOps1">
   <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SudhirDevOps1&theme=tokyonight" alt="Top Languages"/>
 </a>
+<a href="https://github.com/SudhirDevOps1">
+  <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SudhirDevOps1&theme=tokyonight" alt="Most Committed Languages"/>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/SudhirDevOps1">
+  <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SudhirDevOps1&theme=tokyonight&utcOffset=5.5" alt="Productive Time"/>
+</a>
 
 <br/><br/>
 
@@ -205,6 +229,28 @@ My goal: become a **full-stack developer** who ships real-world products.
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=SudhirDevOps1&theme=tokyonight" width="96%" alt="Profile Summary"/>
 </a>
 
+</div>
+
+<br/>
+
+<!-- FULL CONTRIBUTION HEATMAP -->
+## 🗓️ Full Contribution Heatmap
+
+<div align="center">
+  <a href="https://github.com/SudhirDevOps1">
+    <img src="https://ghchart.rshah.org/36BCF7/SudhirDevOps1" width="96%" alt="Yearly Contribution Heatmap"/>
+  </a>
+</div>
+
+<br/>
+
+<!-- 3D CONTRIBUTION CALENDAR -->
+## 🧊 3D Contribution Calendar
+
+<div align="center">
+  <a href="https://github.com/SudhirDevOps1">
+    <img src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/main/profile-3d-contrib/profile-night-rainbow.svg" width="96%" alt="3D Contribution Calendar"/>
+  </a>
 </div>
 
 <br/>
@@ -238,6 +284,17 @@ My goal: become a **full-stack developer** who ships real-world products.
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"/>
     <img alt="Contribution Snake" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"/>
   </picture>
+</div>
+
+<br/>
+
+<!-- ANIMATED STREAK PET -->
+## 🦊 Animated Streak Buddy
+
+<div align="center">
+  <a href="https://github.com/SudhirDevOps1">
+    <img src="https://coolreadme.xyz/api/fox-card?user=SudhirDevOps1" width="620" alt="Animated Streak Card"/>
+  </a>
 </div>
 
 <br/>
@@ -282,7 +339,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 ```text
 🔭  GitHub Profile Studio   → Full-stack React + TS app with live API data
 🌱  Python Automation       → Scripts for web scraping & task automation
-🔐  Ethical Hacking         → Learning network security & CTF challenges
+☁️  Cloud & DevOps          → Docker, CI/CD and deployment pipelines
 📚  DSA Practice            → Arrays, Trees, Graphs in Python & JS
 🎨  UI/UX Projects          → Building modern, animated web interfaces
 ```
@@ -298,6 +355,15 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
+<!-- DEV JOKE -->
+## 😄 Random Dev Joke
+
+<div align="center">
+  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight" width="600" alt="Random Dev Joke"/>
+</div>
+
+<br/>
+
 <!-- FOOTER -->
 <div align="center">
 
@@ -308,7 +374,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 <br/><br/>
 
 <a href="https://github.com/SudhirDevOps1">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=150&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=24&fontColor=ffffff&animation=fadeIn&fontAlignY=72" width="100%" alt="Footer Wave"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=150&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=24&fontColor=ffffff&animation=twinkling&fontAlignY=72" width="100%" alt="Footer Wave"/>
 </a>
 
 <sub>📅 README.md &bull; All data <strong>LIVE</strong> from GitHub REST API v3 &bull; Built with 💙 by <strong>Sudhir Singh</strong> &bull; <em>October 2026</em></sub>

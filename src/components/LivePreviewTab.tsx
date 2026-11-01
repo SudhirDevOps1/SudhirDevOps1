@@ -165,7 +165,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
                 <Code className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[#8b949e] text-xs block">Learning Stack</span>
-                  <strong className="text-white">Python, JS, TS, Ethical Hacking</strong>
+                  <strong className="text-white">Python, JS, TS, Cloud & DevOps</strong>
                 </div>
               </TiltCard>
               <TiltCard className="flex items-start gap-3 p-3.5 rounded-xl glass border border-white/5 shadow-3d" intensity={8} glowColor="#a855f7">
