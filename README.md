@@ -2,23 +2,23 @@
 ================================================================================
   README.md — SudhirDevOps1 GitHub Profile
   Author      : Sudhir Singh
-  Data Source : GitHub REST API v3 (PUBLIC) — 100% REAL
-  Verified on : October 2026
+  Data Source : GitHub REST API v3 + Search API (PUBLIC) — 100% REAL
+  Verified on : November 2026
   Live Studio : https://sudhirdevops1.github.io
   Built with  : React 19 + TypeScript + Tailwind CSS 4 + Vite 7
   NOTE: All stats are REAL-TIME — zero fake data.
 ================================================================================
 -->
 
-<!-- ANIMATED HEADER BANNER -->
+<!-- ═══════════════════════ ANIMATED HERO BANNER ═══════════════════════ -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=280&section=header&text=Sudhir%20Singh&fontSize=68&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Bihar%2C%20India&descSize=20&descAlignY=58&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=290&section=header&text=Sudhir%20Singh&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=37&desc=BCA%20Student%20%E2%80%A2%20Full-Stack%20Developer%20%E2%80%A2%20Automation%20Builder&descSize=20&descAlignY=57&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
 </a>
 
-<!-- TYPING ANIMATION -->
+<!-- ═══════════════════════ TYPING ANIMATION ═══════════════════════ -->
 <div align="center">
   <a href="https://github.com/SudhirDevOps1">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2400&pause=700&color=36BCF7&center=true&vCenter=true&width=940&height=75&lines=Hi+there+%F0%9F%91%8B+I'm+Sudhir+Singh!;%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%E2%9A%9B%EF%B8%8F+React+19+%2B+TypeScript+%2B+Tailwind+4;%F0%9F%90%8D+Python+Automation+%26+Scripting;%F0%9F%9A%80+Building+with+Real+GitHub+API+Data!" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2400&pause=700&color=36BCF7&center=true&vCenter=true&width=940&height=75&lines=Hi+there+%F0%9F%91%8B+I'm+Sudhir+Singh!;%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%E2%9A%9B%EF%B8%8F+React+19+%2B+TypeScript+%2B+Tailwind+4;%F0%9F%90%8D+Python+Automation+%26+Scripting;%E2%9A%99%EF%B8%8F+Docker+%E2%80%A2+CI%2FCD+%E2%80%A2+Cloud;%F0%9F%9A%80+Building+with+Real+GitHub+API+Data!" alt="Typing SVG"/>
   </a>
 
   <br/><br/>
@@ -27,18 +27,24 @@
   &nbsp;
   <img src="https://img.shields.io/badge/Focus-Full--Stack%20Dev-36BCF7?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Focus"/>
   &nbsp;
+  <img src="https://img.shields.io/badge/Based%20In-Bihar%2C%20India-FF6B6B?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location"/>
+  &nbsp;
   <img src="https://komarev.com/ghpvc/?username=SudhirDevOps1&label=Profile+Views&color=36BCF7&style=for-the-badge" alt="Profile views"/>
 
   <br/><br/>
 
-  <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=Commits%20This%20Year" alt="Commit activity"/>
+  <img src="https://img.shields.io/badge/Commits-2%2C897%2B-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
-  <img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=a855f7&label=Last%20Commit" alt="Last commit"/>
+  <img src="https://img.shields.io/badge/Pull%20Requests-52-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=This%20Year" alt="Commit activity"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=FFDD00&label=Last%20Push" alt="Last commit"/>
 </div>
 
 <br/>
 
-<!-- ABOUT ME + AVATAR -->
+<!-- ═══════════════════════ ABOUT ME + AVATAR ═══════════════════════ -->
 <table width="100%">
 <tr>
 <td width="58%" valign="top">
@@ -87,7 +93,38 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- CONNECT -->
+<!-- ═══════════════════════ WHAT I BRING ═══════════════════════ -->
+## ⚡ What I Bring To The Table
+
+<table width="100%">
+<tr>
+<td width="33%" valign="top">
+
+### 🧱 Build
+Complete, shipped applications — not tutorials.
+React + TypeScript frontends, Python backends, clean state management and real API integrations.
+
+</td>
+<td width="33%" valign="top">
+
+### ⚙️ Automate
+Python & Bash scripts, GitHub Actions, scheduled workflows.
+If a task repeats three times, I write code so it repeats zero times.
+
+</td>
+<td width="33%" valign="top">
+
+### 🎨 Design
+Interfaces with intent — dark themes, accessible contrast, tight spacing, purposeful motion.
+Built with Tailwind CSS 4 and a design-token mindset.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- ═══════════════════════ CONNECT ═══════════════════════ -->
 <div align="center">
 
 ## 🌐 Connect With Me
@@ -112,12 +149,12 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- LIVE STATS TABLE -->
+<!-- ═══════════════════════ LIVE STATS TABLE ═══════════════════════ -->
 <div align="center">
 
 ## 📊 Verified GitHub Statistics
 
-> 🔴 **All data is fetched LIVE from GitHub REST API v3 — zero fake numbers.**
+> 🔴 **All data is fetched LIVE from the GitHub REST API v3 + Search API — zero fake numbers.**
 
 | Metric | Value |
 |:--|:--|
@@ -125,11 +162,16 @@ My goal: become a **full-stack developer** who ships real-world products.
 | 🆔 **Username** | [`@SudhirDevOps1`](https://github.com/SudhirDevOps1) |
 | 📍 **Location** | Bihar, India |
 | 🌐 **Website** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
-| 📦 **Public Repositories** | **82** *(Live from API)* |
-| 👥 **Followers** | **10** *(Live from API)* |
-| ➡️ **Following** | **12** *(Live from API)* |
+| 📦 **Public Repositories** | **76** *(Live from API)* |
+| ⭐ **Total Stars Earned** | **44** *(Live from API)* |
+| 🍴 **Total Forks** | **7** *(Live from API)* |
+| 💻 **Commits Authored** | **2,897** *(Search API)* |
+| 🔀 **Pull Requests** | **52** *(Search API)* |
+| 🐞 **Issues Opened** | **1** *(Search API)* |
+| 👥 **Followers** | **11** *(Live from API)* |
+| ➡️ **Following** | **19** *(Live from API)* |
 | 🗓️ **Joined GitHub** | 25 September 2025 |
-| ✅ **Last Verified** | October 2026 |
+| ✅ **Last Verified** | November 2026 |
 | 🏗️ **Studio Stack** | React 19 · TypeScript 5 · Tailwind CSS 4 · Vite 7 |
 
 <br/>
@@ -138,13 +180,13 @@ My goal: become a **full-stack developer** who ships real-world products.
 &nbsp;
 <img src="https://img.shields.io/github/stars/SudhirDevOps1?label=Total%20Stars&style=for-the-badge&color=FFDD00&logo=github" alt="Stars"/>
 &nbsp;
-<img src="https://img.shields.io/badge/Public%20Repos-82-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="Repos"/>
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FSudhirDevOps1&query=%24.public_repos&label=Repos&color=36BCF7&style=for-the-badge&logo=github" alt="Repos"/>
 
 </div>
 
 <br/>
 
-<!-- TECH STACK -->
+<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
 ## 🛠️ Tech Stack & Tools
 
 <div align="center">
@@ -168,6 +210,13 @@ My goal: become a **full-stack developer** who ships real-world products.
   <img src="https://skillicons.dev/icons?i=git,github,vscode,vite,linux,cloudflare,vercel&perline=7" alt="Tools icons"/>
 </a>
 
+<br/>
+
+### ☁️ DevOps & Extras
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=docker,figma,npm,firebase,mysql,markdown,netlify,postman&perline=8" alt="DevOps icons"/>
+</a>
+
 <br/><br/>
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -182,12 +231,19 @@ My goal: become a **full-stack developer** who ships real-world products.
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
 <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"/>
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
 
 </div>
 
 <br/>
 
-<!-- FEATURED PROJECTS -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
+
+<br/>
+
+<!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
 ## 🚀 Featured Projects
 
 <div align="center">
@@ -205,14 +261,18 @@ My goal: become a **full-stack developer** who ships real-world products.
 <br/>
 
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
-  <img src="https://img.shields.io/badge/Browse%20All%20Repositories-82%20Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+  <img src="https://img.shields.io/badge/Browse%20All%20Repositories-76%20Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
 </a>
 
 </div>
 
 <br/>
 
-<!-- GITHUB STATS CARDS -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
+
+<br/>
+
+<!-- ═══════════════════════ GITHUB STATS CARDS ═══════════════════════ -->
 ## 📈 GitHub Statistics
 
 <div align="center">
@@ -249,7 +309,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- FULL CONTRIBUTION HEATMAP -->
+<!-- ═══════════════════════ FULL HEATMAP ═══════════════════════ -->
 ## 🗓️ Full Contribution Heatmap
 
 <div align="center">
@@ -260,7 +320,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- 3D CONTRIBUTION CALENDAR -->
+<!-- ═══════════════════════ 3D CALENDAR ═══════════════════════ -->
 ## 🧊 3D Contribution Calendar
 
 <div align="center">
@@ -271,7 +331,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- TROPHIES -->
+<!-- ═══════════════════════ TROPHIES ═══════════════════════ -->
 ## 🏆 GitHub Trophies
 
 <div align="center">
@@ -280,7 +340,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- ACTIVITY GRAPH -->
+<!-- ═══════════════════════ ACTIVITY GRAPH ═══════════════════════ -->
 ## 📅 Contribution Activity Graph
 
 <div align="center">
@@ -291,7 +351,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- CONTRIBUTION SNAKE -->
+<!-- ═══════════════════════ SNAKE ═══════════════════════ -->
 ## 🐍 Contribution Snake
 
 <div align="center">
@@ -304,7 +364,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- ANIMATED STREAK PET -->
+<!-- ═══════════════════════ STREAK BUDDY ═══════════════════════ -->
 ## 🦊 Animated Streak Buddy
 
 <div align="center">
@@ -315,7 +375,11 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- FEATURED STUDIO -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
+
+<br/>
+
+<!-- ═══════════════════════ FEATURED STUDIO ═══════════════════════ -->
 ## 🚀 Featured — Professional GitHub Studio
 
 <div align="center">
@@ -349,7 +413,25 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- CURRENTLY WORKING ON -->
+<!-- ═══════════════════════ ROADMAP ═══════════════════════ -->
+## 🎯 2026 Roadmap
+
+<div align="center">
+
+| 🎯 Goal | 📌 Why it matters | 🚦 Status |
+|:--|:--|:--|
+| **Full-stack mastery** — React 19 + TypeScript | Ship production apps end-to-end | 🟢 In progress |
+| **Cloud & DevOps** — Docker, CI/CD, Linux | Deploy and operate what I build | 🟡 Learning |
+| **DSA & problem solving** — arrays → graphs | Think in complexity, not guesswork | 🟡 Ongoing |
+| **Open source contributions** | Learn from real codebases and reviews | 🟢 Started |
+| **AI / ML foundations** | Build tools that reason, not just render | ⚪ Exploring |
+| **System design** | Design for scale before it breaks | ⚪ Exploring |
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════ CURRENTLY WORKING ON ═══════════════════════ -->
 ## 📌 What I'm Currently Working On
 
 ```text
@@ -362,7 +444,33 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- DEV QUOTE -->
+<!-- ═══════════════════════ MILESTONES ═══════════════════════ -->
+## 🏅 Milestones & Achievements
+
+<div align="center">
+
+| 🏆 Milestone | 📈 Detail |
+|:--|:--|
+| 🗓️ **Joined GitHub** | 25 September 2025 |
+| 📦 **Public repositories** | **76** shipped and open |
+| 💻 **Commits authored** | **2,897+** across all repositories |
+| 🔀 **Pull requests** | **52** opened and merged through review |
+| ⭐ **Stars earned** | **44** from the developer community |
+| 🍴 **Forks received** | **7** — others building on my work |
+| 🏗️ **Profile Studio** | Full-stack React 19 + TS app, designed, built, deployed |
+| 🐍 **Automation** | Contribution snake + 3D calendar generated daily by GitHub Actions |
+| 🧊 **3D contribution calendar** | Self-hosted, animated, regenerated every night |
+| 📚 **80+ days** | Studying BCA while shipping code daily |
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
+
+<br/>
+
+<!-- ═══════════════════════ DEV QUOTE ═══════════════════════ -->
 ## 💡 Developer Quote
 
 <div align="center">
@@ -371,7 +479,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- DEV JOKE -->
+<!-- ═══════════════════════ DEV JOKE ═══════════════════════ -->
 ## 😄 Random Dev Joke
 
 <div align="center">
@@ -380,7 +488,37 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <br/>
 
-<!-- FOOTER -->
+<!-- ═══════════════════════ CTA ═══════════════════════ -->
+## 🤝 Let's Build Together
+
+<div align="center">
+
+> 💡 Got an idea, a collaboration, an internship or a freelance project?
+> **I'm open to work — let's talk.**
+
+<br/>
+
+<a href="https://linkedin.com/in/SudhirDevOps1">
+  <img src="https://img.shields.io/badge/Message%20Me-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="https://t.me/SudhirDevOps1">
+  <img src="https://img.shields.io/badge/Chat-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
+</a>
+&nbsp;
+<a href="https://github.com/SudhirDevOps1?tab=repositories">
+  <img src="https://img.shields.io/badge/Explore-Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
+</a>
+&nbsp;
+<a href="https://sudhirdevops1.github.io">
+  <img src="https://img.shields.io/badge/Visit-Portfolio-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
+</a>
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <div align="center">
 
 <a href="https://github.com/SudhirDevOps1">
@@ -393,6 +531,6 @@ My goal: become a **full-stack developer** who ships real-world products.
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=150&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=24&fontColor=ffffff&animation=twinkling&fontAlignY=72" width="100%" alt="Footer Wave"/>
 </a>
 
-<sub>📅 README.md &bull; All data <strong>LIVE</strong> from GitHub REST API v3 &bull; Built with 💙 by <strong>Sudhir Singh</strong> &bull; <em>October 2026</em></sub>
+<sub>📅 README.md &bull; All data <strong>LIVE</strong> from GitHub REST API v3 &bull; Built with 💙 by <strong>Sudhir Singh</strong> &bull; <em>November 2026</em></sub>
 
 </div>
