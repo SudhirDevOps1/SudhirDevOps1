@@ -38,15 +38,6 @@
 
 <br/>
 
-<!-- NEOFETCH TERMINAL CARD -->
-<div align="center">
-  <a href="https://github.com/SudhirDevOps1">
-    <img src="https://neofetch-profile.vercel.app/api?username=SudhirDevOps1&theme=github-dark" width="90%" alt="Neofetch Terminal Card"/>
-  </a>
-</div>
-
-<br/>
-
 <!-- ABOUT ME + AVATAR -->
 <table width="100%">
 <tr>
@@ -191,6 +182,31 @@ My goal: become a **full-stack developer** who ships real-world products.
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
 <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"/>
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+
+</div>
+
+<br/>
+
+<!-- FEATURED PROJECTS -->
+## 🚀 Featured Projects
+
+<div align="center">
+
+> 🧠 Real, working applications I designed, built and shipped — live on GitHub.
+
+| 🚀 Project | What it does | Stack & Signals |
+|:--|:--|:--|
+| **[code-to-image-generator](https://github.com/SudhirDevOps1/code-to-image-generator)** | 🎨 Turns code snippets into beautiful, shareable images with syntax highlighting — PWA ready | <img src="https://img.shields.io/github/languages/top/SudhirDevOps1/code-to-image-generator?style=flat-square&color=36BCF7" alt="lang"/> <img src="https://img.shields.io/github/stars/SudhirDevOps1/code-to-image-generator?style=flat-square&color=FFDD00&logo=github&label=stars" alt="stars"/> |
+| **[Brainwave-Audio-Tone-Generator](https://github.com/SudhirDevOps1/Brainwave-Audio-Tone-Generator)** | 🎧 Binaural beats, isochronic tones & pure sine waves with waveform preview and batch generation | <img src="https://img.shields.io/github/languages/top/SudhirDevOps1/Brainwave-Audio-Tone-Generator?style=flat-square&color=36BCF7" alt="lang"/> <img src="https://img.shields.io/github/stars/SudhirDevOps1/Brainwave-Audio-Tone-Generator?style=flat-square&color=FFDD00&logo=github&label=stars" alt="stars"/> |
+| **[The-Ultimate-Master-Study-Tracker](https://github.com/SudhirDevOps1/The-Ultimate-Master-Study-Tracker)** | ⏱️ FlowTrack Pro — local-first productivity ecosystem with Pomodoro, IDE telemetry & zero-cloud privacy | <img src="https://img.shields.io/github/languages/top/SudhirDevOps1/The-Ultimate-Master-Study-Tracker?style=flat-square&color=36BCF7" alt="lang"/> <img src="https://img.shields.io/github/stars/SudhirDevOps1/The-Ultimate-Master-Study-Tracker?style=flat-square&color=FFDD00&logo=github&label=stars" alt="stars"/> |
+| **[SafeVault](https://github.com/SudhirDevOps1/SafeVault)** | 🔐 Offline-first, zero-knowledge credential manager with a desktop app and interactive CLI | <img src="https://img.shields.io/github/languages/top/SudhirDevOps1/SafeVault?style=flat-square&color=36BCF7" alt="lang"/> <img src="https://img.shields.io/github/stars/SudhirDevOps1/SafeVault?style=flat-square&color=FFDD00&logo=github&label=stars" alt="stars"/> |
+| **[BlindShare](https://github.com/SudhirDevOps1/BlindShare)** | 🛡️ End-to-end encrypted document sharing & deck analytics — server is a blind courier (AES-GCM-256) | <img src="https://img.shields.io/github/languages/top/SudhirDevOps1/BlindShare?style=flat-square&color=36BCF7" alt="lang"/> <img src="https://img.shields.io/github/stars/SudhirDevOps1/BlindShare?style=flat-square&color=FFDD00&logo=github&label=stars" alt="stars"/> |
+
+<br/>
+
+<a href="https://github.com/SudhirDevOps1?tab=repositories">
+  <img src="https://img.shields.io/badge/Browse%20All%20Repositories-82%20Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+</a>
 
 </div>
 
