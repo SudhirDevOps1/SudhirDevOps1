@@ -4,13 +4,6 @@ on:
   schedule:
     - cron: "30 2 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - README.md
-      - scripts/update-stats.mjs
-      - .github/workflows/update-profile-stats.yml
 
 permissions:
   contents: write

@@ -4,12 +4,13 @@ on:
   schedule:
     - cron: "0 18 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-3d
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -17,7 +18,9 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Generate 3D contribution SVGs
         uses: yoshi389111/github-profile-3d-contrib@latest
@@ -29,10 +32,17 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A .
+          git add profile-3d-contrib
           if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: update 3D contribution calendar"
-            git push
+            echo "No changes to commit — 3D calendar already current."
+            exit 0
           fi
+          git commit -m "chore(calendar): refresh 3D contribution calendar"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push; then
+              echo "pushed on attempt $attempt"
+              break
+            fi
+            echo "push attempt $attempt failed, retrying in 5s..."
+            sleep 5
+          done
