@@ -49,10 +49,13 @@ export const generateMarkdown = (
 
   // Top repos by stars (featured)
   const featured = repos.slice(0, 6);
+  // shields.io needs - _ and space escaped in badge labels
+  const badge = (v: string) =>
+    v.replace(/-/g, '--').replace(/_/g, '__').replace(/ /g, '_');
   const pinnedCards = featured
     .map(
       (r) => `<a href="${r.html_url}">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=SudhirDevOps1&repo=${r.name}&theme=${theme}&hide_border=true" alt="${r.name}"/>
+  <img src="https://img.shields.io/badge/${badge(r.name)}-${badge(r.language || 'code')}-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="${r.name}"/>
 </a>`
     )
     .join("\n");
@@ -226,12 +229,12 @@ ${projectRows}
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=${theme}&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats"/>
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SudhirDevOps1&theme=${theme}" alt="GitHub stats"/>
 <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=${theme}&hide_border=true" alt="GitHub streak"/>
 
 <br/><br/>
 
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=${theme}&hide_border=true&langs_count=8" alt="Top languages"/>
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SudhirDevOps1&theme=${theme}" alt="Top languages"/>
 
 <br/><br/>
 
@@ -244,7 +247,7 @@ ${projectRows}
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7" alt="Trophies"/>
+<img src="https://github-profile-trophy-sandy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7" alt="Trophies"/>
 
 </div>
 

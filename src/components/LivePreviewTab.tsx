@@ -48,6 +48,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
 }) => {
   const [copiedClone, setCopiedClone] = useState<string | null>(null);
   const [activeSubTab, setActiveSubTab] = useState<'overview' | 'recent'>('recent'); // DEFAULT: Recently Updated
+  const [snakeReady, setSnakeReady] = useState(true);
 
   const displayName = user?.name ?? 'Sudhir Singh';
   const repoCount = user?.public_repos ?? repos.length;
@@ -67,7 +68,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center text-center gap-4 bg-[#0d1117] animate-fade-in">
         <div className="relative">
-          <div className="absolute inset-0 bg-cyan-500/20 rounded-full blur-xl animate-glow-pulse"></div>
+          <div className="absolute inset-0 bg-cyan-500/20 rounded-full blur-xl"></div>
           <Loader2 className="relative w-12 h-12 text-cyan-400 animate-spin" />
         </div>
         <p className="text-sm text-slate-400 font-mono animate-fade-in-up">Fetching live data from GitHub API…</p>
@@ -99,7 +100,6 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           <div className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-emerald-500/30 shadow-3d">
             <div className="relative">
               <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-              <div className="absolute inset-0 w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
             </div>
             <span className="text-xs font-mono text-emerald-300">LIVE</span>
             <span className="text-xs text-slate-400">•</span>
@@ -196,29 +196,19 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           {/* Right: Live Stats */}
           <div className="lg:col-span-4 glass border border-white/5 rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center justify-between space-y-6 shadow-3d animate-slide-in-right">
             <div className="relative">
-              {/* Aurora Multi-color Glow behind avatar */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-2xl animate-aurora-glow"></div>
+              {/* Multi-color glow behind avatar */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-2xl"></div>
               {/* Orbital ring 1 */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-44 h-44 rounded-full border border-cyan-400/20 border-dashed animate-spin-slow"></div>
+                <div className="w-44 h-44 rounded-full border border-cyan-400/20 border-dashed"></div>
               </div>
               {/* Orbital ring 2 */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-52 h-52 rounded-full border border-violet-400/15 border-dashed animate-spin-reverse"></div>
+                <div className="w-52 h-52 rounded-full border border-violet-400/15 border-dashed"></div>
               </div>
-              {/* Orbiting particles */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-3 h-3 rounded-full bg-cyan-400 absolute animate-orbit shadow-lg shadow-cyan-400/50"></div>
-                <div className="w-2 h-2 rounded-full bg-violet-400 absolute animate-orbit-2 shadow-lg shadow-violet-400/50"></div>
-                <div className="w-2 h-2 rounded-full bg-amber-400 absolute" style={{ animation: 'orbit2 10s linear infinite, particleFloat 2s ease-in-out infinite' }}></div>
-              </div>
-              {/* Scattered particles */}
-              <div className="w-1.5 h-1.5 rounded-full bg-cyan-300 absolute top-2 right-4 animate-particle shadow-sm" style={{ animationDelay: '0s' }}></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-violet-300 absolute bottom-4 left-2 animate-particle shadow-sm" style={{ animationDelay: '1.2s' }}></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-pink-300 absolute top-6 left-0 animate-particle shadow-sm" style={{ animationDelay: '2.4s' }}></div>
-              {/* Main Avatar — interactive 3D */}
-              <div className="relative animate-float">
-                <div className="absolute -inset-2 bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 rounded-full blur-lg opacity-70 animate-aurora-glow"></div>
+              {/* Main Avatar */}
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 rounded-full blur-lg opacity-70"></div>
                 <TiltCard className="rounded-full" intensity={18} scale={1.06}>
                   <img 
                     src={user?.avatar_url ?? PROFILE_INFO.avatar} 
@@ -227,14 +217,14 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
                   />
                 </TiltCard>
                 {/* Verified badge */}
-                <span className="absolute bottom-1 right-2 bg-gradient-to-br from-emerald-400 to-cyan-500 border-2 border-[#161b22] text-white p-1.5 rounded-full shadow-lg shadow-emerald-500/30 z-10 animate-glow-pulse" title="Live Verified">
+                <span className="absolute bottom-1 right-2 bg-gradient-to-br from-emerald-400 to-cyan-500 border-2 border-[#161b22] text-white p-1.5 rounded-full shadow-lg shadow-emerald-500/30 z-10" title="Live Verified">
                   <CheckCircle2 className="w-4 h-4" />
                 </span>
               </div>
             </div>
 
             <div className="space-y-1">
-              <h3 className="text-xl font-bold animate-rainbow-text">{displayName}</h3>
+              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-violet-300 to-pink-300">{displayName}</h3>
               <p className="text-sm font-mono text-cyan-400">@{PROFILE_INFO.username}</p>
               <p className="text-[10px] text-slate-400 font-mono">🕐 Dynamic live check: {VERIFIED_DATE}</p>
             </div>
@@ -417,7 +407,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           {/* Stats Cards */}
           <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
             <TiltCard className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-3d" intensity={6}>
-              <img src={`https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=${theme}&hide_border=true&include_all_commits=true&count_private=true`} alt="Stats" className="w-full max-w-[480px] object-contain py-2" />
+              <img src={`https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SudhirDevOps1&theme=${theme}`} alt="Stats" className="w-full max-w-[480px] object-contain py-2" />
             </TiltCard>
             <TiltCard className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-3d" intensity={6}>
               <img src={`https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=${theme}&hide_border=true`} alt="Streak" className="w-full max-w-[480px] object-contain py-2" />
@@ -433,12 +423,12 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           </div>
           
           <div className="bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center overflow-x-auto shadow-inner">
-            <img src={`https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7`} alt="Trophies" className="max-w-full h-auto py-2" />
+            <img src={`https://github-profile-trophy-sandy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7`} alt="Trophies" className="max-w-full h-auto py-2" />
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-5 bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center shadow-inner">
-              <img src={`https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=${theme}&hide_border=true&langs_count=8`} alt="Languages" className="max-w-full h-auto py-1" />
+              <img src={`https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SudhirDevOps1&theme=${theme}`} alt="Languages" className="max-w-full h-auto py-1" />
             </div>
             <div className="lg:col-span-7 bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center shadow-inner">
               <img src={`https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SudhirDevOps1&theme=${theme}&utcOffset=5.5`} alt="Productive time" className="max-w-full h-auto py-1" />
@@ -446,15 +436,22 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           </div>
           
           <div className="bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center overflow-x-auto shadow-inner">
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Activity" className="w-full py-1" />
+            <img src="https://github-readme-activity-graph-xi.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Activity" className="w-full py-1" />
           </div>
           
-          <div className="bg-slate-950/30 backdrop-blur p-6 rounded-2xl border border-white/5 flex flex-col items-center justify-center space-y-4 shadow-inner">
-            <span className="text-xs font-mono font-semibold text-cyan-400">Contribution Graph Snake</span>
-            <picture className="w-full flex justify-center max-w-[850px] overflow-x-auto py-2">
-              <img alt="Snake" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg" className="max-w-full h-auto" />
-            </picture>
-          </div>
+          {snakeReady && (
+            <div className="bg-slate-950/30 backdrop-blur p-6 rounded-2xl border border-white/5 flex flex-col items-center justify-center space-y-4 shadow-inner">
+              <span className="text-xs font-mono font-semibold text-cyan-400">Contribution Graph Snake</span>
+              <picture className="w-full flex justify-center max-w-[850px] overflow-x-auto py-2">
+                <img
+                  alt="Snake"
+                  src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"
+                  className="max-w-full h-auto"
+                  onError={() => setSnakeReady(false)}
+                />
+              </picture>
+            </div>
+          )}
         </div>
 
         {/* Footer CTA */}

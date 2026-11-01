@@ -73,7 +73,7 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
               <span className="p-2.5 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
                 <BarChart3 className="w-6 h-6" />
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-shimmer">Live GitHub Analytics</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Live GitHub Analytics</h2>
             </div>
             <p className="text-sm text-slate-400 max-w-2xl">
               Computed live from real API data{user?.updated_at ? ` • profile updated ${formatDate(user.updated_at)}` : ''}.
@@ -217,7 +217,7 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
           <span className="text-xs text-slate-400 font-mono flex items-center gap-1"><Award className="w-3.5 h-3.5" />Auto-rendered</span>
         </div>
         <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 flex justify-center overflow-x-auto shadow-inner">
-          <img src="https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies" className="max-w-full h-auto py-2" />
+          <img src="https://github-profile-trophy-sandy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies" className="max-w-full h-auto py-2" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 flex justify-center shadow-inner">

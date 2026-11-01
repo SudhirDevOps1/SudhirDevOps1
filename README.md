@@ -187,7 +187,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 <div align="center">
 
 <a href="https://github.com/SudhirDevOps1">
-  <img height="175" src="https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github" alt="GitHub Stats"/>
+  <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SudhirDevOps1&theme=tokyonight" alt="GitHub Stats"/>
 </a>
 <a href="https://github.com/SudhirDevOps1">
   <img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
@@ -196,7 +196,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 <br/><br/>
 
 <a href="https://github.com/SudhirDevOps1">
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=tokyonight&hide_border=true&langs_count=10" alt="Top Languages"/>
+  <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SudhirDevOps1&theme=tokyonight" alt="Top Languages"/>
 </a>
 
 <br/><br/>
@@ -213,7 +213,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy-sandy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies"/>
 </div>
 
 <br/>
@@ -223,7 +223,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 
 <div align="center">
   <a href="https://github.com/SudhirDevOps1">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&bg_color=0D1117&color=36BCF7&line=36BCF7&point=FFFFFF&area=true&hide_border=true" width="96%" alt="Activity Graph"/>
+    <img src="https://github-readme-activity-graph-xi.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&bg_color=0D1117&color=36BCF7&line=36BCF7&point=FFFFFF&area=true&hide_border=true" width="96%" alt="Activity Graph"/>
   </a>
 </div>
 

@@ -62,7 +62,7 @@ export default function App() {
       {/* Toast Notification */}
       {toastMsg && (
         <div className="fixed top-24 right-4 sm:right-6 z-[60] bg-gradient-to-r from-emerald-900 to-cyan-900 border border-emerald-500/50 text-emerald-100 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 max-w-[90vw] animate-slide-in-right">
-          <Sparkles className="w-5 h-5 text-amber-300 shrink-0 animate-spin-slow" />
+          <Sparkles className="w-5 h-5 text-amber-300 shrink-0" />
           <span className="text-xs font-mono font-bold">{toastMsg}</span>
         </div>
       )}
@@ -124,17 +124,17 @@ export default function App() {
           <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl pointer-events-none"></div>
           
           <div className="flex items-center gap-4 text-center md:text-left relative z-10">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-400 via-violet-500 to-pink-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/25 animate-glow-pulse shrink-0">
-              <Code2 className="w-6 h-6 animate-spin-slow" />
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-400 via-violet-500 to-pink-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/25 shrink-0">
+              <Code2 className="w-6 h-6" />
             </div>
             <div>
               <p className="font-extrabold text-white text-base tracking-tight flex items-center gap-2 justify-center md:justify-start">
-                <span className="animate-rainbow-text">Sudhir Singh Studio v2.5</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-violet-300 to-pink-300">Sudhir Singh Studio v2.5</span>
                 <span className="bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">LIVE API</span>
               </p>
               <p className="text-xs text-slate-400 mt-0.5">BCA • Aspiring Full-Stack Architect • Bihar, India</p>
               <p className="text-[10px] font-mono text-cyan-400/80 mt-1 flex items-center gap-1.5 justify-center md:justify-start">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
                 Verified: {VERIFIED_DATE} • Zero Cache • 100% Authentic API Deploys
               </p>
             </div>
