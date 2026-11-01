@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { 
   Copy, 
   Download, 
@@ -85,6 +85,21 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
       return '<p>Unable to render preview.</p>';
     }
   }, [customMarkdown]);
+
+  // Hide any image that failed to load instead of showing a broken-image glyph.
+  const previewRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const root = previewRef.current;
+    if (!root) return;
+    const hideBroken = () => {
+      root.querySelectorAll('img').forEach((img) => {
+        if (img.complete && img.naturalWidth === 0) img.style.display = 'none';
+      });
+    };
+    hideBroken();
+    const timer = window.setTimeout(hideBroken, 3000);
+    return () => window.clearTimeout(timer);
+  }, [renderedHtml]);
 
   const handleResetSync = () => {
     setCustomMarkdown(markdown);
@@ -215,6 +230,7 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
             ) : (
               <div className="w-full h-full overflow-y-auto bg-[#0d1117] border-y border-[#30363d]">
                 <div
+                  ref={previewRef}
                   className="md-render p-8"
                   dangerouslySetInnerHTML={{ __html: renderedHtml }}
                 />
