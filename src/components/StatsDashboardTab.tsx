@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -15,6 +15,7 @@ import {
 import { GitHubUser, GitHubRepo, getTotalStars, getTotalForks, getLanguageStats, formatDate, getLiveUrl } from '../data/github';
 import { AnimatedCounter } from './AnimatedCounter';
 import { TiltCard } from './TiltCard';
+import { AnimatedImage } from './ui/AnimatedImage';
 
 interface StatsDashboardTabProps {
   user: GitHubUser | null;
@@ -217,17 +218,168 @@ export const StatsDashboardTab: React.FC<StatsDashboardTabProps> = ({ user, repo
           <span className="text-xs text-slate-400 font-mono flex items-center gap-1"><Award className="w-3.5 h-3.5" />Auto-rendered</span>
         </div>
         <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 flex justify-center overflow-x-auto shadow-inner">
-          <img src="https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies" className="max-w-full h-auto py-2" />
+          <AnimatedImage
+            src="https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7"
+            alt="GitHub Trophies"
+            className="max-w-full h-auto py-2"
+            width={700}
+          />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 flex justify-center shadow-inner">
-            <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SudhirDevOps1&theme=tokyonight" alt="Repos per language" className="max-w-full h-auto" />
+            <AnimatedImage
+              src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SudhirDevOps1&theme=tokyonight"
+              alt="Repos per language"
+              className="max-w-full h-auto"
+              width={480}
+            />
           </div>
           <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 flex justify-center shadow-inner">
-            <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SudhirDevOps1&theme=tokyonight" alt="Most commit language" className="max-w-full h-auto" />
+            <AnimatedImage
+              src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SudhirDevOps1&theme=tokyonight"
+              alt="Most commit language"
+              className="max-w-full h-auto"
+              width={480}
+            />
           </div>
         </div>
       </TiltCard>
+
+      {/* Monthly Push Activity — computed from LIVE pushed_at data */}
+      <RepoActivityTimeline repos={repos} />
     </div>
   );
 };
+
+// ─────────────────────────────────────────────────────────────
+// Repo Activity Timeline — shows push activity by month (last 12)
+// ─────────────────────────────────────────────────────────────
+interface RepoActivityTimelineProps {
+  repos: import('../data/github').GitHubRepo[];
+}
+
+function RepoActivityTimeline({ repos }: RepoActivityTimelineProps) {
+  const [hoveredMonth, setHoveredMonth] = useState<string | null>(null);
+
+  const monthlyData = useMemo(() => {
+    const now = new Date();
+    const months: { label: string; key: string; count: number; repos: string[] }[] = [];
+
+    for (let i = 11; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+      const label = d.toLocaleDateString('en-GB', { month: 'short', year: '2-digit' });
+      months.push({ label, key, count: 0, repos: [] });
+    }
+
+    repos.forEach(r => {
+      const d = new Date(r.pushed_at);
+      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+      const slot = months.find(m => m.key === key);
+      if (slot) {
+        slot.count++;
+        slot.repos.push(r.name);
+      }
+    });
+
+    return months;
+  }, [repos]);
+
+  const maxCount = Math.max(...monthlyData.map(m => m.count), 1);
+
+  return (
+    <TiltCard className="glass border border-white/10 hover:border-emerald-400/50 rounded-3xl p-6 sm:p-8 space-y-6 shadow-3d" intensity={5} glowColor="rgba(52, 211, 153,">
+      <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div className="space-y-1">
+          <h3 className="font-bold text-lg text-white flex items-center gap-2">
+            <TrendingUp className="w-5 h-5 text-emerald-400" />
+            <span>Monthly Push Activity</span>
+          </h3>
+          <p className="text-xs text-slate-400">Computed from real <code className="text-emerald-300 font-mono">pushed_at</code> timestamps — last 12 months</p>
+        </div>
+        <span className="font-mono text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+          {repos.length} repos
+        </span>
+      </div>
+
+      {/* Bar Chart */}
+      <div className="flex items-end gap-1.5 h-36 overflow-x-auto pb-2">
+        {monthlyData.map((month) => {
+          const heightPct = (month.count / maxCount) * 100;
+          const isHovered = hoveredMonth === month.key;
+          const isEmpty = month.count === 0;
+          return (
+            <div
+              key={month.key}
+              className="flex flex-col items-center gap-1 flex-1 min-w-[36px] cursor-pointer group"
+              onMouseEnter={() => setHoveredMonth(month.key)}
+              onMouseLeave={() => setHoveredMonth(null)}
+            >
+              {/* Tooltip */}
+              {isHovered && month.count > 0 && (
+                <div className="absolute -mt-20 z-30 bg-slate-900 border border-emerald-500/30 rounded-xl px-3 py-2 text-xs text-white shadow-2xl shadow-emerald-500/20 whitespace-nowrap pointer-events-none">
+                  <p className="font-bold text-emerald-300 mb-1">{month.label} — {month.count} repos</p>
+                  {month.repos.slice(0, 3).map(r => (
+                    <p key={r} className="font-mono text-slate-400 text-[10px]">• {r}</p>
+                  ))}
+                  {month.repos.length > 3 && (
+                    <p className="text-slate-500 text-[10px]">+{month.repos.length - 3} more</p>
+                  )}
+                </div>
+              )}
+              {/* Bar */}
+              <div className="relative w-full flex-1 flex items-end">
+                <div
+                  className={`w-full rounded-t-md transition-all duration-500 ${
+                    isEmpty
+                      ? 'bg-slate-800/40'
+                      : isHovered
+                      ? 'bg-gradient-to-t from-emerald-600 to-cyan-400 shadow-lg shadow-emerald-500/30'
+                      : 'bg-gradient-to-t from-emerald-700/80 to-cyan-500/60 group-hover:from-emerald-600 group-hover:to-cyan-400'
+                  }`}
+                  style={{
+                    height: isEmpty ? '4px' : `${Math.max(heightPct, 8)}%`,
+                    minHeight: isEmpty ? '4px' : '8px',
+                  }}
+                />
+              </div>
+              {/* Label */}
+              <span className={`text-[9px] font-mono whitespace-nowrap transition-colors ${isHovered ? 'text-emerald-300' : 'text-slate-500'}`}>
+                {month.label}
+              </span>
+              {/* Count */}
+              {month.count > 0 && (
+                <span className="text-[9px] font-bold font-mono text-emerald-400">
+                  {month.count}
+                </span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Summary stats row */}
+      <div className="grid grid-cols-3 gap-4 pt-2 border-t border-slate-800/80">
+        <div className="text-center space-y-1">
+          <p className="text-xs text-slate-400">Most Active</p>
+          <p className="font-mono font-bold text-emerald-300 text-sm">
+            {monthlyData.reduce((a, b) => a.count > b.count ? a : b, monthlyData[0])?.label ?? '—'}
+          </p>
+        </div>
+        <div className="text-center space-y-1">
+          <p className="text-xs text-slate-400">Total Pushes</p>
+          <p className="font-mono font-bold text-cyan-300 text-sm">
+            {monthlyData.reduce((s, m) => s + m.count, 0)}
+          </p>
+        </div>
+        <div className="text-center space-y-1">
+          <p className="text-xs text-slate-400">Active Months</p>
+          <p className="font-mono font-bold text-violet-300 text-sm">
+            {monthlyData.filter(m => m.count > 0).length} / 12
+          </p>
+        </div>
+      </div>
+    </TiltCard>
+  );
+}
+
