@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Send, 
   Globe, 
@@ -40,6 +40,19 @@ export const Navbar: React.FC<NavbarProps> = ({
   loading,
   onRefresh
 }) => {
+  // Scroll progress bar
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      setScrollProgress(Math.min(progress, 100));
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleDownload = () => {
     confetti({ particleCount: 80, spread: 70, origin: { y: 0.1 } });
     onDownloadMd();
@@ -57,24 +70,32 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-50 bg-slate-950/70 backdrop-blur-2xl border-b border-white/5 text-slate-100 shadow-3d animate-fade-in-down">
+      {/* Scroll Progress Bar */}
+      <div
+        className="absolute top-0 left-0 h-[2px] z-[100] transition-all duration-100 rounded-r-full"
+        style={{
+          width: `${scrollProgress}%`,
+          background: 'linear-gradient(90deg, #06b6d4, #a855f7, #f59e0b, #10b981)',
+          boxShadow: '0 0 8px rgba(6, 182, 212, 0.6), 0 0 16px rgba(168, 85, 247, 0.3)',
+        }}
+      />
       {/* Top ribbon */}
       <div className="bg-gradient-to-r from-cyan-900/40 via-blue-900/40 to-slate-900/60 px-4 py-1.5 border-b border-slate-800/40 text-xs flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1.5 font-medium text-cyan-400">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            Live GitHub Studio v2.0
+            Live GitHub Studio v3.0
           </span>
           <span className="text-slate-400 hidden sm:inline">|</span>
           <span className="text-slate-300 hidden md:inline flex items-center gap-1.5">
             {loading ? (
               <><Loader2 className="w-3 h-3 animate-spin" /> Syncing with GitHub API…</>
             ) : user?.updated_at ? (
-              <><span className="text-emerald-400 animate-pulse">●</span> Live • Updated {VERIFIED_DATE} • Verified: {VERIFIED_DATE}</>
+              <><span className="text-emerald-400">●</span> Live • Updated {VERIFIED_DATE} • Verified: {VERIFIED_DATE}</>
             ) : (
-              <><span className="text-emerald-400 animate-pulse">●</span> Live from GitHub API • Verified: {VERIFIED_DATE}</>
+              <><span className="text-emerald-400">●</span> Live from GitHub API • Verified: {VERIFIED_DATE}</>
             )}
           </span>
         </div>
@@ -110,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300 animate-glow-pulse"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
             <img 
               src={user?.avatar_url ?? PROFILE_INFO.avatar} 
               alt={displayName} 
@@ -119,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-white to-slate-300 bg-clip-text text-transparent animate-gradient-text">
+              <h1 className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-white to-slate-300 bg-clip-text text-transparent">
                 {displayName}
               </h1>
               <span className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-[11px] px-2 py-0.5 rounded-full font-semibold">

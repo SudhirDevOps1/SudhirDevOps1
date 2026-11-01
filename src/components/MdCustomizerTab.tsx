@@ -40,7 +40,12 @@ const THEME_OPTIONS = [
   { id: 'onedark', name: 'One Dark', bg: 'bg-[#282c34]' },
   { id: 'synthwave', name: 'Synthwave 84', bg: 'bg-[#2b213a]' },
   { id: 'nord', name: 'Nord Clean', bg: 'bg-[#2e3440]' },
+  { id: 'gruvbox', name: 'Gruvbox Warm', bg: 'bg-[#282828]' },
+  { id: 'catppuccin_mocha', name: 'Catppuccin', bg: 'bg-[#1e1e2e]' },
+  { id: 'midnight-purple', name: 'Midnight Purple', bg: 'bg-[#0e0e1f]' },
+  { id: 'ocean_dark', name: 'Ocean Dark', bg: 'bg-[#0a1628]' },
 ];
+
 
 export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
   theme,
@@ -187,7 +192,7 @@ export const MdCustomizerTab: React.FC<MdCustomizerTabProps> = ({
               <Code className="w-4 h-4 text-cyan-400" />
               <span className="text-xs font-bold font-mono text-white">README.md</span>
               {edited && <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono">edited</span>}
-              <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>dark mode</span>
+              <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>dark mode</span>
             </div>
             <div className="flex items-center bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs">
               <button onClick={() => setActiveView('preview')} className={`flex items-center gap-1.5 px-3 py-1 rounded-md font-semibold transition-all duration-200 cursor-pointer press-3d ${activeView === 'preview' ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}>

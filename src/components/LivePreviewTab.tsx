@@ -24,7 +24,6 @@ import { GitHubUser, GitHubRepo, getLiveUrl, getTotalStars, getTotalForks, forma
 import { TabId } from './Navbar';
 import { AnimatedCounter } from './AnimatedCounter';
 import { TiltCard } from './TiltCard';
-import { AnimatedImage } from './ui/AnimatedImage';
 
 interface LivePreviewTabProps {
   theme: string;
@@ -111,22 +110,19 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
         {/* Header with typing animation */}
         <div className="glass border border-white/5 rounded-2xl overflow-hidden shadow-3d animate-scale-in">
           <a href={PROFILE_INFO.github} target="_blank" rel="noreferrer" className="block">
-            <AnimatedImage
-              src={`https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=250&section=header&text=${encodeURIComponent(headerTitle)}&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Bihar%2C%20India&descSize=18&descAlignY=60`}
+            <img 
+              src={`https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=250&section=header&text=${encodeURIComponent(headerTitle)}&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Bihar%2C%20India&descSize=18&descAlignY=60`} 
+              width="100%" 
               alt="Header"
-              width={1200}
-              height={250}
-              lazy={false}
+              className="w-full object-cover min-h-[180px]"
             />
           </a>
           <div className="p-6 text-center border-t border-[#30363d]/60 bg-[#0d1117]/80">
             <a href={PROFILE_INFO.github} target="_blank" rel="noreferrer" className="inline-block max-w-full">
-              <AnimatedImage
-                src={`https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color=36BCF7&center=true&vCenter=true&width=850&height=65&lines=${encodeURIComponent(subtitle)};%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%F0%9F%9A%80+${repoCount}+public+repositories+on+GitHub`}
+              <img 
+                src={`https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=900&color=36BCF7&center=true&vCenter=true&width=850&height=65&lines=${encodeURIComponent(subtitle)};%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%F0%9F%9A%80+${repoCount}+public+repositories+on+GitHub`} 
                 alt="Typing"
-                width={850}
-                height={65}
-                lazy={false}
+                className="max-w-full h-auto"
               />
             </a>
           </div>
@@ -185,31 +181,13 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
               <span className="text-xs uppercase tracking-wider text-[#8b949e] font-semibold block mb-3">Connect</span>
               <div className="flex flex-wrap items-center gap-2.5">
                 <a href={PROFILE_INFO.website} target="_blank" rel="noreferrer">
-                  <AnimatedImage
-                    src="https://img.shields.io/badge/Portfolio-sudhirdevops1.github.io-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white"
-                    alt="Portfolio"
-                    width={240}
-                    height={34}
-                    lazy={false}
-                  />
+                  <img src="https://img.shields.io/badge/Portfolio-sudhirdevops1.github.io-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
                 </a>
                 <a href={PROFILE_INFO.github} target="_blank" rel="noreferrer">
-                  <AnimatedImage
-                    src="https://img.shields.io/badge/GitHub-SudhirDevOps1-181717?style=for-the-badge&logo=github&logoColor=white"
-                    alt="GitHub"
-                    width={220}
-                    height={34}
-                    lazy={false}
-                  />
+                  <img src="https://img.shields.io/badge/GitHub-SudhirDevOps1-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
                 </a>
                 <a href={PROFILE_INFO.linkedin} target="_blank" rel="noreferrer">
-                  <AnimatedImage
-                    src="https://img.shields.io/badge/LinkedIn-in%2FSudhirDevOps1-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
-                    alt="LinkedIn"
-                    width={230}
-                    height={34}
-                    lazy={false}
-                  />
+                  <img src="https://img.shields.io/badge/LinkedIn-in%2FSudhirDevOps1-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
                 </a>
               </div>
             </div>
@@ -289,13 +267,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
             </div>
 
             <div className="w-full pt-2">
-              <AnimatedImage
-                src="https://komarev.com/ghpvc/?username=SudhirDevOps1&label=Profile+Views&color=36BCF7&style=for-the-badge"
-                alt="Views"
-                width={260}
-                height={34}
-                lazy={false}
-              />
+              <img src="https://komarev.com/ghpvc/?username=SudhirDevOps1&label=Profile+Views&color=36BCF7&style=for-the-badge" alt="Views" className="mx-auto rounded-lg shadow" />
             </div>
           </div>
         </div>
@@ -310,13 +282,7 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           </div>
           <div className="p-4 rounded-xl bg-[#0d1117] border border-[#30363d] flex justify-center overflow-x-auto">
             <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
-              <AnimatedImage
-                src="https://skillicons.dev/icons?i=html,css,js,ts,python,react,tailwind,bootstrap,git,github,vscode,linux,cloudflare,vercel&perline=14"
-                alt="Tech"
-                width={900}
-                height={60}
-                lazy={false}
-              />
+              <img src="https://skillicons.dev/icons?i=html,css,js,ts,python,react,tailwind,bootstrap,git,github,vscode,linux,cloudflare,vercel&perline=14" alt="Tech" className="max-w-full h-auto py-2" />
             </a>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 pt-2">
@@ -451,22 +417,10 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           {/* Stats Cards */}
           <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
             <TiltCard className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-3d" intensity={6}>
-              <AnimatedImage
-                src={`https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=${theme}&hide_border=true&include_all_commits=true&count_private=true`}
-                alt="Stats"
-                className="max-w-[480px] object-contain py-2"
-                width={480}
-                lazy={false}
-              />
+              <img src={`https://github-readme-stats.vercel.app/api?username=SudhirDevOps1&show_icons=true&theme=${theme}&hide_border=true&include_all_commits=true&count_private=true`} alt="Stats" className="w-full max-w-[480px] object-contain py-2" />
             </TiltCard>
             <TiltCard className="p-1 rounded-2xl bg-[#0d1117] border border-[#30363d] flex justify-center shadow-3d" intensity={6}>
-              <AnimatedImage
-                src={`https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=${theme}&hide_border=true`}
-                alt="Streak"
-                className="max-w-[480px] object-contain py-2"
-                width={480}
-                lazy={false}
-              />
+              <img src={`https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=${theme}&hide_border=true`} alt="Streak" className="w-full max-w-[480px] object-contain py-2" />
             </TiltCard>
           </div>
         </div>
@@ -479,57 +433,27 @@ export const LivePreviewTab: React.FC<LivePreviewTabProps> = ({
           </div>
           
           <div className="bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center overflow-x-auto shadow-inner">
-            <AnimatedImage
-              src={`https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7`}
-              alt="Trophies"
-              className="max-w-full h-auto py-2"
-              width={900}
-              lazy={false}
-            />
+            <img src={`https://github-profile-trophy.vercel.app/?username=SudhirDevOps1&theme=${theme}&no-frame=true&no-bg=true&margin-w=10&column=7`} alt="Trophies" className="max-w-full h-auto py-2" />
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-5 bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center shadow-inner">
-              <AnimatedImage
-                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=${theme}&hide_border=true&langs_count=8`}
-                alt="Languages"
-                className="max-w-full h-auto py-1"
-                width={560}
-                lazy={false}
-              />
+              <img src={`https://github-readme-stats.vercel.app/api/top-langs/?username=SudhirDevOps1&layout=compact&theme=${theme}&hide_border=true&langs_count=8`} alt="Languages" className="max-w-full h-auto py-1" />
             </div>
             <div className="lg:col-span-7 bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center shadow-inner">
-              <AnimatedImage
-                src={`https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SudhirDevOps1&theme=${theme}&utcOffset=5.5`}
-                alt="Productive time"
-                className="max-w-full h-auto py-1"
-                width={700}
-                lazy={false}
-              />
+              <img src={`https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SudhirDevOps1&theme=${theme}&utcOffset=5.5`} alt="Productive time" className="max-w-full h-auto py-1" />
             </div>
           </div>
           
           <div className="bg-slate-950/30 backdrop-blur p-4 rounded-2xl border border-white/5 flex justify-center overflow-x-auto shadow-inner">
-            <AnimatedImage
-              src="https://github-readme-activity-graph.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity"
-              alt="Activity"
-              className="w-full py-1"
-              width={1100}
-              lazy={false}
-            />
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Activity" className="w-full py-1" />
           </div>
           
           <div className="bg-slate-950/30 backdrop-blur p-6 rounded-2xl border border-white/5 flex flex-col items-center justify-center space-y-4 shadow-inner">
             <span className="text-xs font-mono font-semibold text-cyan-400">Contribution Graph Snake</span>
-            <div className="w-full flex justify-center max-w-[850px] overflow-x-auto py-2">
-              <AnimatedImage
-                src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"
-                alt="Snake"
-                className="max-w-full h-auto"
-                width={850}
-                lazy={false}
-              />
-            </div>
+            <picture className="w-full flex justify-center max-w-[850px] overflow-x-auto py-2">
+              <img alt="Snake" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg" className="max-w-full h-auto" />
+            </picture>
           </div>
         </div>
 

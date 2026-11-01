@@ -1,30 +1,16 @@
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { Navbar, TabId } from './components/Navbar';
-import { PortfolioTab } from './components/PortfolioTab';
 import { LivePreviewTab } from './components/LivePreviewTab';
 import { MdCustomizerTab } from './components/MdCustomizerTab';
 import { ReposShowcaseTab } from './components/ReposShowcaseTab';
 import { StatsDashboardTab } from './components/StatsDashboardTab';
-import { ParticleBackground } from './components/ui/ParticleBackground';
 import { generateMarkdown, PROFILE_INFO } from './data/profileData';
 import { useGitHub } from './hooks/useGitHub';
 import { VERIFIED_DATE } from './data/github';
 import { Code2, Sparkles } from 'lucide-react';
 
-const tabVariants = {
-  hidden: { opacity: 0, y: 12, scale: 0.98 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: 'spring' as const, damping: 22, stiffness: 300, duration: 0.45 },
-  },
-  exit: { opacity: 0, y: -8, scale: 0.98, transition: { duration: 0.2 } },
-};
-
 export default function App() {
-  const [activeTab, setActiveTab] = useState<TabId>('portfolio');
+  const [activeTab, setActiveTab] = useState<TabId>('live-preview');
   
   // Live GitHub data
   const { user, repos, loading, error, refetch } = useGitHub();
@@ -92,100 +78,44 @@ export default function App() {
         onRefresh={refetch}
       />
 
-      <main className="flex-1 relative z-10 overflow-x-hidden">
-        {/* Decorative particle network behind content (hero area only on portfolio tab) */}
-        {activeTab === 'portfolio' && (
-          <ParticleBackground className="pointer-events-none" particleCount={44} color="#22d3ee" connectDistance={170} speed={0.3} />
+      <main className="flex-1 relative z-10">
+        {activeTab === 'live-preview' && (
+          <LivePreviewTab
+            theme={theme}
+            headerTitle={headerTitle}
+            subtitle={subtitle}
+            setActiveTab={setActiveTab}
+            user={user}
+            repos={repos}
+            loading={loading}
+            error={error}
+          />
         )}
 
-        <AnimatePresence mode="wait">
-          {activeTab === 'portfolio' && (
-            <motion.div
-              key="portfolio"
-              initial={tabVariants.hidden}
-              animate={tabVariants.visible}
-              exit={tabVariants.exit}
-              className="animate-fade-in-up"
-            >
-              <PortfolioTab
-                user={user}
-                repos={repos}
-                loading={loading}
-                error={error}
-              />
-            </motion.div>
-          )}
+        {activeTab === 'md-customizer' && (
+          <MdCustomizerTab
+            theme={theme}
+            setTheme={setTheme}
+            headerTitle={headerTitle}
+            setHeaderTitle={setHeaderTitle}
+            subtitle={subtitle}
+            setSubtitle={setSubtitle}
+            onCopyMd={handleCopyMd}
+            onDownloadMd={handleDownloadMd}
+            isCopied={isCopied}
+            user={user}
+            repos={repos}
+            loading={loading}
+          />
+        )}
 
-          {activeTab === 'live-preview' && (
-            <motion.div
-              key="live-preview"
-              initial={tabVariants.hidden}
-              animate={tabVariants.visible}
-              exit={tabVariants.exit}
-              className="animate-fade-in-up"
-            >
-              <LivePreviewTab
-                theme={theme}
-                headerTitle={headerTitle}
-                subtitle={subtitle}
-                setActiveTab={setActiveTab}
-                user={user}
-                repos={repos}
-                loading={loading}
-                error={error}
-              />
-            </motion.div>
-          )}
+        {activeTab === 'repos-showcase' && (
+          <ReposShowcaseTab onCopyClone={handleCopyClone} repos={repos} loading={loading} error={error} />
+        )}
 
-          {activeTab === 'md-customizer' && (
-            <motion.div
-              key="md-customizer"
-              initial={tabVariants.hidden}
-              animate={tabVariants.visible}
-              exit={tabVariants.exit}
-              className="animate-scale-in"
-            >
-              <MdCustomizerTab
-                theme={theme}
-                setTheme={setTheme}
-                headerTitle={headerTitle}
-                setHeaderTitle={setHeaderTitle}
-                subtitle={subtitle}
-                setSubtitle={setSubtitle}
-                onCopyMd={handleCopyMd}
-                onDownloadMd={handleDownloadMd}
-                isCopied={isCopied}
-                user={user}
-                repos={repos}
-                loading={loading}
-              />
-            </motion.div>
-          )}
-
-          {activeTab === 'repos-showcase' && (
-            <motion.div
-              key="repos-showcase"
-              initial={tabVariants.hidden}
-              animate={tabVariants.visible}
-              exit={tabVariants.exit}
-              className="animate-fade-in-up"
-            >
-              <ReposShowcaseTab onCopyClone={handleCopyClone} repos={repos} loading={loading} error={error} />
-            </motion.div>
-          )}
-
-          {activeTab === 'stats-dashboard' && (
-            <motion.div
-              key="stats-dashboard"
-              initial={tabVariants.hidden}
-              animate={tabVariants.visible}
-              exit={tabVariants.exit}
-              className="animate-fade-in-up"
-            >
-              <StatsDashboardTab user={user} repos={repos} loading={loading} error={error} />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {activeTab === 'stats-dashboard' && (
+          <StatsDashboardTab user={user} repos={repos} loading={loading} error={error} />
+        )}
       </main>
 
       <footer className="mt-auto p-4 sm:p-6 relative z-20 animate-fade-in">
@@ -199,7 +129,7 @@ export default function App() {
             </div>
             <div>
               <p className="font-extrabold text-white text-base tracking-tight flex items-center gap-2 justify-center md:justify-start">
-                <span className="animate-rainbow-text">Sudhir Singh Studio v3.0</span>
+                <span className="animate-rainbow-text">Sudhir Singh Studio v2.5</span>
                 <span className="bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">LIVE API</span>
               </p>
               <p className="text-xs text-slate-400 mt-0.5">BCA • Aspiring Full-Stack Architect • Bihar, India</p>
