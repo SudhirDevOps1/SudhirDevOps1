@@ -65,7 +65,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 | 🔒 **Exploring** | Cyber Security & System Design |
 | 🌱 **Learning** | Python, TypeScript, Cloud & DevOps |
 | 🤖 **Interested in** | AI/ML, Automation, Open Source |
-| 🌐 **Portfolio** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
+| 🌐 **Portfolio** | [sudhirdevops1.pages.dev/portfolio.html](https://sudhirdevops1.pages.dev/portfolio.html) |
 | 📫 **Contact** | Available on [LinkedIn](https://linkedin.com/in/SudhirDevOps1) |
 | ⚡ **Fun Fact** | I debug at midnight and it still makes sense 😄 |
 
@@ -132,8 +132,8 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 ## 🌐 Connect With Me
 
-<a href="https://sudhirdevops1.github.io">
-  <img src="https://img.shields.io/badge/Portfolio-sudhirdevops1.github.io-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
+<a href="https://sudhirdevops1.pages.dev/portfolio.html">
+  <img src="https://img.shields.io/badge/Portfolio-sudhirdevops1.pages.dev-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
 </a>
 &nbsp;
 <a href="https://github.com/SudhirDevOps1">
@@ -545,7 +545,7 @@ and if a source stops responding, the badge above goes red instead of quietly ly
   <img src="https://img.shields.io/badge/Explore-Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
 </a>
 &nbsp;
-<a href="https://sudhirdevops1.github.io">
+<a href="https://sudhirdevops1.pages.dev/portfolio.html">
   <img src="https://img.shields.io/badge/Visit-Portfolio-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
 </a>
 
