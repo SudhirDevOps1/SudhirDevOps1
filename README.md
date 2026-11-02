@@ -288,7 +288,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
   <img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SudhirDevOps1&theme=tokyonight" alt="GitHub Stats"/>
 </a>
 <a href="https://github.com/SudhirDevOps1">
-  <img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=SudhirDevOps1&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
+  <img height="175" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/main/assets/streak-buddy.svg" alt="Contribution streak, rebuilt daily from the live GitHub contribution calendar"/>
 </a>
 
 <br/><br/>
@@ -376,8 +376,10 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <div align="center">
   <a href="https://github.com/SudhirDevOps1">
-    <img src="https://coolreadme.xyz/api/fox-card?user=SudhirDevOps1" width="620" alt="Animated Streak Card"/>
+    <img src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/main/assets/streak-buddy.svg" width="620" alt="Animated streak card drawn from the live GitHub contribution calendar"/>
   </a>
+
+  <sub><b>Drawn by my own workflow</b> — <code>scripts/update-streak.mjs</code> reads the contribution calendar every day and redraws this card. No third-party cache, no stale numbers.</sub>
 </div>
 
 <br/>
@@ -485,7 +487,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 | ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
 |:--|:--|:--|:--|
-| **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
+| **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above and redraws the streak card | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
 | **README Health Check** | daily · 04:00 UTC | Loads **every image and every link** on this page with retries and fails loudly on error cards, dead links or soft-404s | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
 | **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
 | **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |

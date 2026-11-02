@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="200" viewBox="0 0 620 200" role="img" aria-label="Contribution streak: 10 days current, 12 days longest, 2,790 total contributions">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#161B22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#36BCF7"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="num" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#36BCF7"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <style>
+      .t { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .label { font-size: 11px; letter-spacing: 2.4px; fill: #8B949E; font-weight: 600; }
+      .num { font-size: 38px; font-weight: 700; fill: url(#num); }
+      .unit { font-size: 12px; fill: #6E7681; font-weight: 600; letter-spacing: 1px; }
+      .foot { font-size: 10.5px; fill: #6E7681; letter-spacing: 0.4px; }
+      .dot { fill: #3FB950; animation: pulse 2.4s ease-in-out infinite; transform-origin: 561px 28px; }
+      @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+      .bar { animation: glow 3.6s ease-in-out infinite; }
+      @keyframes glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="619" height="199" rx="16" fill="url(#bg)" stroke="#30363D"/>
+  <rect class="bar" x="0" y="28" width="4" height="144" rx="2" fill="url(#accent)"/>
+
+  <text class="t label" x="30" y="36">STREAK BUDDY</text>
+  <circle class="dot" cx="561" cy="28" r="4"/>
+  <text class="t label" x="590" y="32" text-anchor="end" style="letter-spacing:1.2px">LIVE</text>
+
+  <text class="t label" x="30" y="78">CURRENT</text>
+  <text class="t num" x="30" y="122">10</text>
+  <text class="t unit" x="30" y="142">DAYS IN A ROW</text>
+
+  <line x1="206" y1="60" x2="206" y2="152" stroke="#21262D"/>
+
+  <text class="t label" x="236" y="78">LONGEST</text>
+  <text class="t num" x="236" y="122">12</text>
+  <text class="t unit" x="236" y="142">DAYS · RECORD</text>
+
+  <line x1="412" y1="60" x2="412" y2="152" stroke="#21262D"/>
+
+  <text class="t label" x="442" y="78">TOTAL · 365d</text>
+  <text class="t num" x="442" y="122">2,790</text>
+  <text class="t unit" x="442" y="142">CONTRIBUTIONS</text>
+
+  <text class="t foot" x="30" y="180">@SudhirDevOps1 · 3 today · 136 active days · best day 105</text>
+  <text class="t foot" x="590" y="180" text-anchor="end">updated 02 Nov 2026</text>
+</svg>
