@@ -35,9 +35,9 @@
   <br/><br/>
 
   <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C012-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C006-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Pull_Requests-53-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
+  <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
   &nbsp;
   <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=This%20Repo%20%C2%B7%20Year" alt="Commits in this repository this year"/>
@@ -166,13 +166,13 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 🆔 **Username** | [`@SudhirDevOps1`](https://github.com/SudhirDevOps1) |
 | 📍 **Location** | Bihar, India |
 | 🌐 **Website** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
-| 📦 **Public Repositories** | **77** *(Live from API)* |
+| 📦 **Public Repositories** | **76** *(Live from API)* |
 | ⭐ **Total Stars Earned** | **44** *(Live from API)* |
 | 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **3,012** *(Search API)* |
-| 🔀 **Pull Requests** | **53** *(Search API)* |
+| 💻 **Commits Authored** | **3,006** *(Search API)* |
+| 🔀 **Pull Requests** | **46** *(Search API)* |
 | 🐞 **Issues Opened** | **1** *(Search API)* |
-| 👥 **Followers** | **11** *(Live from API)* |
+| 👥 **Followers** | **12** *(Live from API)* |
 | ➡️ **Following** | **19** *(Live from API)* |
 | 🗓️ **Joined GitHub** | 25 September 2025 |
 | ✅ **Last Verified** | 02 November 2026 |
@@ -267,7 +267,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
   <!-- STATS:REPOS:START -->
-  <img src="https://img.shields.io/badge/Browse_All_Repositories-77_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+  <img src="https://img.shields.io/badge/Browse_All_Repositories-76_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
 <!-- STATS:REPOS:END -->
 </a>
 
@@ -463,9 +463,9 @@ Built with Tailwind CSS 4 and a design-token mindset.
 |:--|:--|
 | 🗓️ **Joined GitHub** | 25 September 2025 |
 | 📅 **Days since joining** | **402** days of shipping code |
-| 📦 **Public repositories** | **77** shipped and open |
-| 💻 **Commits authored** | **3,012** across all repositories |
-| 🔀 **Pull requests** | **53** opened and merged through review |
+| 📦 **Public repositories** | **76** shipped and open |
+| 💻 **Commits authored** | **3,006** across all repositories |
+| 🔀 **Pull requests** | **46** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
 | 🏗️ **Profile Studio** | Full-stack React 19 + TypeScript app, designed, built and deployed |
@@ -569,7 +569,7 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 </a>
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>02 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 02/11/2026, 11:03:57 IST</sub>
+<sub>🤖 Auto-synced <strong>02 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 02/11/2026, 15:22:16 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>
