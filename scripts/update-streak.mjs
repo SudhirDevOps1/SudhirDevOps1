@@ -164,9 +164,9 @@ function render(stats) {
 
   <line x1="206" y1="60" x2="206" y2="152" stroke="#21262D"/>
 
-  <text class="t label" x="236" y="78">LONGEST</text>
+  <text class="t label" x="236" y="78">LONGEST · 365d</text>
   <text class="t num" x="236" y="122">${stats.longest}</text>
-  <text class="t unit" x="236" y="142">${longestLabel} · RECORD</text>
+  <text class="t unit" x="236" y="142">${longestLabel} IN A ROW</text>
 
   <line x1="412" y1="60" x2="412" y2="152" stroke="#21262D"/>
 
