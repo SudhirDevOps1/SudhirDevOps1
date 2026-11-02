@@ -35,7 +35,7 @@
   <br/><br/>
 
   <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C009-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C010-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Pull_Requests-53-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -169,7 +169,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 📦 **Public Repositories** | **77** *(Live from API)* |
 | ⭐ **Total Stars Earned** | **44** *(Live from API)* |
 | 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **3,009** *(Search API)* |
+| 💻 **Commits Authored** | **3,010** *(Search API)* |
 | 🔀 **Pull Requests** | **53** *(Search API)* |
 | 🐞 **Issues Opened** | **1** *(Search API)* |
 | 👥 **Followers** | **11** *(Live from API)* |
@@ -464,7 +464,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 🗓️ **Joined GitHub** | 25 September 2025 |
 | 📅 **Days since joining** | **402** days of shipping code |
 | 📦 **Public repositories** | **77** shipped and open |
-| 💻 **Commits authored** | **3,009** across all repositories |
+| 💻 **Commits authored** | **3,010** across all repositories |
 | 🔀 **Pull requests** | **53** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
@@ -569,7 +569,7 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 </a>
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>02 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 02/11/2026, 10:50:16 IST</sub>
+<sub>🤖 Auto-synced <strong>02 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 02/11/2026, 10:59:24 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>
