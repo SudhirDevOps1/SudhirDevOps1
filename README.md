@@ -488,7 +488,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
 |:--|:--|:--|:--|
 | **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above and redraws the streak card | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
-| **README Health Check** | daily · 04:00 UTC | Loads **every image and every link** on this page with retries and fails loudly on error cards, dead links or soft-404s | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
+| **README Health Check** | daily · 04:00 UTC | Loads **every image and every link** on this page with retries, and fails if the streak card is stale — dead links, error cards and soft-404s all turn the badge red | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
 | **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
 | **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
 | **App CI** | on every push / PR | `npm ci` → `tsc --noEmit` → `vite build` for the Studio app | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/ci.yml/badge.svg" alt="CI status"/> |
