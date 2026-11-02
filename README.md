@@ -4,7 +4,8 @@
   Author      : Sudhir Singh
   Data Source : GitHub REST API v3 + Search API (PUBLIC) — 100% REAL
   Verified on : November 2026
-  Live Studio : https://sudhirdevops1.github.io
+  Live Studio : https://sudhirdevops1.pages.dev
+  Portfolio   : https://sudhirdevops1.github.io
   Built with  : React 19 + TypeScript + Tailwind CSS 4 + Vite 7
   NOTE: All stats are REAL-TIME — zero fake data.
 ================================================================================
@@ -12,7 +13,7 @@
 
 <!-- ═══════════════════════ ANIMATED HERO BANNER ═══════════════════════ -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=290&section=header&text=Sudhir%20Singh&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=37&desc=BCA%20Student%20%E2%80%A2%20Full-Stack%20Developer%20%E2%80%A2%20Automation%20Builder&descSize=20&descAlignY=57&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=290&section=header&text=Sudhir%20Singh&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=37&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Automation%20Builder&descSize=20&descAlignY=57&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
 </a>
 
 <!-- ═══════════════════════ TYPING ANIMATION ═══════════════════════ -->
@@ -34,14 +35,14 @@
   <br/><br/>
 
   <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-2%2C899-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C008-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Pull_Requests-52-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
+  <img src="https://img.shields.io/badge/Pull_Requests-53-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
   &nbsp;
-  <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=This%20Year" alt="Commit activity"/>
+  <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=This%20Repo%20%C2%B7%20Year" alt="Commits in this repository this year"/>
   &nbsp;
-  <img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=FFDD00&label=Last%20Push" alt="Last commit"/>
+  <img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=FFDD00&label=Last%20Push" alt="Last push to this repository"/>
 </div>
 
 <br/>
@@ -156,7 +157,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 ## 📊 Verified GitHub Statistics
 
-> 🔴 **All data is fetched LIVE from the GitHub REST API v3 + Search API — zero fake numbers.**
+> 🟢 **All data is fetched LIVE from the GitHub REST API v3 + Search API — zero fake numbers.**
 
 <!-- STATS:TABLE:START -->
 | Metric | Value |
@@ -165,16 +166,16 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 🆔 **Username** | [`@SudhirDevOps1`](https://github.com/SudhirDevOps1) |
 | 📍 **Location** | Bihar, India |
 | 🌐 **Website** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
-| 📦 **Public Repositories** | **76** *(Live from API)* |
+| 📦 **Public Repositories** | **77** *(Live from API)* |
 | ⭐ **Total Stars Earned** | **44** *(Live from API)* |
 | 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **2,899** *(Search API)* |
-| 🔀 **Pull Requests** | **52** *(Search API)* |
+| 💻 **Commits Authored** | **3,008** *(Search API)* |
+| 🔀 **Pull Requests** | **53** *(Search API)* |
 | 🐞 **Issues Opened** | **1** *(Search API)* |
 | 👥 **Followers** | **11** *(Live from API)* |
 | ➡️ **Following** | **19** *(Live from API)* |
 | 🗓️ **Joined GitHub** | 25 September 2025 |
-| ✅ **Last Verified** | 01 November 2026 |
+| ✅ **Last Verified** | 02 November 2026 |
 | 🏗️ **Studio Stack** | React 19 · TypeScript 5 · Tailwind CSS 4 · Vite 7 |
 <!-- STATS:TABLE:END -->
 
@@ -223,21 +224,21 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
-<img src="https://img.shields.io/badge/Tailwind%20CSS%204-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vite%207-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19"/>
+<img src="https://img.shields.io/badge/Tailwind%20CSS%204-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4"/>
+<img src="https://img.shields.io/badge/Vite%207-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 7"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
+<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
 
 </div>
 
@@ -266,7 +267,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
   <!-- STATS:REPOS:START -->
-  <img src="https://img.shields.io/badge/Browse_All_Repositories-76_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+  <img src="https://img.shields.io/badge/Browse_All_Repositories-77_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
 <!-- STATS:REPOS:END -->
 </a>
 
@@ -459,10 +460,10 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 🏆 Milestone | 📈 Detail |
 |:--|:--|
 | 🗓️ **Joined GitHub** | 25 September 2025 |
-| 📅 **Days since joining** | **401** days of shipping code |
-| 📦 **Public repositories** | **76** shipped and open |
-| 💻 **Commits authored** | **2,899** across all repositories |
-| 🔀 **Pull requests** | **52** opened and merged through review |
+| 📅 **Days since joining** | **402** days of shipping code |
+| 📦 **Public repositories** | **77** shipped and open |
+| 💻 **Commits authored** | **3,008** across all repositories |
+| 🔀 **Pull requests** | **53** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
 | 🏗️ **Profile Studio** | Full-stack React 19 + TypeScript app, designed, built and deployed |
@@ -485,7 +486,7 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
 |:--|:--|:--|:--|
 | **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
-| **README Health Check** | daily · 04:00 UTC | Loads **every image** on this page with 3 retries and fails loudly on error cards | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
+| **README Health Check** | daily · 04:00 UTC | Loads **every image and every link** on this page with retries and fails loudly on error cards, dead links or soft-404s | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
 | **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
 | **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
 | **App CI** | on every push / PR | `npm ci` → `tsc --noEmit` → `vite build` for the Studio app | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/ci.yml/badge.svg" alt="CI status"/> |
@@ -566,7 +567,7 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 </a>
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>01 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 01/11/2026, 16:21:26 IST</sub>
+<sub>🤖 Auto-synced <strong>02 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 02/11/2026, 10:46:15 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>

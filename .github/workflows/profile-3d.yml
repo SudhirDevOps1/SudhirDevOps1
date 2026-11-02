@@ -38,11 +38,17 @@ jobs:
             exit 0
           fi
           git commit -m "chore(calendar): refresh 3D contribution calendar"
+          pushed=0
           for attempt in 1 2 3; do
             if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push; then
               echo "pushed on attempt $attempt"
+              pushed=1
               break
             fi
             echo "push attempt $attempt failed, retrying in 5s..."
             sleep 5
           done
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::Could not push the 3D calendar after 3 attempts"
+            exit 1
+          fi

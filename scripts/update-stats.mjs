@@ -27,23 +27,44 @@ if (TOKEN) headers.Authorization = `Bearer ${TOKEN}`;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function api(path, tries = 3) {
+async function api(path, tries = 4) {
   let lastError = '';
   for (let attempt = 1; attempt <= tries; attempt++) {
-    const res = await fetch(`${API}${path}`, { headers });
+    let res;
+    try {
+      res = await fetch(`${API}${path}`, { headers });
+    } catch (error) {
+      // Transient DNS / TLS / socket failures must not kill the whole run.
+      lastError = `${path} -> network error: ${String(error.message || error).slice(0, 140)}`;
+      if (attempt < tries) {
+        await sleep(2000 * attempt);
+        continue;
+      }
+      throw new Error(lastError);
+    }
+
     if (res.ok) return res.json();
 
     const body = await res.text();
     lastError = `${path} -> HTTP ${res.status} ${body.slice(0, 160)}`;
 
-    // Search API is limited to 30 req/min: back off instead of failing.
-    if (res.status === 403 || res.status === 429) {
-      await sleep(5000 * attempt);
-      continue;
-    }
-    throw new Error(lastError);
+    // 403/429 = rate limit, 5xx = GitHub having a bad day. Both are worth retrying.
+    const retryable = res.status === 403 || res.status === 429 || res.status >= 500;
+    if (!retryable) throw new Error(lastError);
+    if (attempt < tries) await sleep((res.status >= 500 ? 2000 : 5000) * attempt);
   }
-  throw new Error(`retries exhausted: ${lastError}`);
+  throw new Error(`retries exhausted after ${tries} attempts: ${lastError}`);
+}
+
+// A profile with no website must never render "undefined" in the README.
+function websiteOf(user) {
+  const raw = (user.blog || "").trim();
+  if (!raw) {
+    return { label: `github.com/${user.login}`, url: `https://github.com/${user.login}` };
+  }
+  const url = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+  const label = url.replace(/^https?:\/\//i, "").replace(/\/+$/, "");
+  return { label, url };
 }
 
 async function allRepos() {
@@ -90,12 +111,18 @@ async function main() {
     api(`/search/issues?q=author:${OWNER}+type:issue&per_page=1`),
   ]);
 
+  const site = websiteOf(user);
+
   const stats = {
     name: user.name || OWNER,
     username: user.login,
     location: user.location || 'Bihar, India',
-    blog: (user.blog || '').replace(/^https?:\/\//, '').replace(/\/$/, ''),
-    repos: int(user.public_repos),
+    websiteLabel: site.label,
+    websiteUrl: site.url,
+    // Count from the fetched list, so the table can never disagree with the
+    // stars/forks totals that come from the same list (or with the live badge).
+    repos: repos.length,
+    apiRepos: int(user.public_repos),
     followers: int(user.followers),
     following: int(user.following),
     stars: repos.reduce((sum, r) => sum + int(r.stargazers_count), 0),
@@ -108,6 +135,13 @@ async function main() {
     syncedAt: dateLabel(new Date().toISOString()),
     syncedStamp: new Date().toLocaleString('en-GB', { timeZone: 'Asia/Kolkata', hour12: false }),
   };
+
+  if (stats.repos !== stats.apiRepos) {
+    console.warn(
+      `::warning::Repository count differs (list=${stats.repos}, profile=${stats.apiRepos}); using the fetched list.`
+    );
+  }
+
 
   // Honesty guard: refuse to publish obviously broken numbers.
   if (stats.repos === 0 || stats.commits === 0) {
@@ -129,7 +163,7 @@ async function main() {
       `| 👤 **Name** | ${stats.name} |`,
       `| 🆔 **Username** | [\`@${stats.username}\`](https://github.com/${stats.username}) |`,
       `| 📍 **Location** | ${stats.location} |`,
-      `| 🌐 **Website** | [${stats.blog}](https://${stats.blog}) |`,
+      `| 🌐 **Website** | [${stats.websiteLabel}](${stats.websiteUrl}) |`,
       `| 📦 **Public Repositories** | **${fmt(stats.repos)}** *(Live from API)* |`,
       `| ⭐ **Total Stars Earned** | **${fmt(stats.stars)}** *(Live from API)* |`,
       `| 🍴 **Total Forks** | **${fmt(stats.forks)}** *(Live from API)* |`,
@@ -162,6 +196,12 @@ async function main() {
 
     SYNC: `<sub>🤖 Auto-synced <strong>${stats.syncedAt}</strong> &bull; every number above pulled live from the GitHub API &bull; last run ${stats.syncedStamp} IST</sub>`,
   };
+
+  // Last honesty guard: never publish a block containing an empty value.
+  const rendered = Object.values(blocks).join('\n');
+  if (/\b(undefined|NaN|null)\b/.test(rendered)) {
+    throw new Error('Refusing to write a block containing undefined/NaN/null. README left untouched.');
+  }
 
   let updated = readme;
   let changedBlocks = 0;

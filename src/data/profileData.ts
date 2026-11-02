@@ -80,7 +80,8 @@ export const generateMarkdown = (
   👤 Author      : Sudhir Singh
   📊 Data Source : GitHub REST API (PUBLIC) — 100% REAL LIVE DATA
   ✅ Verified on : ${VERIFIED_DATE}
-  🔗 Live Studio : https://sudhirdevops1.github.io
+  🔗 Live Studio : https://sudhirdevops1.pages.dev
+  🌐 Portfolio   : https://sudhirdevops1.github.io
   
   ⚠️  NOTE: All stats (stars, forks, repos) are REAL-TIME from GitHub API.
 ================================================================================

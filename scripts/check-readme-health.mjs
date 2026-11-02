@@ -46,6 +46,22 @@ function extractImageUrls(markdown) {
   return [...urls];
 }
 
+// Every clickable link on the page: HTML anchors plus markdown inline links.
+function extractLinkUrls(markdown, imageUrls) {
+  const images = new Set(imageUrls);
+  const urls = new Set();
+  for (const match of markdown.matchAll(/<a[^>]+href="(https?:\/\/[^"]+)"/g)) {
+    if (!images.has(match[1])) urls.add(match[1]);
+  }
+  for (const match of markdown.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)) {
+    if (!images.has(match[1])) urls.add(match[1]);
+  }
+  return [...urls];
+}
+
+// Statuses that mean "a bot was blocked", not "the link is dead".
+const BOT_BLOCKED = new Set([401, 403, 405, 429, 999]);
+
 async function checkOnce(url) {
   const res = await fetch(url, {
     headers: { 'User-Agent': 'SudhirDevOps1-profile-health', Accept: 'image/*,text/html;q=0.8,*/*;q=0.5' },
@@ -82,6 +98,49 @@ async function checkWithRetry(url) {
   return last;
 }
 
+async function checkLinkOnce(url) {
+  let res;
+  try {
+    res = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; SudhirDevOps1-profile-health)',
+        Accept: 'text/html,application/xhtml+xml,*/*;q=0.8',
+      },
+      signal: AbortSignal.timeout(25_000),
+      redirect: 'follow',
+    });
+  } catch (error) {
+    return { ok: false, reason: error.name === 'TimeoutError' ? 'timeout' : String(error.message).slice(0, 90) };
+  }
+
+  if (res.status === 404 || res.status === 410) return { ok: false, reason: `HTTP ${res.status} (dead link)` };
+  if (BOT_BLOCKED.has(res.status)) return { ok: true, status: res.status, skipped: 'bot-blocked' };
+  if (res.status >= 500) return { ok: false, reason: `HTTP ${res.status} (server error)` };
+  if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
+
+  // A soft 404: the host answers 200 but the page says the target is gone.
+  try {
+    const body = await res.text();
+    if (res.url.includes('github.com') && /Page not found/i.test(body)) {
+      return { ok: false, reason: 'GitHub page not found (soft 404)' };
+    }
+  } catch {
+    // Body is irrelevant when the status already told us the answer.
+  }
+
+  return { ok: true, status: res.status };
+}
+
+async function checkLinkWithRetry(url) {
+  let last = { ok: false, reason: 'never attempted' };
+  for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
+    last = await checkLinkOnce(url);
+    if (last.ok) return last;
+    if (attempt < ATTEMPTS) await sleep(1500 * attempt);
+  }
+  return last;
+}
+
 async function runPool(urls, worker, size) {
   const results = new Array(urls.length);
   let cursor = 0;
@@ -100,10 +159,11 @@ async function runPool(urls, worker, size) {
 async function main() {
   const markdown = readFileSync(README, 'utf8');
   const urls = extractImageUrls(markdown);
+  const links = extractLinkUrls(markdown, urls);
 
   if (urls.length === 0) throw new Error('No image URLs found in README.md');
 
-  console.log(`Checking ${urls.length} unique image URLs from README.md ...`);
+  console.log(`Checking ${urls.length} image URLs and ${links.length} profile links from README.md ...`);
 
   const results = await runPool(
     urls,
@@ -111,8 +171,16 @@ async function main() {
     CONCURRENCY
   );
 
+  const linkResults = await runPool(
+    links,
+    async (url) => ({ url, ...(await checkLinkWithRetry(url)) }),
+    4
+  );
+
   const failed = results.filter((r) => !r.ok);
+  const failedLinks = linkResults.filter((r) => !r.ok);
   const passed = results.length - failed.length;
+  const passedLinks = linkResults.length - failedLinks.length;
 
   const report = {
     checkedAt: new Date().toISOString(),
@@ -120,6 +188,13 @@ async function main() {
     passed,
     failed: failed.length,
     failures: failed.map((f) => ({ url: f.url, reason: f.reason })),
+    links: {
+      total: linkResults.length,
+      passed: passedLinks,
+      failed: failedLinks.length,
+      failures: failedLinks.map((f) => ({ url: f.url, reason: f.reason })),
+      results: linkResults,
+    },
     results,
   };
 
@@ -129,14 +204,21 @@ async function main() {
   for (const r of results) {
     console.log(`${r.ok ? 'OK  ' : 'FAIL'} ${r.ok ? String(r.bytes).padStart(7) : '      -'}  ${r.url}`);
   }
+  for (const r of linkResults) {
+    console.log(`${r.ok ? 'OK  ' : 'FAIL'} ${String(r.status ?? '-').padStart(7)}  ${r.url}`);
+  }
 
   const rows = failed.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
+  const linkRows = failedLinks.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const summary = [
     '## 🩺 README health check',
     '',
     `**${passed}/${results.length} images OK** — ${failed.length} failure(s).`,
+    `**${passedLinks}/${linkResults.length} links OK** — ${failedLinks.length} failure(s).`,
     '',
-    ...(failed.length ? ['| Status | URL | Reason |', '|:--|:--|:--|', ...rows] : ['✅ Every image on the profile loaded with real content.']),
+    ...(failed.length || failedLinks.length
+      ? ['| Status | URL | Reason |', '|:--|:--|:--|', ...rows, ...linkRows]
+      : ['✅ Every image and every link on the profile resolved with real content.']),
   ].join('\n');
 
   console.log(`\n${summary}`);
@@ -146,8 +228,14 @@ async function main() {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   }
 
-  if (failed.length > 0) {
-    console.error(`::error::${failed.length} of ${results.length} README images are broken. See .github/health/latest.json`);
+  if (failed.length > 0 || failedLinks.length > 0) {
+    if (failed.length > 0) {
+      console.error(`::error::${failed.length} of ${results.length} README images are broken.`);
+    }
+    if (failedLinks.length > 0) {
+      console.error(`::error::${failedLinks.length} of ${linkResults.length} README links are broken.`);
+    }
+    console.error('See .github/health/latest.json for the full report.');
     process.exit(1);
   }
 }

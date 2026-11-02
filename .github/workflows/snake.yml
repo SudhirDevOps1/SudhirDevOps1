@@ -4,12 +4,13 @@ on:
   schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: false
 
 jobs:
   generate:
