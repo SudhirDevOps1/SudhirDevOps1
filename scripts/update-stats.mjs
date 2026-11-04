@@ -174,7 +174,6 @@ async function main() {
       `| ➡️ **Following** | **${fmt(stats.following)}** *(Live from API)* |`,
       `| 🗓️ **Joined GitHub** | ${stats.joined} |`,
       `| ✅ **Last Verified** | ${stats.syncedAt} |`,
-      `| 🏗️ **Studio Stack** | React 19 · TypeScript 5 · Tailwind CSS 4 · Vite 7 |`,
     ].join('\n'),
 
     MILESTONES: [
@@ -187,7 +186,6 @@ async function main() {
       `| 🔀 **Pull requests** | **${fmt(stats.prs)}** opened and merged through review |`,
       `| ⭐ **Stars earned** | **${fmt(stats.stars)}** from the developer community |`,
       `| 🍴 **Forks received** | **${fmt(stats.forks)}** — others building on my work |`,
-      `| 🏗️ **Profile Studio** | Full-stack React 19 + TypeScript app, designed, built and deployed |`,
       `| 🐍 **Automation** | Contribution snake + 3D calendar generated daily by GitHub Actions |`,
       `| 🧊 **3D contribution calendar** | Self-hosted, animated, regenerated every night |`,
     ].join('\n'),

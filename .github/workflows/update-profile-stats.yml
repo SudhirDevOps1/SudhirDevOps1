@@ -15,6 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     name: refresh README numbers and the streak card from the GitHub API
     steps:
       - name: Checkout

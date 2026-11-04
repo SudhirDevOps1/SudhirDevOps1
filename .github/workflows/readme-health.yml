@@ -24,6 +24,7 @@ concurrency:
 jobs:
   health:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     name: verify every image on the profile
     steps:
       - name: Checkout

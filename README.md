@@ -4,9 +4,7 @@
   Author      : Sudhir Singh
   Data Source : GitHub REST API v3 + Search API (PUBLIC) — 100% REAL
   Verified on : November 2026
-  Live Studio : https://sudhirdevops1.pages.dev
-  Portfolio   : https://sudhirdevops1.github.io
-  Built with  : React 19 + TypeScript + Tailwind CSS 4 + Vite 7
+  Website     : https://sudhirdevops1.github.io
   NOTE: All stats are REAL-TIME — zero fake data.
 ================================================================================
 -->
@@ -65,7 +63,7 @@ My goal: become a **full-stack developer** who ships real-world products.
 | 🔒 **Exploring** | Cyber Security & System Design |
 | 🌱 **Learning** | Python, TypeScript, Cloud & DevOps |
 | 🤖 **Interested in** | AI/ML, Automation, Open Source |
-| 🌐 **Portfolio** | [sudhirdevops1.pages.dev/portfolio.html](https://sudhirdevops1.pages.dev/portfolio.html) |
+| 🌐 **Portfolio** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
 | 📫 **Contact** | Available on [LinkedIn](https://linkedin.com/in/SudhirDevOps1) |
 | ⚡ **Fun Fact** | I debug at midnight and it still makes sense 😄 |
 
@@ -132,10 +130,6 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 ## 🌐 Connect With Me
 
-<a href="https://sudhirdevops1.pages.dev/portfolio.html">
-  <img src="https://img.shields.io/badge/Portfolio-sudhirdevops1.pages.dev-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
-</a>
-&nbsp;
 <a href="https://github.com/SudhirDevOps1">
   <img src="https://img.shields.io/badge/GitHub-SudhirDevOps1-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
@@ -176,7 +170,6 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | ➡️ **Following** | **19** *(Live from API)* |
 | 🗓️ **Joined GitHub** | 25 September 2025 |
 | ✅ **Last Verified** | 03 November 2026 |
-| 🏗️ **Studio Stack** | React 19 · TypeScript 5 · Tailwind CSS 4 · Vite 7 |
 <!-- STATS:TABLE:END -->
 
 <br/>
@@ -388,40 +381,6 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <br/>
 
-<!-- ═══════════════════════ FEATURED STUDIO ═══════════════════════ -->
-## 🚀 Featured — Professional GitHub Studio
-
-<div align="center">
-
-> **I built a full-stack web application that fetches live data from the GitHub REST API
-> and generates dynamic README profiles — 100% real, zero fake data.**
-
-<br/>
-
-<a href="https://sudhirdevops1.pages.dev/">
-  <img src="https://img.shields.io/badge/Open%20Studio-sudhirdevops1.pages.dev-36BCF7?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Open Studio"/>
-</a>
-
-<br/><br/>
-
-| Feature | Details |
-|:--|:--|
-| 📡 **Data Source** | GitHub REST API v3 — 100% Real-Time |
-| 📦 **Repo Browser** | Live repos with real stars, forks & languages |
-| ✍️ **README Generator** | Drag-and-drop markdown customizer |
-| 📊 **Analytics Dashboard** | Contribution heatmaps, language pies, star history |
-| 📋 **Export** | One-click Copy & Download |
-| ⚡ **Performance** | Vite 7 + React 19 — ultra-fast HMR |
-| 🎨 **Styling** | Tailwind CSS 4 + custom dark theme |
-
-<br/>
-
-**Stack:** `React 19` · `TypeScript 5` · `Tailwind CSS 4` · `Vite 7` · `Lucide Icons` · `canvas-confetti` · `marked`
-
-</div>
-
-<br/>
-
 <!-- ═══════════════════════ ROADMAP ═══════════════════════ -->
 ## 🎯 2026 Roadmap
 
@@ -444,7 +403,6 @@ Built with Tailwind CSS 4 and a design-token mindset.
 ## 📌 What I'm Currently Working On
 
 ```text
-🔭  GitHub Profile Studio   → Full-stack React + TS app with live API data
 🌱  Python Automation       → Scripts for web scraping & task automation
 ☁️  Cloud & DevOps          → Docker, CI/CD and deployment pipelines
 📚  DSA Practice            → Arrays, Trees, Graphs in Python & JS
@@ -468,7 +426,6 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | 🔀 **Pull requests** | **46** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
-| 🏗️ **Profile Studio** | Full-stack React 19 + TypeScript app, designed, built and deployed |
 | 🐍 **Automation** | Contribution snake + 3D calendar generated daily by GitHub Actions |
 | 🧊 **3D contribution calendar** | Self-hosted, animated, regenerated every night |
 <!-- STATS:MILESTONES:END -->
@@ -491,7 +448,6 @@ Built with Tailwind CSS 4 and a design-token mindset.
 | **README Health Check** | daily · 04:00 UTC | Loads **every image and every link** on this page with retries, and fails if the streak card is stale — dead links, error cards and soft-404s all turn the badge red | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
 | **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
 | **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
-| **App CI** | on every push / PR | `npm ci` → `tsc --noEmit` → `vite build` for the Studio app | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/ci.yml/badge.svg" alt="CI status"/> |
 
 <br/>
 
@@ -545,10 +501,6 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 &nbsp;
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
   <img src="https://img.shields.io/badge/Explore-Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
-</a>
-&nbsp;
-<a href="https://sudhirdevops1.pages.dev/portfolio.html">
-  <img src="https://img.shields.io/badge/Visit-Portfolio-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
 </a>
 
 </div>
