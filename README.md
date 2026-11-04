@@ -33,7 +33,7 @@
   <br/><br/>
 
   <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C010-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C025-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -199,13 +199,13 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 | 📦 **Public Repositories** | **77** *(Live from API)* |
 | ⭐ **Total Stars Earned** | **44** *(Live from API)* |
 | 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **3,010** *(Search API)* |
+| 💻 **Commits Authored** | **3,025** *(Search API)* |
 | 🔀 **Pull Requests** | **46** *(Search API)* |
 | 🐞 **Issues Opened** | **1** *(Search API)* |
 | 👥 **Followers** | **12** *(Live from API)* |
 | ➡️ **Following** | **19** *(Live from API)* |
 | 🗓️ **Joined GitHub** | 25 September 2025 |
-| ✅ **Last Verified** | 03 November 2026 |
+| ✅ **Last Verified** | 04 November 2026 |
 <!-- STATS:TABLE:END -->
 
 <br/>
@@ -456,9 +456,9 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 | 🏆 Milestone | 📈 Detail |
 |:--|:--|
 | 🗓️ **Joined GitHub** | 25 September 2025 |
-| 📅 **Days since joining** | **403** days of shipping code |
+| 📅 **Days since joining** | **404** days of shipping code |
 | 📦 **Public repositories** | **77** shipped and open |
-| 💻 **Commits authored** | **3,010** across all repositories |
+| 💻 **Commits authored** | **3,025** across all repositories |
 | 🔀 **Pull requests** | **46** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
@@ -593,7 +593,7 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 </a>
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>03 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 03/11/2026, 15:25:38 IST</sub>
+<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 15:14:20 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>
