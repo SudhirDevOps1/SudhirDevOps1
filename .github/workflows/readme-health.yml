@@ -9,7 +9,9 @@ on:
       - main
     paths:
       - README.md
+      - assets/*.svg
       - scripts/check-readme-health.mjs
+      - scripts/check-svg.mjs
       - .github/workflows/readme-health.yml
 
 permissions:
@@ -34,6 +36,9 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 22
+
+      - name: Check the self-hosted SVG quality gate
+        run: node scripts/check-svg.mjs
 
       - name: Load every README image
         id: check

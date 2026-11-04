@@ -148,6 +148,9 @@ function render(stats) {
       @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
       .bar { animation: glow 3.6s ease-in-out infinite; }
       @keyframes glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+      @media (prefers-reduced-motion: reduce) {
+        .dot, .bar { animation: none; }
+      }
     </style>
   </defs>
 

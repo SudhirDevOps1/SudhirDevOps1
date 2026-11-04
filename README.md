@@ -5,8 +5,19 @@
   Data Source : GitHub REST API v3 + Search API (PUBLIC) — 100% REAL
   Verified on : November 2026
   Website     : https://sudhirdevops1.github.io
-  Hero asset  : assets/hero-banner.svg (self-hosted — no third-party banner dependency)
   NOTE: All stats are REAL-TIME — zero fake data.
+
+  Self-hosted artwork (hand-drawn SVG, no third-party banners):
+    assets/hero-banner.svg    — terminal hero, rotating role line
+    assets/divider.svg        — animated section divider
+    assets/connect-panel.svg  — four channel cards
+    assets/signature.svg      — monogram + signed footer
+    assets/repo-spotlight.svg — GENERATED daily from the REST API
+    assets/streak-buddy.svg   — GENERATED daily from GraphQL
+  Design tokens: #0D1117/#161B22 surface · #30363D border · #36BCF7 cyan
+                 #A855F7 purple · #3FB950 green · system font stack
+  Motion: entrance fades + slow loops only, every asset honours
+          prefers-reduced-motion. No raster, no embedded fonts, no GIFs.
 ================================================================================
 -->
 
@@ -18,7 +29,7 @@
 <!-- ═══════════════════════ TYPING ANIMATION ═══════════════════════ -->
 <div align="center">
   <a href="https://github.com/SudhirDevOps1">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2400&pause=700&color=36BCF7&center=true&vCenter=true&width=940&height=75&lines=Hi+there+%F0%9F%91%8B+I'm+Sudhir+Singh!;%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Aspiring+Full-Stack+Developer;%E2%9A%9B%EF%B8%8F+React+19+%2B+TypeScript+%2B+Tailwind+4;%F0%9F%90%8D+Python+Automation+%26+Scripting;%E2%9A%99%EF%B8%8F+Docker+%E2%80%A2+CI%2FCD+%E2%80%A2+Cloud;%F0%9F%9A%80+Building+with+Real+GitHub+API+Data!" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2600&pause=800&color=36BCF7&center=true&vCenter=true&width=900&height=60&lines=Hi+there+%F0%9F%91%8B+I'm+Sudhir+Singh;%F0%9F%93%8D+Bihar%2C+India+%E2%80%A2+%F0%9F%8E%93+BCA+Student;%F0%9F%92%BB+Full-Stack+in+progress+%E2%80%A2+Automation+in+production;%F0%9F%9A%80+Every+number+below+is+real+and+refreshed+daily" alt="Typing SVG"/>
   </a>
 
   <br/><br/>
@@ -34,7 +45,7 @@
   <br/><br/>
 
   <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C025-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C045-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -50,9 +61,25 @@
   </a>
 </div>
 
-<br/>
+<!-- ═══════════════════════ QUICK NAV ═══════════════════════ -->
+<div align="center">
+  <sub>
+    <a href="#about">About</a> &nbsp;·&nbsp;
+    <a href="#work">What I Bring</a> &nbsp;·&nbsp;
+    <a href="#stack">Stack</a> &nbsp;·&nbsp;
+    <a href="#spotlight">Spotlight</a> &nbsp;·&nbsp;
+    <a href="#projects">Projects</a> &nbsp;·&nbsp;
+    <a href="#stats">Stats</a> &nbsp;·&nbsp;
+    <a href="#art">Contribution Art</a> &nbsp;·&nbsp;
+    <a href="#automation">Automation</a> &nbsp;·&nbsp;
+    <a href="#connect">Connect</a>
+  </sub>
+</div>
+
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ═══════════════════════ ABOUT ME + AVATAR ═══════════════════════ -->
+<a id="about"></a>
 <table width="100%">
 <tr>
 <td width="58%" valign="top">
@@ -101,9 +128,10 @@ My goal: become a **full-stack developer** who ships real-world products.
 </tr>
 </table>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ═══════════════════════ WHAT I BRING ═══════════════════════ -->
+<a id="work"></a>
 ## ⚡ What I Bring To The Table
 
 <table width="100%">
@@ -132,96 +160,35 @@ Built with Tailwind CSS 4 and a design-token mindset.
 </tr>
 </table>
 
-<br/>
-
-<!-- ═══════════════════════ HOW I WORK ═══════════════════════ -->
-## 🔁 How I Work
+### 🔁 How I Work
 
 <table width="100%">
 <tr>
 <td width="33%" valign="top">
 
-### 🚀 Ship > Talk
+**🚀 Ship > Talk**
 Working software over roadmaps and promises. Every claim on this page points to something you can open, run and verify — right now.
 
 </td>
 <td width="33%" valign="top">
 
-### 🤖 Automate > Repeat
+**🤖 Automate > Repeat**
 If a task happens three times, it becomes a script or a scheduled workflow. This very profile refreshes itself every single day.
 
 </td>
 <td width="33%" valign="top">
 
-### 🔍 Real > Fake
+**🔍 Real > Fake**
 Verified numbers or a red badge. Every stat here comes from the GitHub API — nothing is estimated, cached forever or made up.
 
 </td>
 </tr>
 </table>
 
-<br/>
-
-<!-- ═══════════════════════ CONNECT ═══════════════════════ -->
-<div align="center">
-
-## 🌐 Connect With Me
-
-<a href="https://github.com/SudhirDevOps1">
-  <img src="https://img.shields.io/badge/GitHub-SudhirDevOps1-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-</a>
-&nbsp;
-<a href="https://linkedin.com/in/SudhirDevOps1">
-  <img src="https://img.shields.io/badge/LinkedIn-in%2FSudhirDevOps1-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
-&nbsp;
-<a href="https://t.me/SudhirDevOps1">
-  <img src="https://img.shields.io/badge/Telegram-@SudhirDevOps1-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
-</a>
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ LIVE STATS TABLE ═══════════════════════ -->
-<div align="center">
-
-## 📊 Verified GitHub Statistics
-
-> 🟢 **All data is fetched LIVE from the GitHub REST API v3 + Search API — zero fake numbers.**
-
-<!-- STATS:TABLE:START -->
-| Metric | Value |
-|:--|:--|
-| 👤 **Name** | Sudhir Singh |
-| 🆔 **Username** | [`@SudhirDevOps1`](https://github.com/SudhirDevOps1) |
-| 📍 **Location** | Bihar, India |
-| 🌐 **Website** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
-| 📦 **Public Repositories** | **77** *(Live from API)* |
-| ⭐ **Total Stars Earned** | **44** *(Live from API)* |
-| 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **3,025** *(Search API)* |
-| 🔀 **Pull Requests** | **46** *(Search API)* |
-| 🐞 **Issues Opened** | **1** *(Search API)* |
-| 👥 **Followers** | **12** *(Live from API)* |
-| ➡️ **Following** | **19** *(Live from API)* |
-| 🗓️ **Joined GitHub** | 25 September 2025 |
-| ✅ **Last Verified** | 04 November 2026 |
-<!-- STATS:TABLE:END -->
-
-<br/>
-
-<img src="https://img.shields.io/github/followers/SudhirDevOps1?label=Followers&style=for-the-badge&color=4ECDC4&logo=github" alt="Followers"/>
-&nbsp;
-<img src="https://img.shields.io/github/stars/SudhirDevOps1?label=Total%20Stars&style=for-the-badge&color=FFDD00&logo=github" alt="Stars"/>
-&nbsp;
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FSudhirDevOps1&query=%24.public_repos&label=Repos&color=36BCF7&style=for-the-badge&logo=github" alt="Repos"/>
-
-</div>
-
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
+<a id="stack"></a>
 ## 🛠️ Tech Stack & Tools
 
 <div align="center">
@@ -272,13 +239,24 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 
 </div>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
+<!-- ═══════════════════════ LIVE REPO SPOTLIGHT ═══════════════════════ -->
+<a id="spotlight"></a>
+## 🔦 Repo Spotlight
 
-<br/>
+<div align="center">
+
+<img src="./assets/repo-spotlight.svg" width="100%" alt="Top 3 repositories by stars, with language, stars, forks and last push date, regenerated daily from the GitHub REST API"/>
+
+<sub><b>Redrawn every day</b> by <code>scripts/update-stats.mjs</code> — stars, forks, language and the last push date on this card come straight from the GitHub REST API. Nothing on it is typed by hand.</sub>
+
+</div>
+
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
+<a id="projects"></a>
 ## 🚀 Featured Projects
 
 <div align="center">
@@ -303,13 +281,47 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 
 </div>
 
+<img src="./assets/divider.svg" width="100%" alt=""/>
+
+<!-- ═══════════════════════ LIVE STATS TABLE ═══════════════════════ -->
+<a id="stats"></a>
+<div align="center">
+
+## 📊 Verified GitHub Statistics
+
+> 🟢 **All data is fetched LIVE from the GitHub REST API v3 + Search API — zero fake numbers.**
+
+<!-- STATS:TABLE:START -->
+| Metric | Value |
+|:--|:--|
+| 👤 **Name** | Sudhir Singh |
+| 🆔 **Username** | [`@SudhirDevOps1`](https://github.com/SudhirDevOps1) |
+| 📍 **Location** | Bihar, India |
+| 🌐 **Website** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
+| 📦 **Public Repositories** | **77** *(Live from API)* |
+| ⭐ **Total Stars Earned** | **44** *(Live from API)* |
+| 🍴 **Total Forks** | **7** *(Live from API)* |
+| 💻 **Commits Authored** | **3,045** *(Search API)* |
+| 🔀 **Pull Requests** | **46** *(Search API)* |
+| 🐞 **Issues Opened** | **1** *(Search API)* |
+| 👥 **Followers** | **12** *(Live from API)* |
+| ➡️ **Following** | **19** *(Live from API)* |
+| 🗓️ **Joined GitHub** | 25 September 2025 |
+| ✅ **Last Verified** | 04 November 2026 |
+<!-- STATS:TABLE:END -->
+
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
+<img src="https://img.shields.io/github/followers/SudhirDevOps1?label=Followers&style=for-the-badge&color=4ECDC4&logo=github" alt="Followers"/>
+&nbsp;
+<img src="https://img.shields.io/github/stars/SudhirDevOps1?label=Total%20Stars&style=for-the-badge&color=FFDD00&logo=github" alt="Stars"/>
+&nbsp;
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FSudhirDevOps1&query=%24.public_repos&label=Repos&color=36BCF7&style=for-the-badge&logo=github" alt="Repos"/>
+
+</div>
 
 <br/>
 
-<!-- ═══════════════════════ GITHUB STATS CARDS ═══════════════════════ -->
 ## 📈 GitHub Statistics
 
 <div align="center">
@@ -342,113 +354,103 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=SudhirDevOps1&theme=tokyonight" width="96%" alt="Profile Summary"/>
 </a>
 
+<br/><br/>
+
+<sub><b>Streak card</b> — <code>scripts/update-streak.mjs</code> reads the contribution calendar through GraphQL every day and redraws it. No third-party cache, no stale numbers.</sub>
+
 </div>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
-<!-- ═══════════════════════ FULL HEATMAP ═══════════════════════ -->
-## 🗓️ Full Contribution Heatmap
-
-<div align="center">
-  <a href="https://github.com/SudhirDevOps1">
-    <img src="https://ghchart.rshah.org/36BCF7/SudhirDevOps1" width="96%" alt="Yearly Contribution Heatmap"/>
-  </a>
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ 3D CALENDAR ═══════════════════════ -->
-## 🧊 3D Contribution Calendar
-
-<div align="center">
-  <a href="https://github.com/SudhirDevOps1">
-    <img src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/main/profile-3d-contrib/profile-night-rainbow.svg" width="96%" alt="3D Contribution Calendar"/>
-  </a>
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ TROPHIES ═══════════════════════ -->
-## 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy-sandy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies"/>
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ ACTIVITY GRAPH ═══════════════════════ -->
-## 📅 Contribution Activity Graph
-
-<div align="center">
-  <a href="https://github.com/SudhirDevOps1">
-    <img src="https://github-readme-activity-graph-xi.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&bg_color=0D1117&color=36BCF7&line=36BCF7&point=FFFFFF&area=true&hide_border=true" width="96%" alt="Activity Graph"/>
-  </a>
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ SNAKE ═══════════════════════ -->
-## 🐍 Contribution Snake
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"/>
-    <img alt="Contribution Snake" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"/>
-  </picture>
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ STREAK BUDDY ═══════════════════════ -->
-## 🦊 Animated Streak Buddy
-
-<div align="center">
-  <a href="https://github.com/SudhirDevOps1">
-    <img src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/main/assets/streak-buddy.svg" width="620" alt="Animated streak card drawn from the live GitHub contribution calendar"/>
-  </a>
-
-  <sub><b>Drawn by my own workflow</b> — <code>scripts/update-streak.mjs</code> reads the contribution calendar every day and redraws this card. No third-party cache, no stale numbers.</sub>
-</div>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
-
-<br/>
-
-<!-- ═══════════════════════ ROADMAP ═══════════════════════ -->
-## 🎯 2026 Roadmap
+<!-- ═══════════════════════ CONTRIBUTION ART ═══════════════════════ -->
+<a id="art"></a>
+## 🎨 Contribution Art
 
 <div align="center">
 
-| 🎯 Goal | 📌 Why it matters | 🚦 Status |
-|:--|:--|:--|
-| **Full-stack mastery** — React 19 + TypeScript | Ship production apps end-to-end | 🟢 In progress |
-| **Cloud & DevOps** — Docker, CI/CD, Linux | Deploy and operate what I build | 🟡 Learning |
-| **DSA & problem solving** — arrays → graphs | Think in complexity, not guesswork | 🟡 Ongoing |
-| **Open source contributions** | Learn from real codebases and reviews | 🟢 Started |
-| **AI / ML foundations** | Build tools that reason, not just render | ⚪ Exploring |
-| **System design** | Design for scale before it breaks | ⚪ Exploring |
+### 🗓️ Full Heatmap
+
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://ghchart.rshah.org/36BCF7/SudhirDevOps1" width="96%" alt="Yearly Contribution Heatmap"/>
+</a>
+
+<br/><br/>
+
+### 🧊 3D Contribution Calendar
+
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/main/profile-3d-contrib/profile-night-rainbow.svg" width="96%" alt="3D Contribution Calendar"/>
+</a>
+
+<br/><br/>
+
+### 🐍 Contribution Snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"/>
+  <img alt="Contribution Snake" src="https://raw.githubusercontent.com/SudhirDevOps1/SudhirDevOps1/output/github-contribution-grid-snake.svg"/>
+</picture>
+
+<br/><br/>
+
+### 📅 Activity Graph
+
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://github-readme-activity-graph-xi.vercel.app/graph?username=SudhirDevOps1&theme=tokyo-night&bg_color=0D1117&color=36BCF7&line=36BCF7&point=FFFFFF&area=true&hide_border=true" width="96%" alt="Activity Graph"/>
+</a>
+
+<br/><br/>
+
+### 🏆 GitHub Trophies
+
+<img src="https://github-profile-trophy-sandy.vercel.app/?username=SudhirDevOps1&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7" alt="GitHub Trophies"/>
 
 </div>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
-<!-- ═══════════════════════ CURRENTLY WORKING ON ═══════════════════════ -->
-## 📌 What I'm Currently Working On
+<!-- ═══════════════════════ AUTOMATION & MONITORING ═══════════════════════ -->
+<a id="automation"></a>
+## 🛰️ Live Automation & Monitoring
+
+<div align="center">
+
+> ⚙️ This profile **maintains itself**. Every workflow below runs on a schedule,
+> pulls real data from the GitHub API, and turns **red on its own** if a source breaks.
+
+**How it runs itself — the 20-second version:**
 
 ```text
-🌱  Python Automation       → Scripts for web scraping & task automation
-☁️  Cloud & DevOps          → Docker, CI/CD and deployment pipelines
-📚  DSA Practice            → Arrays, Trees, Graphs in Python & JS
-🎨  UI/UX Projects          → Building modern, animated web interfaces
+cron (GitHub Actions)
+  ├─ update-stats.mjs   → REST v3 + Search API → repos · stars · forks · commits · PRs · followers
+  │                       ├─ rewrites the STATS blocks in this README (marker-guarded)
+  │                       └─ redraws assets/repo-spotlight.svg from the top repositories
+  ├─ update-streak.mjs  → GraphQL contribution calendar → assets/streak-buddy.svg
+  ├─ git commit + push (github-actions[bot])   → this page stays fresh, daily
+  └─ check-readme-health.mjs → loads every image & link live
+      └─ check-svg.mjs  → XML validity · aria labels · weight budget · reduced-motion
 ```
+
+| ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
+|:--|:--|:--|:--|
+| **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above, redraws the spotlight card and the streak card | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
+| **README Health Check** | daily · 04:00 UTC | Gates the SVG assets, then loads **every image and every link** on this page with retries, and fails if either generated card is stale — dead links, error cards and soft-404s all turn the badge red | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
+| **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
+| **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
 
 <br/>
 
+**No demo data. No placeholders. No fake numbers.**
+If a value appears on this page, a workflow fetched it from the GitHub API —
+and if a source stops responding, the badge above goes red instead of quietly lying.
+
+</div>
+
+<img src="./assets/divider.svg" width="100%" alt=""/>
+
 <!-- ═══════════════════════ MILESTONES ═══════════════════════ -->
+<a id="milestones"></a>
 ## 🏅 Milestones & Achievements
 
 <div align="center">
@@ -459,7 +461,7 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 | 🗓️ **Joined GitHub** | 25 September 2025 |
 | 📅 **Days since joining** | **404** days of shipping code |
 | 📦 **Public repositories** | **77** shipped and open |
-| 💻 **Commits authored** | **3,025** across all repositories |
+| 💻 **Commits authored** | **3,045** across all repositories |
 | 🔀 **Pull requests** | **46** opened and merged through review |
 | ⭐ **Stars earned** | **44** from the developer community |
 | 🍴 **Forks received** | **7** — others building on my work |
@@ -469,9 +471,10 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 
 </div>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ═══════════════════════ JOURNEY ═══════════════════════ -->
+<a id="journey"></a>
 ## 🧭 My Journey So Far
 
 <div align="center">
@@ -487,63 +490,70 @@ Verified numbers or a red badge. Every stat here comes from the GitHub API — n
 
 <br/>
 
-<!-- ═══════════════════════ AUTOMATION & MONITORING ═══════════════════════ -->
-## 🛰️ Live Automation & Monitoring
+## 🎯 What's Next
 
 <div align="center">
 
-> ⚙️ This profile **maintains itself**. Every workflow below runs on a schedule,
-> pulls real data from the GitHub API, and turns **red on its own** if a source breaks.
+| 🎯 Goal | 📌 Why it matters | 🚦 Status |
+|:--|:--|:--|
+| **Full-stack mastery** — React 19 + TypeScript | Ship production apps end-to-end | 🟢 In progress |
+| **Cloud & DevOps** — Docker, CI/CD, Linux | Deploy and operate what I build | 🟡 Learning |
+| **DSA & problem solving** — arrays → graphs | Think in complexity, not guesswork | 🟡 Ongoing |
+| **Open source contributions** | Learn from real codebases and reviews | 🟢 Started |
+| **AI / ML foundations** | Build tools that reason, not just render | ⚪ Exploring |
+| **System design** | Design for scale before it breaks | ⚪ Exploring |
 
-**How it runs itself — the 20-second version:**
+</div>
 
 ```text
-cron (GitHub Actions)
-  ├─ update-stats.mjs  → REST v3 + Search API → repos · stars · forks · commits · PRs · followers
-  ├─                      └─ rewrites the STATS blocks in this README (marker-guarded)
-  ├─ update-streak.mjs → GraphQL contribution calendar → assets/streak-buddy.svg
-  ├─ git commit + push (github-actions[bot])   → this page stays fresh, daily
-  └─ check-readme-health.mjs → verifies every image & link live · red badge on any failure
+🌱  Python Automation   → Scripts for web scraping & task automation
+☁️  Cloud & DevOps      → Docker, CI/CD and deployment pipelines
+📚  DSA Practice        → Arrays, Trees, Graphs in Python & JS
+🎨  UI/UX Projects      → Building modern, animated web interfaces
 ```
 
-| ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
-|:--|:--|:--|:--|
-| **Update Profile Stats** | daily · 02:30 UTC | Recomputes repos, stars, forks, commits, PRs, issues, followers — then rewrites the tables above and redraws the streak card | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
-| **README Health Check** | daily · 04:00 UTC | Loads **every image and every link** on this page with retries, and fails if the streak card is stale — dead links, error cards and soft-404s all turn the badge red | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
-| **Contribution Snake** | every 12 hours | Regenerates the animated snake from real contribution data | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
-| **3D Contribution Calendar** | daily · 18:00 UTC | Rebuilds the isometric 3D calendar SVG | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
-<br/>
-
-**No demo data. No placeholders. No fake numbers.**
-If a value appears on this page, a workflow fetched it from the GitHub API —
-and if a source stops responding, the badge above goes red instead of quietly lying.
-
-</div>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:36BCF7,50:a855f7,100:36BCF7&height=4" width="100%" alt=""/>
-
-<br/>
-
-<!-- ═══════════════════════ DEV QUOTE ═══════════════════════ -->
-## 💡 Developer Quote
+<!-- ═══════════════════════ FUN ═══════════════════════ -->
+## 💡 Off The Clock
 
 <div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+
+<br/><br/>
+
+<img src="https://readme-jokes.vercel.app/api?theme=tokyonight" width="600" alt="Random Dev Joke"/>
+
 </div>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
-<!-- ═══════════════════════ DEV JOKE ═══════════════════════ -->
-## 😄 Random Dev Joke
+<!-- ═══════════════════════ CONNECT ═══════════════════════ -->
+<a id="connect"></a>
+## 🌐 Connect With Me
 
 <div align="center">
-  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight" width="600" alt="Random Dev Joke"/>
+
+<a href="https://github.com/SudhirDevOps1"><img src="./assets/connect-panel.svg" width="100%" alt="Connect with Sudhir Singh on GitHub, LinkedIn, Telegram or the portfolio site"/></a>
+
+<br/><br/>
+
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://img.shields.io/badge/GitHub-SudhirDevOps1-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+&nbsp;
+<a href="https://linkedin.com/in/SudhirDevOps1">
+  <img src="https://img.shields.io/badge/LinkedIn-in%2FSudhirDevOps1-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="https://t.me/SudhirDevOps1">
+  <img src="https://img.shields.io/badge/Telegram-@SudhirDevOps1-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
+</a>
+
 </div>
 
-<br/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ═══════════════════════ CTA ═══════════════════════ -->
 ## 🤝 Let's Build Together
@@ -583,22 +593,14 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <div align="center">
 
-<a href="https://github.com/SudhirDevOps1">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=940&height=60&lines=Thanks+for+visiting+my+profile!+%F0%9F%99%8F;Open+to+collaboration+%F0%9F%A4%9D;Let's+build+something+amazing+together!+%F0%9F%9A%80;Star+a+repo+if+you+find+it+useful+%E2%AD%90" alt="Footer Typing"/>
-</a>
+<img src="./assets/signature.svg" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/><br/>
 
-<sub><b>sudo ship_it --with-passion</b> · zero fake data · always shipping 🚀</sub>
-
-<br/><br/>
-
-<a href="https://github.com/SudhirDevOps1">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:2C5364,100:0F2027&height=150&section=footer&text=Code%20%E2%80%A2%20Build%20%E2%80%A2%20Ship&fontSize=24&fontColor=ffffff&animation=twinkling&fontAlignY=72" width="100%" alt="Footer Wave"/>
-</a>
+<sub>Built and drawn by hand · refreshed by robots · every number verified</sub>
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 15:14:20 IST</sub>
+<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 18:43:25 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>

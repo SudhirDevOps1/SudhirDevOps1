@@ -20,6 +20,7 @@ import { dirname } from 'node:path';
 const README = 'README.md';
 const REPORT = '.github/health/latest.json';
 const STREAK_SVG = 'assets/streak-buddy.svg';
+const SPOTLIGHT_SVG = 'assets/repo-spotlight.svg';
 const CONCURRENCY = 8;
 const ATTEMPTS = 3;
 const MIN_BYTES = 200;
@@ -196,6 +197,37 @@ function checkStreakCard() {
   return { ok: true, updated: `${day} ${mon} ${year}`, ageDays, streakDays };
 }
 
+// Same idea for the spotlight card: if the daily stats job stops running, the
+// card keeps rendering with last week's repositories — a quiet lie. Freshness
+// is the only proof that the numbers on it are still true.
+function checkSpotlightCard() {
+  let svg;
+  try {
+    svg = readFileSync(SPOTLIGHT_SVG, 'utf8');
+  } catch {
+    return { ok: false, reason: `${SPOTLIGHT_SVG} is missing` };
+  }
+
+  const stamp = svg.match(/generated (\d{2}) ([A-Za-z]{3}) (\d{4})/);
+  if (!stamp) return { ok: false, reason: 'no "generated <date>" stamp in the card' };
+
+  const [, day, mon, year] = stamp;
+  const month = MONTHS[mon.toLowerCase()];
+  if (month === undefined) return { ok: false, reason: `unreadable month "${mon}" in the card` };
+
+  const drawn = Date.UTC(Number(year), month, Number(day));
+  const ageDays = Math.max(0, Math.floor((Date.now() - drawn) / 86_400_000));
+  if (ageDays > MAX_STREAK_AGE_DAYS) {
+    return { ok: false, reason: `card is ${ageDays} days old (limit ${MAX_STREAK_AGE_DAYS})` };
+  }
+
+  const stars = [...svg.matchAll(/★ ([\d,]+)/g)]
+    .map((m) => Number(m[1].replace(/,/g, '')))
+    .reduce((sum, n) => sum + n, 0);
+
+  return { ok: true, updated: `${day} ${mon} ${year}`, ageDays, stars };
+}
+
 async function main() {
   const markdown = readFileSync(README, 'utf8');
   const urls = extractImageUrls(markdown);
@@ -220,6 +252,7 @@ async function main() {
   const failed = results.filter((r) => !r.ok);
   const failedLinks = linkResults.filter((r) => !r.ok);
   const streak = checkStreakCard();
+  const spotlight = checkSpotlightCard();
   const passed = results.length - failed.length;
   const passedLinks = linkResults.length - failedLinks.length;
 
@@ -237,6 +270,7 @@ async function main() {
       results: linkResults,
     },
     streak,
+    spotlight,
     results,
   };
 
@@ -253,10 +287,15 @@ async function main() {
     `${streak.ok ? 'OK  ' : 'FAIL'} ${String(`age ${streak.ageDays ?? '-'}d`).padStart(7)}  ` +
       `${STREAK_SVG} (${streak.ok ? streak.updated : streak.reason})`
   );
+  console.log(
+    `${spotlight.ok ? 'OK  ' : 'FAIL'} ${String(`age ${spotlight.ageDays ?? '-'}d`).padStart(7)}  ` +
+      `${SPOTLIGHT_SVG} (${spotlight.ok ? `${spotlight.updated} · ${spotlight.stars}★` : spotlight.reason})`
+  );
 
   const rows = failed.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const linkRows = failedLinks.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const streakRow = streak.ok ? [] : [`| ❌ | \`${STREAK_SVG}\` | ${streak.reason} |`];
+  const spotlightRow = spotlight.ok ? [] : [`| ❌ | \`${SPOTLIGHT_SVG}\` | ${spotlight.reason} |`];
   const summary = [
     '## 🩺 README health check',
     '',
@@ -265,10 +304,13 @@ async function main() {
     streak.ok
       ? `**Streak card** — drawn ${streak.updated}, ${streak.ageDays} day(s) old, current streak ${streak.streakDays} day(s).`
       : `**Streak card FAILED** — ${streak.reason}.`,
+    spotlight.ok
+      ? `**Repo spotlight** — generated ${spotlight.updated}, ${spotlight.ageDays} day(s) old, ${spotlight.stars}★ across the top 3.`
+      : `**Repo spotlight FAILED** — ${spotlight.reason}.`,
     '',
-    ...(failed.length || failedLinks.length || !streak.ok
-      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow]
-      : ['✅ Every image, every link and the streak card on the profile are live.']),
+    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok
+      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow]
+      : ['✅ Every image, every link, the streak card and the spotlight card on the profile are live.']),
   ].join('\n');
 
   console.log(`\n${summary}`);
@@ -278,7 +320,7 @@ async function main() {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   }
 
-  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok) {
+  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok) {
     if (failed.length > 0) {
       console.error(`::error::${failed.length} of ${results.length} README images are broken.`);
     }
@@ -287,6 +329,9 @@ async function main() {
     }
     if (!streak.ok) {
       console.error(`::error::Streak card is not live: ${streak.reason}.`);
+    }
+    if (!spotlight.ok) {
+      console.error(`::error::Repo spotlight is not live: ${spotlight.reason}.`);
     }
     console.error('See .github/health/latest.json for the full report.');
     process.exit(1);

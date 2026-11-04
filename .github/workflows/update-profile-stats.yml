@@ -42,14 +42,14 @@ jobs:
 
       - name: Commit refreshed README
         run: |
-          if [ -z "$(git status --porcelain README.md assets/streak-buddy.svg)" ]; then
-            echo "No changes to commit — stats and streak card already current."
+          if [ -z "$(git status --porcelain README.md assets/streak-buddy.svg assets/repo-spotlight.svg)" ]; then
+            echo "No changes to commit — stats, streak card and spotlight already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/streak-buddy.svg
-          git commit -m "chore(stats): refresh live GitHub stats + streak card"
+          git add README.md assets/streak-buddy.svg assets/repo-spotlight.svg
+          git commit -m "chore(stats): refresh live GitHub stats, streak card + repo spotlight"
           pushed=0
           for attempt in 1 2 3; do
             if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push; then

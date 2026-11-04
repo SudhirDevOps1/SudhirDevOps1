@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120" role="img" aria-label="Sudhir Singh — signed, with the tagline sudo ship_it, zero fake data">
+  <title>Sudhir Singh — signature</title>
+  <desc>Monogram badge drawn with an animated stroke, the name fading up, and a hand-drawn underline that draws itself.</desc>
+
+  <!--
+    Design tokens
+      surface  #161B22   border #30363D   text #E6EDF3   muted #8B949E
+      accent   #36BCF7 cyan -> #A855F7 purple   ok #3FB950
+    Motion: stroke-draw + fade-up entrance only, no infinite loops except the status dot.
+  -->
+
+  <defs>
+    <linearGradient id="sigG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#36BCF7"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <style>
+      .ring {
+        stroke-dasharray: 232;
+        stroke-dashoffset: 232;
+        animation: draw 1.5s .15s cubic-bezier(.65,0,.35,1) forwards;
+      }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+
+      .mono { opacity: 0; animation: fadeUp .7s .75s cubic-bezier(.2,.8,.2,1) both; }
+      .name { opacity: 0; animation: fadeUp .7s .55s cubic-bezier(.2,.8,.2,1) both; }
+      .tag  { opacity: 0; animation: fadeUp .7s .95s cubic-bezier(.2,.8,.2,1) both; }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(9px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .line {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        animation: draw 1.3s 1.25s ease forwards;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ring, .mono, .name, .tag, .line { animation: none; opacity: 1; stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect x="2.5" y="2.5" width="79" height="79" rx="18" fill="#161B22" stroke="url(#sigG)" stroke-width="1.6" class="ring"/>
+  <text x="42" y="55" text-anchor="middle"
+        font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="url(#sigG)" letter-spacing="1">SS</text>
+
+  <text class="name" x="104" y="45"
+        font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="29" font-weight="700" fill="#E6EDF3" letter-spacing=".4">Sudhir Singh</text>
+
+  <text class="tag" x="106" y="70"
+        font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="11" fill="#8B949E" letter-spacing="2">SUDO SHIP_IT --WITH-PASSION</text>
+
+  <path class="line" d="M106 84 q 24 -9 48 0 t 48 0 t 48 0 t 48 0"
+        fill="none" stroke="url(#sigG)" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+
+  <text x="106" y="105"
+        font-family="ui-monospace, Menlo, Consolas, monospace"
+        font-size="9.5" fill="#6E7681" letter-spacing=".6">zero fake data · always shipping</text>
+</svg>
