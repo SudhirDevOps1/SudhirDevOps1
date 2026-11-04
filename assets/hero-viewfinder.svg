@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 502" width="1200" height="502" role="img" aria-label="Sudhir Singh — Cinema-Grade Anamorphic Viewfinder HUD: Optical telemetry, real-time command line terminal, and systems engineering profile.">
+  <title>Sudhir Singh — Optical Telemetry Viewfinder</title>
+  <desc>Anamorphic HUD viewfinder displaying camera optics telemetry, live terminal execution, verified coordinates in Bihar India, and real-time automation status.</desc>
+
+  <defs>
+    <!-- Color palette tokens: #070A0F, #121826, #1E293B, #38BDF8, #A855F7, #10B981, #F59E0B -->
+    <linearGradient id="vfBg" x1="0" y1="0" x2="1200" y2="502" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070A0F"/>
+      <stop offset="50%" stop-color="#0B111D"/>
+      <stop offset="100%" stop-color="#121826"/>
+    </linearGradient>
+
+    <linearGradient id="vfNameGrad" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <linearGradient id="vfScanGrad" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="85%" stop-color="#38BDF8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <pattern id="vfGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.4"/>
+      <circle cx="0" cy="0" r="0.8" fill="#38BDF8" fill-opacity="0.3"/>
+    </pattern>
+
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      
+      /* Optical telemetry blinking & scanner */
+      .rec-dot { animation: recBlink 1.4s ease-in-out infinite; }
+      @keyframes recBlink { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.2; transform: scale(0.85); } }
+
+      .scanline { animation: sweep 5s linear infinite; }
+      @keyframes sweep { 0% { transform: translateY(-80px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(510px); opacity: 0; } }
+
+      .reticle-spin { animation: reticleRotate 20s linear infinite; transform-origin: 1040px 170px; }
+      @keyframes reticleRotate { 100% { transform: rotate(360deg); } }
+
+      .terminal-caret { animation: caretBlink 0.9s steps(1) infinite; }
+      @keyframes caretBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+      .role-fade { opacity: 0; animation: roleSequence 12s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+      .role-1 { animation-delay: 0s; }
+      .role-2 { animation-delay: 4s; }
+      .role-3 { animation-delay: 8s; }
+      @keyframes roleSequence {
+        0% { opacity: 0; transform: translateY(6px); }
+        5% { opacity: 1; transform: translateY(0); }
+        30% { opacity: 1; transform: translateY(0); }
+        33% { opacity: 0; transform: translateY(-6px); }
+        100% { opacity: 0; }
+      }
+
+      .hud-glow { filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.35)); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .rec-dot, .scanline, .reticle-spin, .terminal-caret, .role-fade { animation: none; }
+        .role-1 { opacity: 1; }
+        .rec-dot { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- ── 1. CINEMA BACKGROUND & ANAMORPHIC FRAME ──────────────── -->
+  <rect width="1200" height="502" rx="14" fill="url(#vfBg)"/>
+  <rect width="1200" height="502" rx="14" fill="url(#vfGrid)"/>
+
+  <!-- Viewfinder Frame Border -->
+  <rect x="1" y="1" width="1198" height="500" rx="13" fill="none" stroke="#1E293B" stroke-width="1.2"/>
+  <rect x="18" y="18" width="1164" height="466" rx="8" fill="none" stroke="#38BDF8" stroke-opacity="0.18" stroke-width="0.8"/>
+
+  <!-- ── 2. OPTICAL SCANNER SWEEP ─────────────────────────────── -->
+  <g class="scanline">
+    <rect x="19" y="0" width="1162" height="60" fill="url(#vfScanGrad)"/>
+    <line x1="19" y1="60" x2="1181" y2="60" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.75"/>
+  </g>
+
+  <!-- ── 3. VIEWFINDER CORNER BRACKETS & CROSSHAIRS ───────────── -->
+  <!-- Top Left -->
+  <path d="M 32 60 L 32 32 L 60 32" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Top Right -->
+  <path d="M 1140 32 L 1168 32 L 1168 60" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bottom Left -->
+  <path d="M 32 442 L 32 470 L 60 470" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bottom Right -->
+  <path d="M 1140 470 L 1168 470 L 1168 442" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Center-Frame Precision Crosshair -->
+  <g stroke="#38BDF8" stroke-opacity="0.35" stroke-width="0.8">
+    <line x1="600" y1="236" x2="600" y2="246"/>
+    <line x1="600" y1="256" x2="600" y2="266"/>
+    <line x1="585" y1="251" x2="595" y2="251"/>
+    <line x1="605" y1="251" x2="615" y2="251"/>
+    <circle cx="600" cy="251" r="18" fill="none" stroke="#38BDF8" stroke-opacity="0.2" stroke-dasharray="2 3"/>
+  </g>
+
+  <!-- ── 4. OPTICAL TELEMETRY HUD HEADER ──────────────────────── -->
+  <!-- Recording Status Indicator -->
+  <g transform="translate(48, 44)">
+    <circle class="rec-dot" cx="0" cy="0" r="4.5" fill="#EF4444"/>
+    <text class="mono" x="12" y="4" font-size="11" font-weight="700" fill="#EF4444" letter-spacing="1.5">REC</text>
+    <text class="mono" x="52" y="4" font-size="10.5" fill="#64748B" letter-spacing="1">[LIVE · 4K DCI · 23.976 fps]</text>
+  </g>
+
+  <!-- Lens & Shutter Parameters -->
+  <g transform="translate(600, 44)" text-anchor="middle">
+    <text class="mono" x="0" y="4" font-size="10.5" fill="#94A3B8" letter-spacing="1.8">FOCAL 50mm · ƒ/1.4 · ISO 100 · SHUTTER 1/250s · 5600K</text>
+  </g>
+
+  <!-- Geo & Battery Telemetry -->
+  <g transform="translate(1152, 44)" text-anchor="end">
+    <text class="mono" x="0" y="4" font-size="10.5" fill="#38BDF8" letter-spacing="1.2">LAT 25.59° N // LON 85.14° E [BIHAR-IN]</text>
+  </g>
+
+  <!-- ── 5. TERMINAL PROMPT & IDENTITY SECTION ────────────────── -->
+  <g transform="translate(56, 102)">
+    <!-- Terminal Shell Bar -->
+    <rect x="0" y="0" width="620" height="28" rx="6" fill="#0A0E17" stroke="#1E293B" stroke-width="0.8"/>
+    <circle cx="14" cy="14" r="3.5" fill="#EF4444" fill-opacity="0.8"/>
+    <circle cx="26" cy="14" r="3.5" fill="#F59E0B" fill-opacity="0.8"/>
+    <circle cx="38" cy="14" r="3.5" fill="#10B981" fill-opacity="0.8"/>
+    <text class="mono" x="54" y="18" font-size="11" fill="#64748B">user@systems:~#</text>
+    <text class="mono" x="175" y="18" font-size="11" font-weight="600" fill="#38BDF8">./deploy-profile --production --truth=100%</text>
+    <rect class="terminal-caret" x="495" y="7" width="7" height="14" fill="#38BDF8"/>
+  </g>
+
+  <!-- Main Identity Banner -->
+  <g transform="translate(56, 185)">
+    <text class="sans hud-glow" x="0" y="45" font-size="52" font-weight="800" fill="url(#vfNameGrad)" letter-spacing="-1">SUDHIR SINGH</text>
+    
+    <!-- Cycling Role Titles -->
+    <g transform="translate(2, 80)">
+      <text class="mono role-fade role-1" x="0" y="0" font-size="15" font-weight="600" fill="#38BDF8" letter-spacing="1.2">&gt;&gt; SYSTEMS ARCHITECT &amp; AUTOMATION ENGINEER</text>
+      <text class="mono role-fade role-2" x="0" y="0" font-size="15" font-weight="600" fill="#A855F7" letter-spacing="1.2">&gt;&gt; FULL-STACK DEVELOPER // CLOUD &amp; DEVOPS PIPELINES</text>
+      <text class="mono role-fade role-3" x="0" y="0" font-size="15" font-weight="600" fill="#10B981" letter-spacing="1.2">&gt;&gt; 100% VERIFIED LIVE DATA · ZERO STALE NUMBERS</text>
+    </g>
+
+    <text class="mono" x="2" y="114" font-size="12" fill="#94A3B8" letter-spacing="0.5">BCA Systems Student · Bihar, India · Building high-reliability software &amp; automated crons</text>
+  </g>
+
+  <!-- ── 6. RIGHT-HAND AVIONICS TELEMETRY RADAR ────────────────── -->
+  <g transform="translate(1040, 205)">
+    <!-- Rotating Compass Ring -->
+    <circle cx="0" cy="0" r="76" fill="#0A0E17" stroke="#1E293B" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="62" fill="none" stroke="#38BDF8" stroke-opacity="0.15" stroke-dasharray="3 4"/>
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#38BDF8" stroke-opacity="0.25"/>
+    <circle cx="0" cy="0" r="18" fill="#121826" stroke="#38BDF8" stroke-width="1.5"/>
+
+    <!-- Rotating Reticle Cross -->
+    <g class="reticle-spin" stroke="#38BDF8" stroke-width="1.2">
+      <line x1="0" y1="-62" x2="0" y2="-44"/>
+      <line x1="0" y1="44" x2="0" y2="62"/>
+      <line x1="-62" y1="0" x2="-44" y2="0"/>
+      <line x1="44" y1="0" x2="62" y2="0"/>
+    </g>
+
+    <!-- Center Icon -->
+    <text class="mono" x="0" y="4" text-anchor="middle" font-size="9" font-weight="700" fill="#38BDF8">HUD</text>
+
+    <!-- Cardinal Coordinates -->
+    <text class="mono" x="0" y="-82" text-anchor="middle" font-size="8.5" fill="#64748B">000°</text>
+    <text class="mono" x="84" y="3" font-size="8.5" fill="#64748B">090°</text>
+    <text class="mono" x="0" y="90" text-anchor="middle" font-size="8.5" fill="#64748B">180°</text>
+    <text class="mono" x="-84" y="3" text-anchor="end" font-size="8.5" fill="#64748B">270°</text>
+
+    <text class="mono" x="0" y="112" text-anchor="middle" font-size="9.5" fill="#38BDF8" letter-spacing="1">SYSTEM RADAR ACTIVE</text>
+  </g>
+
+  <!-- ── 7. FOOTER AUDIT METRICS & STATUS ─────────────────────── -->
+  <g transform="translate(48, 460)">
+    <rect x="0" y="-18" width="1104" height="26" rx="4" fill="#0A0E17" stroke="#1E293B" stroke-width="0.8"/>
+    
+    <!-- Status Badges -->
+    <circle cx="16" cy="-5" r="4" fill="#10B981"/>
+    <text class="mono" x="26" y="-1" font-size="10" font-weight="600" fill="#10B981" letter-spacing="1">CI/CD: PASSING</text>
+
+    <line x1="128" y1="-14" x2="128" y2="4" stroke="#1E293B"/>
+
+    <text class="mono" x="144" y="-1" font-size="10" fill="#94A3B8" letter-spacing="0.8">DATA TRUTH: <tspan fill="#38BDF8" font-weight="600">GITHUB REST v3 + SEARCH API</tspan></text>
+
+    <line x1="440" y1="-14" x2="440" y2="4" stroke="#1E293B"/>
+
+    <text class="mono" x="456" y="-1" font-size="10" fill="#94A3B8" letter-spacing="0.8">AVAILABILITY: <tspan fill="#F59E0B" font-weight="600">OPEN TO WORK // CONTRACTS</tspan></text>
+
+    <line x1="770" y1="-14" x2="770" y2="4" stroke="#1E293B"/>
+
+    <text class="mono" x="1090" y="-1" text-anchor="end" font-size="10" fill="#64748B" letter-spacing="1">SECURITY: ZERO-KNOWLEDGE AUDITED</text>
+  </g>
+
+</svg>

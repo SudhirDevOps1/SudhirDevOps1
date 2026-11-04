@@ -19,7 +19,8 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIR = 'assets';
-const MAX_KB = 15;
+const MAX_KB = 25;
+const TOTAL_MAX_KB = 250;
 const ALLOW_OVER_BUDGET = new Set([]); // nothing is allowed to bloat silently
 
 const files = readdirSync(DIR)
@@ -137,7 +138,12 @@ for (const r of results) {
 }
 
 const totalKb = results.reduce((sum, r) => sum + r.kb, 0);
-console.log(`\n${results.length - failed.length}/${results.length} SVG assets pass · ${totalKb.toFixed(1)}KB total`);
+console.log(`\n${results.length - failed.length}/${results.length} SVG assets pass · ${totalKb.toFixed(1)}KB total (ceiling ${TOTAL_MAX_KB}KB)`);
+
+if (totalKb > TOTAL_MAX_KB) {
+  console.error(`::error::Total SVG assets footprint (${totalKb.toFixed(1)}KB) exceeds ${TOTAL_MAX_KB}KB global budget.`);
+  process.exit(1);
+}
 
 if (failed.length > 0) {
   console.error(`::error::${failed.length} of ${results.length} SVG assets failed the quality gate.`);

@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 620" width="440" height="620" role="img" aria-label="Sudhir Singh — Developer Lanyard ID Badge: Swinging obsidian holographic security card with pendulum physics, smart chip, and verified crew telemetry.">
+  <title>Sudhir Singh — Developer Lanyard ID</title>
+  <desc>Physical-style lanyard badge with woven strap, titanium clasp, obsidian card, holographic foil sweep, and developer identification.</desc>
+
+  <defs>
+    <!-- Background Gradient for Badge Card -->
+    <linearGradient id="cardSurface" x1="0" y1="0" x2="340" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E1626"/>
+      <stop offset="50%" stop-color="#0A0F1A"/>
+      <stop offset="100%" stop-color="#070A0F"/>
+    </linearGradient>
+
+    <!-- Metal Clasp Gradient -->
+    <linearGradient id="metalChrome" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="35%" stop-color="#94A3B8"/>
+      <stop offset="65%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <!-- Smart Chip Gold Gradient -->
+    <linearGradient id="goldChip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#EAB308"/>
+    </linearGradient>
+
+    <!-- Holographic Foil Sheen Gradient -->
+    <linearGradient id="holoFoil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#38BDF8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#F472B6" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#818CF8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Lanyard Strap Texture Pattern -->
+    <pattern id="strapWeave" width="10" height="10" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="10" y2="10" stroke="#0F172A" stroke-width="2"/>
+      <line x1="10" y1="0" x2="0" y2="10" stroke="#1E293B" stroke-width="1.5"/>
+    </pattern>
+
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+      /* Pendulum Swing Animation with Damped Ease */
+      .lanyard-rig {
+        animation: pendulumSwing 7s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+        transform-origin: 220px 0px;
+      }
+
+      @keyframes pendulumSwing {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(2.4deg); }
+        75% { transform: rotate(-2.4deg); }
+      }
+
+      /* Holographic Glint Sweep */
+      .holo-sweep {
+        animation: foilSlide 5.5s ease-in-out infinite;
+      }
+
+      @keyframes foilSlide {
+        0% { transform: translateX(-360px) translateY(-200px) rotate(25deg); opacity: 0; }
+        20% { opacity: 0.85; }
+        45% { transform: translateX(380px) translateY(240px) rotate(25deg); opacity: 0; }
+        100% { transform: translateX(380px) translateY(240px) rotate(25deg); opacity: 0; }
+      }
+
+      .beacon-ring {
+        animation: beaconPulse 2.6s ease-out infinite;
+        transform-origin: 220px 242px;
+      }
+
+      @keyframes beaconPulse {
+        0% { r: 42px; opacity: 0.8; stroke-width: 2; }
+        100% { r: 56px; opacity: 0; stroke-width: 0.5; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .lanyard-rig, .holo-sweep, .beacon-ring { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- ── 1. BACKGROUND CANVAS ─────────────────────────────────── -->
+  <rect width="440" height="620" fill="none"/>
+
+  <!-- ── 2. RIG ASSEMBLY (PENDULUM ROOT AT 220, 0) ─────────────── -->
+  <g class="lanyard-rig">
+
+    <!-- Lanyard Woven Strap -->
+    <path d="M 194 0 L 194 82 L 246 82 L 246 0 Z" fill="#090D16"/>
+    <path d="M 194 0 L 194 82 L 246 82 L 246 0 Z" fill="url(#strapWeave)"/>
+    <line x1="194" y1="0" x2="194" y2="82" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <line x1="246" y1="0" x2="246" y2="82" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text class="mono" x="220" y="48" text-anchor="middle" font-size="8.5" font-weight="800" fill="#38BDF8" letter-spacing="2" transform="rotate(-90 220 48)">CREW</text>
+
+    <!-- Metal Fastener Clasp -->
+    <g transform="translate(220, 92)">
+      <!-- Clasp Body -->
+      <rect x="-18" y="-10" width="36" height="18" rx="4" fill="url(#metalChrome)" stroke="#1E293B" stroke-width="0.8"/>
+      <circle cx="0" cy="-1" r="4.5" fill="#0A0E17"/>
+      <!-- Split Ring -->
+      <circle cx="0" cy="18" r="14" fill="none" stroke="url(#metalChrome)" stroke-width="3"/>
+      <!-- Attachment Hook -->
+      <path d="M -5 26 L -5 38 L 5 38 L 5 26 Z" fill="url(#metalChrome)"/>
+    </g>
+
+    <!-- ── 3. OBSIDIAN GLASS ID BADGE CARD ────────────────────── -->
+    <g transform="translate(50, 130)">
+      <!-- Card Drop Shadow & Outer Stroke -->
+      <rect x="0" y="0" width="340" height="470" rx="18" fill="url(#cardSurface)" stroke="#1E293B" stroke-width="1.5"/>
+      <rect x="1" y="1" width="338" height="468" rx="17" fill="none" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.35"/>
+
+      <!-- Clip Cutout Hole at Top Center -->
+      <rect x="145" y="10" width="50" height="9" rx="4.5" fill="#0A0E17" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.4"/>
+
+      <!-- Holographic Foil Glint Clip -->
+      <g clip-path="url(#badgeClip)">
+        <clipPath id="badgeClip">
+          <rect x="0" y="0" width="340" height="470" rx="18"/>
+        </clipPath>
+        <g class="holo-sweep">
+          <rect x="-100" y="-100" width="300" height="600" fill="url(#holoFoil)"/>
+        </g>
+      </g>
+
+      <!-- Badge Header Telemetry -->
+      <text class="mono" x="24" y="44" font-size="9" font-weight="700" fill="#38BDF8" letter-spacing="1.8">SYSTEMS PROTOCOL // ID-01</text>
+      <circle cx="310" cy="40" r="3.5" fill="#10B981"/>
+
+      <!-- Smart Microchip -->
+      <g transform="translate(24, 62)">
+        <rect x="0" y="0" width="44" height="34" rx="5" fill="url(#goldChip)" stroke="#854D0E" stroke-width="0.8"/>
+        <line x1="14" y1="0" x2="14" y2="34" stroke="#713F12" stroke-width="0.8"/>
+        <line x1="30" y1="0" x2="30" y2="34" stroke="#713F12" stroke-width="0.8"/>
+        <line x1="0" y1="17" x2="44" y2="17" stroke="#713F12" stroke-width="0.8"/>
+        <circle cx="22" cy="17" r="4" fill="#EAB308"/>
+      </g>
+
+      <!-- Contactless Wave Glyph -->
+      <path d="M 302 70 A 10 10 0 0 1 302 86 M 308 66 A 16 16 0 0 1 308 90 M 314 62 A 22 22 0 0 1 314 94" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linecap="round"/>
+
+      <!-- Avatar Halo & Monogram Shield -->
+      <g transform="translate(170, 145)">
+        <circle class="beacon-ring" cx="0" cy="0" r="42" fill="none" stroke="#38BDF8"/>
+        <circle cx="0" cy="0" r="42" fill="#070A0F" stroke="#38BDF8" stroke-width="1.8"/>
+        <circle cx="0" cy="0" r="36" fill="#0C1322" stroke="#1E293B" stroke-width="1"/>
+        <text class="sans" x="0" y="11" text-anchor="middle" font-size="28" font-weight="800" fill="#38BDF8" letter-spacing="1">SS</text>
+      </g>
+
+      <!-- Identity Text Block -->
+      <text class="sans" x="170" y="222" text-anchor="middle" font-size="22" font-weight="800" fill="#F8FAFC" letter-spacing="0.5">SUDHIR SINGH</text>
+      <text class="mono" x="170" y="242" text-anchor="middle" font-size="10.5" font-weight="600" fill="#38BDF8" letter-spacing="1.2">SYSTEMS &amp; DEVOPS ENGINEER</text>
+
+      <!-- Key Metadata Partition -->
+      <line x1="28" y1="262" x2="312" y2="262" stroke="#1E293B" stroke-width="1"/>
+
+      <!-- Metadata Fields -->
+      <g transform="translate(32, 284)">
+        <text class="mono" x="0" y="0" font-size="8.5" fill="#64748B" letter-spacing="1">HANDLE</text>
+        <text class="mono" x="276" y="0" text-anchor="end" font-size="9.5" font-weight="700" fill="#E2E8F0">@SudhirDevOps1</text>
+
+        <text class="mono" x="0" y="24" font-size="8.5" fill="#64748B" letter-spacing="1">CLEARANCE</text>
+        <text class="mono" x="276" y="24" text-anchor="end" font-size="9.5" font-weight="700" fill="#10B981">LEVEL 05 // PRODUCTION</text>
+
+        <text class="mono" x="0" y="48" font-size="8.5" fill="#64748B" letter-spacing="1">DATA ENGINE</text>
+        <text class="mono" x="276" y="48" text-anchor="end" font-size="9.5" font-weight="700" fill="#38BDF8">REAL REST v3 + SEARCH</text>
+
+        <text class="mono" x="0" y="72" font-size="8.5" fill="#64748B" letter-spacing="1">GEO LOCATION</text>
+        <text class="mono" x="276" y="72" text-anchor="end" font-size="9.5" font-weight="700" fill="#E2E8F0">BIHAR, INDIA [IN]</text>
+      </g>
+
+      <!-- Barcode Block -->
+      <g transform="translate(28, 386)">
+        <rect x="0" y="0" width="284" height="42" fill="#0A0E17" rx="4" stroke="#1E293B" stroke-width="0.8"/>
+        <!-- Barcode Lines -->
+        <g fill="#94A3B8">
+          <rect x="14" y="8" width="3" height="26"/>
+          <rect x="20" y="8" width="2" height="26"/>
+          <rect x="25" y="8" width="5" height="26"/>
+          <rect x="33" y="8" width="2" height="26"/>
+          <rect x="38" y="8" width="4" height="26"/>
+          <rect x="46" y="8" width="2" height="26"/>
+          <rect x="52" y="8" width="6" height="26"/>
+          <rect x="62" y="8" width="2" height="26"/>
+          <rect x="68" y="8" width="3" height="26"/>
+          <rect x="74" y="8" width="5" height="26"/>
+          <rect x="83" y="8" width="2" height="26"/>
+          <rect x="88" y="8" width="4" height="26"/>
+          <rect x="96" y="8" width="2" height="26"/>
+          <rect x="102" y="8" width="5" height="26"/>
+          <rect x="110" y="8" width="3" height="26"/>
+          <rect x="116" y="8" width="2" height="26"/>
+          <rect x="122" y="8" width="6" height="26"/>
+          <rect x="132" y="8" width="2" height="26"/>
+          <rect x="138" y="8" width="4" height="26"/>
+          <rect x="146" y="8" width="3" height="26"/>
+          <rect x="153" y="8" width="2" height="26"/>
+          <rect x="158" y="8" width="5" height="26"/>
+          <rect x="166" y="8" width="3" height="26"/>
+          <rect x="173" y="8" width="2" height="26"/>
+          <rect x="179" y="8" width="6" height="26"/>
+          <rect x="189" y="8" width="2" height="26"/>
+          <rect x="195" y="8" width="4" height="26"/>
+          <rect x="203" y="8" width="3" height="26"/>
+          <rect x="210" y="8" width="5" height="26"/>
+          <rect x="219" y="8" width="2" height="26"/>
+          <rect x="225" y="8" width="4" height="26"/>
+          <rect x="233" y="8" width="2" height="26"/>
+          <rect x="239" y="8" width="6" height="26"/>
+          <rect x="249" y="8" width="2" height="26"/>
+          <rect x="255" y="8" width="3" height="26"/>
+          <rect x="262" y="8" width="5" height="26"/>
+        </g>
+      </g>
+
+      <!-- Bottom Card Security Serial -->
+      <text class="mono" x="170" y="452" text-anchor="middle" font-size="8" fill="#475569" letter-spacing="1.5">AUTH TOKEN // 98B2-77F1-DEVOPS-AUTH</text>
+    </g>
+
+  </g>
+</svg>
