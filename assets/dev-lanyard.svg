@@ -40,7 +40,7 @@
       <line x1="10" y1="0" x2="0" y2="10" stroke="#1E293B" stroke-width="1.5"/>
     </pattern>
 
-    <style>
+    <style type="text/css"><![CDATA[
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
@@ -81,7 +81,7 @@
       @media (prefers-reduced-motion: reduce) {
         .lanyard-rig, .holo-sweep, .beacon-ring { animation: none; }
       }
-    </style>
+    ]]></style>
   </defs>
 
   <!-- ── 1. BACKGROUND CANVAS ─────────────────────────────────── -->

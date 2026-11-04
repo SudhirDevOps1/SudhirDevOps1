@@ -17,6 +17,7 @@
 
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 const DIR = 'assets';
 const MAX_KB = 25;
@@ -94,6 +95,15 @@ function checkAsset(file) {
   }
 
   problems.push(...parseErrors(source));
+
+  const py = spawnSync(
+    'python',
+    ['-c', 'import xml.etree.ElementTree as ET, sys; ET.parse(sys.argv[1])', path],
+    { encoding: 'utf8' }
+  );
+  if (py.status !== 0) {
+    problems.push(`strict XML parse failure: ${(py.stderr || '').trim() || 'invalid XML'}`);
+  }
 
   const root = source.match(/<svg\b[^>]*>/);
   if (!root) {

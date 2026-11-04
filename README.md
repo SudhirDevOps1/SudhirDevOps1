@@ -1,42 +1,32 @@
 <!--
 ================================================================================
-  README.md — SudhirDevOps1 Cinema-Grade GitHub Profile
+  README.md — SudhirDevOps1 Ultra-Premium Cinema-Grade GitHub Profile
   Author : Sudhir Singh · Data Engine : GitHub REST API v3 + Search API (100% REAL)
 
   Self-hosted artwork — hand-crafted SVG, zero third-party dependency banners:
-    assets/hero-viewfinder.svg  2.39:1 Anamorphic Viewfinder HUD + Optical Telemetry
-    assets/what-i-build.svg     Subsystems: Build · Automate · Design
-    assets/orbital-radar.svg    Concentric 3-ring Orbital Tech Radar
+    assets/hero-viewfinder.svg  1280x720 Cinema HUD: Optical Telemetry + Live Terminal + Code Card + Scanner
+    assets/build-console.svg    1280x520 Production Console: Browser Terminal + Capability Meters + Audit Matrix
+    assets/orbital-radar.svg    1280x580 Concentric 3-ring Orbital Tech Radar + Sweep Beam
     assets/stack-arsenal.svg    16 tools in a single geometric glyph language
-    assets/dev-lanyard.svg      Swinging Obsidian Lanyard ID with Holographic Sweep
+    assets/dev-lanyard.svg      Swinging Obsidian Lanyard ID with Damped Pendulum & Holographic Sweep
     assets/dev-id.svg           GENERATED daily — Identity card + live stats dashboard
     assets/repo-spotlight.svg   GENERATED daily — Top 3 repositories by stars
     assets/streak-buddy.svg     GENERATED daily — Live contribution streak
+    assets/what-i-build.svg     Subsystems: Build · Automate · Design
     assets/connect-panel.svg    Comms & channels matrix
     assets/signature.svg        Cryptographic signed footer
     assets/divider.svg          Precision section divider
 
-  Tokens: #070A0F/#0B0F17 surface · #1E293B/#30363D border · #38BDF8 · #A855F7 · #10B981
-  Motion: Hardware-accelerated CSS + SMIL; 100% prefers-reduced-motion compliant.
+  Tokens: #070A11/#0B1220 surface · #1E293B border · #38BDF8 · #818CF8 · #C084FC · #10B981
+  Motion: Hardware-accelerated CSS + SMIL; 100% prefers-reduced-motion compliant; 100% Valid XML.
 ================================================================================
 -->
 
 <div align="center">
 
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="./assets/hero-viewfinder.svg?v=1" width="100%" alt="Sudhir Singh — Optical Telemetry Viewfinder HUD: Anamorphic camera telemetry, live terminal command sequence, and systems engineering profile."/>
+  <img src="./assets/hero-viewfinder.svg?v=2" width="100%" alt="Sudhir Singh — Cinema-Grade Anamorphic Viewfinder HUD: Optical telemetry, live terminal command execution, code card, and systems engineering profile."/>
 </a>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&width=860&height=52&lines=SUDHIR+SINGH+%2F%2F+SYSTEMS+%26+AUTOMATION+ENGINEER;%F0%9F%93%8D+Bihar%2C+India+%C2%B7+BCA+Systems+Student;%E2%9A%99%EF%B8%8F+Full-Stack+in+progress+%C2%B7+Automation+in+production;%F0%9F%9B%A1%EF%B8%8F+Zero+fake+metrics+%C2%B7+Every+number+verified+via+REST+v3" alt="Typing SVG"/>
-
-<br/>
-
-<img src="https://img.shields.io/badge/Open%20To%20Work-%E2%9C%93-10B981?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Open to work"/>
-<img src="https://img.shields.io/badge/Focus-Full--Stack%20%26%20DevOps-38BDF8?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Focus"/>
-<img src="https://img.shields.io/badge/Based%20In-Bihar%2C%20India-F59E0B?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location"/>
-<img src="https://komarev.com/ghpvc/?username=SudhirDevOps1&label=Views&color=38BDF8&style=for-the-badge" alt="Profile views"/>
 
 <br/>
 
@@ -48,57 +38,71 @@
 
 <br/><br/>
 
-<sub><a href="#about">About</a> · <a href="#subsystems">Subsystems</a> · <a href="#radar">Orbital Radar</a> · <a href="#credentials">Credentials</a> · <a href="#spotlight">Spotlight</a> · <a href="#projects">Projects</a> · <a href="#activity">Activity</a> · <a href="#automation">Automation</a> · <a href="#connect">Connect</a></sub>
+<sub><a href="#about">About</a> · <a href="#console">Build Console</a> · <a href="#radar">Orbital Radar</a> · <a href="#credentials">Dev Lanyard &amp; ID</a> · <a href="#spotlight">Spotlight</a> · <a href="#projects">Production Builds</a> · <a href="#activity">Activity &amp; Skyline</a> · <a href="#automation">Automation Architecture</a> · <a href="#connect">Connect</a></sub>
 
 </div>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="about"></a>
 
-## ⚡ // 01. OPERATIONAL BRIEFING
+## ⚡ // 01. OPERATIONAL BRIEFING & SUBSYSTEMS
 
-I am **Sudhir Singh** — a BCA student and systems automation builder based in **Bihar, India**. I architect and ship production web tools, study telemetry engines, zero-knowledge security utilities, and automated CI/CD pipelines.
+I am **Sudhir Singh** — a BCA student, systems developer, and automation engineer based in **Bihar, India**. I architect and ship production web tools, study telemetry engines, zero-knowledge security software, and automated CI/CD pipelines.
 
 I operate on the principle of **computational honesty**: software must be verifiable by code, data must be fetched directly from runtime APIs, and interfaces should prioritize clarity, performance, and operational truth over decorative marketing fluff.
 
-🎓 **Degree:** BCA Systems & Computer Applications &nbsp;·&nbsp; 📍 **Location:** Bihar, India &nbsp;·&nbsp; 🌐 **Portfolio:** [sudhirdevops1.github.io](https://sudhirdevops1.github.io)  
+🎓 **Degree:** BCA Systems &amp; Computer Applications &nbsp;·&nbsp; 📍 **Location:** Bihar, India &nbsp;·&nbsp; 🌐 **Portfolio:** [sudhirdevops1.github.io](https://sudhirdevops1.github.io)  
 🤝 **Availability:** Open for High-Impact Internships, Full-Time Engineering, and Contract Automation  
 ⚡ **Discipline:** Clean architectures, zero unhandled errors, and automated nightly health gates.
 
-<a id="subsystems"></a>
+<br/>
 
-<img src="./assets/what-i-build.svg?v=1" width="100%" alt="What I build: complete applications, automation that runs itself, and interfaces designed with intent"/>
+<img src="./assets/what-i-build.svg?v=2" width="100%" alt="What I build: complete applications, automation that runs itself, and interfaces designed with intent"/>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+
+<a id="console"></a>
+
+## 🖥️ // 02. PRODUCTION BUILD CONSOLE & ARCHITECTURE
+
+Simulated browser terminal executing automated runtime telemetry, alongside verified capability progression meters and production infrastructure audit signals:
+
+<div align="center">
+
+<img src="./assets/build-console.svg?v=2" width="100%" alt="Production Build Console: Simulated browser terminal, capability meters, and runtime telemetry."/>
+
+</div>
+
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="radar"></a>
 <a id="stack"></a>
 
-## 🛰️ // 02. ORBITAL TECH RADAR & ARSENAL
+## 🛰️ // 03. ORBITAL TECH RADAR & ARSENAL
 
 Continuous rotational telemetry mapping production tools across concentric abstraction orbits:
 - **Inner Orbit (Runtime Core):** TypeScript, Node.js, Git/GitHub, Linux/Bash
-- **Mid Orbit (Pipelines & Cloud):** Docker, GitHub Actions, FastAPI/Python, REST & GraphQL
-- **Outer Orbit (Data & Edge):** DevSecOps, Next.js/React, PostgreSQL/SQL, Reverse Engineering
+- **Mid Orbit (Pipelines &amp; Cloud):** Docker, GitHub Actions, FastAPI/Python, REST &amp; GraphQL
+- **Outer Orbit (Data &amp; Security):** DevSecOps, Next.js/React, PostgreSQL/SQL, Reverse Engineering
 
 <div align="center">
 
-<img src="./assets/orbital-radar.svg?v=1" width="100%" alt="Orbital Tech Radar — Concentric rotating orbits for Systems, Cloud, Full-Stack, and Security"/>
+<img src="./assets/orbital-radar.svg?v=2" width="100%" alt="Orbital Tech Radar — Concentric rotating orbits for Systems, Cloud, Full-Stack, and Security"/>
 
 <br/><br/>
 
-<img src="./assets/stack-arsenal.svg?v=1" width="100%" alt="Tech arsenal: sixteen tools across frontend, backend, and DevOps"/>
+<img src="./assets/stack-arsenal.svg?v=2" width="100%" alt="Tech arsenal: sixteen tools across frontend, backend, and DevOps"/>
 
 </div>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="credentials"></a>
 <a id="id"></a>
 <a id="stats"></a>
 
-## 🪪 // 03. DEVELOPER CREDENTIALS & LIVE DASHBOARD
+## 🪪 // 04. DEVELOPER CREDENTIALS & LIVE DASHBOARD
 
 Physical-inspired lanyard security pass with damped pendulum physics and holographic foil glint, paired with real-time audit metrics rewritten daily by `scripts/update-stats.mjs`:
 
@@ -107,10 +111,10 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 <table>
 <tr>
 <td width="36%" align="center" valign="middle">
-  <img src="./assets/dev-lanyard.svg?v=1" width="340" alt="Swinging Obsidian Dev Lanyard ID"/>
+  <img src="./assets/dev-lanyard.svg?v=2" width="340" alt="Swinging Obsidian Dev Lanyard ID"/>
 </td>
 <td width="64%" align="center" valign="middle">
-  <img src="./assets/dev-id.svg?v=1" width="100%" alt="Developer ID and Live Dashboard"/>
+  <img src="./assets/dev-id.svg?v=2" width="100%" alt="Developer ID and Live Dashboard"/>
 </td>
 </tr>
 </table>
@@ -123,25 +127,25 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 </div>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="spotlight"></a>
 
-## 🔦 // 04. REPO SPOTLIGHT [TOP 3 BY STARS]
+## 🔦 // 05. REPO SPOTLIGHT [TOP 3 BY STARS · LIVE]
 
 <div align="center">
 
-<img src="./assets/repo-spotlight.svg?v=1" width="100%" alt="Top 3 repositories by stars with language, stars, forks and last push date"/>
+<img src="./assets/repo-spotlight.svg?v=2" width="100%" alt="Top 3 repositories by stars with language, stars, forks and last push date"/>
 
 <sub><strong>Live Spotlight:</strong> Stars, forks, languages, and last commit dates refreshed directly from GitHub API.</sub>
 
 </div>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="projects"></a>
 
-## 🚀 // 05. PRODUCTION SUBSYSTEMS & FLAGSHIPS
+## 🚀 // 06. PRODUCTION SUBSYSTEMS & FLAGSHIPS
 
 | Subsystem | Architectural Scope | Signals |
 |:---|:---|:---:|
@@ -161,11 +165,11 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 </div>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="activity"></a>
 
-## 📈 // 06. FLIGHT TELEMETRY & CONTRIBUTION CITY
+## 📈 // 07. FLIGHT TELEMETRY & CONTRIBUTION SKYLINE
 
 <div align="center">
 
@@ -212,11 +216,11 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 </div>
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="automation"></a>
 
-## 🛰️ // 07. RECURRING PIPELINE & CRON ARCHITECTURE
+## 🛰️ // 08. RECURRING PIPELINE & CRON ARCHITECTURE
 
 ```text
 cron (GitHub Actions Engine)
@@ -234,15 +238,15 @@ cron (GitHub Actions Engine)
 
 *If an external data source fails, status badges turn red instead of quietly displaying stale values.*
 
-<img src="./assets/divider.svg?v=1" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
 
 <a id="connect"></a>
 
-## 📡 // 08. COMMS CHANNELS & CRYPTOGRAPHIC SIGN-OFF
+## 📡 // 09. COMMS CHANNELS & CRYPTOGRAPHIC SIGN-OFF
 
 <div align="center">
 
-<img src="./assets/connect-panel.svg?v=1" width="100%" alt="Connect with Sudhir Singh on GitHub, LinkedIn, Telegram or the portfolio site"/>
+<img src="./assets/connect-panel.svg?v=2" width="100%" alt="Connect with Sudhir Singh on GitHub, LinkedIn, Telegram or the portfolio site"/>
 
 <br/>
 
@@ -256,7 +260,7 @@ cron (GitHub Actions Engine)
 
 <br/>
 
-<img src="./assets/signature.svg?v=1" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
+<img src="./assets/signature.svg?v=2" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/>
 
