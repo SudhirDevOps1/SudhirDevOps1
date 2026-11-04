@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" width="1280" height="620" role="img" aria-label="Sudhir Singh — developer workspace: code editor running the profile pipeline, a terminal showing a real stats refresh, and the daily automation graph. BCA student, Bihar India, open to work.">
+  <title>Sudhir Singh — the build room</title>
+  <desc>Layered workspace: an editor running the profile's own pipeline, a terminal showing the daily stats job, and the cron to fetch to commit graph.</desc>
+
+  <!-- Tokens: #0B0F17-#121826 bg · #161B22/#0D1117 panel · #30363D border · #36BCF7 · #A855F7 · #3FB950 -->
+
+  <defs>
+    <linearGradient id="hbBg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="620">
+      <stop offset="0" stop-color="#0B0F17"/>
+      <stop offset=".55" stop-color="#101725"/>
+      <stop offset="1" stop-color="#121826"/>
+    </linearGradient>
+    <linearGradient id="hbName" gradientUnits="userSpaceOnUse" x1="56" y1="0" x2="560" y2="0">
+      <stop offset="0" stop-color="#36BCF7"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="hbEdge" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="620">
+      <stop offset="0" stop-color="#36BCF7"/>
+      <stop offset=".5" stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#3FB950"/>
+    </linearGradient>
+    <linearGradient id="hbBadge" gradientUnits="userSpaceOnUse" x1="1126" y1="54" x2="1210" y2="138">
+      <stop offset="0" stop-color="#36BCF7"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <radialGradient id="hbGlowA" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#36BCF7" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#36BCF7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hbGlowB" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#A855F7" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hbDots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity=".05"/>
+    </pattern>
+
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .sans { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; }
+
+      /* line-by-line reveal, then it stays put */
+      .ln { opacity: 0; animation: ink .45s cubic-bezier(.2,.8,.2,1) both; }
+      @keyframes ink { from { opacity: 0; transform: translateX(-7px); } to { opacity: 1; transform: translateX(0); } }
+
+      .role { opacity: 0; animation: roleCycle 14.4s cubic-bezier(.2,.8,.2,1) infinite; }
+      .r2 { animation-delay: 4.8s; }
+      .r3 { animation-delay: 9.6s; }
+      @keyframes roleCycle {
+        0%   { opacity: 0; transform: translateY(8px); }
+        3%   { opacity: 1; transform: translateY(0); }
+        30%  { opacity: 1; transform: translateY(0); }
+        33%  { opacity: 0; transform: translateY(-8px); }
+        100% { opacity: 0; transform: translateY(-8px); }
+      }
+
+      .caret { animation: blink 1.1s steps(1) infinite; }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+      .flow { animation: travel 4.2s cubic-bezier(.45,0,.55,1) infinite; }
+      @keyframes travel { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(50px); opacity: 0; } }
+
+      .pulse { animation: beat 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes beat { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+
+      .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.8,.2,1) both; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ln, .rise { animation: none; opacity: 1; }
+        .role { animation: none; opacity: 0; }
+        .r1 { opacity: 1; }
+        .caret, .flow, .pulse { animation: none; opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- ── background ───────────────────────────────────────────── -->
+  <rect width="1280" height="620" fill="url(#hbBg)"/>
+  <rect width="1280" height="620" fill="url(#hbDots)"/>
+  <ellipse cx="250" cy="120" rx="420" ry="300" fill="url(#hbGlowA)"/>
+  <ellipse cx="1080" cy="520" rx="380" ry="280" fill="url(#hbGlowB)"/>
+  <rect x="0" y="0" width="3" height="620" fill="url(#hbEdge)" opacity=".9"/>
+
+  <g fill="none" stroke="#2A3038" stroke-width="1.4" stroke-linecap="round">
+    <path d="M20 40 V22 H38"/>
+    <path d="M1260 40 V22 H1242"/>
+    <path d="M20 580 V598 H38"/>
+    <path d="M1260 580 V598 H1242"/>
+  </g>
+
+  <!-- ── header ───────────────────────────────────────────────── -->
+  <text class="mono" x="56" y="62" font-size="12.5" fill="#6E7681" letter-spacing=".6">
+    <tspan fill="#3FB950">sudhir@dev</tspan> <tspan fill="#4B5563">~</tspan> <tspan fill="#36BCF7">%</tspan> whoami
+  </text>
+
+  <text class="sans" x="56" y="120" font-size="46" font-weight="800" fill="url(#hbName)" letter-spacing="-0.4">Sudhir Singh</text>
+
+  <text class="sans role r1" x="57" y="152" font-size="16.5" fill="#A8D8EA">Full-Stack in progress · Automation in production</text>
+  <text class="sans role r2" x="57" y="152" font-size="16.5" fill="#A8D8EA">BCA student · Bihar, India · open to work</text>
+  <text class="sans role r3" x="57" y="152" font-size="16.5" fill="#A8D8EA">Every number below is fetched, never typed</text>
+
+  <g class="rise">
+    <circle cx="1168" cy="96" r="42" fill="#121826" stroke="url(#hbBadge)" stroke-width="1.8"/>
+    <circle cx="1168" cy="96" r="34" fill="none" stroke="#30363D"/>
+    <text class="sans" x="1168" y="106" text-anchor="middle" font-size="26" font-weight="800" fill="url(#hbBadge)">SS</text>
+  </g>
+
+  <!-- ── editor window ────────────────────────────────────────── -->
+  <g class="rise">
+    <rect x="56" y="176" width="560" height="344" rx="14" fill="#0D1117" stroke="#30363D"/>
+    <path d="M56 190 a14 14 0 0 1 14-14 h532 a14 14 0 0 1 14 14 v22 h-560 z" fill="#161B22"/>
+    <line x1="56" y1="212" x2="616" y2="212" stroke="#30363D"/>
+    <circle cx="80" cy="194" r="4.5" fill="#FF5F57"/>
+    <circle cx="96" cy="194" r="4.5" fill="#FEBC2E"/>
+    <circle cx="112" cy="194" r="4.5" fill="#28C840"/>
+    <text class="mono" x="336" y="199" text-anchor="middle" font-size="11" fill="#8B949E">pipeline.ts</text>
+    <line x1="92" y1="212" x2="92" y2="520" stroke="#1C2128"/>
+
+    <text class="mono" x="82" y="234" text-anchor="end" font-size="11.5" fill="#3F4752">1</text>
+    <text class="mono ln" x="104" y="234" font-size="12.5" fill="#C9D1D9" style="animation-delay:.15s"><tspan fill="#C792EA">import</tspan> { execSync } <tspan fill="#C792EA">from</tspan> <tspan fill="#FFD166">'node:child_process'</tspan>;</text>
+
+    <text class="mono" x="82" y="255" text-anchor="end" font-size="11.5" fill="#3F4752">2</text>
+    <text class="mono ln" x="104" y="255" font-size="12.5" fill="#C9D1D9" style="animation-delay:.22s"><tspan fill="#C792EA">import</tspan> { writeFileSync } <tspan fill="#C792EA">from</tspan> <tspan fill="#FFD166">'node:fs'</tspan>;</text>
+
+    <text class="mono" x="82" y="276" text-anchor="end" font-size="11.5" fill="#3F4752">3</text>
+
+    <text class="mono" x="82" y="297" text-anchor="end" font-size="11.5" fill="#3F4752">4</text>
+    <text class="mono ln" x="104" y="297" font-size="12.5" fill="#6E7681" style="animation-delay:.29s">// every number here is fetched, never typed</text>
+
+    <text class="mono" x="82" y="318" text-anchor="end" font-size="11.5" fill="#3F4752">5</text>
+    <text class="mono ln" x="104" y="318" font-size="12.5" fill="#C9D1D9" style="animation-delay:.36s"><tspan fill="#C792EA">export async function</tspan> <tspan fill="#36BCF7">ship</tspan>(): Promise&lt;void&gt; {</text>
+
+    <text class="mono" x="82" y="339" text-anchor="end" font-size="11.5" fill="#3F4752">6</text>
+    <text class="mono ln" x="104" y="339" font-size="12.5" fill="#C9D1D9" style="animation-delay:.43s">  <tspan fill="#C792EA">const</tspan> stats = <tspan fill="#C792EA">await</tspan> <tspan fill="#36BCF7">fetchStats</tspan>();</text>
+
+    <text class="mono" x="82" y="360" text-anchor="end" font-size="11.5" fill="#3F4752">7</text>
+    <text class="mono ln" x="104" y="360" font-size="12.5" fill="#C9D1D9" style="animation-delay:.50s">  <tspan fill="#C792EA">if</tspan> (!stats.repos) <tspan fill="#C792EA">throw new</tspan> Error(<tspan fill="#FFD166">'no fake data'</tspan>);</text>
+
+    <text class="mono" x="82" y="381" text-anchor="end" font-size="11.5" fill="#3F4752">8</text>
+
+    <text class="mono" x="82" y="402" text-anchor="end" font-size="11.5" fill="#3F4752">9</text>
+    <text class="mono ln" x="104" y="402" font-size="12.5" fill="#C9D1D9" style="animation-delay:.57s">  <tspan fill="#36BCF7">writeFileSync</tspan>(<tspan fill="#FFD166">'README.md'</tspan>, <tspan fill="#36BCF7">render</tspan>(stats));</text>
+
+    <text class="mono" x="82" y="423" text-anchor="end" font-size="11.5" fill="#3F4752">10</text>
+    <text class="mono ln" x="104" y="423" font-size="12.5" fill="#C9D1D9" style="animation-delay:.64s">  <tspan fill="#36BCF7">execSync</tspan>(<tspan fill="#FFD166">'git commit -am "chore: refresh"'</tspan>);</text>
+
+    <text class="mono" x="82" y="444" text-anchor="end" font-size="11.5" fill="#3F4752">11</text>
+    <text class="mono ln" x="104" y="444" font-size="12.5" fill="#C9D1D9" style="animation-delay:.71s">  <tspan fill="#36BCF7">execSync</tspan>(<tspan fill="#FFD166">'git push origin main'</tspan>);</text>
+
+    <text class="mono" x="82" y="465" text-anchor="end" font-size="11.5" fill="#3F4752">12</text>
+    <text class="mono ln" x="104" y="465" font-size="12.5" fill="#C9D1D9" style="animation-delay:.78s">}</text>
+
+    <text class="mono" x="82" y="486" text-anchor="end" font-size="11.5" fill="#3F4752">13</text>
+    <text class="mono ln" x="104" y="486" font-size="12.5" fill="#C9D1D9" style="animation-delay:.85s"><tspan fill="#36BCF7">ship</tspan>().<tspan fill="#36BCF7">catch</tspan>(() =&gt; process.<tspan fill="#36BCF7">exit</tspan>(1));</text>
+
+    <rect x="104" y="499" width="488" height="1" fill="#1C2128"/>
+    <text class="mono" x="104" y="515" font-size="10" fill="#4B5563">UTF-8   TS   Ln 13, Col 42</text>
+  </g>
+
+  <!-- ── terminal window ──────────────────────────────────────── -->
+  <g class="rise" style="animation-delay:.18s">
+    <rect x="648" y="176" width="576" height="168" rx="14" fill="#0D1117" stroke="#30363D"/>
+    <path d="M648 190 a14 14 0 0 1 14-14 h548 a14 14 0 0 1 14 14 v20 h-576 z" fill="#161B22"/>
+    <line x1="648" y1="210" x2="1224" y2="210" stroke="#30363D"/>
+    <circle cx="672" cy="192" r="4" fill="#FF5F57"/>
+    <circle cx="686" cy="192" r="4" fill="#FEBC2E"/>
+    <circle cx="700" cy="192" r="4" fill="#28C840"/>
+    <text class="mono" x="1132" y="196" text-anchor="end" font-size="10.5" fill="#6E7681">zsh — live run</text>
+    <circle class="pulse" cx="1200" cy="192" r="3.4" fill="#3FB950"/>
+
+    <text class="mono" x="672" y="238" font-size="12" fill="#E6EDF3"><tspan fill="#3FB950">$</tspan> node scripts/update-stats.mjs</text>
+    <text class="mono" x="672" y="260" font-size="12" fill="#8B949E">Wrote <tspan fill="#36BCF7">assets/repo-spotlight.svg</tspan></text>
+    <text class="mono" x="672" y="282" font-size="12" fill="#8B949E">Updated <tspan fill="#E6EDF3">5</tspan> stat blocks — REST + Search API</text>
+    <text class="mono" x="672" y="304" font-size="12" fill="#E6EDF3"><tspan fill="#3FB950">$</tspan> git push origin main</text>
+    <text class="mono" x="672" y="326" font-size="12" fill="#8B949E">main <tspan fill="#6E7681">→</tspan> main <tspan fill="#3FB950">✓ done in 4s</tspan></text>
+    <rect class="caret" x="858" y="317" width="7" height="13" fill="#36BCF7"/>
+  </g>
+
+  <!-- ── automation graph ─────────────────────────────────────── -->
+  <g class="rise" style="animation-delay:.34s">
+    <rect x="648" y="364" width="576" height="156" rx="14" fill="#161B22" stroke="#30363D"/>
+    <text class="mono" x="676" y="390" font-size="10.5" fill="#8B949E" letter-spacing="2.2">// DAILY PIPELINE</text>
+    <text class="mono" x="1196" y="390" text-anchor="end" font-size="10" fill="#3FB950" letter-spacing="1">SELF-RUNNING</text>
+
+    <line x1="816" y1="442" x2="866" y2="442" stroke="#30363D" stroke-width="1.6"/>
+    <line x1="1006" y1="442" x2="1056" y2="442" stroke="#30363D" stroke-width="1.6"/>
+    <g class="flow"><circle cx="816" cy="442" r="3.2" fill="#36BCF7"/></g>
+    <g class="flow" style="animation-delay:2.1s"><circle cx="1006" cy="442" r="3.2" fill="#A855F7"/></g>
+
+    <rect x="676" y="414" width="140" height="56" rx="10" fill="#0D1117" stroke="#30363D"/>
+    <text class="mono" x="746" y="436" text-anchor="middle" font-size="10" fill="#36BCF7" letter-spacing="1.2">02:30 UTC</text>
+    <text class="sans" x="746" y="456" text-anchor="middle" font-size="12.5" font-weight="600" fill="#E6EDF3">cron</text>
+
+    <rect x="866" y="414" width="140" height="56" rx="10" fill="#0D1117" stroke="#30363D"/>
+    <text class="mono" x="936" y="436" text-anchor="middle" font-size="10" fill="#A855F7" letter-spacing="1.2">REST + GRAPHQL</text>
+    <text class="sans" x="936" y="456" text-anchor="middle" font-size="12.5" font-weight="600" fill="#E6EDF3">fetch</text>
+
+    <rect x="1056" y="414" width="140" height="56" rx="10" fill="#0D1117" stroke="#30363D"/>
+    <text class="mono" x="1126" y="436" text-anchor="middle" font-size="10" fill="#3FB950" letter-spacing="1.2">BOT COMMIT</text>
+    <text class="sans" x="1126" y="456" text-anchor="middle" font-size="12.5" font-weight="600" fill="#E6EDF3">push</text>
+
+    <text class="mono" x="676" y="498" font-size="10" fill="#4B5563">no manual edits · stale card turns the badge red</text>
+  </g>
+
+  <!-- ── status pills ─────────────────────────────────────────── -->
+  <g class="rise" style="animation-delay:.5s">
+    <rect x="56" y="544" width="128" height="30" rx="15" fill="#161B22" stroke="#30363D"/>
+    <text class="mono" x="120" y="564" text-anchor="middle" font-size="10.5" fill="#C9D1D9" letter-spacing=".8">BCA STUDENT</text>
+
+    <rect x="194" y="544" width="136" height="30" rx="15" fill="#161B22" stroke="#30363D"/>
+    <text class="mono" x="262" y="564" text-anchor="middle" font-size="10.5" fill="#C9D1D9" letter-spacing=".8">BIHAR · INDIA</text>
+
+    <rect x="340" y="544" width="152" height="30" rx="15" fill="#12261A" stroke="#2E7D4F"/>
+    <circle class="pulse" cx="360" cy="559" r="4" fill="#3FB950"/>
+    <text class="mono" x="374" y="564" font-size="10.5" fill="#3FB950" letter-spacing=".8">OPEN TO WORK</text>
+  </g>
+</svg>

@@ -21,6 +21,7 @@ const README = 'README.md';
 const REPORT = '.github/health/latest.json';
 const STREAK_SVG = 'assets/streak-buddy.svg';
 const SPOTLIGHT_SVG = 'assets/repo-spotlight.svg';
+const DEV_ID_SVG = 'assets/dev-id.svg';
 const CONCURRENCY = 8;
 const ATTEMPTS = 3;
 const MIN_BYTES = 200;
@@ -197,15 +198,15 @@ function checkStreakCard() {
   return { ok: true, updated: `${day} ${mon} ${year}`, ageDays, streakDays };
 }
 
-// Same idea for the spotlight card: if the daily stats job stops running, the
-// card keeps rendering with last week's repositories — a quiet lie. Freshness
-// is the only proof that the numbers on it are still true.
-function checkSpotlightCard() {
+// Same idea for the generated cards: if the daily stats job stops running, a
+// card keeps rendering last week's numbers — a quiet lie. Freshness is the only
+// proof that what it shows is still true.
+function checkGeneratedCard(file) {
   let svg;
   try {
-    svg = readFileSync(SPOTLIGHT_SVG, 'utf8');
+    svg = readFileSync(file, 'utf8');
   } catch {
-    return { ok: false, reason: `${SPOTLIGHT_SVG} is missing` };
+    return { ok: false, reason: `${file} is missing` };
   }
 
   const stamp = svg.match(/generated (\d{2}) ([A-Za-z]{3}) (\d{4})/);
@@ -221,11 +222,24 @@ function checkSpotlightCard() {
     return { ok: false, reason: `card is ${ageDays} days old (limit ${MAX_STREAK_AGE_DAYS})` };
   }
 
-  const stars = [...svg.matchAll(/★ ([\d,]+)/g)]
+  return { ok: true, updated: `${day} ${mon} ${year}`, ageDays, svg };
+}
+
+function checkSpotlightCard() {
+  const result = checkGeneratedCard(SPOTLIGHT_SVG);
+  if (!result.ok) return result;
+
+  const stars = [...result.svg.matchAll(/★ ([\d,]+)/g)]
     .map((m) => Number(m[1].replace(/,/g, '')))
     .reduce((sum, n) => sum + n, 0);
 
-  return { ok: true, updated: `${day} ${mon} ${year}`, ageDays, stars };
+  return { ok: true, updated: result.updated, ageDays: result.ageDays, stars };
+}
+
+function checkDevIdCard() {
+  const result = checkGeneratedCard(DEV_ID_SVG);
+  if (!result.ok) return result;
+  return { ok: true, updated: result.updated, ageDays: result.ageDays };
 }
 
 async function main() {
@@ -253,6 +267,7 @@ async function main() {
   const failedLinks = linkResults.filter((r) => !r.ok);
   const streak = checkStreakCard();
   const spotlight = checkSpotlightCard();
+  const devId = checkDevIdCard();
   const passed = results.length - failed.length;
   const passedLinks = linkResults.length - failedLinks.length;
 
@@ -271,6 +286,7 @@ async function main() {
     },
     streak,
     spotlight,
+    devId,
     results,
   };
 
@@ -291,11 +307,16 @@ async function main() {
     `${spotlight.ok ? 'OK  ' : 'FAIL'} ${String(`age ${spotlight.ageDays ?? '-'}d`).padStart(7)}  ` +
       `${SPOTLIGHT_SVG} (${spotlight.ok ? `${spotlight.updated} · ${spotlight.stars}★` : spotlight.reason})`
   );
+  console.log(
+    `${devId.ok ? 'OK  ' : 'FAIL'} ${String(`age ${devId.ageDays ?? '-'}d`).padStart(7)}  ` +
+      `${DEV_ID_SVG} (${devId.ok ? devId.updated : devId.reason})`
+  );
 
   const rows = failed.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const linkRows = failedLinks.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const streakRow = streak.ok ? [] : [`| ❌ | \`${STREAK_SVG}\` | ${streak.reason} |`];
   const spotlightRow = spotlight.ok ? [] : [`| ❌ | \`${SPOTLIGHT_SVG}\` | ${spotlight.reason} |`];
+  const devIdRow = devId.ok ? [] : [`| ❌ | \`${DEV_ID_SVG}\` | ${devId.reason} |`];
   const summary = [
     '## 🩺 README health check',
     '',
@@ -307,10 +328,13 @@ async function main() {
     spotlight.ok
       ? `**Repo spotlight** — generated ${spotlight.updated}, ${spotlight.ageDays} day(s) old, ${spotlight.stars}★ across the top 3.`
       : `**Repo spotlight FAILED** — ${spotlight.reason}.`,
+    devId.ok
+      ? `**Developer ID** — generated ${devId.updated}, ${devId.ageDays} day(s) old.`
+      : `**Developer ID FAILED** — ${devId.reason}.`,
     '',
-    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok
-      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow]
-      : ['✅ Every image, every link, the streak card and the spotlight card on the profile are live.']),
+    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok || !devId.ok
+      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow, ...devIdRow]
+      : ['✅ Every image, every link and all three generated cards on the profile are live.']),
   ].join('\n');
 
   console.log(`\n${summary}`);
@@ -320,7 +344,7 @@ async function main() {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   }
 
-  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok) {
+  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok || !devId.ok) {
     if (failed.length > 0) {
       console.error(`::error::${failed.length} of ${results.length} README images are broken.`);
     }
@@ -332,6 +356,9 @@ async function main() {
     }
     if (!spotlight.ok) {
       console.error(`::error::Repo spotlight is not live: ${spotlight.reason}.`);
+    }
+    if (!devId.ok) {
+      console.error(`::error::Developer ID card is not live: ${devId.reason}.`);
     }
     console.error('See .github/health/latest.json for the full report.');
     process.exit(1);
