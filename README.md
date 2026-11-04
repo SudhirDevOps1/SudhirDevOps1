@@ -5,13 +5,14 @@
   Data Source : GitHub REST API v3 + Search API (PUBLIC) — 100% REAL
   Verified on : November 2026
   Website     : https://sudhirdevops1.github.io
+  Hero asset  : assets/hero-banner.svg (self-hosted — no third-party banner dependency)
   NOTE: All stats are REAL-TIME — zero fake data.
 ================================================================================
 -->
 
-<!-- ═══════════════════════ ANIMATED HERO BANNER ═══════════════════════ -->
+<!-- ═══════════════════════ ANIMATED HERO BANNER (self-hosted, hand-drawn SVG) ═══════════════════════ -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,30:203A43,60:2C5364,100:36BCF7&height=290&section=header&text=Sudhir%20Singh&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=37&desc=BCA%20Student%20%E2%80%A2%20Aspiring%20Full-Stack%20Developer%20%E2%80%A2%20Automation%20Builder&descSize=20&descAlignY=57&descColor=A8D8EA" width="100%" alt="Sudhir Singh — Profile Header"/>
+  <img src="./assets/hero-banner.svg" width="100%" alt="Sudhir Singh — Aspiring Full-Stack Developer, BCA Student and Automation Builder. Open to work."/>
 </a>
 
 <!-- ═══════════════════════ TYPING ANIMATION ═══════════════════════ -->
@@ -585,6 +586,10 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 <a href="https://github.com/SudhirDevOps1">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=940&height=60&lines=Thanks+for+visiting+my+profile!+%F0%9F%99%8F;Open+to+collaboration+%F0%9F%A4%9D;Let's+build+something+amazing+together!+%F0%9F%9A%80;Star+a+repo+if+you+find+it+useful+%E2%AD%90" alt="Footer Typing"/>
 </a>
+
+<br/><br/>
+
+<sub><b>sudo ship_it --with-passion</b> · zero fake data · always shipping 🚀</sub>
 
 <br/><br/>
 

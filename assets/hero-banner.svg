@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-label="Sudhir Singh — Aspiring Full-Stack Developer, BCA Student and Automation Builder. Open to work.">
+  <title>Sudhir Singh — Full-Stack Developer &amp; Automation Builder</title>
+  <desc>Self-hosted profile banner. Dark navy panel with a terminal prompt, gradient name, tagline, open-to-work pill and orbital code motif.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F2027"/>
+      <stop offset=".55" stop-color="#11161F"/>
+      <stop offset="1" stop-color="#161B22"/>
+    </linearGradient>
+    <linearGradient id="nameG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36BCF7">
+        <animate attributeName="stop-color" values="#36BCF7;#A855F7;#36BCF7" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#A855F7">
+        <animate attributeName="stop-color" values="#A855F7;#36BCF7;#A855F7" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="barG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36BCF7"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <radialGradient id="glowR" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#36BCF7" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#36BCF7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.15" fill="#FFFFFF" fill-opacity=".055"/>
+    </pattern>
+  </defs>
+
+  <!-- panel + texture -->
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <rect width="1280" height="420" fill="url(#dots)"/>
+  <rect x="0" y="54" width="4" height="366" fill="url(#barG)" fill-opacity=".85"/>
+
+  <!-- right decoration: orbit + code glyph -->
+  <circle cx="1120" cy="180" r="165" fill="url(#glowR)"/>
+  <g fill="none" stroke-width="1.4">
+    <circle cx="1125" cy="188" r="88" stroke="#36BCF7" stroke-opacity=".5" stroke-dasharray="6 9">
+      <animateTransform attributeName="transform" type="rotate" values="0 1125 188;360 1125 188" dur="26s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1125" cy="188" r="59" stroke="#A855F7" stroke-opacity=".65" stroke-dasharray="3 10">
+      <animateTransform attributeName="transform" type="rotate" values="360 1125 188;0 1125 188" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1125" cy="188" r="31" stroke="#36BCF7" stroke-opacity=".8"/>
+  </g>
+  <text x="1125" y="201" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="44" font-weight="700" fill="#36BCF7" fill-opacity=".9">&lt;/&gt;</text>
+  <text x="1125" y="258" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8B949E" letter-spacing="2.5">ALWAYS SHIPPING</text>
+  <text x="1010" y="96" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#FFFFFF" fill-opacity=".28">+</text>
+  <text x="1240" y="120" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#FFFFFF" fill-opacity=".22">+</text>
+  <text x="1024" y="330" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#FFFFFF" fill-opacity=".22">+</text>
+
+  <!-- top bar -->
+  <circle cx="34" cy="32" r="6.5" fill="#FF5F57"/>
+  <circle cx="56" cy="32" r="6.5" fill="#FEBC2E"/>
+  <circle cx="78" cy="32" r="6.5" fill="#28C840"/>
+  <text x="640" y="37" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#6E7681" letter-spacing="1.6">sudhir@github: ~/profile</text>
+  <line x1="24" y1="54" x2="1256" y2="54" stroke="#30363D" stroke-width="1"/>
+
+  <!-- prompt -->
+  <text x="64" y="112" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16.5" fill="#3FB950">➜  <tspan fill="#A8D8EA">~</tspan> whoami</text>
+
+  <!-- name + role (fade-up group) -->
+  <g opacity="0" transform="translate(0 14)">
+    <animateTransform attributeName="transform" type="translate" values="0 14;0 0" dur=".9s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" dur=".9s" fill="freeze"/>
+    <text x="60" y="192" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="74" font-weight="800" fill="url(#nameG)" letter-spacing="2">SUDHIR SINGH</text>
+    <text x="60" y="240" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#A8D8EA" letter-spacing=".4">Aspiring Full-Stack Developer  ·  BCA Student  ·  Automation Builder</text>
+  </g>
+
+  <!-- accent bar -->
+  <rect x="64" y="264" width="430" height="4" rx="2" fill="url(#barG)"/>
+
+  <!-- tagline -->
+  <text x="64" y="310" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-style="italic" font-size="15.5" fill="#C9D1D9">I build real things, automate the boring ones, document honestly.</text>
+
+  <!-- status pills -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11.5" letter-spacing="1.2">
+    <rect x="64" y="330" width="152" height="27" rx="13.5" fill="#0F2A1A" stroke="#3FB950" stroke-opacity=".55"/>
+    <circle cx="80" cy="343.5" r="4" fill="#3FB950">
+      <animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="91" y="348" fill="#3FB950">OPEN TO WORK</text>
+
+    <rect x="230" y="330" width="152" height="27" rx="13.5" fill="#161B22" stroke="#30363D"/>
+    <text x="246" y="348" fill="#C9D1D9">BIHAR · INDIA</text>
+
+    <rect x="396" y="330" width="182" height="27" rx="13.5" fill="#161B22" stroke="#30363D"/>
+    <text x="412" y="348" fill="#C9D1D9">IST · UTC +05:30</text>
+  </g>
+
+  <!-- version tag -->
+  <text x="1256" y="400" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#6E7681" letter-spacing=".5">assets/hero-banner.svg · v2026.11</text>
+</svg>
