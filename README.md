@@ -38,14 +38,14 @@
 <br/>
 
 <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C046-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C047-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
 
 <br/><br/>
 
-<sub><a href="#about">About</a> · <a href="#build">What I Build</a> · <a href="#stack">Arsenal</a> · <a href="#id">Developer ID</a> · <a href="#spotlight">Spotlight</a> · <a href="#projects">Projects</a> · <a href="#stats">Stats</a> · <a href="#automation">Automation</a> · <a href="#connect">Connect</a></sub>
+<sub><a href="#about">About</a> · <a href="#build">What I Build</a> · <a href="#stack">Arsenal</a> · <a href="#id">Developer ID</a> · <a href="#spotlight">Spotlight</a> · <a href="#projects">Projects</a> · <a href="#activity">Activity</a> · <a href="#automation">Automation</a> · <a href="#connect">Connect</a></sub>
 
 </div>
 
@@ -59,6 +59,8 @@ I'm **Sudhir Singh** — a BCA student in **Bihar, India**, building real web to
 
 🎓 BCA &nbsp;·&nbsp; 📍 Bihar, India &nbsp;·&nbsp; 🌐 [sudhirdevops1.github.io](https://sudhirdevops1.github.io) &nbsp;·&nbsp; 🤝 Open to internships, full-time and freelance &nbsp;·&nbsp; ⚡ I debug at midnight and it still makes sense
 
+<a id="build"></a>
+
 <img src="./assets/what-i-build.svg" width="100%" alt="What I build: complete applications, automation that runs itself, and interfaces designed with intent"/>
 
 <a id="stack"></a>
@@ -66,8 +68,13 @@ I'm **Sudhir Singh** — a BCA student in **Bihar, India**, building real web to
 <img src="./assets/stack-arsenal.svg" width="100%" alt="Tech arsenal: sixteen tools across frontend, backend and DevOps"/>
 
 <a id="id"></a>
+<a id="stats"></a>
 
 <img src="./assets/dev-id.svg" width="100%" alt="Developer ID card and live dashboard: repositories, stars, forks, commits, pull requests and followers, all fetched from the GitHub API"/>
+
+<!-- STATS:TABLE:START -->
+<div align="center"><sub>📦 <strong>77</strong> repositories &nbsp;·&nbsp; ⭐ <strong>44</strong> stars &nbsp;·&nbsp; 🍴 <strong>7</strong> forks &nbsp;·&nbsp; 💻 <strong>3,047</strong> commits &nbsp;·&nbsp; 🔀 <strong>46</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>1</strong> issues &nbsp;·&nbsp; 👥 <strong>12</strong> followers &nbsp;·&nbsp; ✅ verified <strong>04 November 2026</strong></sub></div>
+<!-- STATS:TABLE:END -->
 
 <div align="center"><sub><strong>Redrawn every day.</strong> <code>scripts/update-stats.mjs</code> rebuilds this card from the GitHub REST + Search API, so the numbers can't quietly go stale.</sub></div>
 
@@ -103,30 +110,9 @@ I'm **Sudhir Singh** — a BCA student in **Bihar, India**, building real web to
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
 
-<a id="stats"></a>
+<a id="activity"></a>
 
-## 📊 Verified Statistics
-
-> 🟢 Every value below is fetched from the GitHub REST API v3 + Search API. Zero fake numbers.
-
-<!-- STATS:TABLE:START -->
-| Metric | Value |
-|:--|:--|
-| 👤 **Name** | Sudhir Singh |
-| 🆔 **Username** | [`@SudhirDevOps1`](https://github.com/SudhirDevOps1) |
-| 📍 **Location** | Bihar, India |
-| 🌐 **Website** | [sudhirdevops1.github.io](https://sudhirdevops1.github.io) |
-| 📦 **Public Repositories** | **77** *(Live from API)* |
-| ⭐ **Total Stars Earned** | **44** *(Live from API)* |
-| 🍴 **Total Forks** | **7** *(Live from API)* |
-| 💻 **Commits Authored** | **3,046** *(Search API)* |
-| 🔀 **Pull Requests** | **46** *(Search API)* |
-| 🐞 **Issues Opened** | **1** *(Search API)* |
-| 👥 **Followers** | **12** *(Live from API)* |
-| ➡️ **Following** | **19** *(Live from API)* |
-| 🗓️ **Joined GitHub** | 25 September 2025 |
-| ✅ **Last Verified** | 04 November 2026 |
-<!-- STATS:TABLE:END -->
+## 📈 Activity
 
 <div align="center">
 
@@ -183,30 +169,12 @@ cron (GitHub Actions)
   └─ check-readme-health.mjs + check-svg.mjs → every image, link and asset, verified live
 ```
 
-| Workflow | Schedule | Live status |
-|:--|:--|:--|
-| **Update Profile Stats** — recomputes every number, redraws two cards | daily · 02:30 UTC | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/> |
-| **README Health Check** — gates the SVGs, then loads every image and link | daily · 04:00 UTC | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/> |
-| **Contribution Snake** | every 12 hours | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/> |
-| **3D Contribution Calendar** | daily · 18:00 UTC | <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/> |
+- **Update Profile Stats** — recomputes every number, redraws two cards &nbsp;·&nbsp; `daily · 02:30 UTC` &nbsp;·&nbsp; <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/update-profile-stats.yml/badge.svg" alt="Stats sync status"/>
+- **README Health Check** — gates the SVGs, then loads every image and link &nbsp;·&nbsp; `daily · 04:00 UTC` &nbsp;·&nbsp; <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/readme-health.yml/badge.svg" alt="README health status"/>
+- **Contribution Snake** &nbsp;·&nbsp; `every 12 hours` &nbsp;·&nbsp; <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/snake.yml/badge.svg" alt="Snake status"/>
+- **3D Contribution Calendar** &nbsp;·&nbsp; `daily · 18:00 UTC` &nbsp;·&nbsp; <img src="https://github.com/SudhirDevOps1/SudhirDevOps1/actions/workflows/profile-3d.yml/badge.svg" alt="3D calendar status"/>
 
 If a source stops responding, the badge goes red instead of quietly lying.
-
-## 🏅 Milestones
-
-<!-- STATS:MILESTONES:START -->
-| 🏆 Milestone | 📈 Detail |
-|:--|:--|
-| 🗓️ **Joined GitHub** | 25 September 2025 |
-| 📅 **Days since joining** | **404** days of shipping code |
-| 📦 **Public repositories** | **77** shipped and open |
-| 💻 **Commits authored** | **3,046** across all repositories |
-| 🔀 **Pull requests** | **46** opened and merged through review |
-| ⭐ **Stars earned** | **44** from the developer community |
-| 🍴 **Forks received** | **7** — others building on my work |
-| 🐍 **Automation** | Contribution snake + 3D calendar generated daily by GitHub Actions |
-| 🧊 **3D contribution calendar** | Self-hosted, animated, regenerated every night |
-<!-- STATS:MILESTONES:END -->
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
 
@@ -232,8 +200,12 @@ If a source stops responding, the badge goes red instead of quietly lying.
 
 <sub>Built and drawn by hand · refreshed by robots · every number verified</sub>
 
+<!-- STATS:MILESTONES:START -->
+<div align="center"><sub>🗓️ on GitHub since <strong>25 September 2025</strong> &nbsp;·&nbsp; <strong>404</strong> days of shipping &nbsp;·&nbsp; 📍 Bihar, India &nbsp;·&nbsp; 🌐 <a href="https://sudhirdevops1.github.io">sudhirdevops1.github.io</a></sub></div>
+<!-- STATS:MILESTONES:END -->
+
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 19:06:23 IST</sub>
+<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 19:12:49 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>

@@ -418,38 +418,12 @@ async function main() {
       `  <img src="${badge('Pull Requests', String(stats.prs), '4ECDC4', 'gitkraken')}" alt="Pull requests"/>`,
     ].join('\n'),
 
-    TABLE: [
-      `| Metric | Value |`,
-      `|:--|:--|`,
-      `| 👤 **Name** | ${stats.name} |`,
-      `| 🆔 **Username** | [\`@${stats.username}\`](https://github.com/${stats.username}) |`,
-      `| 📍 **Location** | ${stats.location} |`,
-      `| 🌐 **Website** | [${stats.websiteLabel}](${stats.websiteUrl}) |`,
-      `| 📦 **Public Repositories** | **${fmt(stats.repos)}** *(Live from API)* |`,
-      `| ⭐ **Total Stars Earned** | **${fmt(stats.stars)}** *(Live from API)* |`,
-      `| 🍴 **Total Forks** | **${fmt(stats.forks)}** *(Live from API)* |`,
-      `| 💻 **Commits Authored** | **${fmt(stats.commits)}** *(Search API)* |`,
-      `| 🔀 **Pull Requests** | **${fmt(stats.prs)}** *(Search API)* |`,
-      `| 🐞 **Issues Opened** | **${fmt(stats.issues)}** *(Search API)* |`,
-      `| 👥 **Followers** | **${fmt(stats.followers)}** *(Live from API)* |`,
-      `| ➡️ **Following** | **${fmt(stats.following)}** *(Live from API)* |`,
-      `| 🗓️ **Joined GitHub** | ${stats.joined} |`,
-      `| ✅ **Last Verified** | ${stats.syncedAt} |`,
-    ].join('\n'),
+    // Plain-text twin of the developer ID card. The card is the artwork; this
+    // strip is what a screen reader, a search engine and a no-SVG client get.
+    // Same numbers, same source, one line instead of a 14-row table.
+    TABLE: `<div align="center"><sub>📦 <strong>${fmt(stats.repos)}</strong> repositories &nbsp;·&nbsp; ⭐ <strong>${fmt(stats.stars)}</strong> stars &nbsp;·&nbsp; 🍴 <strong>${fmt(stats.forks)}</strong> forks &nbsp;·&nbsp; 💻 <strong>${fmt(stats.commits)}</strong> commits &nbsp;·&nbsp; 🔀 <strong>${fmt(stats.prs)}</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>${fmt(stats.issues)}</strong> issues &nbsp;·&nbsp; 👥 <strong>${fmt(stats.followers)}</strong> followers &nbsp;·&nbsp; ✅ verified <strong>${stats.syncedAt}</strong></sub></div>`,
 
-    MILESTONES: [
-      `| 🏆 Milestone | 📈 Detail |`,
-      `|:--|:--|`,
-      `| 🗓️ **Joined GitHub** | ${stats.joined} |`,
-      `| 📅 **Days since joining** | **${fmt(stats.joinedDays)}** days of shipping code |`,
-      `| 📦 **Public repositories** | **${fmt(stats.repos)}** shipped and open |`,
-      `| 💻 **Commits authored** | **${fmt(stats.commits)}** across all repositories |`,
-      `| 🔀 **Pull requests** | **${fmt(stats.prs)}** opened and merged through review |`,
-      `| ⭐ **Stars earned** | **${fmt(stats.stars)}** from the developer community |`,
-      `| 🍴 **Forks received** | **${fmt(stats.forks)}** — others building on my work |`,
-      `| 🐍 **Automation** | Contribution snake + 3D calendar generated daily by GitHub Actions |`,
-      `| 🧊 **3D contribution calendar** | Self-hosted, animated, regenerated every night |`,
-    ].join('\n'),
+    MILESTONES: `<div align="center"><sub>🗓️ on GitHub since <strong>${stats.joined}</strong> &nbsp;·&nbsp; <strong>${fmt(stats.joinedDays)}</strong> days of shipping &nbsp;·&nbsp; 📍 ${stats.location} &nbsp;·&nbsp; 🌐 <a href="${stats.websiteUrl}">${stats.websiteLabel}</a></sub></div>`,
 
     REPOS: `  <img src="${badge('Browse All Repositories', `${fmt(stats.repos)} Projects`, '36BCF7', 'github')}" alt="All Repos"/>`,
 
