@@ -1,238 +1,251 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="Sudhir Singh — Orbital Tech Radar: Concentric rotating orbits representing Systems, Full-Stack, Cloud DevOps, and DevSecOps competencies.">
-  <title>Sudhir Singh — Orbital Tech Radar</title>
-  <desc>Interactive-style orbital radar mapping twelve core engineering technologies across three rotating concentric orbits centered on the DevOps runtime core.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 480" width="1280" height="480" role="img" aria-label="Sudhir Singh — Tech Stack &amp; Atom Orbits">
+  <title>Tech Stack &amp; Atom Orbits — Sudhir Singh</title>
+  <desc>Primary technologies travelling three 3D-tilted elliptical orbits around an atom core with orbiting satellite moons, paired with a grouped production tech grid.</desc>
 
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="orbBg" x1="0" y1="0" x2="1200" y2="560" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#070A0F"/>
-      <stop offset="60%" stop-color="#0C1322"/>
-      <stop offset="100%" stop-color="#080C14"/>
-    </linearGradient>
-
-    <!-- Core Glow Gradient -->
-    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
-      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Radar Sweep Gradient -->
-    <radialGradient id="sweepGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.35"/>
-      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-    </radialGradient>
-
-    <pattern id="orbGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.35"/>
-    </pattern>
-
     <style type="text/css"><![CDATA[
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+      .sgm { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
+      .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
-      /* Orbital Rotations */
-      .orbit-inner { animation: spinClockwise 45s linear infinite; transform-origin: 600px 275px; }
-      .orbit-mid { animation: spinCounterClockwise 75s linear infinite; transform-origin: 600px 275px; }
-      .orbit-outer { animation: spinClockwise 110s linear infinite; transform-origin: 600px 275px; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes coreBreathe { 0%, 100% { transform: scale(1); opacity: .9; } 50% { transform: scale(1.08); opacity: .6; } }
 
-      /* Counter-rotate node labels to stay upright */
-      .counter-inner { animation: spinCounterClockwise 45s linear infinite; transform-box: fill-box; transform-origin: center; }
-      .counter-mid { animation: spinClockwise 75s linear infinite; transform-box: fill-box; transform-origin: center; }
-      .counter-outer { animation: spinCounterClockwise 110s linear infinite; transform-box: fill-box; transform-origin: center; }
-
-      .radar-sweep { animation: sweepSpin 8s linear infinite; transform-origin: 600px 275px; }
-
-      .core-pulse { animation: coreBeat 3s ease-in-out infinite; transform-origin: 600px 275px; }
-      @keyframes coreBeat { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.08); opacity: 0.5; } }
-
-      @keyframes spinClockwise { 100% { transform: rotate(360deg); } }
-      @keyframes spinCounterClockwise { 100% { transform: rotate(-360deg); } }
-      @keyframes sweepSpin { 100% { transform: rotate(360deg); } }
+      .fu { animation: fadeUp .7s cubic-bezier(.2,.8,.2,1) both; }
+      .fi { animation: fadeIn .7s ease both; }
+      .core-pulse { transform-box: fill-box; transform-origin: center; animation: coreBreathe 3.5s ease-in-out infinite; }
 
       @media (prefers-reduced-motion: reduce) {
-        .orbit-inner, .orbit-mid, .orbit-outer, .counter-inner, .counter-mid, .counter-outer, .radar-sweep, .core-pulse {
-          animation: none;
-        }
+        * { animation: none !important; opacity: 1 !important; transform: none !important; }
       }
     ]]></style>
+
+    <linearGradient id="stkBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E131F"/>
+      <stop offset="1" stop-color="#080B12"/>
+    </linearGradient>
+    <linearGradient id="stkEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#C084FC" stop-opacity=".5"/>
+    </linearGradient>
+    <radialGradient id="atomCoreG" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset=".55" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </radialGradient>
+    <radialGradient id="atomHalo">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="stkDots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r=".9" fill="#FFFFFF" fill-opacity=".05"/>
+    </pattern>
+
+    <!-- 3 Tilted 3D Elliptical Orbital Paths -->
+    <path id="orb0" d="M 434 280 A 172 105 0 1 1 90 280 A 172 105 0 1 1 434 280 Z"/>
+    <path id="orb1" d="M 348 429 A 172 105 60 1 1 176 131 A 172 105 60 1 1 348 429 Z"/>
+    <path id="orb2" d="M 176 429 A 172 105 120 1 1 348 131 A 172 105 120 1 1 176 429 Z"/>
+
+    <!-- Moon Orbit Path around traveling icon -->
+    <path id="moonPath" d="M -34 0 A 34 34 0 1 1 34 0 A 34 34 0 1 1 -34 0 Z"/>
+
+    <clipPath id="stkClip">
+      <rect width="1280" height="480" rx="24"/>
+    </clipPath>
   </defs>
 
-  <!-- ── 1. BACKGROUND & RETICLE BORDERS ──────────────────────── -->
-  <rect width="1200" height="560" rx="14" fill="url(#orbBg)"/>
-  <rect width="1200" height="560" rx="14" fill="url(#orbGrid)"/>
-  <rect x="1" y="1" width="1198" height="558" rx="13" fill="none" stroke="#1E293B" stroke-width="1.2"/>
+  <g clip-path="url(#stkClip)">
+    <rect width="1280" height="480" fill="url(#stkBg)"/>
+    <rect width="1280" height="480" fill="url(#stkDots)"/>
+    <rect x=".75" y=".75" width="1278.5" height="478.5" rx="23.25" fill="none" stroke="url(#stkEdge)" stroke-width="1.5"/>
 
-  <!-- Corner Crop Marks -->
-  <g stroke="#38BDF8" stroke-width="2" stroke-linecap="round">
-    <path d="M 24 44 L 24 24 L 44 24" fill="none"/>
-    <path d="M 1156 24 L 1176 24 L 1176 44" fill="none"/>
-    <path d="M 24 516 L 24 536 L 44 536" fill="none"/>
-    <path d="M 1156 536 L 1176 536 L 1176 516" fill="none"/>
+    <!-- Section Header -->
+    <g transform="translate(56,52)" class="fu">
+      <text class="jbb" font-size="11.5" fill="#38BDF8" letter-spacing="2.2">// ARSENAL &amp; TECH ORBITS</text>
+      <text class="sg" y="32" font-size="28" fill="#F1F5F9" letter-spacing="-.4">Production Stack by Discipline</text>
+    </g>
+
+    <!-- Top Right Active Signals -->
+    <g transform="translate(1076,62)">
+      <rect x="0" y="-18" width="148" height="28" rx="14" fill="#C084FC" fill-opacity=".1" stroke="#C084FC" stroke-opacity=".4"/>
+      <circle cx="16" cy="-4" r="4" fill="#C084FC"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+      <text class="jbb" x="28" y="0" font-size="9.5" fill="#C084FC" letter-spacing="1.1">ACTIVE ORBITS</text>
+    </g>
+
+    <!-- ── LEFT SIDE: THE ATOM CORE & 3D ORBIT RIG (x=40 to x=480) ─── -->
+    <g>
+      <!-- Central Ambient Glow -->
+      <circle cx="262" cy="280" r="100" fill="url(#atomHalo)"/>
+
+      <!-- Orbit Guides -->
+      <use href="#orb0" fill="none" stroke="#38BDF8" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <use href="#orb1" fill="none" stroke="#818CF8" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <use href="#orb2" fill="none" stroke="#C084FC" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+      <!-- Central Atom Engine Core -->
+      <g transform="translate(262,280)" class="core-pulse">
+        <circle r="32" fill="url(#atomCoreG)"/>
+        <circle r="26" fill="none" stroke="#FFFFFF" stroke-opacity=".4" stroke-width="1"/>
+        <text class="jbb" text-anchor="middle" y="4" font-size="9.5" fill="#FFFFFF" letter-spacing="1">CORE</text>
+      </g>
+
+      <!-- ── PRIMARY NODE 1: TypeScript traveling Orbit 0 (Horizontal) ── -->
+      <g>
+        <animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb0"/></animateMotion>
+        
+        <!-- Node Surface -->
+        <circle r="22" fill="#0B1220" stroke="#38BDF8" stroke-width="2"/>
+        <text class="jbb" text-anchor="middle" y="4" font-size="11" fill="#38BDF8">TS</text>
+
+        <!-- Moon Orbit ring -->
+        <circle r="34" fill="none" stroke="#38BDF8" stroke-opacity=".3" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <!-- Satellite Moon 1: Bash -->
+        <g>
+          <animateMotion dur="6s" repeatCount="indefinite"><mpath href="#moonPath"/></animateMotion>
+          <circle r="10" fill="#070A11" stroke="#F59E0B" stroke-width="1.5"/>
+          <text class="jbb" text-anchor="middle" y="3" font-size="6.5" fill="#F59E0B">SH</text>
+        </g>
+      </g>
+
+      <!-- ── PRIMARY NODE 2: Docker traveling Orbit 1 (+60deg tilt) ── -->
+      <g>
+        <animateMotion dur="26s" repeatCount="indefinite"><mpath href="#orb1"/></animateMotion>
+        <circle r="22" fill="#0B1220" stroke="#818CF8" stroke-width="2"/>
+        <text class="jbb" text-anchor="middle" y="4" font-size="10" fill="#818CF8">DOCK</text>
+
+        <!-- Satellite Moon 2: Git -->
+        <circle r="34" fill="none" stroke="#818CF8" stroke-opacity=".3" stroke-width="1" stroke-dasharray="3 3"/>
+        <g>
+          <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#moonPath"/></animateMotion>
+          <circle r="10" fill="#070A11" stroke="#EF4444" stroke-width="1.5"/>
+          <text class="jbb" text-anchor="middle" y="3" font-size="6.5" fill="#EF4444">GIT</text>
+        </g>
+      </g>
+
+      <!-- ── PRIMARY NODE 3: Node.js traveling Orbit 2 (-60deg tilt) ── -->
+      <g>
+        <animateMotion dur="30s" repeatCount="indefinite"><mpath href="#orb2"/></animateMotion>
+        <circle r="22" fill="#0B1220" stroke="#10B981" stroke-width="2"/>
+        <text class="jbb" text-anchor="middle" y="4" font-size="10" fill="#10B981">NODE</text>
+      </g>
+    </g>
+
+    <!-- Divider Bar -->
+    <line x1="510" y1="110" x2="510" y2="440" stroke="#1E293B"/>
+
+    <!-- ── RIGHT SIDE: GROUPED PRODUCTION TECH MATRIX (x=540 to x=1224) ── -->
+    <!-- Category 1: Core Runtime -->
+    <g transform="translate(540,116)" class="fu" style="animation-delay:.15s">
+      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#38BDF8"/>
+      <text class="jbb" x="42" y="20" font-size="9" fill="#38BDF8" letter-spacing="1.4">01 // CORE RUNTIME</text>
+
+      <g transform="translate(16,42)">
+        <rect width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="15" r="3" fill="#38BDF8"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">TypeScript</text>
+
+        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="15" r="3" fill="#10B981"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">Node.js</text>
+
+        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="55" r="3" fill="#F59E0B"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">Python / FastAPI</text>
+
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="55" r="3" fill="#EF4444"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">Java OpenJDK</text>
+
+        <text class="jb" y="98" font-size="8.5" fill="#64748B">daily drivers &#183; strict types &#183; async runtime</text>
+      </g>
+    </g>
+
+    <!-- Category 2: Containers & Cloud -->
+    <g transform="translate(894,116)" class="fu" style="animation-delay:.3s">
+      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#818CF8"/>
+      <text class="jbb" x="42" y="20" font-size="9" fill="#818CF8" letter-spacing="1.4">02 // CLOUD &amp; DEVOPS</text>
+
+      <g transform="translate(16,42)">
+        <rect width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="15" r="3" fill="#818CF8"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">Docker</text>
+
+        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="15" r="3" fill="#F472B6"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">GitHub Actions</text>
+
+        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="55" r="3" fill="#FBBF24"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">Linux / Bash</text>
+
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="55" r="3" fill="#38BDF8"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">CI/CD Automation</text>
+
+        <text class="jb" y="98" font-size="8.5" fill="#64748B">containerized services &#183; automated cron</text>
+      </g>
+    </g>
+
+    <!-- Category 3: APIs & Data -->
+    <g transform="translate(540,286)" class="fu" style="animation-delay:.45s">
+      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#10B981"/>
+      <text class="jbb" x="42" y="20" font-size="9" fill="#10B981" letter-spacing="1.4">03 // APIS &amp; DATA FLOWS</text>
+
+      <g transform="translate(16,42)">
+        <rect width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="15" r="3" fill="#10B981"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">GitHub REST v3</text>
+
+        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="15" r="3" fill="#C084FC"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">GraphQL API</text>
+
+        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="55" r="3" fill="#38BDF8"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">PostgreSQL / SQL</text>
+
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="55" r="3" fill="#EF4444"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">Redis Cache</text>
+
+        <text class="jb" y="98" font-size="8.5" fill="#64748B">real-time streaming &#183; clean relational schema</text>
+      </g>
+    </g>
+
+    <!-- Category 4: Security & Audit -->
+    <g transform="translate(894,286)" class="fu" style="animation-delay:.6s">
+      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#F59E0B"/>
+      <text class="jbb" x="42" y="20" font-size="9" fill="#F59E0B" letter-spacing="1.4">04 // DEVSECOPS &amp; PRIVACY</text>
+
+      <g transform="translate(16,42)">
+        <rect width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="15" r="3" fill="#F59E0B"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">AES-GCM-256</text>
+
+        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="15" r="3" fill="#10B981"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">Zero-Knowledge</text>
+
+        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="14" cy="55" r="3" fill="#38BDF8"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">Strict XML Audit</text>
+
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <circle cx="164" cy="55" r="3" fill="#A78BFA"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">Clean Architecture</text>
+
+        <text class="jb" y="98" font-size="8.5" fill="#64748B">zero external dependencies &#183; self-hosted</text>
+      </g>
+    </g>
   </g>
-
-  <!-- Section Title -->
-  <text class="mono" x="50" y="52" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="2">// ORBITAL TECH RADAR [SYSTEM STACK]</text>
-  <text class="mono" x="1150" y="52" text-anchor="end" font-size="11" fill="#64748B" letter-spacing="1">12 PRODUCTION FLIGHT NODES · ZERO FLUFF</text>
-
-  <!-- ── 2. CONCENTRIC ORBIT TRACKS ───────────────────────────── -->
-  <!-- Target Reticles & Cross-Axes -->
-  <g stroke="#1E293B" stroke-width="0.8">
-    <line x1="600" y1="35" x2="600" y2="515"/>
-    <line x1="360" y1="275" x2="840" y2="275"/>
-    <circle cx="600" cy="275" r="95" fill="none" stroke="#38BDF8" stroke-opacity="0.22" stroke-dasharray="3 4"/>
-    <circle cx="600" cy="275" r="165" fill="none" stroke="#818CF8" stroke-opacity="0.2" stroke-dasharray="4 5"/>
-    <circle cx="600" cy="275" r="235" fill="none" stroke="#C084FC" stroke-opacity="0.18" stroke-dasharray="5 6"/>
-  </g>
-
-  <!-- Radar Sweep Arm -->
-  <g class="radar-sweep">
-    <path d="M 600 275 L 835 275 A 235 235 0 0 0 766 109 Z" fill="url(#sweepGrad)"/>
-    <line x1="600" y1="275" x2="835" y2="275" stroke="#38BDF8" stroke-width="1.4" stroke-opacity="0.85"/>
-  </g>
-
-  <!-- ── 3. RADAR CENTER ENGINE CORE ──────────────────────────── -->
-  <circle class="core-pulse" cx="600" cy="275" r="42" fill="url(#coreGlow)"/>
-  <circle cx="600" cy="275" r="28" fill="#0A0E17" stroke="#38BDF8" stroke-width="1.8"/>
-  <circle cx="600" cy="275" r="10" fill="#38BDF8"/>
-  <text class="mono" x="600" y="279" text-anchor="middle" font-size="8" font-weight="800" fill="#0A0E17">CORE</text>
-
-  <!-- ── 4. ORBIT 1: CORE RUNTIME PRIMITIVES (R=95, 4 NODES) ───── -->
-  <g class="orbit-inner">
-    <!-- Node 1: TypeScript (0 deg -> x: 695, y: 275) -->
-    <g transform="translate(695, 275)">
-      <circle cx="0" cy="0" r="18" fill="#0C1322" stroke="#3178C6" stroke-width="1.5"/>
-      <g class="counter-inner">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="10" font-weight="800" fill="#3178C6">TS</text>
-      </g>
-    </g>
-
-    <!-- Node 2: Node.js (90 deg -> x: 600, y: 370) -->
-    <g transform="translate(600, 370)">
-      <circle cx="0" cy="0" r="18" fill="#0C1322" stroke="#22C55E" stroke-width="1.5"/>
-      <g class="counter-inner">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="9" font-weight="800" fill="#22C55E">Node</text>
-      </g>
-    </g>
-
-    <!-- Node 3: Git / GitHub (180 deg -> x: 505, y: 275) -->
-    <g transform="translate(505, 275)">
-      <circle cx="0" cy="0" r="18" fill="#0C1322" stroke="#F97316" stroke-width="1.5"/>
-      <g class="counter-inner">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="9.5" font-weight="800" fill="#F97316">Git</text>
-      </g>
-    </g>
-
-    <!-- Node 4: Linux / Bash (270 deg -> x: 600, y: 180) -->
-    <g transform="translate(600, 180)">
-      <circle cx="0" cy="0" r="18" fill="#0C1322" stroke="#FBBF24" stroke-width="1.5"/>
-      <g class="counter-inner">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="9" font-weight="800" fill="#FBBF24">Linux</text>
-      </g>
-    </g>
-  </g>
-
-  <!-- ── 5. ORBIT 2: CLOUD & INFRA SYSTEMS (R=165, 4 NODES) ───── -->
-  <g class="orbit-mid">
-    <!-- Node 1: Docker (45 deg -> x: 716, y: 391) -->
-    <g transform="translate(716, 391)">
-      <circle cx="0" cy="0" r="20" fill="#0C1322" stroke="#38BDF8" stroke-width="1.5"/>
-      <g class="counter-mid">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="9" font-weight="700" fill="#38BDF8">Docker</text>
-      </g>
-    </g>
-
-    <!-- Node 2: GitHub Actions (135 deg -> x: 484, y: 391) -->
-    <g transform="translate(484, 391)">
-      <circle cx="0" cy="0" r="20" fill="#0C1322" stroke="#A855F7" stroke-width="1.5"/>
-      <g class="counter-mid">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="8.5" font-weight="700" fill="#C084FC">CI/CD</text>
-      </g>
-    </g>
-
-    <!-- Node 3: Python / FastAPI (225 deg -> x: 484, y: 159) -->
-    <g transform="translate(484, 159)">
-      <circle cx="0" cy="0" r="20" fill="#0C1322" stroke="#10B981" stroke-width="1.5"/>
-      <g class="counter-mid">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="8.5" font-weight="700" fill="#10B981">Python</text>
-      </g>
-    </g>
-
-    <!-- Node 4: REST / GraphQL (315 deg -> x: 716, y: 159) -->
-    <g transform="translate(716, 159)">
-      <circle cx="0" cy="0" r="20" fill="#0C1322" stroke="#EC4899" stroke-width="1.5"/>
-      <g class="counter-mid">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="9" font-weight="700" fill="#F472B6">APIs</text>
-      </g>
-    </g>
-  </g>
-
-  <!-- ── 6. ORBIT 3: PRODUCTION & SECURITY (R=235, 4 NODES) ───── -->
-  <g class="orbit-outer">
-    <!-- Node 1: DevSecOps (30 deg -> x: 803, y: 392) -->
-    <g transform="translate(803, 392)">
-      <circle cx="0" cy="0" r="22" fill="#0C1322" stroke="#EF4444" stroke-width="1.5"/>
-      <g class="counter-outer">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="8" font-weight="700" fill="#EF4444">SecOps</text>
-      </g>
-    </g>
-
-    <!-- Node 2: PostgreSQL / SQL (120 deg -> x: 483, y: 478) -->
-    <g transform="translate(483, 478)">
-      <circle cx="0" cy="0" r="22" fill="#0C1322" stroke="#0284C7" stroke-width="1.5"/>
-      <g class="counter-outer">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="8.5" font-weight="700" fill="#38BDF8">Postgres</text>
-      </g>
-    </g>
-
-    <!-- Node 3: React / Next.js (210 deg -> x: 397, y: 158) -->
-    <g transform="translate(397, 158)">
-      <circle cx="0" cy="0" r="22" fill="#0C1322" stroke="#06B6D4" stroke-width="1.5"/>
-      <g class="counter-outer">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="9" font-weight="700" fill="#22D3EE">Next.js</text>
-      </g>
-    </g>
-
-    <!-- Node 4: Reverse Eng (300 deg -> x: 717, y: 72) -->
-    <g transform="translate(717, 72)">
-      <circle cx="0" cy="0" r="22" fill="#0C1322" stroke="#EAB308" stroke-width="1.5"/>
-      <g class="counter-outer">
-        <text class="mono" x="0" y="4" text-anchor="middle" font-size="8" font-weight="700" fill="#FACC15">RevEng</text>
-      </g>
-    </g>
-  </g>
-
-  <!-- ── 7. TELEMETRY QUADRANT LEGENDS (4 CORNERS) ─────────────── -->
-  <!-- Quadrant 1 (Top Left) -->
-  <g transform="translate(50, 95)">
-    <rect x="0" y="0" width="180" height="48" rx="6" fill="#0A0E17" stroke="#1E293B" stroke-width="0.8"/>
-    <text class="mono" x="12" y="18" font-size="9" font-weight="700" fill="#38BDF8">RING 01 // RUNTIME</text>
-    <text class="mono" x="12" y="34" font-size="9.5" fill="#94A3B8">TS · Node · Git · Bash</text>
-  </g>
-
-  <!-- Quadrant 2 (Top Right) -->
-  <g transform="translate(970, 95)">
-    <rect x="0" y="0" width="180" height="48" rx="6" fill="#0A0E17" stroke="#1E293B" stroke-width="0.8"/>
-    <text class="mono" x="12" y="18" font-size="9" font-weight="700" fill="#A855F7">RING 02 // PIPELINES</text>
-    <text class="mono" x="12" y="34" font-size="9.5" fill="#94A3B8">Docker · CI/CD · Python</text>
-  </g>
-
-  <!-- Quadrant 3 (Bottom Left) -->
-  <g transform="translate(50, 460)">
-    <rect x="0" y="0" width="180" height="48" rx="6" fill="#0A0E17" stroke="#1E293B" stroke-width="0.8"/>
-    <text class="mono" x="12" y="18" font-size="9" font-weight="700" fill="#10B981">RING 03 // DATA &amp; UI</text>
-    <text class="mono" x="12" y="34" font-size="9.5" fill="#94A3B8">Next.js · PostgreSQL · APIs</text>
-  </g>
-
-  <!-- Quadrant 4 (Bottom Right) -->
-  <g transform="translate(970, 460)">
-    <rect x="0" y="0" width="180" height="48" rx="6" fill="#0A0E17" stroke="#1E293B" stroke-width="0.8"/>
-    <text class="mono" x="12" y="18" font-size="9" font-weight="700" fill="#EF4444">SPECIALIZATION</text>
-    <text class="mono" x="12" y="34" font-size="9.5" fill="#94A3B8">DevSecOps · REA · Audit</text>
-  </g>
-
-  <!-- Footer Track Description -->
-  <text class="mono" x="600" y="534" text-anchor="middle" font-size="10" fill="#475569" letter-spacing="0.5">Rotational speed scaled inversely by layer abstraction · Continuous CSS hardware-accelerated transform</text>
-
 </svg>

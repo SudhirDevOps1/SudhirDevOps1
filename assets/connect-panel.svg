@@ -1,105 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-label="Connect with Sudhir Singh on GitHub, LinkedIn, Telegram, or the portfolio site at sudhirdevops1.github.io.">
-  <title>Connect — pick a channel</title>
-  <desc>Four large channel cards, each with a brand mark, handle, one line of context and an open-channel affordance, entering in a stagger.</desc>
-
-  <!-- Tokens: #0B0F17-#121826 bg · #161B22/#0D1117 panel · #30363D border · #36BCF7 · #A855F7 · #3FB950
-       Icons: GitHub / LinkedIn / Telegram marks from Simple Icons (CC0 1.0); globe drawn here.
-       No hardcoded numbers — live counts stay in the API-driven blocks. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-label="Connect with Sudhir Singh — GitHub, LinkedIn, Telegram, and Portfolio.">
+  <title>Connect with Sudhir Singh</title>
+  <desc>Four large verified communication cards linking to GitHub, LinkedIn, Telegram, and the portfolio site.</desc>
 
   <defs>
-    <linearGradient id="cpBg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="440">
-      <stop offset="0" stop-color="#0B0F17"/>
-      <stop offset="1" stop-color="#121826"/>
-    </linearGradient>
-    <style>
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-      .sans { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; }
-      .card { opacity: 0; animation: rise .7s cubic-bezier(.2,.8,.2,1) both; }
+    <style type="text/css"><![CDATA[
+text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+      .sgm { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
+      .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
+
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+
+      .card { animation: fadeUp .7s cubic-bezier(.2,.8,.2,1) both; }
+      .arrow { animation: nudge 2s ease-in-out infinite; }
       .c1 { animation-delay: .05s; }
       .c2 { animation-delay: .18s; }
       .c3 { animation-delay: .31s; }
       .c4 { animation-delay: .44s; }
-      @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-      .name { font-size: 20px; font-weight: 700; fill: #E6EDF3; }
-      .handle { font-size: 11px; }
-      .desc { font-size: 12px; fill: #8B949E; }
-      .cta { font-size: 9.5px; letter-spacing: 1.6px; fill: #6E7681; }
-      @media (prefers-reduced-motion: reduce) { .card { animation: none; opacity: 1; } }
-    </style>
+
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; opacity: 1 !important; transform: none !important; }
+      }
+    ]]></style>
+
+    <linearGradient id="cpBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E131F"/>
+      <stop offset="1" stop-color="#080B12"/>
+    </linearGradient>
+    <linearGradient id="cpEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#818CF8" stop-opacity=".5"/>
+    </linearGradient>
+    <pattern id="cpDots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r=".9" fill="#FFFFFF" fill-opacity=".05"/>
+    </pattern>
+
+    <clipPath id="cpClip">
+      <rect width="1280" height="440" rx="24"/>
+    </clipPath>
   </defs>
 
-  <rect width="1280" height="440" fill="url(#cpBg)"/>
+  <g clip-path="url(#cpClip)">
+    <rect width="1280" height="440" fill="url(#cpBg)"/>
+    <rect width="1280" height="440" fill="url(#cpDots)"/>
+    <rect x=".75" y=".75" width="1278.5" height="438.5" rx="23.25" fill="none" stroke="url(#cpEdge)" stroke-width="1.5"/>
 
-  <text class="mono" x="56" y="56" font-size="11" fill="#8B949E" letter-spacing="2.6">// CONNECT</text>
-  <text class="mono" x="1224" y="56" text-anchor="end" font-size="10.5" fill="#4B5563" letter-spacing="1.6">PICK A CHANNEL</text>
+    <text class="jbb" x="56" y="54" font-size="11.5" fill="#38BDF8" letter-spacing="2.2">// COMMS &amp; NETWORK CHANNELS</text>
+    <text class="jb" x="1224" y="54" text-anchor="end" font-size="10" fill="#64748B" letter-spacing="1.4">OPEN FOR COLLABORATION</text>
 
-  <!-- 01 · GitHub -->
-  <g class="card c1">
-    <rect x="56" y="88" width="283" height="320" rx="18" fill="#121826" stroke="#30363D"/>
-    <rect x="56" y="88" width="283" height="3" rx="1.5" fill="#E6EDF3" fill-opacity=".7"/>
-    <rect x="84" y="116" width="64" height="64" rx="18" fill="#0D1117" stroke="#30363D"/>
-    <g transform="translate(100 132) scale(1.34)" fill="#E6EDF3">
-      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    <!-- 01 · GitHub -->
+    <g class="card c1">
+      <rect x="56" y="86" width="283" height="320" rx="18" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="56" y="86" width="283" height="3" rx="1.5" fill="#E2E8F0" fill-opacity=".7"/>
+      <rect x="84" y="114" width="60" height="60" rx="16" fill="#161F30" stroke="#1E293B"/>
+      <g transform="translate(98 128) scale(1.3)" fill="#E2E8F0">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </g>
+      <text class="sg" x="84" y="214" font-size="20" fill="#F1F5F9">GitHub</text>
+      <text class="jbb" x="84" y="238" font-size="11" fill="#38BDF8">@SudhirDevOps1</text>
+      <line x1="84" y1="258" x2="311" y2="258" stroke="#1E293B"/>
+      <text class="sgm" x="84" y="284" font-size="12" fill="#94A3B8">77 open repositories,</text>
+      <text class="sgm" x="84" y="302" font-size="12" fill="#94A3B8">codebases &amp; full history.</text>
+      <text class="jbb" x="84" y="368" font-size="9" fill="#64748B" letter-spacing="1.4">OPEN CHANNEL</text>
+      <g class="arrow" transform="translate(300,364)"><text class="jb" font-size="14" fill="#38BDF8">&#8599;</text></g>
     </g>
-    <text class="sans name" x="84" y="216">GitHub</text>
-    <text class="mono handle" x="84" y="238" fill="#36BCF7">@SudhirDevOps1</text>
-    <line x1="84" y1="258" x2="311" y2="258" stroke="#1C2128"/>
-    <text class="sans desc" x="84" y="284">All repositories, source code</text>
-    <text class="sans desc" x="84" y="302">and the full commit history.</text>
-    <text class="mono cta" x="84" y="368">OPEN CHANNEL</text>
-    <text class="mono" x="311" y="368" text-anchor="end" font-size="14" fill="#6E7681">↗</text>
-  </g>
 
-  <!-- 02 · LinkedIn -->
-  <g class="card c2">
-    <rect x="351" y="88" width="283" height="320" rx="18" fill="#121826" stroke="#30363D"/>
-    <rect x="351" y="88" width="283" height="3" rx="1.5" fill="#36BCF7" fill-opacity=".85"/>
-    <rect x="379" y="116" width="64" height="64" rx="18" fill="#0D1117" stroke="#30363D"/>
-    <g transform="translate(395 132) scale(1.34)" fill="#36BCF7">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    <!-- 02 · LinkedIn -->
+    <g class="card c2">
+      <rect x="351" y="86" width="283" height="320" rx="18" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="351" y="86" width="283" height="3" rx="1.5" fill="#38BDF8" fill-opacity=".85"/>
+      <rect x="379" y="114" width="60" height="60" rx="16" fill="#161F30" stroke="#1E293B"/>
+      <g transform="translate(393 128) scale(1.3)" fill="#38BDF8">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </g>
+      <text class="sg" x="379" y="214" font-size="20" fill="#F1F5F9">LinkedIn</text>
+      <text class="jbb" x="379" y="238" font-size="11" fill="#38BDF8">/in/SudhirDevOps1</text>
+      <line x1="379" y1="258" x2="606" y2="258" stroke="#1E293B"/>
+      <text class="sgm" x="379" y="284" font-size="12" fill="#94A3B8">Professional background,</text>
+      <text class="sgm" x="379" y="302" font-size="12" fill="#94A3B8">career journey &amp; network.</text>
+      <text class="jbb" x="379" y="368" font-size="9" fill="#64748B" letter-spacing="1.4">DIRECT MESSAGE</text>
+      <g class="arrow" transform="translate(595,364)"><text class="jb" font-size="14" fill="#38BDF8">&#8599;</text></g>
     </g>
-    <text class="sans name" x="379" y="216">LinkedIn</text>
-    <text class="mono handle" x="379" y="238" fill="#36BCF7">in/SudhirDevOps1</text>
-    <line x1="379" y1="258" x2="606" y2="258" stroke="#1C2128"/>
-    <text class="sans desc" x="379" y="284">Open to internships, full-time</text>
-    <text class="sans desc" x="379" y="302">roles and freelance work.</text>
-    <text class="mono cta" x="379" y="368">OPEN CHANNEL</text>
-    <text class="mono" x="606" y="368" text-anchor="end" font-size="14" fill="#6E7681">↗</text>
-  </g>
 
-  <!-- 03 · Telegram -->
-  <g class="card c3">
-    <rect x="646" y="88" width="283" height="320" rx="18" fill="#121826" stroke="#30363D"/>
-    <rect x="646" y="88" width="283" height="3" rx="1.5" fill="#A855F7" fill-opacity=".85"/>
-    <rect x="674" y="116" width="64" height="64" rx="18" fill="#0D1117" stroke="#30363D"/>
-    <g transform="translate(690 132) scale(1.34)" fill="#A855F7">
-      <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+    <!-- 03 · Telegram -->
+    <g class="card c3">
+      <rect x="646" y="86" width="283" height="320" rx="18" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="646" y="86" width="283" height="3" rx="1.5" fill="#818CF8" fill-opacity=".85"/>
+      <rect x="674" y="114" width="60" height="60" rx="16" fill="#161F30" stroke="#1E293B"/>
+      <g transform="translate(688 128) scale(1.3)" fill="#818CF8">
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.535-.194 1.006.128.832.942z"/>
+      </g>
+      <text class="sg" x="674" y="214" font-size="20" fill="#F1F5F9">Telegram</text>
+      <text class="jbb" x="674" y="238" font-size="11" fill="#818CF8">@SudhirDevOps1</text>
+      <line x1="674" y1="258" x2="901" y2="258" stroke="#1E293B"/>
+      <text class="sgm" x="674" y="284" font-size="12" fill="#94A3B8">Quick inquiries,</text>
+      <text class="sgm" x="674" y="302" font-size="12" fill="#94A3B8">casual chats &amp; collab.</text>
+      <text class="jbb" x="674" y="368" font-size="9" fill="#64748B" letter-spacing="1.4">START CHAT</text>
+      <g class="arrow" transform="translate(890,364)"><text class="jb" font-size="14" fill="#818CF8">&#8599;</text></g>
     </g>
-    <text class="sans name" x="674" y="216">Telegram</text>
-    <text class="mono handle" x="674" y="238" fill="#36BCF7">@SudhirDevOps1</text>
-    <line x1="674" y1="258" x2="901" y2="258" stroke="#1C2128"/>
-    <text class="sans desc" x="674" y="284">The fastest way to reach me</text>
-    <text class="sans desc" x="674" y="302">for a quick, direct reply.</text>
-    <text class="mono cta" x="674" y="368">OPEN CHANNEL</text>
-    <text class="mono" x="901" y="368" text-anchor="end" font-size="14" fill="#6E7681">↗</text>
-  </g>
 
-  <!-- 04 · Portfolio -->
-  <g class="card c4">
-    <rect x="941" y="88" width="283" height="320" rx="18" fill="#121826" stroke="#30363D"/>
-    <rect x="941" y="88" width="283" height="3" rx="1.5" fill="#3FB950" fill-opacity=".85"/>
-    <rect x="969" y="116" width="64" height="64" rx="18" fill="#0D1117" stroke="#30363D"/>
-    <g transform="translate(985 132) scale(1.34)" fill="none" stroke="#3FB950" stroke-width="1.5">
-      <circle cx="12" cy="12" r="10"/>
-      <ellipse cx="12" cy="12" rx="4.4" ry="10"/>
-      <line x1="2" y1="12" x2="22" y2="12"/>
+    <!-- 04 · Portfolio -->
+    <g class="card c4">
+      <rect x="941" y="86" width="283" height="320" rx="18" fill="#0B1220" stroke="#1E293B"/>
+      <rect x="941" y="86" width="283" height="3" rx="1.5" fill="#10B981" fill-opacity=".85"/>
+      <rect x="969" y="114" width="60" height="60" rx="16" fill="#161F30" stroke="#1E293B"/>
+      <g transform="translate(983 128) scale(1.3)" fill="#10B981">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      </g>
+      <text class="sg" x="969" y="214" font-size="20" fill="#F1F5F9">Portfolio</text>
+      <text class="jbb" x="969" y="238" font-size="11" fill="#10B981">sudhirdevops1.github.io</text>
+      <line x1="969" y1="258" x2="1196" y2="258" stroke="#1E293B"/>
+      <text class="sgm" x="969" y="284" font-size="12" fill="#94A3B8">Live project demos,</text>
+      <text class="sgm" x="969" y="302" font-size="12" fill="#94A3B8">interactive web tools &amp; docs.</text>
+      <text class="jbb" x="969" y="368" font-size="9" fill="#64748B" letter-spacing="1.4">VISIT COCKPIT</text>
+      <g class="arrow" transform="translate(1185,364)"><text class="jb" font-size="14" fill="#10B981">&#8599;</text></g>
     </g>
-    <text class="sans name" x="969" y="216">Portfolio</text>
-    <text class="mono handle" x="969" y="238" fill="#36BCF7">sudhirdevops1.github.io</text>
-    <line x1="969" y1="258" x2="1196" y2="258" stroke="#1C2128"/>
-    <text class="sans desc" x="969" y="284">Live projects, write-ups and</text>
-    <text class="sans desc" x="969" y="302">the work behind each one.</text>
-    <text class="mono cta" x="969" y="368">OPEN CHANNEL</text>
-    <text class="mono" x="1196" y="368" text-anchor="end" font-size="14" fill="#6E7681">↗</text>
   </g>
 </svg>
