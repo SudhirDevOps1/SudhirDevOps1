@@ -41,6 +41,12 @@
   <img src="https://img.shields.io/github/commit-activity/y/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=36BCF7&label=This%20Repo%20%C2%B7%20Year" alt="Commits in this repository this year"/>
   &nbsp;
   <img src="https://img.shields.io/github/last-commit/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&color=FFDD00&label=Last%20Push" alt="Last push to this repository"/>
+
+  <br/><br/>
+
+  <a href="https://linkedin.com/in/SudhirDevOps1">
+    <img src="https://img.shields.io/badge/Open%20to%20Work%20%E2%80%94%20Internships%20%C2%B7%20Full--time%20%C2%B7%20Freelance-8B5CF6?style=for-the-badge&logo=briefcase&logoColor=white" alt="Open to work — internships, full-time, freelance"/>
+  </a>
 </div>
 
 <br/>
@@ -54,6 +60,8 @@
 
 I am **Sudhir Singh**, a passionate **BCA student** from **Bihar, India**, building practical web tools, study utilities, media apps, and automation scripts.
 My goal: become a **full-stack developer** who ships real-world products.
+
+> 🎯 **Mission — ship real things, automate the boring ones, document honestly.**
 
 | | |
 |---|---|
@@ -118,6 +126,34 @@ If a task repeats three times, I write code so it repeats zero times.
 ### 🎨 Design
 Interfaces with intent — dark themes, accessible contrast, tight spacing, purposeful motion.
 Built with Tailwind CSS 4 and a design-token mindset.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- ═══════════════════════ HOW I WORK ═══════════════════════ -->
+## 🔁 How I Work
+
+<table width="100%">
+<tr>
+<td width="33%" valign="top">
+
+### 🚀 Ship > Talk
+Working software over roadmaps and promises. Every claim on this page points to something you can open, run and verify — right now.
+
+</td>
+<td width="33%" valign="top">
+
+### 🤖 Automate > Repeat
+If a task happens three times, it becomes a script or a scheduled workflow. This very profile refreshes itself every single day.
+
+</td>
+<td width="33%" valign="top">
+
+### 🔍 Real > Fake
+Verified numbers or a red badge. Every stat here comes from the GitHub API — nothing is estimated, cached forever or made up.
 
 </td>
 </tr>
@@ -434,6 +470,22 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 <br/>
 
+<!-- ═══════════════════════ JOURNEY ═══════════════════════ -->
+## 🧭 My Journey So Far
+
+<div align="center">
+
+| 🗓️ When | 🚀 Milestone |
+|:--|:--|
+| **Sep 2025** | Joined GitHub and shipped my first public repos — study tools & web utilities |
+| **Oct–Dec 2025** | Built and open-sourced media apps, study trackers and code-to-image PWA |
+| **2026** | Shipped SafeVault, BlindShare and applied TypeScript at production-grade quality |
+| **Nov 2026** | This profile became **self-maintaining** — daily GitHub Actions, real API data, zero manual edits |
+
+</div>
+
+<br/>
+
 <!-- ═══════════════════════ AUTOMATION & MONITORING ═══════════════════════ -->
 ## 🛰️ Live Automation & Monitoring
 
@@ -441,6 +493,17 @@ Built with Tailwind CSS 4 and a design-token mindset.
 
 > ⚙️ This profile **maintains itself**. Every workflow below runs on a schedule,
 > pulls real data from the GitHub API, and turns **red on its own** if a source breaks.
+
+**How it runs itself — the 20-second version:**
+
+```text
+cron (GitHub Actions)
+  ├─ update-stats.mjs  → REST v3 + Search API → repos · stars · forks · commits · PRs · followers
+  ├─                      └─ rewrites the STATS blocks in this README (marker-guarded)
+  ├─ update-streak.mjs → GraphQL contribution calendar → assets/streak-buddy.svg
+  ├─ git commit + push (github-actions[bot])   → this page stays fresh, daily
+  └─ check-readme-health.mjs → verifies every image & link live · red badge on any failure
+```
 
 | ⚙️ Workflow | 🕒 Schedule | 🧠 What it actually does | 📡 Live status |
 |:--|:--|:--|:--|
@@ -502,6 +565,15 @@ and if a source stops responding, the badge above goes red instead of quietly ly
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
   <img src="https://img.shields.io/badge/Explore-Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
 </a>
+&nbsp;
+<a href="https://github.com/SudhirDevOps1/SudhirDevOps1">
+  <img src="https://img.shields.io/github/stars/SudhirDevOps1/SudhirDevOps1?style=for-the-badge&logo=star&logoColor=FFDD00&color=181717&label=Star%20This%20Profile" alt="Star this profile repository"/>
+</a>
+
+<br/><br/>
+
+> 🛠️ This profile is **100% self-maintaining** — a daily GitHub Actions pipeline
+> refreshes every stat you see, live from the GitHub API, and commits it back.
 
 </div>
 
