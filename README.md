@@ -25,13 +25,13 @@
 <div align="center">
 
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="./assets/hero-viewfinder.svg?v=2" width="100%" alt="Sudhir Singh — Cinema-Grade Anamorphic Viewfinder HUD: Optical telemetry, live terminal command execution, code card, and systems engineering profile."/>
+  <img src="./assets/hero-viewfinder.svg?v=3" width="100%" alt="Sudhir Singh — Cinema-Grade Anamorphic Viewfinder HUD: Optical telemetry, live terminal command execution, code card, and systems engineering profile."/>
 </a>
 
 <br/>
 
 <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C047-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C053-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -42,7 +42,7 @@
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="about"></a>
 
@@ -58,9 +58,9 @@ I operate on the principle of **computational honesty**: software must be verifi
 
 <br/>
 
-<img src="./assets/what-i-build.svg?v=2" width="100%" alt="What I build: complete applications, automation that runs itself, and interfaces designed with intent"/>
+<img src="./assets/what-i-build.svg?v=3" width="100%" alt="What I build: complete applications, automation that runs itself, and interfaces designed with intent"/>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="console"></a>
 
@@ -70,11 +70,11 @@ Simulated browser terminal executing automated runtime telemetry, alongside veri
 
 <div align="center">
 
-<img src="./assets/build-console.svg?v=2" width="100%" alt="Production Build Console: Simulated browser terminal, capability meters, and runtime telemetry."/>
+<img src="./assets/build-console.svg?v=3" width="100%" alt="Production Build Console: Simulated browser terminal, capability meters, and runtime telemetry."/>
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="radar"></a>
 <a id="stack"></a>
@@ -88,15 +88,15 @@ Continuous rotational telemetry mapping production tools across concentric abstr
 
 <div align="center">
 
-<img src="./assets/orbital-radar.svg?v=2" width="100%" alt="Orbital Tech Radar — Concentric rotating orbits for Systems, Cloud, Full-Stack, and Security"/>
+<img src="./assets/orbital-radar.svg?v=3" width="100%" alt="Orbital Tech Radar — Concentric rotating orbits for Systems, Cloud, Full-Stack, and Security"/>
 
 <br/><br/>
 
-<img src="./assets/stack-arsenal.svg?v=2" width="100%" alt="Tech arsenal: sixteen tools across frontend, backend, and DevOps"/>
+<img src="./assets/stack-arsenal.svg?v=3" width="100%" alt="Tech arsenal: sixteen tools across frontend, backend, and DevOps"/>
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="credentials"></a>
 <a id="id"></a>
@@ -108,26 +108,17 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 <div align="center">
 
-<table>
-<tr>
-<td width="36%" align="center" valign="middle">
-  <img src="./assets/dev-lanyard.svg?v=2" width="340" alt="Swinging Obsidian Dev Lanyard ID"/>
-</td>
-<td width="64%" align="center" valign="middle">
-  <img src="./assets/dev-id.svg?v=2" width="100%" alt="Developer ID and Live Dashboard"/>
-</td>
-</tr>
-</table>
+<img src="./assets/dev-id.svg?v=3" width="100%" alt="Unified Swinging Obsidian Dev Lanyard ID and Live Field Telemetry Dashboard"/>
 
 <!-- STATS:TABLE:START -->
-<div align="center"><sub>📦 <strong>77</strong> repositories &nbsp;·&nbsp; ⭐ <strong>44</strong> stars &nbsp;·&nbsp; 🍴 <strong>7</strong> forks &nbsp;·&nbsp; 💻 <strong>3,047</strong> commits &nbsp;·&nbsp; 🔀 <strong>46</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>1</strong> issues &nbsp;·&nbsp; 👥 <strong>12</strong> followers &nbsp;·&nbsp; ✅ verified <strong>04 November 2026</strong></sub></div>
+<div align="center"><sub>📦 <strong>77</strong> repositories &nbsp;·&nbsp; ⭐ <strong>44</strong> stars &nbsp;·&nbsp; 🍴 <strong>7</strong> forks &nbsp;·&nbsp; 💻 <strong>3,053</strong> commits &nbsp;·&nbsp; 🔀 <strong>46</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>1</strong> issues &nbsp;·&nbsp; 👥 <strong>12</strong> followers &nbsp;·&nbsp; ✅ verified <strong>04 November 2026</strong></sub></div>
 <!-- STATS:TABLE:END -->
 
 <sub><strong>Data Integrity Invariant:</strong> Every number is pulled from the GitHub REST API v3 and Search API during scheduled runs. Nothing is hardcoded.</sub>
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="spotlight"></a>
 
@@ -135,13 +126,13 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 <div align="center">
 
-<img src="./assets/repo-spotlight.svg?v=2" width="100%" alt="Top 3 repositories by stars with language, stars, forks and last push date"/>
+<img src="./assets/repo-spotlight.svg?v=3" width="100%" alt="Top 3 repositories by stars with language, stars, forks and last push date"/>
 
 <sub><strong>Live Spotlight:</strong> Stars, forks, languages, and last commit dates refreshed directly from GitHub API.</sub>
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="projects"></a>
 
@@ -159,13 +150,13 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
 <!-- STATS:REPOS:START -->
-  <img src="https://img.shields.io/badge/Browse_All_Repositories-77_Projects-38BDF8?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+  <img src="https://img.shields.io/badge/Browse_All_Repositories-77_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
 <!-- STATS:REPOS:END -->
 </a>
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="activity"></a>
 
@@ -216,7 +207,7 @@ Physical-inspired lanyard security pass with damped pendulum physics and hologra
 
 </div>
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="automation"></a>
 
@@ -238,7 +229,7 @@ cron (GitHub Actions Engine)
 
 *If an external data source fails, status badges turn red instead of quietly displaying stale values.*
 
-<img src="./assets/divider.svg?v=2" width="100%" alt=""/>
+<img src="./assets/divider.svg?v=3" width="100%" alt=""/>
 
 <a id="connect"></a>
 
@@ -246,7 +237,7 @@ cron (GitHub Actions Engine)
 
 <div align="center">
 
-<img src="./assets/connect-panel.svg?v=2" width="100%" alt="Connect with Sudhir Singh on GitHub, LinkedIn, Telegram or the portfolio site"/>
+<img src="./assets/connect-panel.svg?v=3" width="100%" alt="Connect with Sudhir Singh on GitHub, LinkedIn, Telegram or the portfolio site"/>
 
 <br/>
 
@@ -260,7 +251,7 @@ cron (GitHub Actions Engine)
 
 <br/>
 
-<img src="./assets/signature.svg?v=2" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
+<img src="./assets/signature.svg?v=3" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/>
 
@@ -271,7 +262,7 @@ cron (GitHub Actions Engine)
 <!-- STATS:MILESTONES:END -->
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 19:12:49 IST</sub>
+<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 20:22:27 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>
