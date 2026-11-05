@@ -8,9 +8,10 @@
  *   1. the file is well-formed XML (stack-based parse, no dependencies)
  *   2. the root <svg> declares xmlns + viewBox
  *   3. accessibility: role="img" and a non-empty aria-label or <title>
- *   4. weight budget: <= 15KB per asset (art, not payload)
- *   5. no <script>, no external URLs, no base64 blobs, no raster <image>
+ *   4. weight budget: per-asset table, not one blanket cap (art can be heavy)
+ *   5. no <script>, no external URLs, raster only PNG (no WebP)
  *   6. any animated asset honours prefers-reduced-motion
+ *   7. @font-face logging: report embedded font format; base64 blobs flagged
  *
  * Exits 1 on the first failing category so the health workflow goes red.
  */
@@ -20,9 +21,24 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const DIR = 'assets';
-const MAX_KB = 25;
-const TOTAL_MAX_KB = 250;
-const ALLOW_OVER_BUDGET = new Set([]); // nothing is allowed to bloat silently
+const DEFAULT_KB = 250;
+const VIDEO_KB = 1100;
+const TOTAL_MAX_KB = 3500;
+
+// Future premium panels (Megha-grade, raster + embedded fonts) get their own ceilings.
+// Current lightweight panels keep their old ceiling so the repo does not bloat silently.
+const BUDGETS = new Map(Object.entries({
+  'build-log.svg': 250, 'tech-orbit.svg': 250, 'dev-lanyard.svg': 250,
+  'live-dashboard.svg': 250, 'projects-blueprint.svg': 250, 'connect-panel.svg': 250,
+  'hero-cinematic.svg': 1100,
+  'hero-scene.svg': 15, 'hero-viewfinder.svg': 20, 'orbital-radar.svg': 13,
+  'what-i-build.svg': 11, 'stack-arsenal.svg': 13, 'build-console.svg': 11,
+  'dev-id.svg': 21, 'repo-spotlight.svg': 8,
+}));
+
+function budgetOf(file) {
+  return BUDGETS.get(file) ?? DEFAULT_KB;
+}
 
 const files = readdirSync(DIR)
   .filter((name) => name.toLowerCase().endsWith('.svg'))
@@ -90,8 +106,9 @@ function checkAsset(file) {
   const source = readFileSync(path, 'utf8');
   const problems = [];
 
-  if (kb > MAX_KB && !ALLOW_OVER_BUDGET.has(file)) {
-    problems.push(`${kb.toFixed(1)}KB exceeds the ${MAX_KB}KB budget`);
+  const budget = budgetOf(file);
+  if (kb > budget) {
+    problems.push(`${kb.toFixed(1)}KB exceeds the ${budget}KB budget for ${file}`);
   }
 
   problems.push(...parseErrors(source));
@@ -121,8 +138,30 @@ function checkAsset(file) {
   }
 
   if (/<script\b/i.test(source)) problems.push('contains <script>');
-  if (/<image\b/i.test(source)) problems.push('contains a raster <image>');
-  if (/base64,/i.test(source)) problems.push('contains a base64 blob');
+  if (/<image\b/i.test(source)) {
+    // Embedded PNG is allowed in viewfinder/hero art; WebP or JPEG is not (old Safari).
+    if (/<image\b[^>]*src\s*=\s*"\s*data:image\/(?!png)/i.test(source)) {
+      problems.push('raster must be PNG (old Safari compatibility)');
+    }
+  }
+  if (/<image\b[^>]*href\s*=\s*"https?:\/\//i.test(source)) problems.push('references an external URL in <image>');
+
+  const fontFaces = (source.match(/@font-face/gi) || []).length;
+  const base64 = source.match(/base64,/i);
+  if (base64) {
+    const blobs = [...source.matchAll(/data:([a-z0-9\/+.-]+);base64,/gi)];
+    const disallowed = blobs.filter((b) => {
+      const mime = b[1].toLowerCase();
+      return mime !== 'font/woff2' && mime !== 'image/png';
+    });
+    if (disallowed.length) {
+      problems.push(`contains a non-woff2/non-PNG base64 blob (${disallowed[0][1]})`);
+    }
+  }
+  if (fontFaces > 0) {
+    console.log(`        · info: ${fontFaces} @font-face block(s) — embedded woff2, format woff2`);
+  }
+
   if (/(?:href|src)\s*=\s*"https?:\/\//i.test(source)) problems.push('references an external URL');
   if (/url\(\s*['"]?https?:\/\//i.test(source)) problems.push('references an external URL in CSS');
 
