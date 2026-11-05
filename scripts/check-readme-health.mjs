@@ -22,6 +22,7 @@ const REPORT = '.github/health/latest.json';
 const STREAK_SVG = 'assets/streak-buddy.svg';
 const SPOTLIGHT_SVG = 'assets/repo-spotlight.svg';
 const DEV_ID_SVG = 'assets/dev-id.svg';
+const BLUEPRINT_SVG = 'assets/projects-blueprint.svg';
 const CONCURRENCY = 8;
 const ATTEMPTS = 3;
 const MIN_BYTES = 200;
@@ -242,6 +243,12 @@ function checkDevIdCard() {
   return { ok: true, updated: result.updated, ageDays: result.ageDays };
 }
 
+function checkBlueprintCard() {
+  const result = checkGeneratedCard(BLUEPRINT_SVG);
+  if (!result.ok) return result;
+  return { ok: true, updated: result.updated, ageDays: result.ageDays };
+}
+
 async function main() {
   const markdown = readFileSync(README, 'utf8');
   const urls = extractImageUrls(markdown);
@@ -268,6 +275,7 @@ async function main() {
   const streak = checkStreakCard();
   const spotlight = checkSpotlightCard();
   const devId = checkDevIdCard();
+  const blueprint = checkBlueprintCard();
   const passed = results.length - failed.length;
   const passedLinks = linkResults.length - failedLinks.length;
 
@@ -287,6 +295,7 @@ async function main() {
     streak,
     spotlight,
     devId,
+    blueprint,
     results,
   };
 
@@ -311,12 +320,17 @@ async function main() {
     `${devId.ok ? 'OK  ' : 'FAIL'} ${String(`age ${devId.ageDays ?? '-'}d`).padStart(7)}  ` +
       `${DEV_ID_SVG} (${devId.ok ? devId.updated : devId.reason})`
   );
+  console.log(
+    `${blueprint.ok ? 'OK  ' : 'FAIL'} ${String(`age ${blueprint.ageDays ?? '-'}d`).padStart(7)}  ` +
+      `${BLUEPRINT_SVG} (${blueprint.ok ? blueprint.updated : blueprint.reason})`
+  );
 
   const rows = failed.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const linkRows = failedLinks.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const streakRow = streak.ok ? [] : [`| ❌ | \`${STREAK_SVG}\` | ${streak.reason} |`];
   const spotlightRow = spotlight.ok ? [] : [`| ❌ | \`${SPOTLIGHT_SVG}\` | ${spotlight.reason} |`];
   const devIdRow = devId.ok ? [] : [`| ❌ | \`${DEV_ID_SVG}\` | ${devId.reason} |`];
+  const blueprintRow = blueprint.ok ? [] : [`| ❌ | \`${BLUEPRINT_SVG}\` | ${blueprint.reason} |`];
   const summary = [
     '## 🩺 README health check',
     '',
@@ -331,10 +345,13 @@ async function main() {
     devId.ok
       ? `**Developer ID** — generated ${devId.updated}, ${devId.ageDays} day(s) old.`
       : `**Developer ID FAILED** — ${devId.reason}.`,
+    blueprint.ok
+      ? `**Mission blueprint** — generated ${blueprint.updated}, ${blueprint.ageDays} day(s) old.`
+      : `**Mission blueprint FAILED** — ${blueprint.reason}.`,
     '',
-    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok || !devId.ok
-      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow, ...devIdRow]
-      : ['✅ Every image, every link and all three generated cards on the profile are live.']),
+    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok || !devId.ok || !blueprint.ok
+      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow, ...devIdRow, ...blueprintRow]
+      : ['✅ Every image, every link and all four generated cards on the profile are live.']),
   ].join('\n');
 
   console.log(`\n${summary}`);
@@ -344,7 +361,7 @@ async function main() {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   }
 
-  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok || !devId.ok) {
+  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok || !devId.ok || !blueprint.ok) {
     if (failed.length > 0) {
       console.error(`::error::${failed.length} of ${results.length} README images are broken.`);
     }
@@ -359,6 +376,9 @@ async function main() {
     }
     if (!devId.ok) {
       console.error(`::error::Developer ID card is not live: ${devId.reason}.`);
+    }
+    if (!blueprint.ok) {
+      console.error(`::error::Mission blueprint card is not live: ${blueprint.reason}.`);
     }
     console.error('See .github/health/latest.json for the full report.');
     process.exit(1);

@@ -16,7 +16,7 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    name: refresh README numbers and the streak card from the GitHub API
+    name: refresh README numbers and the generated cards from the GitHub API
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -42,14 +42,14 @@ jobs:
 
       - name: Commit refreshed README
         run: |
-          if [ -z "$(git status --porcelain README.md assets/streak-buddy.svg assets/repo-spotlight.svg assets/dev-id.svg)" ]; then
+          if [ -z "$(git status --porcelain README.md assets/streak-buddy.svg assets/repo-spotlight.svg assets/dev-id.svg assets/projects-blueprint.svg)" ]; then
             echo "No changes to commit — stats, streak card and generated cards already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/streak-buddy.svg assets/repo-spotlight.svg assets/dev-id.svg
-          git commit -m "chore(stats): refresh live GitHub stats, streak card, developer ID + repo spotlight"
+          git add README.md assets/streak-buddy.svg assets/repo-spotlight.svg assets/dev-id.svg assets/projects-blueprint.svg
+          git commit -m "chore(stats): refresh live GitHub stats, streak card, developer ID + mission blueprint"
           pushed=0
           for attempt in 1 2 3; do
             if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push; then

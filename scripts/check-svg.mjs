@@ -22,18 +22,20 @@ import { spawnSync } from 'node:child_process';
 
 const DIR = 'assets';
 const DEFAULT_KB = 250;
-const VIDEO_KB = 1100;
 const TOTAL_MAX_KB = 3500;
 
-// Future premium panels (Megha-grade, raster + embedded fonts) get their own ceilings.
-// Current lightweight panels keep their old ceiling so the repo does not bloat silently.
+// Premium Megha-grade panels (embedded woff2 art) get their own ceilings;
+// legacy lightweight assets stay capped near present size.
 const BUDGETS = new Map(Object.entries({
-  'build-log.svg': 250, 'tech-orbit.svg': 250, 'dev-lanyard.svg': 250,
-  'live-dashboard.svg': 250, 'projects-blueprint.svg': 250, 'connect-panel.svg': 250,
-  'hero-cinematic.svg': 1100,
-  'hero-scene.svg': 15, 'hero-viewfinder.svg': 250, 'orbital-radar.svg': 13,
-  'what-i-build.svg': 11, 'stack-arsenal.svg': 13, 'build-console.svg': 11,
-  'dev-id.svg': 21, 'repo-spotlight.svg': 8,
+  'connect-panel.svg': 120,
+  'dev-id.svg': 110,
+  'hero-viewfinder.svg': 250,
+  'orbital-radar.svg': 120,
+  'projects-blueprint.svg': 120,
+  'signature.svg': 120,
+  'what-i-build.svg': 120,
+  'repo-spotlight.svg': 8,
+  'streak-buddy.svg': 3,
 }));
 
 function budgetOf(file) {

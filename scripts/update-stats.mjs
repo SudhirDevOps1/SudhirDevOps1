@@ -16,6 +16,9 @@ import { dirname } from 'node:path';
 
 const README = 'README.md';
 const SPOTLIGHT = 'assets/repo-spotlight.svg';
+const DEV_ID = 'assets/dev-id.svg';
+const BLUEPRINT = 'assets/projects-blueprint.svg';
+const LOCAL_FONTS = 'assets/fonts.css';
 const API = 'https://api.github.com';
 const OWNER = process.env.GITHUB_REPOSITORY_OWNER || 'SudhirDevOps1';
 const TOKEN = process.env.GITHUB_TOKEN || '';
@@ -77,6 +80,18 @@ async function allRepos() {
     if (batch.length < 100) break;
   }
   return repos;
+}
+
+// Reads the inlined woff2 blocks cached in assets/fonts.css (build input for the
+// generated cards — never fetched at render time). Missing file degrades to system fonts.
+function loadLocalFonts(families = ['Archivo Black', 'JetBrains Mono']) {
+  try {
+    const css = readFileSync(LOCAL_FONTS, 'utf8');
+    const blocks = css.split(/(?=@font-face \{)/).filter((b) => b.trim().startsWith('@font-face'));
+    return families.map((f) => blocks.find((b) => b.includes(`font-family: '${f}';`))).filter(Boolean).join('\n  ');
+  } catch {
+    return '';
+  }
 }
 
 const fmt = (n) => new Intl.NumberFormat('en-US').format(n);
@@ -234,8 +249,6 @@ function writeSpotlight(ranked, stats) {
  * Here the whole file is rewritten by the daily job, so the card cannot drift.
  * ------------------------------------------------------------------------- */
 
-const DEV_ID = 'assets/dev-id.svg';
-
 function renderDevId(stats, ranked = []) {
   const kpis = [
     ['PUBLIC REPOS', fmt(stats.repos), 'verified REST v3', '#38BDF8'],
@@ -284,9 +297,10 @@ function renderDevId(stats, ranked = []) {
 
   <defs>
     <style type="text/css"><![CDATA[
+  ${loadLocalFonts()}
 text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
-      .sgm { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
+      .sg { font-family: 'Archivo Black', 'Futura Black', 'Segoe UI Black', sans-serif; font-weight: 400; }
+      .sgm { font-family: 'Archivo Black', 'Futura Black', 'Segoe UI Black', sans-serif; font-weight: 400; }
       .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
@@ -552,6 +566,113 @@ ${repoBars}
 </svg>`;
 }
 
+// Top 5 non-archived, non-fork, non-self repos — for the mission blueprint card.
+function pickMissions(repos) {
+  const eligible = repos.filter(
+    (repo) => !repo.fork && !repo.archived && repo.name.toLowerCase() !== OWNER.toLowerCase()
+  );
+  return eligible
+    .slice()
+    .sort(
+      (a, b) =>
+        int(b.stargazers_count) - int(a.stargazers_count) ||
+        new Date(b.pushed_at || 0) - new Date(a.pushed_at || 0)
+    )
+    .slice(0, 5);
+}
+
+function renderBlueprint(missions, stats) {
+  const maxStars = Math.max(...missions.map((r) => int(r.stargazers_count)), 1);
+  const rows = missions
+    .map((repo, index) => {
+      const y = 118 + index * 72;
+      const name = esc(clip(repo.name, 34));
+      const description = esc(clip(repo.description || 'No description yet — the code speaks first.', 72));
+      const language = esc(clip(repo.language || 'Mixed', 12));
+      const stars = int(repo.stargazers_count);
+      const forks = int(repo.forks_count);
+      const barW = Math.max(14, Math.min(170, Math.round((stars / maxStars) * 170)));
+      const missionNo = `M${index + 1}`;
+
+      return `  <g>
+    <line x1="48" y1="${y + 6}" x2="1232" y2="${y + 6}" stroke="#16324F" stroke-width="1"/>
+    <text x="56" y="${y + 40}" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">${missionNo}</text>
+    <text x="130" y="${y + 26}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">${name}</text>
+    <text x="130" y="${y + 46}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">${description}</text>
+
+    <rect x="880" y="${y + 14}" width="356" height="12" rx="6" fill="#0E2233"/>
+    <rect x="880" y="${y + 14}" width="${barW}" height="12" rx="6" fill="url(#bpBarG)"/>
+    <text x="880" y="${y + 12}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">STARS</text>
+    <text x="1236" y="${y + 25}" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" font-weight="700" fill="#FBBF24">${stars}</text>
+    <circle cx="1157" cy="${y + 20}" r="4.2" fill="#FBBF24"/>
+    <text x="880" y="${y + 40}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">${language}</tspan> · FORKS ${fmt(forks)}</text>
+  </g>`;
+    })
+    .join('\n');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520" role="img" aria-label="Mission blueprint sheet listing ${esc(stats.username)}'s five highest-impact repositories with live star counts.">
+  <title>Mission Blueprint — ${esc(stats.username)}</title>
+  <desc>Drafting-sheet render of the live GitHub repository list, generated by scripts/update-stats.mjs. Generated ${esc(stats.shortStamp)}.</desc>
+
+  <defs>
+    <style><![CDATA[
+  ${loadLocalFonts()}
+    ]]></style>
+    <linearGradient id="bpBg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="520">
+      <stop offset="0" stop-color="#0F1B2D"/>
+      <stop offset="1" stop-color="#0A111E"/>
+    </linearGradient>
+    <linearGradient id="bpBarG" gradientUnits="userSpaceOnUse" x1="880" y1="0" x2="1050" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <pattern id="bpFine" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#17365A" stroke-opacity=".45" stroke-width=".5"/>
+    </pattern>
+    <pattern id="bpMajor" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M120 0H0V120" fill="none" stroke="#1E4A73" stroke-opacity=".6" stroke-width="1"/>
+    </pattern>
+    <style>
+      .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: bpDraw 2.2s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes bpDraw { to { stroke-dashoffset: 0; } }
+      @media (prefers-reduced-motion: reduce) { .draw { animation: none; stroke-dashoffset: 0; } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="520" fill="url(#bpBg)"/>
+  <rect width="1280" height="520" fill="url(#bpFine)"/>
+  <rect width="1280" height="520" fill="url(#bpMajor)"/>
+  <rect x="8" y="8" width="1264" height="504" fill="none" stroke="#1E4A73" stroke-width="1.5"/>
+  <rect x="14" y="14" width="1252" height="492" fill="none" stroke="#16324F" stroke-width=".5"/>
+
+  <text x="48" y="66" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="27" fill="#E2E8F0" letter-spacing="1.2">S-RANK MISSIONS</text>
+  <line class="draw" x1="48" y1="80" x2="1232" y2="80" stroke="#38BDF8" stroke-width="1.6"/>
+  <text x="1232" y="60" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#5F7890" letter-spacing="1.6">LIVE DATA · REDRAWN NIGHTLY</text>
+
+${rows}
+
+  <rect x="886" y="470" width="346" height="34" fill="none" stroke="#16324F" stroke-width="1"/>
+  <text x="886" y="486" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">DWG SUDHIR-DP-001 &#160;·&#160; SCALE 1:1 &#160;·&#160; SHEET 1/1</text>
+  <text x="1232" y="486" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">${esc(stats.shortStamp)}</text>
+</svg>
+`;
+}
+
+function writeBlueprint(missions, stats) {
+  if (missions.length < 5) {
+    console.warn(`::warning::Only ${missions.length} mission candidates found; blueprint drawn with what exists.`);
+  }
+  const svg = renderBlueprint(missions, stats);
+
+  if (/\b(undefined|NaN|null)\b/.test(svg)) {
+    throw new Error('Refusing to write a blueprint card containing undefined/NaN/null.');
+  }
+
+  mkdirSync(dirname(BLUEPRINT), { recursive: true });
+  writeFileSync(BLUEPRINT, svg, 'utf8');
+  console.log(`Wrote ${BLUEPRINT} — ${missions.map((m) => m.name).join(', ')}`);
+}
+
 function writeDevId(stats, ranked = []) {
   const svg = renderDevId(stats, ranked);
 
@@ -626,20 +747,21 @@ async function main() {
   const ranked = pickSpotlight(repos);
   writeSpotlight(ranked, stats);
   writeDevId(stats, ranked);
+  writeBlueprint(pickMissions(repos), stats);
 
   const blocks = {
     HERO: [
       `  <img src="${badge('Commits', fmt(stats.commits), 'a855f7', 'git')}" alt="Commits"/>`,
-      `  &nbsp;`,
+      `  &#160;`,
       `  <img src="${badge('Pull Requests', String(stats.prs), '4ECDC4', 'gitkraken')}" alt="Pull requests"/>`,
     ].join('\n'),
 
     // Plain-text twin of the developer ID card. The card is the artwork; this
     // strip is what a screen reader, a search engine and a no-SVG client get.
     // Same numbers, same source, one line instead of a 14-row table.
-    TABLE: `<div align="center"><sub>📦 <strong>${fmt(stats.repos)}</strong> repositories &nbsp;·&nbsp; ⭐ <strong>${fmt(stats.stars)}</strong> stars &nbsp;·&nbsp; 🍴 <strong>${fmt(stats.forks)}</strong> forks &nbsp;·&nbsp; 💻 <strong>${fmt(stats.commits)}</strong> commits &nbsp;·&nbsp; 🔀 <strong>${fmt(stats.prs)}</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>${fmt(stats.issues)}</strong> issues &nbsp;·&nbsp; 👥 <strong>${fmt(stats.followers)}</strong> followers &nbsp;·&nbsp; ✅ verified <strong>${stats.syncedAt}</strong></sub></div>`,
+    TABLE: `<div align="center"><sub>📦 <strong>${fmt(stats.repos)}</strong> repositories &#160;·&#160; ⭐ <strong>${fmt(stats.stars)}</strong> stars &#160;·&#160; 🍴 <strong>${fmt(stats.forks)}</strong> forks &#160;·&#160; 💻 <strong>${fmt(stats.commits)}</strong> commits &#160;·&#160; 🔀 <strong>${fmt(stats.prs)}</strong> pull requests &#160;·&#160; 🐞 <strong>${fmt(stats.issues)}</strong> issues &#160;·&#160; 👥 <strong>${fmt(stats.followers)}</strong> followers &#160;·&#160; ✅ verified <strong>${stats.syncedAt}</strong></sub></div>`,
 
-    MILESTONES: `<div align="center"><sub>🗓️ on GitHub since <strong>${stats.joined}</strong> &nbsp;·&nbsp; <strong>${fmt(stats.joinedDays)}</strong> days of shipping &nbsp;·&nbsp; 📍 ${stats.location} &nbsp;·&nbsp; 🌐 <a href="${stats.websiteUrl}">${stats.websiteLabel}</a></sub></div>`,
+    MILESTONES: `<div align="center"><sub>🗓️ on GitHub since <strong>${stats.joined}</strong> &#160;·&#160; <strong>${fmt(stats.joinedDays)}</strong> days of shipping &#160;·&#160; 📍 ${stats.location} &#160;·&#160; 🌐 <a href="${stats.websiteUrl}">${stats.websiteLabel}</a></sub></div>`,
 
     REPOS: `  <img src="${badge('Browse All Repositories', `${fmt(stats.repos)} Projects`, '36BCF7', 'github')}" alt="All Repos"/>`,
 
