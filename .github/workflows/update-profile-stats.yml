@@ -2,7 +2,7 @@ name: Update Profile Stats
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: "0 0,12 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,12 +19,12 @@ jobs:
     name: refresh README numbers and the generated cards from the GitHub API
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
@@ -35,21 +35,25 @@ jobs:
         run: node scripts/update-stats.mjs
 
       - name: Redraw the streak card from the live contribution calendar
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: node scripts/update-streak.mjs
 
-      - name: Commit refreshed README
+      - name: Verify all SVG assets, links, and data parity
+        run: node scripts/verify-all.mjs
+
+      - name: Commit refreshed README and cards
         run: |
-          if [ -z "$(git status --porcelain README.md assets/streak-buddy.svg assets/repo-spotlight.svg assets/dev-id.svg assets/projects-blueprint.svg)" ]; then
-            echo "No changes to commit — stats, streak card and generated cards already current."
+          if [ -z "$(git status --porcelain README.md assets/)" ]; then
+            echo "No changes to commit — profile stats and cards are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/streak-buddy.svg assets/repo-spotlight.svg assets/dev-id.svg assets/projects-blueprint.svg
-          git commit -m "chore(stats): refresh live GitHub stats, streak card, developer ID + mission blueprint"
+          git add README.md assets/
+          git commit -m "chore(stats): daily profile telemetry sync [skip ci]"
           pushed=0
           for attempt in 1 2 3; do
             if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push; then
