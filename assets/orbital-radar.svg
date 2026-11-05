@@ -4,75 +4,73 @@
 
   <defs>
     <style type="text/css"><![CDATA[
-text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .sg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
       .sgm { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
       .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      @keyframes coreBreathe { 0%, 100% { transform: scale(1); opacity: .9; } 50% { transform: scale(1.08); opacity: .6; } }
-
-      .fu { animation: fadeUp .7s cubic-bezier(.2,.8,.2,1) both; }
-      .fi { animation: fadeIn .7s ease both; }
+      @keyframes coreBreathe { 0%, 100% { transform: scale(1); opacity: .95; } 50% { transform: scale(1.08); opacity: .7; } }
       .core-pulse { transform-box: fill-box; transform-origin: center; animation: coreBreathe 3.5s ease-in-out infinite; }
 
       @media (prefers-reduced-motion: reduce) {
-        * { animation: none !important; opacity: 1 !important; transform: none !important; }
+        *, .core-pulse { animation: none !important; }
       }
     ]]></style>
 
     <linearGradient id="stkBg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0E131F"/>
-      <stop offset="1" stop-color="#080B12"/>
+      <stop offset="0%" stop-color="#0E1626"/>
+      <stop offset="100%" stop-color="#080C14"/>
     </linearGradient>
+
     <linearGradient id="stkEdge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#38BDF8" stop-opacity=".55"/>
-      <stop offset=".5" stop-color="#1E293B"/>
-      <stop offset="1" stop-color="#C084FC" stop-opacity=".5"/>
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".6"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity=".6"/>
     </linearGradient>
+
     <radialGradient id="atomCoreG" cx=".35" cy=".3" r=".8">
-      <stop offset="0" stop-color="#38BDF8"/>
-      <stop offset=".55" stop-color="#818CF8"/>
-      <stop offset="1" stop-color="#312E81"/>
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="55%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#312E81"/>
     </radialGradient>
+
     <radialGradient id="atomHalo">
-      <stop offset="0" stop-color="#38BDF8" stop-opacity=".35"/>
-      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
     </radialGradient>
 
     <pattern id="stkDots" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="12" cy="12" r=".9" fill="#FFFFFF" fill-opacity=".05"/>
+      <circle cx="12" cy="12" r=".9" fill="#FFFFFF" fill-opacity=".06"/>
     </pattern>
 
     <!-- 3 Tilted 3D Elliptical Orbital Paths -->
-    <path id="orb0" d="M 434 280 A 172 105 0 1 1 90 280 A 172 105 0 1 1 434 280 Z"/>
-    <path id="orb1" d="M 348 429 A 172 105 60 1 1 176 131 A 172 105 60 1 1 348 429 Z"/>
-    <path id="orb2" d="M 176 429 A 172 105 120 1 1 348 131 A 172 105 120 1 1 176 429 Z"/>
+    <path id="orb0" d="M 434 275 A 172 105 0 1 1 90 275 A 172 105 0 1 1 434 275 Z"/>
+    <path id="orb1" d="M 348 424 A 172 105 60 1 1 176 126 A 172 105 60 1 1 348 424 Z"/>
+    <path id="orb2" d="M 176 424 A 172 105 120 1 1 348 126 A 172 105 120 1 1 176 424 Z"/>
 
     <!-- Moon Orbit Path around traveling icon -->
     <path id="moonPath" d="M -34 0 A 34 34 0 1 1 34 0 A 34 34 0 1 1 -34 0 Z"/>
 
     <clipPath id="stkClip">
-      <rect width="1280" height="480" rx="24"/>
+      <rect width="1280" height="480" rx="20"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#stkClip)">
     <rect width="1280" height="480" fill="url(#stkBg)"/>
     <rect width="1280" height="480" fill="url(#stkDots)"/>
-    <rect x=".75" y=".75" width="1278.5" height="478.5" rx="23.25" fill="none" stroke="url(#stkEdge)" stroke-width="1.5"/>
+    <rect x=".75" y=".75" width="1278.5" height="478.5" rx="19.25" fill="none" stroke="url(#stkEdge)" stroke-width="1.5"/>
 
-    <!-- Section Header -->
-    <g transform="translate(56,52)" class="fu">
+    <!-- Section Header (100% Visible by default) -->
+    <g transform="translate(56,52)">
       <text class="jbb" font-size="11.5" fill="#38BDF8" letter-spacing="2.2">// ARSENAL &amp; TECH ORBITS</text>
       <text class="sg" y="32" font-size="28" fill="#F1F5F9" letter-spacing="-.4">Production Stack by Discipline</text>
     </g>
 
     <!-- Top Right Active Signals -->
-    <g transform="translate(1076,62)">
-      <rect x="0" y="-18" width="148" height="28" rx="14" fill="#C084FC" fill-opacity=".1" stroke="#C084FC" stroke-opacity=".4"/>
+    <g transform="translate(1076,56)">
+      <rect x="0" y="-18" width="148" height="28" rx="14" fill="#C084FC" fill-opacity=".12" stroke="#C084FC" stroke-opacity=".6"/>
       <circle cx="16" cy="-4" r="4" fill="#C084FC"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
       <text class="jbb" x="28" y="0" font-size="9.5" fill="#C084FC" letter-spacing="1.1">ACTIVE ORBITS</text>
     </g>
@@ -80,30 +78,28 @@ text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monac
     <!-- ── LEFT SIDE: THE ATOM CORE & 3D ORBIT RIG (x=40 to x=480) ─── -->
     <g>
       <!-- Central Ambient Glow -->
-      <circle cx="262" cy="280" r="100" fill="url(#atomHalo)"/>
+      <circle cx="262" cy="275" r="105" fill="url(#atomHalo)"/>
 
       <!-- Orbit Guides -->
-      <use href="#orb0" fill="none" stroke="#38BDF8" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 4"/>
-      <use href="#orb1" fill="none" stroke="#818CF8" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 4"/>
-      <use href="#orb2" fill="none" stroke="#C084FC" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <use href="#orb0" fill="none" stroke="#38BDF8" stroke-opacity=".35" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <use href="#orb1" fill="none" stroke="#818CF8" stroke-opacity=".35" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <use href="#orb2" fill="none" stroke="#C084FC" stroke-opacity=".35" stroke-width="1.6" stroke-dasharray="4 4"/>
 
       <!-- Central Atom Engine Core -->
-      <g transform="translate(262,280)" class="core-pulse">
+      <g transform="translate(262,275)" class="core-pulse">
         <circle r="32" fill="url(#atomCoreG)"/>
-        <circle r="26" fill="none" stroke="#FFFFFF" stroke-opacity=".4" stroke-width="1"/>
+        <circle r="26" fill="none" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="1.2"/>
         <text class="jbb" text-anchor="middle" y="4" font-size="9.5" fill="#FFFFFF" letter-spacing="1">CORE</text>
       </g>
 
       <!-- ── PRIMARY NODE 1: TypeScript traveling Orbit 0 (Horizontal) ── -->
       <g>
         <animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb0"/></animateMotion>
-        
-        <!-- Node Surface -->
-        <circle r="22" fill="#0B1220" stroke="#38BDF8" stroke-width="2"/>
+        <circle r="22" fill="#0D1527" stroke="#38BDF8" stroke-width="2"/>
         <text class="jbb" text-anchor="middle" y="4" font-size="11" fill="#38BDF8">TS</text>
 
         <!-- Moon Orbit ring -->
-        <circle r="34" fill="none" stroke="#38BDF8" stroke-opacity=".3" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle r="34" fill="none" stroke="#38BDF8" stroke-opacity=".4" stroke-width="1" stroke-dasharray="3 3"/>
 
         <!-- Satellite Moon 1: Bash -->
         <g>
@@ -116,11 +112,11 @@ text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monac
       <!-- ── PRIMARY NODE 2: Docker traveling Orbit 1 (+60deg tilt) ── -->
       <g>
         <animateMotion dur="26s" repeatCount="indefinite"><mpath href="#orb1"/></animateMotion>
-        <circle r="22" fill="#0B1220" stroke="#818CF8" stroke-width="2"/>
+        <circle r="22" fill="#0D1527" stroke="#818CF8" stroke-width="2"/>
         <text class="jbb" text-anchor="middle" y="4" font-size="10" fill="#818CF8">DOCK</text>
 
         <!-- Satellite Moon 2: Git -->
-        <circle r="34" fill="none" stroke="#818CF8" stroke-opacity=".3" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle r="34" fill="none" stroke="#818CF8" stroke-opacity=".4" stroke-width="1" stroke-dasharray="3 3"/>
         <g>
           <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#moonPath"/></animateMotion>
           <circle r="10" fill="#070A11" stroke="#EF4444" stroke-width="1.5"/>
@@ -131,121 +127,117 @@ text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monac
       <!-- ── PRIMARY NODE 3: Node.js traveling Orbit 2 (-60deg tilt) ── -->
       <g>
         <animateMotion dur="30s" repeatCount="indefinite"><mpath href="#orb2"/></animateMotion>
-        <circle r="22" fill="#0B1220" stroke="#10B981" stroke-width="2"/>
+        <circle r="22" fill="#0D1527" stroke="#10B981" stroke-width="2"/>
         <text class="jbb" text-anchor="middle" y="4" font-size="10" fill="#10B981">NODE</text>
       </g>
     </g>
 
-    <!-- Divider Bar -->
-    <line x1="510" y1="110" x2="510" y2="440" stroke="#1E293B"/>
+    <!-- Vertical Divider Bar -->
+    <line x1="510" y1="110" x2="510" y2="446" stroke="#1E293B" stroke-width="1.5"/>
 
-    <!-- ── RIGHT SIDE: GROUPED PRODUCTION TECH MATRIX (x=540 to x=1224) ── -->
+    <!-- ── RIGHT SIDE: 4 FULLY ILLUMINATED TECH MATRIX PANELS (x=540 to x=1224) ── -->
     <!-- Category 1: Core Runtime -->
-    <g transform="translate(540,116)" class="fu" style="animation-delay:.15s">
-      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+    <g transform="translate(540,116)">
+      <rect width="330" height="154" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
       <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#38BDF8"/>
-      <text class="jbb" x="42" y="20" font-size="9" fill="#38BDF8" letter-spacing="1.4">01 // CORE RUNTIME</text>
+      <text class="jbb" x="42" y="20" font-size="9.5" fill="#38BDF8" letter-spacing="1.4">01 // CORE RUNTIME</text>
 
       <g transform="translate(16,42)">
-        <rect width="138" height="30" rx="8" fill="#161F30"/>
+        <rect width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
         <circle cx="14" cy="15" r="3" fill="#38BDF8"/>
-        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">TypeScript</text>
+        <text class="jb" x="24" y="19" font-size="10" fill="#F1F5F9">TypeScript</text>
 
-        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
+        <rect x="150" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
         <circle cx="164" cy="15" r="3" fill="#10B981"/>
-        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">Node.js</text>
+        <text class="jb" x="174" y="19" font-size="10" fill="#F1F5F9">Node.js</text>
 
-        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
+        <rect y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
         <circle cx="14" cy="55" r="3" fill="#F59E0B"/>
-        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">Python / FastAPI</text>
+        <text class="jb" x="24" y="59" font-size="10" fill="#F1F5F9">Python / FastAPI</text>
 
-        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="55" r="3" fill="#EF4444"/>
-        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">Java OpenJDK</text>
-
-        <text class="jb" y="98" font-size="8.5" fill="#64748B">daily drivers &#183; strict types &#183; async runtime</text>
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="55" r="3" fill="#CBD5E1"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#F1F5F9">Linux Kernel</text>
       </g>
+      <text class="jb" x="16" y="136" font-size="8.5" fill="#94A3B8">execution runtime &#183; async event loop</text>
     </g>
 
-    <!-- Category 2: Containers & Cloud -->
-    <g transform="translate(894,116)" class="fu" style="animation-delay:.3s">
-      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+    <!-- Category 2: Cloud & Containers -->
+    <g transform="translate(894,116)">
+      <rect width="330" height="154" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
       <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#818CF8"/>
-      <text class="jbb" x="42" y="20" font-size="9" fill="#818CF8" letter-spacing="1.4">02 // CLOUD &amp; DEVOPS</text>
+      <text class="jbb" x="42" y="20" font-size="9.5" fill="#818CF8" letter-spacing="1.4">02 // CLOUD &amp; CONTAINERS</text>
 
       <g transform="translate(16,42)">
-        <rect width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="14" cy="15" r="3" fill="#818CF8"/>
-        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">Docker</text>
+        <rect width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="14" cy="15" r="3" fill="#38BDF8"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#F1F5F9">Docker</text>
 
-        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="15" r="3" fill="#F472B6"/>
-        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">GitHub Actions</text>
+        <rect x="150" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="15" r="3" fill="#818CF8"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#F1F5F9">Kubernetes</text>
 
-        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="14" cy="55" r="3" fill="#FBBF24"/>
-        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">Linux / Bash</text>
+        <rect y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="14" cy="55" r="3" fill="#C084FC"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#F1F5F9">Terraform IaC</text>
 
-        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="55" r="3" fill="#38BDF8"/>
-        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">CI/CD Automation</text>
-
-        <text class="jb" y="98" font-size="8.5" fill="#64748B">containerized services &#183; automated cron</text>
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="55" r="3" fill="#F59E0B"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#F1F5F9">AWS Cloud</text>
       </g>
+      <text class="jb" x="16" y="136" font-size="8.5" fill="#94A3B8">immutable infra &#183; zero-downtime mesh</text>
     </g>
 
-    <!-- Category 3: APIs & Data -->
-    <g transform="translate(540,286)" class="fu" style="animation-delay:.45s">
-      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+    <!-- Category 3: Storage & Cache -->
+    <g transform="translate(540,292)">
+      <rect width="330" height="154" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
       <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#10B981"/>
-      <text class="jbb" x="42" y="20" font-size="9" fill="#10B981" letter-spacing="1.4">03 // APIS &amp; DATA FLOWS</text>
+      <text class="jbb" x="42" y="20" font-size="9.5" fill="#10B981" letter-spacing="1.4">03 // STORAGE &amp; CACHE</text>
 
       <g transform="translate(16,42)">
-        <rect width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="14" cy="15" r="3" fill="#10B981"/>
-        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">GitHub REST v3</text>
+        <rect width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="14" cy="15" r="3" fill="#38BDF8"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#F1F5F9">PostgreSQL</text>
 
-        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="15" r="3" fill="#C084FC"/>
-        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">GraphQL API</text>
+        <rect x="150" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="15" r="3" fill="#38BDF8"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#F1F5F9">SQLite 3</text>
 
-        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="14" cy="55" r="3" fill="#38BDF8"/>
-        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">PostgreSQL / SQL</text>
+        <rect y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="14" cy="55" r="3" fill="#EF4444"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#F1F5F9">Redis Cache</text>
 
-        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="55" r="3" fill="#EF4444"/>
-        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">Redis Cache</text>
-
-        <text class="jb" y="98" font-size="8.5" fill="#64748B">real-time streaming &#183; clean relational schema</text>
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="55" r="3" fill="#10B981"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#F1F5F9">IndexedDB</text>
       </g>
+      <text class="jb" x="16" y="136" font-size="8.5" fill="#94A3B8">local-first persistence &#183; sub-ms read</text>
     </g>
 
-    <!-- Category 4: Security & Audit -->
-    <g transform="translate(894,286)" class="fu" style="animation-delay:.6s">
-      <rect width="330" height="154" rx="14" fill="#0B1220" stroke="#1E293B"/>
+    <!-- Category 4: DevSecOps & Privacy -->
+    <g transform="translate(894,292)">
+      <rect width="330" height="154" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
       <rect x="16" y="14" width="20" height="3" rx="1.5" fill="#F59E0B"/>
-      <text class="jbb" x="42" y="20" font-size="9" fill="#F59E0B" letter-spacing="1.4">04 // DEVSECOPS &amp; PRIVACY</text>
+      <text class="jbb" x="42" y="20" font-size="9.5" fill="#F59E0B" letter-spacing="1.4">04 // DEVSECOPS &amp; RELIABILITY</text>
 
       <g transform="translate(16,42)">
-        <rect width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="14" cy="15" r="3" fill="#F59E0B"/>
-        <text class="jb" x="24" y="19" font-size="10" fill="#E2E8F0">AES-GCM-256</text>
+        <rect width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="14" cy="15" r="3" fill="#10B981"/>
+        <text class="jb" x="24" y="19" font-size="10" fill="#F1F5F9">AES-GCM-256</text>
 
-        <rect x="150" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="15" r="3" fill="#10B981"/>
-        <text class="jb" x="174" y="19" font-size="10" fill="#E2E8F0">Zero-Knowledge</text>
+        <rect x="150" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="15" r="3" fill="#38BDF8"/>
+        <text class="jb" x="174" y="19" font-size="10" fill="#F1F5F9">Zero-Knowledge</text>
 
-        <rect y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="14" cy="55" r="3" fill="#38BDF8"/>
-        <text class="jb" x="24" y="59" font-size="10" fill="#E2E8F0">Strict XML Audit</text>
+        <rect y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="14" cy="55" r="3" fill="#F59E0B"/>
+        <text class="jb" x="24" y="59" font-size="10" fill="#F1F5F9">Prometheus</text>
 
-        <rect x="150" y="40" width="138" height="30" rx="8" fill="#161F30"/>
-        <circle cx="164" cy="55" r="3" fill="#A78BFA"/>
-        <text class="jb" x="174" y="59" font-size="10" fill="#E2E8F0">Clean Architecture</text>
-
-        <text class="jb" y="98" font-size="8.5" fill="#64748B">zero external dependencies &#183; self-hosted</text>
+        <rect x="150" y="40" width="138" height="30" rx="8" fill="#162238" stroke="#1E293B"/>
+        <circle cx="164" cy="55" r="3" fill="#F59E0B"/>
+        <text class="jb" x="174" y="59" font-size="10" fill="#F1F5F9">Grafana</text>
       </g>
+      <text class="jb" x="16" y="136" font-size="8.5" fill="#94A3B8">zero external dependencies &#183; self-hosted</text>
     </g>
   </g>
 </svg>

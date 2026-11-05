@@ -290,27 +290,16 @@ text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monac
       .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
-      .settle {
-        transform-origin: 212px -10px;
-        animation: dropSettle 3.2s cubic-bezier(.34,1.1,.5,1) forwards;
-      }
       .sway {
         transform-origin: 212px -10px;
-        animation: perpetualSway 4.8s ease-in-out 3.2s infinite;
+        animation: perpetualSway 5s ease-in-out infinite;
       }
       .wob {
         transform-origin: 212px 300px;
-        animation: cardWobble 4.8s ease-in-out 3.2s infinite;
+        animation: cardWobble 5s ease-in-out infinite;
       }
       @keyframes dropSettle {
-        0% { transform: rotate(0deg) translateY(-660px); }
-        18% { transform: rotate(0deg) translateY(0); }
-        30% { transform: rotate(13deg); }
-        46% { transform: rotate(-9deg); }
-        62% { transform: rotate(6deg); }
-        78% { transform: rotate(-3.5deg); }
-        92% { transform: rotate(1.5deg); }
-        100% { transform: rotate(0deg); }
+        0%, 100% { transform: rotate(0deg); }
       }
       @keyframes perpetualSway {
         0%, 100% { transform: rotate(-3.2deg); }

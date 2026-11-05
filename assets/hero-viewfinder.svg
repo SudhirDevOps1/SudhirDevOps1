@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 580" width="1280" height="580" role="img" aria-label="Sudhir Singh — Systems &amp; DevOps Engineer">
   <title>Sudhir Singh — Systems &amp; DevOps Engineer</title>
-  <desc>Cinema-grade 1280x580 anamorphic viewfinder HUD featuring real-time camera telemetry, live terminal command execution, letter-by-letter animated name reveal, typing code card, and cyber holographic telemetry containment cell.</desc>
+  <desc>Cinema-grade 1280x580 anamorphic viewfinder HUD featuring real-time camera telemetry, live terminal command execution, glowing cyber name reveal, typing code card, and cyber holographic telemetry containment cell.</desc>
 
   <defs>
     <style type="text/css"><![CDATA[
@@ -10,59 +10,51 @@
       .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      @keyframes popIn {
-        0% { opacity: 0; transform: translateY(16px) scale(.75); }
-        70% { opacity: 1; transform: translateY(-3px) scale(1.05); }
-        100% { opacity: 1; transform: translateY(0) scale(1); }
-      }
+      /* Continuous, non-blocking animations that never hide content */
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       @keyframes laserSweep {
         0% { transform: translateY(0); opacity: 0; }
-        15% { opacity: .85; }
-        85% { opacity: .85; }
-        100% { transform: translateY(460px); opacity: 0; }
+        15% { opacity: .9; }
+        85% { opacity: .9; }
+        100% { transform: translateY(450px); opacity: 0; }
       }
       @keyframes neonFlicker {
         0%, 100% { opacity: 1; }
-        4% { opacity: .8; }
-        6% { opacity: .2; }
+        4% { opacity: .85; }
+        6% { opacity: .4; }
         10% { opacity: .95; }
-        14% { opacity: .4; }
+        14% { opacity: .6; }
         18% { opacity: 1; }
       }
       @keyframes roleCycle {
         0%, 30% { opacity: 1; transform: translateY(0); }
-        33%, 97% { opacity: 0; transform: translateY(-14px); }
+        33%, 97% { opacity: 0; transform: translateY(-12px); }
         100% { opacity: 1; transform: translateY(0); }
       }
       @keyframes roleCycle2 {
-        0%, 30% { opacity: 0; transform: translateY(14px); }
+        0%, 30% { opacity: 0; transform: translateY(12px); }
         33%, 63% { opacity: 1; transform: translateY(0); }
-        66%, 100% { opacity: 0; transform: translateY(-14px); }
+        66%, 100% { opacity: 0; transform: translateY(-12px); }
       }
       @keyframes roleCycle3 {
-        0%, 63% { opacity: 0; transform: translateY(14px); }
+        0%, 63% { opacity: 0; transform: translateY(12px); }
         66%, 96% { opacity: 1; transform: translateY(0); }
-        99%, 100% { opacity: 0; transform: translateY(-14px); }
+        99%, 100% { opacity: 0; transform: translateY(-12px); }
       }
       @keyframes rotateCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       @keyframes rotateCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
-      @keyframes pulseGlow { 0%, 100% { opacity: .4; transform: scale(1); } 50% { opacity: .9; transform: scale(1.03); } }
+      @keyframes pulseGlow { 0%, 100% { opacity: .5; transform: scale(1); } 50% { opacity: .85; transform: scale(1.04); } }
       @keyframes eqBar1 { 0%, 100% { height: 18px; y: 462px; } 50% { height: 42px; y: 438px; } }
       @keyframes eqBar2 { 0%, 100% { height: 38px; y: 442px; } 50% { height: 14px; y: 466px; } }
       @keyframes eqBar3 { 0%, 100% { height: 26px; y: 454px; } 50% { height: 50px; y: 430px; } }
       @keyframes eqBar4 { 0%, 100% { height: 46px; y: 434px; } 50% { height: 22px; y: 458px; } }
       @keyframes eqBar5 { 0%, 100% { height: 16px; y: 464px; } 50% { height: 36px; y: 444px; } }
 
-      .term { animation: fadeIn .8s ease forwards; }
-      .titleL { display: inline-block; animation: popIn .6s cubic-bezier(.34,1.4,.64,1) both; }
       .laser { animation: laserSweep 4.5s ease-in-out infinite; }
       .neon { animation: neonFlicker 6s infinite; }
-      .rotCW { transform-origin: 980px 290px; animation: rotateCW 24s linear infinite; }
-      .rotCCW { transform-origin: 980px 290px; animation: rotateCCW 18s linear infinite; }
-      .pulseCore { transform-origin: 980px 290px; animation: pulseGlow 3.5s ease-in-out infinite; }
+      .rotCW { transform-origin: 258px 228px; animation: rotateCW 24s linear infinite; }
+      .rotCCW { transform-origin: 258px 228px; animation: rotateCCW 18s linear infinite; }
+      .pulseCore { transform-origin: 258px 228px; animation: pulseGlow 3.5s ease-in-out infinite; }
       .eq1 { animation: eqBar1 1.2s ease-in-out infinite; }
       .eq2 { animation: eqBar2 0.9s ease-in-out infinite; }
       .eq3 { animation: eqBar3 1.5s ease-in-out infinite; }
@@ -78,43 +70,43 @@
 
     <!-- Canvas Background Gradient -->
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#080C14"/>
-      <stop offset="45%" stop-color="#0F172A"/>
-      <stop offset="80%" stop-color="#0A0F1D"/>
-      <stop offset="100%" stop-color="#05070B"/>
+      <stop offset="0%" stop-color="#070A11"/>
+      <stop offset="45%" stop-color="#0E1626"/>
+      <stop offset="80%" stop-color="#090E1B"/>
+      <stop offset="100%" stop-color="#05070D"/>
     </linearGradient>
 
     <!-- Cyber Text Gradient -->
     <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="40%" stop-color="#818CF8"/>
-      <stop offset="75%" stop-color="#C084FC"/>
+      <stop offset="35%" stop-color="#818CF8"/>
+      <stop offset="70%" stop-color="#C084FC"/>
       <stop offset="100%" stop-color="#F43F5E"/>
     </linearGradient>
 
-    <!-- Holographic Beam Gradient -->
+    <!-- Holographic Laser Beam Gradient -->
     <linearGradient id="holoLaser" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#38BDF8" stop-opacity=".8"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity=".9"/>
       <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="holoBeam" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".02"/>
-      <stop offset="50%" stop-color="#818CF8" stop-opacity=".09"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity=".02"/>
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".03"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity=".03"/>
     </linearGradient>
 
     <radialGradient id="holoSphere" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".35"/>
-      <stop offset="50%" stop-color="#818CF8" stop-opacity=".12"/>
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".4"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity=".15"/>
       <stop offset="100%" stop-color="#0B1220" stop-opacity="0"/>
     </radialGradient>
 
     <!-- Subtle Optical HUD Grid Pattern -->
     <pattern id="hudGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.55" stroke-opacity=".45"/>
-      <circle cx="0" cy="0" r="0.9" fill="#38BDF8" fill-opacity=".35"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.55" stroke-opacity=".5"/>
+      <circle cx="0" cy="0" r="0.9" fill="#38BDF8" fill-opacity=".4"/>
     </pattern>
 
     <!-- Glow Filter -->
@@ -150,52 +142,36 @@
 
   <!-- ── 3. Top Telemetry Bar ───────────────────────────────────── -->
   <g transform="translate(54, 42)">
-    <!-- REC Pulse Indicator -->
     <circle cx="6" cy="0" r="5" fill="#EF4444"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
     <text x="18" y="4" class="jbb" font-size="11" fill="#EF4444" letter-spacing="1.5">REC [&#9679;] LIVE</text>
-    <text x="130" y="4" class="jb" font-size="10.5" fill="#64748B" letter-spacing="1">ISO 800 &#183; F/2.8 &#183; 1/250s</text>
-    <text x="320" y="4" class="jb" font-size="10" fill="#38BDF8" fill-opacity=".8" letter-spacing="1.2">SYS::ARMED // PROD-CLUSTER</text>
-
-    <!-- Right Header Ticks -->
-    <text x="1080" y="4" class="jb" font-size="10" fill="#94A3B8" text-anchor="end" letter-spacing="1.4">LAT 25.0961&#176; N &#183; LONG 85.3131&#176; E</text>
+    <text x="130" y="4" class="jb" font-size="10.5" fill="#94A3B8" letter-spacing="1">ISO 800 &#183; F/2.8 &#183; 1/250s</text>
+    <text x="320" y="4" class="jb" font-size="10" fill="#38BDF8" letter-spacing="1.2">SYS::ARMED // PROD-CLUSTER</text>
+    <text x="1172" y="4" class="jb" font-size="10" fill="#94A3B8" text-anchor="end" letter-spacing="1.4">LAT 25.0961&#176; N &#183; LONG 85.3131&#176; E</text>
   </g>
 
   <!-- ── 4. Left Hero Column: Terminal + Animated Identity ───────── -->
   <g transform="translate(54, 76)">
     <!-- Terminal Window Container -->
-    <rect x="0" y="0" width="620" height="446" rx="14" fill="#0B1220" fill-opacity=".88" stroke="#1E293B" stroke-width="1.2"/>
+    <rect x="0" y="0" width="620" height="446" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
     
     <!-- Terminal Titlebar -->
-    <rect x="0" y="0" width="620" height="36" rx="14" fill="#0F172A" fill-opacity=".95"/>
-    <rect x="0" y="22" width="620" height="14" fill="#0F172A" fill-opacity=".95"/>
+    <rect x="0" y="0" width="620" height="36" rx="14" fill="#111B32"/>
+    <rect x="0" y="22" width="620" height="14" fill="#111B32"/>
     <circle cx="20" cy="18" r="5.5" fill="#FF5F56"/>
     <circle cx="38" cy="18" r="5.5" fill="#FFBD2E"/>
     <circle cx="56" cy="18" r="5.5" fill="#27C93F"/>
-    <text x="310" y="22" class="jb" font-size="10.5" fill="#64748B" text-anchor="middle">sudhir@mesh-control: ~ (production)</text>
+    <text x="310" y="22" class="jb" font-size="10.5" fill="#94A3B8" text-anchor="middle">sudhir@mesh-control: ~ (production)</text>
 
     <!-- Terminal Command Executing -->
     <g transform="translate(22, 62)">
       <text class="jb" font-size="12" fill="#38BDF8" font-weight="bold">$</text>
-      <text x="16" y="0" class="jb" font-size="12" fill="#94A3B8">./deploy-mesh.sh --cluster=k8s-prod --telemetry=live</text>
+      <text x="16" y="0" class="jb" font-size="12" fill="#CBD5E1">./deploy-mesh.sh --cluster=k8s-prod --telemetry=live</text>
       <rect x="446" y="-11" width="8" height="14" fill="#38BDF8"><animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/></rect>
     </g>
 
-    <!-- Giant Gleaming Name with Popping Letter Animation -->
+    <!-- Giant Gleaming Name (100% Visible by default, high-luminance gradient) -->
     <g transform="translate(22, 126)">
-      <text class="sg" font-size="48" fill="url(#nameGrad)" letter-spacing="-1.2">
-        <tspan class="titleL" style="animation-delay:0.04s">S</tspan>
-        <tspan class="titleL" style="animation-delay:0.08s">u</tspan>
-        <tspan class="titleL" style="animation-delay:0.12s">d</tspan>
-        <tspan class="titleL" style="animation-delay:0.16s">h</tspan>
-        <tspan class="titleL" style="animation-delay:0.20s">i</tspan>
-        <tspan class="titleL" style="animation-delay:0.24s">r</tspan>
-        <tspan> </tspan>
-        <tspan class="titleL" style="animation-delay:0.28s">S</tspan>
-        <tspan class="titleL" style="animation-delay:0.32s">i</tspan>
-        <tspan class="titleL" style="animation-delay:0.36s">n</tspan>
-        <tspan class="titleL" style="animation-delay:0.40s">g</tspan>
-        <tspan class="titleL" style="animation-delay:0.44s">h</tspan>
-      </text>
+      <text class="sg" font-size="48" fill="url(#nameGrad)" letter-spacing="-1">Sudhir Singh</text>
     </g>
 
     <!-- Cycling Dynamic Role Strip -->
@@ -207,109 +183,101 @@
 
     <!-- Tech Stack Pill Array -->
     <g transform="translate(22, 186)">
-      <!-- Pill 1: Kubernetes -->
-      <rect x="0" y="0" width="102" height="24" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1" stroke-opacity=".6"/>
+      <rect x="0" y="0" width="102" height="24" rx="12" fill="#162238" stroke="#38BDF8" stroke-width="1" stroke-opacity=".8"/>
       <circle cx="12" cy="12" r="3.5" fill="#38BDF8"/>
-      <text x="24" y="16" class="jbb" font-size="10" fill="#E2E8F0">Kubernetes</text>
+      <text x="24" y="16" class="jbb" font-size="10" fill="#F1F5F9">Kubernetes</text>
 
-      <!-- Pill 2: Docker -->
-      <rect x="110" y="0" width="76" height="24" rx="12" fill="#1E293B" stroke="#818CF8" stroke-width="1" stroke-opacity=".6"/>
+      <rect x="110" y="0" width="76" height="24" rx="12" fill="#162238" stroke="#818CF8" stroke-width="1" stroke-opacity=".8"/>
       <circle cx="122" cy="12" r="3.5" fill="#818CF8"/>
-      <text x="134" y="16" class="jbb" font-size="10" fill="#E2E8F0">Docker</text>
+      <text x="134" y="16" class="jbb" font-size="10" fill="#F1F5F9">Docker</text>
 
-      <!-- Pill 3: Terraform -->
-      <rect x="194" y="0" width="92" height="24" rx="12" fill="#1E293B" stroke="#C084FC" stroke-width="1" stroke-opacity=".6"/>
+      <rect x="194" y="0" width="92" height="24" rx="12" fill="#162238" stroke="#C084FC" stroke-width="1" stroke-opacity=".8"/>
       <circle cx="206" cy="12" r="3.5" fill="#C084FC"/>
-      <text x="218" y="16" class="jbb" font-size="10" fill="#E2E8F0">Terraform</text>
+      <text x="218" y="16" class="jbb" font-size="10" fill="#F1F5F9">Terraform</text>
 
-      <!-- Pill 4: TypeScript -->
-      <rect x="294" y="0" width="94" height="24" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1" stroke-opacity=".6"/>
+      <rect x="294" y="0" width="94" height="24" rx="12" fill="#162238" stroke="#38BDF8" stroke-width="1" stroke-opacity=".8"/>
       <circle cx="306" cy="12" r="3.5" fill="#38BDF8"/>
-      <text x="318" y="16" class="jbb" font-size="10" fill="#E2E8F0">TypeScript</text>
+      <text x="318" y="16" class="jbb" font-size="10" fill="#F1F5F9">TypeScript</text>
 
-      <!-- Pill 5: Python -->
-      <rect x="396" y="0" width="74" height="24" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1" stroke-opacity=".6"/>
+      <rect x="396" y="0" width="74" height="24" rx="12" fill="#162238" stroke="#F59E0B" stroke-width="1" stroke-opacity=".8"/>
       <circle cx="408" cy="12" r="3.5" fill="#F59E0B"/>
-      <text x="420" y="16" class="jbb" font-size="10" fill="#E2E8F0">Python</text>
+      <text x="420" y="16" class="jbb" font-size="10" fill="#F1F5F9">Python</text>
 
-      <!-- Pill 6: Linux/CI -->
-      <rect x="478" y="0" width="86" height="24" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1" stroke-opacity=".6"/>
+      <rect x="478" y="0" width="86" height="24" rx="12" fill="#162238" stroke="#10B981" stroke-width="1" stroke-opacity=".8"/>
       <circle cx="490" cy="12" r="3.5" fill="#10B981"/>
-      <text x="502" y="16" class="jbb" font-size="10" fill="#E2E8F0">Linux/CI</text>
+      <text x="502" y="16" class="jbb" font-size="10" fill="#F1F5F9">Linux/CI</text>
     </g>
 
     <!-- Typing Code Card (Simulated Editor Writing Live Production Spec) -->
     <g transform="translate(22, 226)">
-      <rect x="0" y="0" width="576" height="144" rx="10" fill="#080C14" stroke="#1E293B" stroke-width="1"/>
-      <!-- Editor File Header -->
-      <rect x="0" y="0" width="576" height="26" rx="10" fill="#0D131F"/>
-      <rect x="0" y="16" width="576" height="10" fill="#0D131F"/>
-      <circle cx="14" cy="13" r="3" fill="#38BDF8" fill-opacity=".7"/>
+      <rect x="0" y="0" width="576" height="144" rx="10" fill="#080D18" stroke="#1E293B" stroke-width="1.2"/>
+      <rect x="0" y="0" width="576" height="26" rx="10" fill="#0F172A"/>
+      <rect x="0" y="16" width="576" height="10" fill="#0F172A"/>
+      <circle cx="14" cy="13" r="3" fill="#38BDF8"/>
       <text x="26" y="17" class="jb" font-size="9" fill="#94A3B8">cluster-mesh.config.ts &#183; UTF-8</text>
 
-      <!-- Syntax-Highlighted Code Lines -->
       <g transform="translate(16, 46)">
         <text class="jb" font-size="11" fill="#64748B">01</text>
         <text x="26" y="0" class="jb" font-size="11" fill="#F43F5E">export const</text>
         <text x="116" y="0" class="jb" font-size="11" fill="#38BDF8">architect</text>
-        <text x="188" y="0" class="jb" font-size="11" fill="#94A3B8">: SystemsEngineer = {</text>
+        <text x="188" y="0" class="jb" font-size="11" fill="#CBD5E1">: SystemsEngineer = {</text>
 
         <text y="22" class="jb" font-size="11" fill="#64748B">02</text>
         <text x="42" y="22" class="jb" font-size="11" fill="#818CF8">lead</text>
-        <text x="72" y="22" class="jb" font-size="11" fill="#94A3B8">:</text>
+        <text x="72" y="22" class="jb" font-size="11" fill="#CBD5E1">:</text>
         <text x="84" y="22" class="jb" font-size="11" fill="#10B981">"Sudhir Singh"</text>
-        <text x="194" y="22" class="jb" font-size="11" fill="#94A3B8">,</text>
+        <text x="194" y="22" class="jb" font-size="11" fill="#CBD5E1">,</text>
         <text x="212" y="22" class="jb" font-size="11" fill="#818CF8">resilience</text>
-        <text x="302" y="22" class="jb" font-size="11" fill="#94A3B8">:</text>
+        <text x="302" y="22" class="jb" font-size="11" fill="#CBD5E1">:</text>
         <text x="314" y="22" class="jb" font-size="11" fill="#F59E0B">99.999</text>
 
         <text y="44" class="jb" font-size="11" fill="#64748B">03</text>
         <text x="42" y="44" class="jb" font-size="11" fill="#818CF8">focus</text>
-        <text x="82" y="44" class="jb" font-size="11" fill="#94A3B8">: [</text>
+        <text x="82" y="44" class="jb" font-size="11" fill="#CBD5E1">: [</text>
         <text x="104" y="44" class="jb" font-size="11" fill="#10B981">"Zero-Downtime CI/CD"</text>
-        <text x="284" y="44" class="jb" font-size="11" fill="#94A3B8">,</text>
+        <text x="284" y="44" class="jb" font-size="11" fill="#CBD5E1">,</text>
         <text x="298" y="44" class="jb" font-size="11" fill="#10B981">"K8s Clusters"</text>
-        <text x="414" y="44" class="jb" font-size="11" fill="#94A3B8">],</text>
+        <text x="414" y="44" class="jb" font-size="11" fill="#CBD5E1">],</text>
 
         <text y="66" class="jb" font-size="11" fill="#64748B">04</text>
         <text x="42" y="66" class="jb" font-size="11" fill="#818CF8">status</text>
-        <text x="92" y="66" class="jb" font-size="11" fill="#94A3B8">:</text>
+        <text x="92" y="66" class="jb" font-size="11" fill="#CBD5E1">:</text>
         <text x="104" y="66" class="jb" font-size="11" fill="#38BDF8">"READY_TO_DEPLOY"</text>
         <rect x="244" y="55" width="7" height="13" fill="#10B981"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
 
         <text y="88" class="jb" font-size="11" fill="#64748B">05</text>
-        <text x="26" y="88" class="jb" font-size="11" fill="#94A3B8">};</text>
+        <text x="26" y="88" class="jb" font-size="11" fill="#CBD5E1">};</text>
       </g>
     </g>
 
     <!-- Glowing Neon Status Banner -->
     <g transform="translate(22, 386)" class="neon">
-      <rect x="0" y="0" width="576" height="38" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.4" stroke-opacity=".8"/>
+      <rect x="0" y="0" width="576" height="38" rx="8" fill="#111C33" stroke="#10B981" stroke-width="1.5"/>
       <circle cx="20" cy="19" r="4.5" fill="#10B981" filter="url(#cyanGlow)"/>
       <text x="34" y="23" class="jbb" font-size="11" fill="#10B981" letter-spacing="1.4">AVAILABILITY: OPEN TO CONTRACT &amp; FULL-TIME ROLES</text>
-      <text x="546" y="23" class="jb" font-size="10" fill="#64748B" text-anchor="end">BIHAR, IN // UTC+05:30</text>
+      <text x="546" y="23" class="jb" font-size="10" fill="#94A3B8" text-anchor="end">BIHAR, IN // UTC+05:30</text>
     </g>
   </g>
 
   <!-- ── 5. Right Hero Column: Cyber Holographic Containment Pod ── -->
   <g transform="translate(710, 76)">
     <!-- Pod Enclosure Frame -->
-    <rect x="0" y="0" width="516" height="446" rx="14" fill="#0B1220" fill-opacity=".88" stroke="#1E293B" stroke-width="1.2"/>
+    <rect x="0" y="0" width="516" height="446" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
     
     <!-- Chamber Header -->
-    <rect x="0" y="0" width="516" height="36" rx="14" fill="#0F172A" fill-opacity=".95"/>
-    <rect x="0" y="22" width="516" height="14" fill="#0F172A" fill-opacity=".95"/>
+    <rect x="0" y="0" width="516" height="36" rx="14" fill="#111B32"/>
+    <rect x="0" y="22" width="516" height="14" fill="#111B32"/>
     <text x="22" y="22" class="jbb" font-size="10" fill="#38BDF8" letter-spacing="1.6">// HOLO-CONTAINMENT MATRIX</text>
-    <text x="494" y="22" class="jb" font-size="10" fill="#64748B" text-anchor="end">SEC-LVL: ALPHA</text>
+    <text x="494" y="22" class="jb" font-size="10" fill="#94A3B8" text-anchor="end">SEC-LVL: ALPHA</text>
 
     <!-- Holographic Pod Ambient Radial Glow -->
     <circle cx="258" cy="228" r="160" fill="url(#holoSphere)" class="pulseCore"/>
 
     <!-- Outer Rotating Radar Telemetry Ring -->
     <g transform="translate(0, 0)">
-      <circle cx="258" cy="228" r="145" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity=".35" stroke-dasharray="6 4" class="rotCW"/>
-      <circle cx="258" cy="228" r="122" fill="none" stroke="#818CF8" stroke-width="1.2" stroke-opacity=".4" stroke-dasharray="14 6" class="rotCCW"/>
-      <circle cx="258" cy="228" r="96" fill="none" stroke="#38BDF8" stroke-width="0.8" stroke-opacity=".25"/>
+      <circle cx="258" cy="228" r="145" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity=".5" stroke-dasharray="6 4" class="rotCW"/>
+      <circle cx="258" cy="228" r="122" fill="none" stroke="#818CF8" stroke-width="1.6" stroke-opacity=".6" stroke-dasharray="14 6" class="rotCCW"/>
+      <circle cx="258" cy="228" r="96" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity=".4"/>
     </g>
 
     <!-- Holographic Laser Scanner Sweep -->
@@ -321,7 +289,7 @@
     <!-- Cyber-Engineer Silhouette & Visor in Containment Chamber -->
     <g transform="translate(258, 228)">
       <!-- Pedestal Platform -->
-      <ellipse cx="0" cy="118" rx="90" ry="18" fill="#0F172A" stroke="#38BDF8" stroke-width="1.4" stroke-opacity=".7"/>
+      <ellipse cx="0" cy="118" rx="90" ry="18" fill="#162238" stroke="#38BDF8" stroke-width="1.6"/>
       <ellipse cx="0" cy="118" rx="65" ry="12" fill="none" stroke="#818CF8" stroke-width="1" stroke-dasharray="4 3"/>
 
       <!-- Holographic Projection Cone Rays -->
@@ -329,20 +297,20 @@
 
       <!-- Stylized Cybernetic Systems Engineer Silhouette -->
       <!-- Shoulders & Torso -->
-      <path d="M -52 110 C -48 65, -34 40, -22 28 L 22 28 C 34 40, 48 65, 52 110 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5" stroke-opacity=".8"/>
+      <path d="M -52 110 C -48 65, -34 40, -22 28 L 22 28 C 34 40, 48 65, 52 110 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="1.8"/>
       <!-- Cybernetic Armor Seams -->
-      <path d="M -22 28 L -14 75 L 0 85 L 14 75 L 22 28" fill="none" stroke="#818CF8" stroke-width="1.2" stroke-opacity=".7"/>
-      <line x1="0" y1="28" x2="0" y2="85" stroke="#38BDF8" stroke-width="1" stroke-opacity=".8"/>
+      <path d="M -22 28 L -14 75 L 0 85 L 14 75 L 22 28" fill="none" stroke="#818CF8" stroke-width="1.5"/>
+      <line x1="0" y1="28" x2="0" y2="85" stroke="#38BDF8" stroke-width="1.5"/>
       
       <!-- Head & Helmet -->
-      <path d="M -20 18 C -24 -15, -18 -36, 0 -36 C 18 -36, 24 -15, 20 18 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <path d="M -20 18 C -24 -15, -18 -36, 0 -36 C 18 -36, 24 -15, 20 18 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="1.8"/>
       <!-- Glowing Cyber Visor -->
       <path d="M -15 -8 L 15 -8 Q 12 4 0 4 Q -12 4 -15 -8 Z" fill="#38BDF8" filter="url(#cyanGlow)">
         <animate attributeName="opacity" values="1;.7;1" dur="2s" repeatCount="indefinite"/>
       </path>
 
       <!-- Holographic Orbiting Data Rings around Head -->
-      <ellipse cx="0" cy="-12" rx="36" ry="8" fill="none" stroke="#C084FC" stroke-width="1" stroke-dasharray="4 2" transform="rotate(-15)">
+      <ellipse cx="0" cy="-12" rx="36" ry="8" fill="none" stroke="#C084FC" stroke-width="1.2" stroke-dasharray="4 2" transform="rotate(-15)">
         <animateTransform attributeName="transform" type="rotate" values="-15 0 -12; 345 0 -12" dur="8s" repeatCount="indefinite"/>
       </ellipse>
     </g>
@@ -354,16 +322,16 @@
       <rect x="24" y="450" width="6" height="24" rx="3" fill="#C084FC" class="eq3"/>
       <rect x="36" y="450" width="6" height="40" rx="3" fill="#38BDF8" class="eq4"/>
       <rect x="48" y="450" width="6" height="18" rx="3" fill="#10B981" class="eq5"/>
-      <text x="66" y="474" class="jb" font-size="9" fill="#64748B">TELEMETRY FREQ // 44.1kHz</text>
+      <text x="66" y="474" class="jb" font-size="9" fill="#94A3B8">TELEMETRY FREQ // 44.1kHz</text>
     </g>
 
     <!-- Hologram Telemetry Metrics Box -->
     <g transform="translate(250, 436)">
-      <rect x="0" y="0" width="230" height="48" rx="8" fill="#080C14" stroke="#1E293B" stroke-width="1"/>
+      <rect x="0" y="0" width="230" height="48" rx="8" fill="#090E1A" stroke="#1E293B" stroke-width="1"/>
       <circle cx="14" cy="16" r="3" fill="#10B981"/>
       <text x="24" y="19" class="jbb" font-size="9.5" fill="#E2E8F0">STABILITY: 99.999%</text>
       <text x="142" y="19" class="jb" font-size="9" fill="#38BDF8">NODE: ACTIVE</text>
-      <text x="24" y="36" class="jb" font-size="8.5" fill="#64748B">K8S INGRESS: 0ms PKT LOSS</text>
+      <text x="24" y="36" class="jb" font-size="8.5" fill="#94A3B8">K8S INGRESS: 0ms PKT LOSS</text>
       <text x="168" y="36" class="jb" font-size="8.5" fill="#10B981">&#9650; 3,056 COMMITS</text>
     </g>
   </g>
@@ -371,7 +339,7 @@
   <!-- ── 6. Bottom Anamorphic Metric Ticker Strip ────────────────── -->
   <g transform="translate(54, 544)">
     <line x1="0" y1="-8" x2="1172" y2="-8" stroke="#1E293B" stroke-width="1"/>
-    <text x="0" y="8" class="jbb" font-size="10" fill="#38BDF8" letter-spacing="1">SUDHIR.SYSTEMS.V4</text>
+    <text x="0" y="8" class="jbb" font-size="10" fill="#38BDF8" letter-spacing="1">SUDHIR.SYSTEMS.V5</text>
     <text x="170" y="8" class="jb" font-size="9.5" fill="#94A3B8">CLUSTER HEALTH: NOMINAL</text>
     <text x="380" y="8" class="jb" font-size="9.5" fill="#94A3B8">PIPELINES: 100% AUTOMATED</text>
     <text x="600" y="8" class="jb" font-size="9.5" fill="#94A3B8">DATA SOURCE: GITHUB REST v3</text>
