@@ -1,145 +1,183 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 520" width="1280" height="520" role="img" aria-label="What I Build — Sudhir Singh Systems Engineering">
   <title>What I Build — Sudhir Singh</title>
-  <desc>Three production systems architected by Sudhir Singh: Resilient full-stack applications, autonomous CI/CD pipelines, and high-availability systems architecture.</desc>
+  <desc>Three production capability rows with animated radar console: resilient apps, CI/CD pipelines, systems architecture.</desc>
 
   <defs>
     <style type="text/css"><![CDATA[
       text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+      .sg  { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
       .sgm { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
-      .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .jb  { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
       @keyframes radarSpin { 100% { transform: rotate(360deg); } }
-      @keyframes floatSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+      @keyframes sd { 0%,100%{opacity:1} 50%{opacity:.12} }
+      @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
 
-      .radar-sweep { transform-box: fill-box; transform-origin: center; animation: radarSpin 8s linear infinite; }
-      .fl { animation: floatSlow 6s ease-in-out infinite; }
+      .rsweep { transform-box:fill-box; transform-origin:center; animation: radarSpin 7s linear infinite; }
+      .sd  { animation: sd 1.6s ease-in-out infinite; }
+      .fy  { animation: floatY 5s ease-in-out infinite; }
 
       @media (prefers-reduced-motion: reduce) {
-        *, .radar-sweep, .fl { animation: none !important; }
+        *, .rsweep, .sd, .fy { animation: none !important; }
       }
     ]]></style>
 
-    <linearGradient id="wpanel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0E1626"/>
+    <linearGradient id="wbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0E1626"/>
       <stop offset="100%" stop-color="#080C14"/>
     </linearGradient>
-
     <linearGradient id="wedge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".6"/>
-      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="0%"   stop-color="#38BDF8" stop-opacity=".6"/>
+      <stop offset="50%"  stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#818CF8" stop-opacity=".6"/>
     </linearGradient>
-
+    <!-- Row accent gradients -->
+    <linearGradient id="row1g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="row2g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="row3g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
     <pattern id="wdots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="12" cy="12" r=".9" fill="#FFFFFF" fill-opacity=".06"/>
     </pattern>
-
     <clipPath id="wclip">
       <rect width="1280" height="520" rx="20"/>
     </clipPath>
   </defs>
 
-  <!-- ── Base Card Surface ────────────────────────────────────── -->
   <g clip-path="url(#wclip)">
-    <rect width="1280" height="520" fill="url(#wpanel)"/>
+    <rect width="1280" height="520" fill="url(#wbg)"/>
     <rect width="1280" height="520" fill="url(#wdots)"/>
     <rect x=".75" y=".75" width="1278.5" height="518.5" rx="19.25" fill="none" stroke="url(#wedge)" stroke-width="1.5"/>
 
-    <!-- Section Header (100% Visible by default) -->
+    <!-- Section header -->
     <g transform="translate(56,52)">
       <text class="jbb" font-size="11.5" fill="#38BDF8" letter-spacing="2.2">// CORE CAPABILITIES &amp; SUBSYSTEMS</text>
-      <text class="sg" y="32" font-size="28" fill="#F1F5F9" letter-spacing="-.4">What I Build: Systems, Pipelines, Cockpits</text>
+      <text class="sg" y="32" font-size="27" fill="#F1F5F9" letter-spacing="-.4">What I Build: Systems, Pipelines, Cockpits</text>
+    </g>
+    <!-- Badge top right -->
+    <g transform="translate(1072,56)">
+      <rect x="0" y="-20" width="152" height="30" rx="15" fill="#38BDF8" fill-opacity=".1" stroke="#38BDF8" stroke-opacity=".55"/>
+      <circle cx="16" cy="-5" r="4.5" fill="#38BDF8" class="sd"/>
+      <text class="jbb" x="30" y="-1" font-size="9.5" fill="#38BDF8" letter-spacing="1.1">VERIFIED ACTIVE</text>
     </g>
 
-    <!-- Top Right Verified Live Badge -->
-    <g transform="translate(1076,56)">
-      <rect x="0" y="-18" width="148" height="28" rx="14" fill="#38BDF8" fill-opacity=".12" stroke="#38BDF8" stroke-opacity=".6"/>
-      <circle cx="16" cy="-4" r="4" fill="#38BDF8"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
-      <text class="jbb" x="28" y="0" font-size="9.5" fill="#38BDF8" letter-spacing="1.1">VERIFIED ACTIVE</text>
-    </g>
+    <!-- ══ LEFT: RADAR CONSOLE (x=56, w=398, h=372) ══ -->
+    <g transform="translate(56,116)" class="fy">
+      <rect width="398" height="372" rx="16" fill="#08111E" stroke="#1E293B" stroke-width="1.5"/>
+      <!-- Mac-style titlebar -->
+      <rect width="398" height="38" rx="16" fill="#0F1B2E"/>
+      <rect y="22" width="398" height="16" fill="#0F1B2E"/>
+      <circle cx="20" cy="19" r="4.5" fill="#EF4444"/>
+      <circle cx="36" cy="19" r="4.5" fill="#F59E0B"/>
+      <circle cx="52" cy="19" r="4.5" fill="#10B981"/>
+      <rect x="74" y="9" width="234" height="20" rx="6" fill="#07090F" stroke="#1E293B"/>
+      <text class="jb" x="84" y="23" font-size="9" fill="#64748B">systems.sudhir.dev/status</text>
 
-    <!-- ── LEFT SIDE: ARCHITECTURE VISUAL RADAR CONSOLE (x=56 to x=450) ── -->
-    <g transform="translate(56,116)" class="fl">
-      <!-- Browser / Terminal Frame -->
-      <rect width="394" height="364" rx="16" fill="#090E1A" stroke="#1E293B" stroke-width="1.4"/>
-      
-      <!-- Frame Top Bar -->
-      <rect width="394" height="36" rx="16" fill="#111B30"/>
-      <rect y="20" width="394" height="16" fill="#111B30"/>
-      <circle cx="20" cy="18" r="4.5" fill="#EF4444"/>
-      <circle cx="36" cy="18" r="4.5" fill="#F59E0B"/>
-      <circle cx="52" cy="18" r="4.5" fill="#10B981"/>
-      
-      <!-- URL Bar -->
-      <rect x="74" y="8" width="236" height="20" rx="6" fill="#090E1A" stroke="#1E293B"/>
-      <text class="jb" x="84" y="22" font-size="9" fill="#94A3B8">systems.sudhir.dev/status</text>
+      <!-- Radar rings centered at 199, 194 -->
+      <g transform="translate(199,194)">
+        <circle r="118" fill="none" stroke="#1E293B" stroke-width="1.4" stroke-dasharray="5 5"/>
+        <circle r="90"  fill="none" stroke="#1E293B" stroke-width="1.4"/>
+        <circle r="62"  fill="none" stroke="#38BDF8" stroke-opacity=".35" stroke-width="1.4" stroke-dasharray="4 4"/>
+        <circle r="34"  fill="none" stroke="#38BDF8" stroke-opacity=".55" stroke-width="1.6"/>
+        <!-- Cross hairs -->
+        <line x1="-118" y1="0" x2="118" y2="0" stroke="#1E293B" stroke-width=".8"/>
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="#1E293B" stroke-width=".8"/>
 
-      <!-- Center Radar Telemetry Rings -->
-      <g transform="translate(197,184)">
-        <circle r="92" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4 4"/>
-        <circle r="64" fill="none" stroke="#1E293B" stroke-width="1.5"/>
-        <circle r="36" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity=".4"/>
-        
-        <!-- Rotating Radar Sweep Line -->
-        <g class="radar-sweep">
-          <line x1="0" y1="0" x2="90" y2="0" stroke="#38BDF8" stroke-width="2.2"/>
-          <polygon points="0,0 90,0 80,30" fill="#38BDF8" fill-opacity=".15"/>
+        <!-- Rotating sweep arm -->
+        <g class="rsweep">
+          <line x1="0" y1="0" x2="116" y2="0" stroke="#38BDF8" stroke-width="2.4"/>
+          <polygon points="0,0 116,0 102,32" fill="#38BDF8" fill-opacity=".18"/>
         </g>
-        
-        <circle r="9" fill="#0D1527" stroke="#38BDF8" stroke-width="2"/>
-        <circle r="3.5" fill="#38BDF8"/>
+
+        <!-- Center node -->
+        <circle r="10" fill="#0D1527" stroke="#38BDF8" stroke-width="2"/>
+        <circle r="4"  fill="#38BDF8"/>
+
+        <!-- Blip nodes at orbit intersections -->
+        <circle cx="90" cy="0"   r="5" fill="#38BDF8" fill-opacity=".9"/>
+        <circle cx="-62" cy="0"  r="4" fill="#C084FC" fill-opacity=".8"/>
+        <circle cx="0" cy="-62"  r="4" fill="#10B981" fill-opacity=".8"/>
+        <circle cx="45" cy="-45" r="3" fill="#F59E0B" fill-opacity=".9"/>
       </g>
 
-      <!-- Bottom Status Readouts inside visual frame -->
-      <g transform="translate(20,306)">
-        <rect width="354" height="42" rx="8" fill="#111B30" stroke="#1E293B"/>
-        <circle cx="16" cy="21" r="3.5" fill="#10B981"/>
-        <text class="jbb" x="28" y="25" font-size="10" fill="#10B981">&#62; PIPELINE HEALTH: 100% OPERATIONAL</text>
+      <!-- Status readout bar at bottom of radar -->
+      <g transform="translate(20,320)">
+        <rect width="358" height="34" rx="8" fill="#0D1A2E" stroke="#1E293B"/>
+        <circle cx="14" cy="17" r="3.5" fill="#10B981" class="sd"/>
+        <text class="jbb" x="26" y="21" font-size="10" fill="#10B981">&#62; PIPELINE HEALTH: 100% OPERATIONAL</text>
       </g>
-    </g>
 
-    <!-- ── RIGHT SIDE: 3 FULLY ILLUMINATED CAPABILITY ROWS (x=480 to x=1224) ── -->
-    <!-- Row 1: Resilient Full-Stack Applications -->
-    <g transform="translate(480,116)">
-      <rect width="744" height="110" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="18" y="16" width="24" height="3" rx="1.5" fill="#38BDF8"/>
-      <text class="jbb" x="50" y="22" font-size="10.5" fill="#38BDF8" letter-spacing="1.5">01 // RESILIENT FULL-STACK APPLICATIONS</text>
-      
-      <text class="sg" x="18" y="52" font-size="16" fill="#FFFFFF">Local-First Desktop Cockpits &amp; Web Audio Synthesis</text>
-      <text class="sgm" x="18" y="74" font-size="12" fill="#94A3B8">High-performance tools: syntax screenshot generator, binaural neuroscience audio engines, and zero-knowledge vaults.</text>
-      
-      <g transform="translate(18,86)">
-        <text class="jb" font-size="10" fill="#64748B">STACK: <tspan class="jbb" fill="#CBD5E1">TypeScript &#183; React/Next.js &#183; Web Audio API &#183; SQLite &#183; Node.js</tspan></text>
+      <!-- Secondary status row -->
+      <g transform="translate(20,360)">
+        <rect width="358" height="26" rx="6" fill="#0A0F1E" stroke="#1E293B"/>
+        <text class="jb" x="12" y="18" font-size="9" fill="#64748B">uptime: 99.99% &#183; latency: 0ms &#183; replicas: 3/3</text>
       </g>
     </g>
 
-    <!-- Row 2: Autonomous CI/CD & Telemetry -->
-    <g transform="translate(480,242)">
-      <rect width="744" height="110" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="18" y="16" width="24" height="3" rx="1.5" fill="#C084FC"/>
-      <text class="jbb" x="50" y="22" font-size="10.5" fill="#C084FC" letter-spacing="1.5">02 // AUTONOMOUS CI/CD &amp; TELEMETRY</text>
-      
-      <text class="sg" x="18" y="52" font-size="16" fill="#FFFFFF">Scheduled Health Gates &amp; Verified API Engines</text>
-      <text class="sgm" x="18" y="74" font-size="12" fill="#94A3B8">Automated GitHub Actions pipelines pulling real data via REST v3 and GraphQL, with strict XML quality gating.</text>
-      
-      <g transform="translate(18,86)">
-        <text class="jb" font-size="10" fill="#64748B">STACK: <tspan class="jbb" fill="#CBD5E1">GitHub Actions &#183; Cron &#183; GitHub REST v3 &#183; Search API &#183; Python</tspan></text>
+    <!-- ══ RIGHT: 3 CAPABILITY ROWS (x=478, w=746) ══ -->
+    <!-- Row 1: Full-Stack Applications -->
+    <g transform="translate(478,116)">
+      <rect width="746" height="114" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
+      <rect width="746" height="114" rx="14" fill="url(#row1g)"/>
+      <!-- accent bar -->
+      <rect x="0" y="0" width="4" height="114" rx="2" fill="#38BDF8"/>
+      <text class="jbb" x="22" y="22" font-size="10.5" fill="#38BDF8" letter-spacing="1.5">01 // RESILIENT FULL-STACK APPLICATIONS</text>
+      <text class="sg"  x="22" y="50" font-size="17" fill="#FFFFFF">Local-First Desktop Cockpits &amp; Web Audio Synthesis</text>
+      <text class="sgm" x="22" y="72" font-size="12" fill="#94A3B8">High-performance tools: syntax screenshot generator, binaural neuroscience audio engines, zero-knowledge vaults.</text>
+      <!-- Stack chips -->
+      <g transform="translate(22,84)">
+        <text class="jb" font-size="10" fill="#475569">STACK: <tspan class="jbb" fill="#CBD5E1">TypeScript &#183; React/Next.js &#183; Web Audio API &#183; SQLite &#183; Node.js</tspan></text>
+      </g>
+      <!-- Status badge -->
+      <g transform="translate(624,16)">
+        <rect width="104" height="22" rx="11" fill="#10B981" fill-opacity=".12" stroke="#10B981" stroke-opacity=".6"/>
+        <circle cx="12" cy="11" r="3.5" fill="#10B981" class="sd"/>
+        <text class="jbb" x="22" y="15" font-size="9" fill="#10B981" letter-spacing=".8">DEPLOYED</text>
       </g>
     </g>
 
-    <!-- Row 3: Systems Architecture & Kubernetes -->
-    <g transform="translate(480,368)">
-      <rect width="744" height="110" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="18" y="16" width="24" height="3" rx="1.5" fill="#10B981"/>
-      <text class="jbb" x="50" y="22" font-size="10.5" fill="#10B981" letter-spacing="1.5">03 // SYSTEMS ARCHITECTURE &amp; SECURITY</text>
-      
-      <text class="sg" x="18" y="52" font-size="16" fill="#FFFFFF">Containerized Microservices &amp; Zero-Dependency Design</text>
-      <text class="sgm" x="18" y="74" font-size="12" fill="#94A3B8">Client-side AES-GCM-256 encryption, containerized microservices, Prometheus monitoring, and self-hosted vector graphics.</text>
-      
-      <g transform="translate(18,86)">
-        <text class="jb" font-size="10" fill="#64748B">STACK: <tspan class="jbb" fill="#CBD5E1">Docker &#183; Kubernetes &#183; Terraform &#183; DevSecOps &#183; Linux Systems</tspan></text>
+    <!-- Row 2: CI/CD Pipelines -->
+    <g transform="translate(478,246)">
+      <rect width="746" height="114" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
+      <rect width="746" height="114" rx="14" fill="url(#row2g)"/>
+      <rect x="0" y="0" width="4" height="114" rx="2" fill="#C084FC"/>
+      <text class="jbb" x="22" y="22" font-size="10.5" fill="#C084FC" letter-spacing="1.5">02 // AUTONOMOUS CI/CD &amp; TELEMETRY</text>
+      <text class="sg"  x="22" y="50" font-size="17" fill="#FFFFFF">Scheduled Health Gates &amp; Verified API Engines</text>
+      <text class="sgm" x="22" y="72" font-size="12" fill="#94A3B8">GitHub Actions pipelines pulling real data via REST v3 and GraphQL, with strict XML quality gating and cron automation.</text>
+      <g transform="translate(22,84)">
+        <text class="jb" font-size="10" fill="#475569">STACK: <tspan class="jbb" fill="#CBD5E1">GitHub Actions &#183; Cron &#183; REST v3 &#183; GraphQL &#183; Python</tspan></text>
+      </g>
+      <g transform="translate(624,16)">
+        <rect width="104" height="22" rx="11" fill="#C084FC" fill-opacity=".12" stroke="#C084FC" stroke-opacity=".6"/>
+        <circle cx="12" cy="11" r="3.5" fill="#C084FC" class="sd"/>
+        <text class="jbb" x="22" y="15" font-size="9" fill="#C084FC" letter-spacing=".8">AUTOMATED</text>
+      </g>
+    </g>
+
+    <!-- Row 3: Systems Architecture -->
+    <g transform="translate(478,376)">
+      <rect width="746" height="114" rx="14" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
+      <rect width="746" height="114" rx="14" fill="url(#row3g)"/>
+      <rect x="0" y="0" width="4" height="114" rx="2" fill="#10B981"/>
+      <text class="jbb" x="22" y="22" font-size="10.5" fill="#10B981" letter-spacing="1.5">03 // SYSTEMS ARCHITECTURE &amp; SECURITY</text>
+      <text class="sg"  x="22" y="50" font-size="17" fill="#FFFFFF">Containerized Microservices &amp; Zero-Dependency Design</text>
+      <text class="sgm" x="22" y="72" font-size="12" fill="#94A3B8">Client-side AES-GCM-256 encryption, containerized microservices, Prometheus monitoring, and self-hosted vector graphics.</text>
+      <g transform="translate(22,84)">
+        <text class="jb" font-size="10" fill="#475569">STACK: <tspan class="jbb" fill="#CBD5E1">Docker &#183; Kubernetes &#183; Terraform &#183; DevSecOps &#183; Linux Systems</tspan></text>
+      </g>
+      <g transform="translate(600,16)">
+        <rect width="128" height="22" rx="11" fill="#10B981" fill-opacity=".12" stroke="#10B981" stroke-opacity=".6"/>
+        <circle cx="12" cy="11" r="3.5" fill="#10B981" class="sd"/>
+        <text class="jbb" x="22" y="15" font-size="9" fill="#10B981" letter-spacing=".8">PROD HARDENED</text>
       </g>
     </g>
   </g>

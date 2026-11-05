@@ -1,36 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-label="Connect with Sudhir Singh — GitHub, LinkedIn, Telegram, and Portfolio.">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-label="Connect with Sudhir Singh — GitHub, LinkedIn, Telegram, and Portfolio">
   <title>Connect with Sudhir Singh</title>
   <desc>Four large verified communication cards linking to GitHub, LinkedIn, Telegram, and the portfolio site.</desc>
 
   <defs>
     <style type="text/css"><![CDATA[
       text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sg { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
+      .sg  { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; }
       .sgm { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
-      .jb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .jb  { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       .jbb { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 700; }
 
-      @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
-      .arrow { animation: nudge 2s ease-in-out infinite; }
+      @keyframes nudge { 0%,100%{transform:translateX(0)} 50%{transform:translateX(7px)} }
+      @keyframes sd    { 0%,100%{opacity:1} 50%{opacity:.12} }
+      @keyframes cardShimmer1 { 0%,100%{opacity:.06} 50%{opacity:.14} }
+      @keyframes cardShimmer2 { 0%,100%{opacity:.06} 50%{opacity:.12} }
+
+      .arrow { animation: nudge 2.2s ease-in-out infinite; }
+      .sd    { animation: sd 1.6s ease-in-out infinite; }
+      .cs1   { animation: cardShimmer1 4s ease-in-out infinite; }
+      .cs2   { animation: cardShimmer2 5s ease-in-out 1s infinite; }
 
       @media (prefers-reduced-motion: reduce) {
-        *, .arrow { animation: none !important; }
+        *, .arrow, .sd, .cs1, .cs2 { animation: none !important; }
       }
     ]]></style>
 
     <linearGradient id="cpBg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0E1626"/>
+      <stop offset="0%"   stop-color="#0E1626"/>
       <stop offset="100%" stop-color="#080C14"/>
     </linearGradient>
     <linearGradient id="cpEdge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".6"/>
-      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="0%"   stop-color="#38BDF8" stop-opacity=".6"/>
+      <stop offset="50%"  stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#818CF8" stop-opacity=".6"/>
     </linearGradient>
+
+    <!-- Card glow gradients -->
+    <radialGradient id="ghGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#E2E8F0" stop-opacity=".1"/>
+      <stop offset="100%" stop-color="#E2E8F0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="liGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#0A66C2" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#0A66C2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tgGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#26A5E4" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#26A5E4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pfGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#10B981" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+
     <pattern id="cpDots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="12" cy="12" r=".9" fill="#FFFFFF" fill-opacity=".06"/>
     </pattern>
-
     <clipPath id="cpClip">
       <rect width="1280" height="440" rx="20"/>
     </clipPath>
@@ -41,70 +66,89 @@
     <rect width="1280" height="440" fill="url(#cpDots)"/>
     <rect x=".75" y=".75" width="1278.5" height="438.5" rx="19.25" fill="none" stroke="url(#cpEdge)" stroke-width="1.5"/>
 
-    <text class="jbb" x="56" y="54" font-size="11.5" fill="#38BDF8" letter-spacing="2.2">// COMMS &amp; NETWORK CHANNELS</text>
-    <text class="jb" x="1224" y="54" text-anchor="end" font-size="10" fill="#94A3B8" letter-spacing="1.4">OPEN FOR COLLABORATION</text>
+    <text class="jbb" x="56" y="56" font-size="11.5" fill="#38BDF8" letter-spacing="2.2">// COMMS &amp; NETWORK CHANNELS</text>
+    <text class="jb" x="1224" y="56" text-anchor="end" font-size="10" fill="#94A3B8" letter-spacing="1.4">OPEN FOR COLLABORATION</text>
 
-    <!-- 01 · GitHub (100% visible by default) -->
-    <g class="card c1">
-      <rect x="56" y="86" width="283" height="320" rx="18" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="56" y="86" width="283" height="3" rx="1.5" fill="#E2E8F0" fill-opacity=".8"/>
-      <rect x="84" y="114" width="60" height="60" rx="16" fill="#162238" stroke="#1E293B"/>
-      <g transform="translate(98 128) scale(1.3)" fill="#E2E8F0">
+    <!-- ══ CARD 1: GitHub ══ -->
+    <g>
+      <!-- Card background -->
+      <rect x="56" y="84" width="284" height="324" rx="18" fill="#0D1527" stroke="#E2E8F0" stroke-opacity=".15" stroke-width="1.4"/>
+      <!-- Top accent stripe -->
+      <rect x="56" y="84" width="284" height="4" rx="2" fill="#E2E8F0" fill-opacity=".8"/>
+      <!-- Shimmer overlay -->
+      <rect x="56" y="84" width="284" height="324" rx="18" fill="url(#ghGlow)" class="cs1"/>
+      <!-- Icon bg -->
+      <rect x="84" y="116" width="64" height="64" rx="18" fill="#162238" stroke="#E2E8F0" stroke-opacity=".2" stroke-width="1"/>
+      <!-- GitHub icon -->
+      <g transform="translate(96,128) scale(1.33)" fill="#E2E8F0">
         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
       </g>
-      <text class="sg" x="84" y="214" font-size="22" fill="#F8FAFC">GitHub</text>
-      <text class="sgm" x="84" y="240" font-size="13" fill="#94A3B8">Source code, pipelines, and continuous open-source activity.</text>
-      <text class="jbb" x="84" y="324" font-size="12" fill="#38BDF8">@SudhirDevOps1</text>
-      <g transform="translate(84 354)" class="arrow">
-        <text class="jbb" font-size="12" fill="#38BDF8">VIEW PROFILE &gt;&gt;&gt;</text>
+      <!-- Card content -->
+      <text class="sg" x="84" y="224" font-size="24" fill="#F8FAFC">GitHub</text>
+      <text class="sgm" x="84" y="250" font-size="12" fill="#94A3B8">Source code, pipelines,</text>
+      <text class="sgm" x="84" y="268" font-size="12" fill="#94A3B8">and open-source activity.</text>
+      <!-- Divider -->
+      <line x1="84" y1="288" x2="316" y2="288" stroke="#1E293B" stroke-width="1"/>
+      <text class="jbb" x="84" y="312" font-size="12" fill="#E2E8F0">@SudhirDevOps1</text>
+      <g transform="translate(84,350)" class="arrow">
+        <text class="jbb" font-size="12" fill="#38BDF8">VIEW PROFILE &#187;&#187;</text>
       </g>
     </g>
 
-    <!-- 02 · LinkedIn (100% visible by default) -->
-    <g class="card c2">
-      <rect x="367" y="86" width="283" height="320" rx="18" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="367" y="86" width="283" height="3" rx="1.5" fill="#0A66C2"/>
-      <rect x="395" y="114" width="60" height="60" rx="16" fill="#162238" stroke="#1E293B"/>
-      <g transform="translate(409 128) scale(1.3)" fill="#0A66C2">
+    <!-- ══ CARD 2: LinkedIn ══ -->
+    <g>
+      <rect x="368" y="84" width="284" height="324" rx="18" fill="#0D1527" stroke="#0A66C2" stroke-opacity=".35" stroke-width="1.4"/>
+      <rect x="368" y="84" width="284" height="4" rx="2" fill="#0A66C2"/>
+      <rect x="368" y="84" width="284" height="324" rx="18" fill="url(#liGlow)" class="cs2"/>
+      <rect x="396" y="116" width="64" height="64" rx="18" fill="#162238" stroke="#0A66C2" stroke-opacity=".3" stroke-width="1"/>
+      <g transform="translate(408,128) scale(1.33)" fill="#0A66C2">
         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.3a1.6 1.6 0 1 0 1.6 1.6 1.6 1.6 0 0 0-1.6-1.6"/>
       </g>
-      <text class="sg" x="395" y="214" font-size="22" fill="#F8FAFC">LinkedIn</text>
-      <text class="sgm" x="395" y="240" font-size="13" fill="#94A3B8">Professional background, systems engineering, and network.</text>
-      <text class="jbb" x="395" y="324" font-size="12" fill="#38BDF8">in/SudhirDevOps1</text>
-      <g transform="translate(395 354)" class="arrow">
-        <text class="jbb" font-size="12" fill="#38BDF8">CONNECT &gt;&gt;&gt;</text>
+      <text class="sg" x="396" y="224" font-size="24" fill="#F8FAFC">LinkedIn</text>
+      <text class="sgm" x="396" y="250" font-size="12" fill="#94A3B8">Professional background,</text>
+      <text class="sgm" x="396" y="268" font-size="12" fill="#94A3B8">systems engineering network.</text>
+      <line x1="396" y1="288" x2="628" y2="288" stroke="#1E293B" stroke-width="1"/>
+      <text class="jbb" x="396" y="312" font-size="12" fill="#CBD5E1">in/SudhirDevOps1</text>
+      <g transform="translate(396,350)" class="arrow">
+        <text class="jbb" font-size="12" fill="#0A66C2">CONNECT &#187;&#187;</text>
       </g>
     </g>
 
-    <!-- 03 · Telegram (100% visible by default) -->
-    <g class="card c3">
-      <rect x="678" y="86" width="283" height="320" rx="18" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="678" y="86" width="283" height="3" rx="1.5" fill="#26A5E4"/>
-      <rect x="706" y="114" width="60" height="60" rx="16" fill="#162238" stroke="#1E293B"/>
-      <g transform="translate(720 128) scale(1.3)" fill="#26A5E4">
+    <!-- ══ CARD 3: Telegram ══ -->
+    <g>
+      <rect x="680" y="84" width="284" height="324" rx="18" fill="#0D1527" stroke="#26A5E4" stroke-opacity=".35" stroke-width="1.4"/>
+      <rect x="680" y="84" width="284" height="4" rx="2" fill="#26A5E4"/>
+      <rect x="680" y="84" width="284" height="324" rx="18" fill="url(#tgGlow)" class="cs1"/>
+      <rect x="708" y="116" width="64" height="64" rx="18" fill="#162238" stroke="#26A5E4" stroke-opacity=".3" stroke-width="1"/>
+      <g transform="translate(720,128) scale(1.33)" fill="#26A5E4">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
       </g>
-      <text class="sg" x="706" y="214" font-size="22" fill="#F8FAFC">Telegram</text>
-      <text class="sgm" x="706" y="240" font-size="13" fill="#94A3B8">Direct real-time communication for engineering collaborations.</text>
-      <text class="jbb" x="706" y="324" font-size="12" fill="#38BDF8">@SudhirDevOps1</text>
-      <g transform="translate(706 354)" class="arrow">
-        <text class="jbb" font-size="12" fill="#38BDF8">MESSAGE &gt;&gt;&gt;</text>
+      <text class="sg" x="708" y="224" font-size="24" fill="#F8FAFC">Telegram</text>
+      <text class="sgm" x="708" y="250" font-size="12" fill="#94A3B8">Direct real-time messaging</text>
+      <text class="sgm" x="708" y="268" font-size="12" fill="#94A3B8">for engineering collaborations.</text>
+      <line x1="708" y1="288" x2="940" y2="288" stroke="#1E293B" stroke-width="1"/>
+      <text class="jbb" x="708" y="312" font-size="12" fill="#CBD5E1">@SudhirDevOps1</text>
+      <g transform="translate(708,350)" class="arrow">
+        <text class="jbb" font-size="12" fill="#26A5E4">MESSAGE &#187;&#187;</text>
       </g>
     </g>
 
-    <!-- 04 · Portfolio (100% visible by default) -->
-    <g class="card c4">
-      <rect x="989" y="86" width="235" height="320" rx="18" fill="#0D1527" stroke="#1E293B" stroke-width="1.4"/>
-      <rect x="989" y="86" width="235" height="3" rx="1.5" fill="#10B981"/>
-      <rect x="1017" y="114" width="60" height="60" rx="16" fill="#162238" stroke="#1E293B"/>
-      <g transform="translate(1031 128) scale(1.3)" fill="#10B981">
+    <!-- ══ CARD 4: Portfolio ══ -->
+    <g>
+      <rect x="992" y="84" width="232" height="324" rx="18" fill="#0D1527" stroke="#10B981" stroke-opacity=".35" stroke-width="1.4"/>
+      <rect x="992" y="84" width="232" height="4" rx="2" fill="#10B981"/>
+      <rect x="992" y="84" width="232" height="324" rx="18" fill="url(#pfGlow)" class="cs2"/>
+      <rect x="1020" y="116" width="64" height="64" rx="18" fill="#162238" stroke="#10B981" stroke-opacity=".3" stroke-width="1"/>
+      <g transform="translate(1032,128) scale(1.33)" fill="#10B981">
         <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 17.93V18a1 1 0 0 0-1-1 3 3 0 0 1-3-3v-1a2 2 0 0 0-2-2H5a1 1 0 0 0-1 1v.09A8 8 0 0 1 11 4.07V5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-.93A8 8 0 0 1 19.93 11H19a2 2 0 0 0-2 2v2a3 3 0 0 1-3 3h-1z"/>
       </g>
-      <text class="sg" x="1017" y="214" font-size="22" fill="#F8FAFC">Portfolio</text>
-      <text class="sgm" x="1017" y="240" font-size="13" fill="#94A3B8">Interactive builds, documentation, and architecture logs.</text>
-      <text class="jbb" x="1017" y="324" font-size="12" fill="#38BDF8">sudhirdevops1</text>
-      <g transform="translate(1017 354)" class="arrow">
-        <text class="jbb" font-size="12" fill="#38BDF8">VISIT SITE &gt;&gt;&gt;</text>
+      <text class="sg" x="1020" y="224" font-size="24" fill="#F8FAFC">Portfolio</text>
+      <text class="sgm" x="1020" y="250" font-size="12" fill="#94A3B8">Interactive builds,</text>
+      <text class="sgm" x="1020" y="268" font-size="12" fill="#94A3B8">architecture logs.</text>
+      <line x1="1020" y1="288" x2="1200" y2="288" stroke="#1E293B" stroke-width="1"/>
+      <text class="jbb" x="1020" y="312" font-size="12" fill="#CBD5E1">sudhirdevops1</text>
+      <g transform="translate(1020,350)" class="arrow">
+        <text class="jbb" font-size="12" fill="#10B981">VISIT SITE &#187;&#187;</text>
       </g>
     </g>
   </g>
