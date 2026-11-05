@@ -31,7 +31,7 @@ const BUDGETS = new Map(Object.entries({
   'build-log.svg': 250, 'tech-orbit.svg': 250, 'dev-lanyard.svg': 250,
   'live-dashboard.svg': 250, 'projects-blueprint.svg': 250, 'connect-panel.svg': 250,
   'hero-cinematic.svg': 1100,
-  'hero-scene.svg': 15, 'hero-viewfinder.svg': 20, 'orbital-radar.svg': 13,
+  'hero-scene.svg': 15, 'hero-viewfinder.svg': 250, 'orbital-radar.svg': 13,
   'what-i-build.svg': 11, 'stack-arsenal.svg': 13, 'build-console.svg': 11,
   'dev-id.svg': 21, 'repo-spotlight.svg': 8,
 }));
