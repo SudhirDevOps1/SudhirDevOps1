@@ -15,13 +15,13 @@
 
 <br/><br/>
 
-<!-- 02 · WHAT I BUILD — THE TWO MORE GRITTY CARDS (1280×560) -->
-<img src="./assets/what-i-build.svg?v=9" width="100%" alt="What I build: resilient applications, autonomous pipelines, systems architecture"/>
+<!-- 02 · WHAT I BUILD — SYSTEMS COMMAND COCKPIT (1280×540) -->
+<img src="./assets/what-i-build.svg?v=10" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
 
 <br/><br/>
 
 <!-- 03 · TECH ARSENAL — ORBITAL RADAR (1280×560) -->
-<img src="./assets/orbital-radar.svg?v=9" width="100%" alt="Tech arsenal: real brand icons on three tilted orbit rings around a glowing core"/>
+<img src="./assets/orbital-radar.svg?v=10" width="100%" alt="Tech arsenal: real brand icons on three tilted orbit rings around a glowing core"/>
 
 <br/><br/>
 
