@@ -263,6 +263,9 @@ function renderDevId(stats, ranked = []) {
       const y = 134;
       return `  <g>
     <rect x="${x + 0.5}" y="${y + 0.5}" width="194" height="92" rx="14" fill="#0B1220" stroke="#1E293B"/>
+    <!-- Tactical corner reticles -->
+    <path d="M ${x + 6} ${y + 14} L ${x + 6} ${y + 6} L ${x + 14} ${y + 6}" fill="none" stroke="${color}" stroke-width="1.2" stroke-opacity=".65"/>
+    <path d="M ${x + 188} ${y + 78} L ${x + 188} ${y + 86} L ${x + 180} ${y + 86}" fill="none" stroke="${color}" stroke-width="1.2" stroke-opacity=".65"/>
     <rect x="${x + 16}" y="${y + 12}" width="22" height="3" rx="1.5" fill="${color}"/>
     <text x="${x + 16}" y="${y + 32}" font-family="'JBM', ui-monospace, monospace" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="1.4">${label}</text>
     <text x="${x + 16}" y="${y + 68}" font-family="'SG', 'Segoe UI', sans-serif" font-size="32" font-weight="800" fill="${color}">${value}</text>
@@ -597,6 +600,7 @@ function renderBlueprint(missions, stats) {
       return `  <g>
     <line x1="48" y1="${y + 6}" x2="1232" y2="${y + 6}" stroke="#16324F" stroke-width="1"/>
     <text x="56" y="${y + 40}" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">${missionNo}</text>
+    <circle cx="118" cy="${y + 22}" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="${y + 26}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">${name}</text>
     <text x="130" y="${y + 46}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">${description}</text>
 
@@ -632,10 +636,24 @@ function renderBlueprint(missions, stats) {
     <pattern id="bpMajor" width="120" height="120" patternUnits="userSpaceOnUse">
       <path d="M120 0H0V120" fill="none" stroke="#1E4A73" stroke-opacity=".6" stroke-width="1"/>
     </pattern>
+    <linearGradient id="bpLaserG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset=".25" stop-color="#38BDF8" stop-opacity=".3"/>
+      <stop offset=".5" stop-color="#38BDF8" stop-opacity=".85"/>
+      <stop offset=".75" stop-color="#38BDF8" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
     <style>
-      .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: bpDraw 2.2s cubic-bezier(.4,0,.2,1) forwards; }
-      @keyframes bpDraw { to { stroke-dashoffset: 0; } }
-      @media (prefers-reduced-motion: reduce) { .draw { animation: none; stroke-dashoffset: 0; } }
+      /* Camo-proxy safe: base offset 0 */
+      .draw { stroke-dasharray: 1400; stroke-dashoffset: 0; animation: bpDraw 2.2s cubic-bezier(.4,0,.2,1); }
+      .bpLaser { animation: laserSweep 5.5s ease-in-out infinite; }
+      .bpPulse { animation: bpDiode 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes bpDraw { from { stroke-dashoffset: 1400; } to { stroke-dashoffset: 0; } }
+      @keyframes laserSweep { 0% { transform: translateY(0px); opacity: 0; } 10%, 90% { opacity: .75; } 100% { transform: translateY(480px); opacity: 0; } }
+      @keyframes bpDiode { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .3; transform: scale(.7); } }
+      @media (prefers-reduced-motion: reduce) {
+        .draw, .bpLaser, .bpPulse { animation: none; stroke-dashoffset: 0; opacity: 1; transform: none; }
+      }
     </style>
   </defs>
 
@@ -644,6 +662,10 @@ function renderBlueprint(missions, stats) {
   <rect width="1280" height="520" fill="url(#bpMajor)"/>
   <rect x="8" y="8" width="1264" height="504" fill="none" stroke="#1E4A73" stroke-width="1.5"/>
   <rect x="14" y="14" width="1252" height="492" fill="none" stroke="#16324F" stroke-width=".5"/>
+
+  <!-- Tactical blueprint laser sweep & coordinate markings -->
+  <line class="bpLaser" x1="14" y1="18" x2="1266" y2="18" stroke="url(#bpLaserG)" stroke-width="2"/>
+  <text x="48" y="32" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#1E4A73" letter-spacing="1.5">[GRID: SEC-01 · CYBER-BLUEPRINT · ACTIVE PROTOCOL]</text>
 
   <text x="48" y="66" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="27" fill="#E2E8F0" letter-spacing="1.2">S-RANK MISSIONS</text>
   <line class="draw" x1="48" y1="80" x2="1232" y2="80" stroke="#38BDF8" stroke-width="1.6"/>

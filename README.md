@@ -2,13 +2,13 @@
 
 <!-- 01 · HERO VIEWFINDER HUD (1280×740) -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="./assets/hero-viewfinder.svg?v=9" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
+  <img src="./assets/hero-viewfinder.svg?v=12" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
 </a>
 
 <br/><br/>
 
 <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C063-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C066-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &#160;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -16,27 +16,27 @@
 <br/><br/>
 
 <!-- 02 · WHAT I BUILD — SYSTEMS COMMAND COCKPIT (1280×540) -->
-<img src="./assets/what-i-build.svg?v=10" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
+<img src="./assets/what-i-build.svg?v=12" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
 
 <br/><br/>
 
 <!-- 03 · TECH ARSENAL — TACTICAL ORBITAL RADAR HUD (1280×560) -->
-<img src="./assets/orbital-radar.svg?v=11" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
+<img src="./assets/orbital-radar.svg?v=12" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
 
 <br/><br/>
 
 <!-- 04 · DEV LANYARD + LIVE TELEMETRY DASHBOARD (1280×620) — GENERATED -->
-<img src="./assets/dev-id.svg?v=9" width="100%" alt="Swinging dev lanyard ID and live field telemetry dashboard — generated nightly from the GitHub API"/>
+<img src="./assets/dev-id.svg?v=12" width="100%" alt="Swinging dev lanyard ID and live field telemetry dashboard — generated nightly from the GitHub API"/>
 
 <br/><br/>
 
 <!-- 05 · S-RANK MISSIONS — BLUEPRINT SHEET (1280×520) — GENERATED -->
-<img src="./assets/projects-blueprint.svg?v=9" width="100%" alt="Mission blueprint: five highest-impact repositories with live star counts"/>
+<img src="./assets/projects-blueprint.svg?v=12" width="100%" alt="Mission blueprint: five highest-impact repositories with live star counts"/>
 
 <br/><br/>
 
 <!-- STATS:TABLE:START -->
-<div align="center"><sub>📦 <strong>77</strong> repositories &#160;·&#160; ⭐ <strong>44</strong> stars &#160;·&#160; 🍴 <strong>7</strong> forks &#160;·&#160; 💻 <strong>3,063</strong> commits &#160;·&#160; 🔀 <strong>46</strong> pull requests &#160;·&#160; 🐞 <strong>1</strong> issues &#160;·&#160; 👥 <strong>12</strong> followers &#160;·&#160; ✅ verified <strong>05 November 2026</strong></sub></div>
+<div align="center"><sub>📦 <strong>77</strong> repositories &#160;·&#160; ⭐ <strong>44</strong> stars &#160;·&#160; 🍴 <strong>7</strong> forks &#160;·&#160; 💻 <strong>3,066</strong> commits &#160;·&#160; 🔀 <strong>46</strong> pull requests &#160;·&#160; 🐞 <strong>1</strong> issues &#160;·&#160; 👥 <strong>12</strong> followers &#160;·&#160; ✅ verified <strong>05 November 2026</strong></sub></div>
 <!-- STATS:TABLE:END -->
 
 <sub><strong>Data Integrity Invariant:</strong> Every number is pulled directly from the GitHub REST API v3 and Search API during scheduled runs. Zero fake data.</sub>
@@ -86,7 +86,7 @@
 <br/><br/>
 
 <!-- 06 · CONNECT — IDENTITY + CHANNELS (1280×460) -->
-<img src="./assets/connect-panel.svg?v=9" width="100%" alt="Pick a channel to connect with Sudhir Singh"/>
+<img src="./assets/connect-panel.svg?v=12" width="100%" alt="Pick a channel to connect with Sudhir Singh"/>
 
 <br/>
 
@@ -96,7 +96,7 @@
 
 <br/><br/>
 
-<img src="./assets/signature.svg?v=9" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
+<img src="./assets/signature.svg?v=12" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/><br/>
 
@@ -107,7 +107,7 @@
 <!-- STATS:MILESTONES:END -->
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>05 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 05/11/2026, 11:56:28 IST</sub>
+<sub>🤖 Auto-synced <strong>05 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 05/11/2026, 12:36:10 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>

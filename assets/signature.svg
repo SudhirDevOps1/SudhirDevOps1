@@ -26,16 +26,33 @@
     <style>
       .cv { font-family: 'Caveat', cursive; }
       .mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace; }
-      .stroke { stroke-dasharray: 900; stroke-dashoffset: 900; animation: sgDraw 2.4s cubic-bezier(.4,0,.2,1) forwards; }
-      .nm { opacity: 0; animation: sgFade .7s ease-out 1.15s forwards; }
-      .tg { opacity: 0; animation: sgFade .7s ease-out 1.6s forwards; }
-      @keyframes sgDraw { to { stroke-dashoffset: 0; } }
-      @keyframes sgFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-      @media (prefers-reduced-motion: reduce) { .stroke, .nm, .tg { animation: none; opacity: 1; stroke-dashoffset: 0; } }
+      /* Camo-safe: base opacity 1, base stroke offset 0 */
+      .stroke { stroke-dasharray: 900; stroke-dashoffset: 0; animation: sgDraw 2.4s cubic-bezier(.4,0,.2,1), sgShimmer 4s ease-in-out infinite 2.5s; }
+      .nm { opacity: 1; animation: sgShimmer 4s ease-in-out infinite 3s; }
+      .tg { opacity: 1; }
+      .sealGlow { animation: sealPulse 3s ease-in-out infinite; }
+      .pulseDot { animation: dotPulse 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+      @keyframes sgDraw { from { stroke-dashoffset: 900; } to { stroke-dashoffset: 0; } }
+      @keyframes sgShimmer { 0%, 100% { filter: drop-shadow(0 0 0 rgba(56,189,248,0)); } 50% { filter: drop-shadow(0 0 6px rgba(168,85,247,.45)); } }
+      @keyframes sealPulse { 0%, 100% { stroke-opacity: .4; } 50% { stroke-opacity: .85; } }
+      @keyframes dotPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .stroke, .nm, .tg, .sealGlow, .pulseDot { animation: none; opacity: 1; stroke-dashoffset: 0; filter: none; }
+      }
     </style>
   </defs>
 
   <path class="stroke" d="M54 96 C120 60 176 60 232 84 C270 101 330 101 388 74 C424 58 466 56 514 78" fill="none" stroke="url(#sgSig)" stroke-width="3.4" stroke-linecap="round" opacity=".95"/>
   <text class="nm cv" x="52" y="72" font-size="52" font-weight="700" fill="url(#sgSig)">Sudhir Singh</text>
   <text class="tg mono" x="54" y="122" font-size="11.5" fill="#7A8699" letter-spacing="1.6">sudo ship_it — zero fake data</text>
+
+  <!-- Cryptographic authenticity seal -->
+  <g transform="translate(424 18)">
+    <rect class="sealGlow" x="0" y="0" width="122" height="22" rx="4" fill="#0D1117" stroke="#38BDF8" stroke-width="1"/>
+    <circle cx="10" cy="11" r="2.5" fill="#3FB950" class="pulseDot"/>
+    <text class="mono" x="18" y="14.5" font-size="8" fill="#38BDF8" letter-spacing=".6">GPG · SHA-256</text>
+    <path d="M106 7 L114 7 L114 15" fill="none" stroke="#38BDF8" stroke-width=".8" stroke-opacity=".6"/>
+  </g>
 </svg>
