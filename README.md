@@ -20,8 +20,8 @@
 
 <br/><br/>
 
-<!-- 03 · TECH ARSENAL — ORBITAL RADAR (1280×560) -->
-<img src="./assets/orbital-radar.svg?v=10" width="100%" alt="Tech arsenal: real brand icons on three tilted orbit rings around a glowing core"/>
+<!-- 03 · TECH ARSENAL — TACTICAL ORBITAL RADAR HUD (1280×560) -->
+<img src="./assets/orbital-radar.svg?v=11" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
 
 <br/><br/>
 
