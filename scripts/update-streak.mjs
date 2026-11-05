@@ -17,9 +17,15 @@
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
+import { execSync } from 'node:child_process';
 
 const OWNER = process.env.GITHUB_REPOSITORY_OWNER || 'SudhirDevOps1';
-const TOKEN = process.env.GITHUB_TOKEN || '';
+let TOKEN = process.env.GITHUB_TOKEN || '';
+if (!TOKEN) {
+  try {
+    TOKEN = execSync('gh auth token', { encoding: 'utf8' }).trim();
+  } catch {}
+}
 const OUT = 'assets/streak-buddy.svg';
 
 const QUERY = `

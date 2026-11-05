@@ -13,6 +13,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
+import { execSync } from 'node:child_process';
 
 const README = 'README.md';
 const SPOTLIGHT = 'assets/repo-spotlight.svg';
@@ -21,7 +22,12 @@ const BLUEPRINT = 'assets/projects-blueprint.svg';
 const LOCAL_FONTS = 'assets/fonts.css';
 const API = 'https://api.github.com';
 const OWNER = process.env.GITHUB_REPOSITORY_OWNER || 'SudhirDevOps1';
-const TOKEN = process.env.GITHUB_TOKEN || '';
+let TOKEN = process.env.GITHUB_TOKEN || '';
+if (!TOKEN) {
+  try {
+    TOKEN = execSync('gh auth token', { encoding: 'utf8' }).trim();
+  } catch {}
+}
 
 const headers = {
   'User-Agent': `${OWNER}-profile-stats-bot`,
@@ -570,6 +576,31 @@ ${repoBars}
 }
 
 // Top 5 non-archived, non-fork, non-self repos — for the mission blueprint card.
+function renderFlagshipTable(missions) {
+  const emojiMap = {
+    'code-to-image-generator': '🎨',
+    'Brainwave-Audio-Tone-Generator': '🎧',
+    'NovaPulse': '⚡',
+    'The-Ultimate-Master-Study-Tracker': '⏱️',
+    'FormForge': '📋',
+    'SafeVault': '🔐',
+    'BlindShare': '🛡️',
+  };
+
+  const rows = missions.map((repo) => {
+    const icon = emojiMap[repo.name] || '🚀';
+    const desc = repo.description || 'Production engineering mission · zero fake data.';
+    const lang = repo.language || 'Code';
+    return `| ${icon} **[${repo.name}](https://github.com/${OWNER}/${repo.name})** | ${desc} | <code>${lang}</code> | <img src="https://img.shields.io/github/stars/${OWNER}/${repo.name}?style=flat-square&color=FFDD00&logo=github&label=stars" alt="stars"/> |`;
+  });
+
+  return [
+    '| Mission | Architectural Scope | Jutsu / Tech Stack | Stars |',
+    '|:---|:---|:---|:---:|',
+    ...rows,
+  ].join('\n');
+}
+
 function pickMissions(repos) {
   const eligible = repos.filter(
     (repo) => !repo.fork && !repo.archived && repo.name.toLowerCase() !== OWNER.toLowerCase()
@@ -785,6 +816,8 @@ async function main() {
 
     MILESTONES: `<div align="center"><sub>🗓️ on GitHub since <strong>${stats.joined}</strong> &#160;·&#160; <strong>${fmt(stats.joinedDays)}</strong> days of shipping &#160;·&#160; 📍 ${stats.location} &#160;·&#160; 🌐 <a href="${stats.websiteUrl}">${stats.websiteLabel}</a></sub></div>`,
 
+    FLAGSHIP: renderFlagshipTable(pickMissions(repos)),
+
     REPOS: `  <img src="${badge('Browse All Repositories', `${fmt(stats.repos)} Projects`, '36BCF7', 'github')}" alt="All Repos"/>`,
 
     SYNC: `<sub>🤖 Auto-synced <strong>${stats.syncedAt}</strong> &bull; every number above pulled live from the GitHub API &bull; last run ${stats.syncedStamp} IST</sub>`,
@@ -807,6 +840,14 @@ async function main() {
     const next = updated.replace(re, `$1\n${value}\n$2`);
     if (next !== updated) changedBlocks++;
     updated = next;
+  }
+
+  // Automatic Camo proxy cache invalidation across all self-hosted SVGs in README
+  const cacheTag = `v=${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${new Date().getUTCHours()}`;
+  const withFreshCamo = updated.replace(/(\.\/assets\/[a-zA-Z0-9_-]+\.svg)\?v=[a-zA-Z0-9_-]+/g, `$1?${cacheTag}`);
+  if (withFreshCamo !== updated) {
+    updated = withFreshCamo;
+    changedBlocks++;
   }
 
   if (updated === readme) {
