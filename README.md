@@ -2,13 +2,13 @@
 
 <!-- 01 · HERO VIEWFINDER HUD (1280x560) -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="./assets/hero-viewfinder.svg?v=4" width="100%" alt="Sudhir Singh — Cinema-Grade Anamorphic Viewfinder HUD: Optical telemetry, live terminal command execution, code card, and systems engineering profile."/>
+  <img src="./assets/hero-viewfinder.svg?v=5" width="100%" alt="Sudhir Singh — Cinema-Grade Anamorphic Viewfinder HUD: Optical telemetry, live terminal command execution, code card, and systems engineering profile."/>
 </a>
 
 <br/><br/>
 
 <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C055-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C056-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -16,22 +16,22 @@
 <br/><br/>
 
 <!-- 02 · WHAT I BUILD / SUBSYSTEMS (1280x520) -->
-<img src="./assets/what-i-build.svg?v=4" width="100%" alt="What I build: resilient applications, autonomous pipelines, systems architecture"/>
+<img src="./assets/what-i-build.svg?v=5" width="100%" alt="What I build: resilient applications, autonomous pipelines, systems architecture"/>
 
 <br/><br/>
 
 <!-- 03 · TECH STACK & ATOM ORBITS (1280x480) -->
-<img src="./assets/orbital-radar.svg?v=4" width="100%" alt="Tech arsenal: technologies traveling 3D atom orbits with orbiting satellite moons"/>
+<img src="./assets/orbital-radar.svg?v=5" width="100%" alt="Tech arsenal: technologies traveling 3D atom orbits with orbiting satellite moons"/>
 
 <br/><br/>
 
 <!-- 04 · UNIFIED SWINGING DEV LANYARD & LIVE DASHBOARD (1280x620) -->
-<img src="./assets/dev-id.svg?v=4" width="100%" alt="Swinging Dev Lanyard ID and Live Field Telemetry Dashboard"/>
+<img src="./assets/dev-id.svg?v=5" width="100%" alt="Swinging Dev Lanyard ID and Live Field Telemetry Dashboard"/>
 
 <br/><br/>
 
 <!-- STATS:TABLE:START -->
-<div align="center"><sub>📦 <strong>77</strong> repositories &nbsp;·&nbsp; ⭐ <strong>44</strong> stars &nbsp;·&nbsp; 🍴 <strong>7</strong> forks &nbsp;·&nbsp; 💻 <strong>3,055</strong> commits &nbsp;·&nbsp; 🔀 <strong>46</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>1</strong> issues &nbsp;·&nbsp; 👥 <strong>12</strong> followers &nbsp;·&nbsp; ✅ verified <strong>04 November 2026</strong></sub></div>
+<div align="center"><sub>📦 <strong>77</strong> repositories &nbsp;·&nbsp; ⭐ <strong>44</strong> stars &nbsp;·&nbsp; 🍴 <strong>7</strong> forks &nbsp;·&nbsp; 💻 <strong>3,056</strong> commits &nbsp;·&nbsp; 🔀 <strong>46</strong> pull requests &nbsp;·&nbsp; 🐞 <strong>1</strong> issues &nbsp;·&nbsp; 👥 <strong>12</strong> followers &nbsp;·&nbsp; ✅ verified <strong>05 November 2026</strong></sub></div>
 <!-- STATS:TABLE:END -->
 
 <sub><strong>Data Integrity Invariant:</strong> Every number is pulled directly from the GitHub REST API v3 and Search API during scheduled runs. Zero fake data.</sub>
@@ -81,7 +81,7 @@
 <br/><br/>
 
 <!-- 05 · COMMS CHANNELS MATRIX (1280x440) -->
-<img src="./assets/connect-panel.svg?v=4" width="100%" alt="Pick a channel to connect"/>
+<img src="./assets/connect-panel.svg?v=5" width="100%" alt="Pick a channel to connect"/>
 
 <br/>
 
@@ -91,18 +91,18 @@
 
 <br/><br/>
 
-<img src="./assets/signature.svg?v=4" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
+<img src="./assets/signature.svg?v=5" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/><br/>
 
 <sub>Engineered by hand &bull; Refreshed by automation &bull; Every single metric verified against GitHub REST API v3</sub>
 
 <!-- STATS:MILESTONES:START -->
-<div align="center"><sub>🗓️ on GitHub since <strong>25 September 2025</strong> &nbsp;·&nbsp; <strong>404</strong> days of shipping &nbsp;·&nbsp; 📍 Bihar, India &nbsp;·&nbsp; 🌐 <a href="https://sudhirdevops1.github.io">sudhirdevops1.github.io</a></sub></div>
+<div align="center"><sub>🗓️ on GitHub since <strong>25 September 2025</strong> &nbsp;·&nbsp; <strong>405</strong> days of shipping &nbsp;·&nbsp; 📍 Bihar, India &nbsp;·&nbsp; 🌐 <a href="https://sudhirdevops1.github.io">sudhirdevops1.github.io</a></sub></div>
 <!-- STATS:MILESTONES:END -->
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>04 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 04/11/2026, 20:48:22 IST</sub>
+<sub>🤖 Auto-synced <strong>05 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 05/11/2026, 10:44:10 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>

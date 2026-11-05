@@ -426,7 +426,7 @@ ${kpiCards}
 ${repoBars}
 
     <line x1="442" y1="528" x2="856" y2="528" stroke="#1E293B"/>
-    <text x="442" y="552" class="jb" font-size="9" fill="#64748B">pulled live from GitHub REST API v3 &#183; auto-ranked</text>
+    <text x="442" y="552" class="jb" font-size="9" fill="#64748B">pulled live from GitHub REST API v3 &#183; generated </text>
   </g>
 
   <!-- Operations & Architecture Panel -->

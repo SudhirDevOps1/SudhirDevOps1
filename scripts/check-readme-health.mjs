@@ -209,7 +209,7 @@ function checkGeneratedCard(file) {
     return { ok: false, reason: `${file} is missing` };
   }
 
-  const stamp = svg.match(/generated (\d{2}) ([A-Za-z]{3}) (\d{4})/);
+  const stamp = svg.match(/generated (\d{2}) ([A-Za-z]{3}) (\d{4})/i);
   if (!stamp) return { ok: false, reason: 'no "generated <date>" stamp in the card' };
 
   const [, day, mon, year] = stamp;
