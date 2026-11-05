@@ -346,6 +346,15 @@ text { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monac
         0%, 100% { opacity: 1; transform: scale(1); }
         50% { opacity: .25; transform: scale(.7); }
       }
+      .ecgPulse {
+        stroke-dasharray: 200;
+        animation: ecgSweep 3.5s linear infinite;
+      }
+      @keyframes ecgSweep {
+        0% { stroke-dashoffset: 400; opacity: .3; }
+        50% { opacity: 1; filter: drop-shadow(0 0 4px #38BDF8); }
+        100% { stroke-dashoffset: 0; opacity: .3; }
+      }
       @media (prefers-reduced-motion: reduce) {
         * { animation: none !important; opacity: 1 !important; transform: none !important; }
       }
@@ -468,6 +477,8 @@ ${repoBars}
     <text x="942" y="500" class="sgm" font-size="12.5" fill="#F1F5F9">100% verified against GitHub APIs</text>
 
     <line x1="922" y1="528" x2="1218" y2="528" stroke="#1E293B"/>
+    <!-- Live Cybernetic ECG Telemetry Wave -->
+    <path class="ecgPulse" d="M 922 528 L 964 528 L 972 514 L 980 542 L 988 518 L 996 528 L 1218 528" fill="none" stroke="#38BDF8" stroke-width="1.6"/>
     <text x="922" y="552" class="jb" font-size="9" fill="#64748B">status: operational &#183; systems nominal</text>
   </g>
 
@@ -629,7 +640,7 @@ function renderBlueprint(missions, stats) {
       const missionNo = `M${index + 1}`;
 
       return `  <g>
-    <line x1="48" y1="${y + 6}" x2="1232" y2="${y + 6}" stroke="#16324F" stroke-width="1"/>
+    <line class="rowGlow rg-${index % 5}" x1="48" y1="${y + 6}" x2="1232" y2="${y + 6}" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="${y + 40}" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">${missionNo}</text>
     <circle cx="118" cy="${y + 22}" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="${y + 26}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">${name}</text>
@@ -679,11 +690,19 @@ function renderBlueprint(missions, stats) {
       .draw { stroke-dasharray: 1400; stroke-dashoffset: 0; animation: bpDraw 2.2s cubic-bezier(.4,0,.2,1); }
       .bpLaser { animation: laserSweep 5.5s ease-in-out infinite; }
       .bpPulse { animation: bpDiode 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .rowGlow { animation: rowBorderPulse 4s ease-in-out infinite; }
+      .rg-1 { animation-delay: 0.8s; }
+      .rg-2 { animation-delay: 1.6s; }
+      .rg-3 { animation-delay: 2.4s; }
+      .rg-4 { animation-delay: 3.2s; }
+
       @keyframes bpDraw { from { stroke-dashoffset: 1400; } to { stroke-dashoffset: 0; } }
-      @keyframes laserSweep { 0% { transform: translateY(0px); opacity: 0; } 10%, 90% { opacity: .75; } 100% { transform: translateY(480px); opacity: 0; } }
+      @keyframes laserSweep { 0% { transform: translateY(0px); opacity: 0; } 10%, 90% { opacity: .8; } 100% { transform: translateY(480px); opacity: 0; } }
       @keyframes bpDiode { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .3; transform: scale(.7); } }
+      @keyframes rowBorderPulse { 0%, 100% { stroke: #16324F; } 50% { stroke: #38BDF8; stroke-opacity: .75; } }
+
       @media (prefers-reduced-motion: reduce) {
-        .draw, .bpLaser, .bpPulse { animation: none; stroke-dashoffset: 0; opacity: 1; transform: none; }
+        .draw, .bpLaser, .bpPulse, .rowGlow { animation: none; stroke-dashoffset: 0; opacity: 1; transform: none; }
       }
     </style>
   </defs>
@@ -696,6 +715,7 @@ function renderBlueprint(missions, stats) {
 
   <!-- Tactical blueprint laser sweep & coordinate markings -->
   <line class="bpLaser" x1="14" y1="18" x2="1266" y2="18" stroke="url(#bpLaserG)" stroke-width="2"/>
+  <line class="bpLaser" style="animation-delay:-0.3s;opacity:0.4;" x1="14" y1="18" x2="1266" y2="18" stroke="url(#bpLaserG)" stroke-width="5"/>
   <text x="48" y="32" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#1E4A73" letter-spacing="1.5">[GRID: SEC-01 · CYBER-BLUEPRINT · ACTIVE PROTOCOL]</text>
 
   <text x="48" y="66" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="27" fill="#E2E8F0" letter-spacing="1.2">S-RANK MISSIONS</text>

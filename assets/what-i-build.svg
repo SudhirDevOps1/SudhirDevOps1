@@ -67,8 +67,27 @@
         animation: ringSpinCW 10s linear infinite;
       }
 
+      @keyframes waveFlowFast {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 300; }
+      }
+      .wave-anim-fast {
+        stroke-dasharray: 12 6;
+        animation: waveFlowFast 8s linear infinite;
+      }
+
+      @keyframes cardBorderGlow {
+        0%, 100% { stroke: #1E293B; }
+        50% { stroke: #38BDF8; stroke-opacity: .75; filter: drop-shadow(0 0 6px rgba(56,189,248,.35)); }
+      }
+      .card-glow {
+        animation: cardBorderGlow 4.5s ease-in-out infinite;
+      }
+      .cg-2 { animation-delay: 1.5s; }
+      .cg-3 { animation-delay: 3s; }
+
       @media (prefers-reduced-motion: reduce) {
-        .led-1, .led-2, .led-3, .led-4, .wave-anim, .spin-cw, .spin-ccw, .shuriken-spin {
+        .led-1, .led-2, .led-3, .led-4, .wave-anim, .wave-anim-fast, .spin-cw, .spin-ccw, .shuriken-spin, .card-glow {
           animation: none !important;
         }
       }
@@ -183,8 +202,8 @@
       <!-- Sine Wave Path (harmonic synthesis) -->
       <path class="wave-anim" d="M 10 41 Q 38 12 66 41 T 122 41 T 178 41 T 234 41 T 290 41 T 346 41 T 402 41 T 448 41" 
             fill="none" stroke="url(#waveGrad)" stroke-width="2.2" stroke-linecap="round"/>
-      <path d="M 10 41 Q 38 24 66 41 T 122 41 T 178 41 T 234 41 T 290 41 T 346 41 T 402 41 T 448 41" 
-            fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.4" stroke-linecap="round"/>
+      <path class="wave-anim-fast" d="M 10 41 Q 38 24 66 41 T 122 41 T 178 41 T 234 41 T 290 41 T 346 41 T 402 41 T 448 41" 
+            fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6" stroke-linecap="round"/>
 
       <text class="mono" x="12" y="72" font-size="8" fill="#94A3B8">SYNTHESIS: BINAURAL &#183; ISOCHRONIC &#183; REAL-TIME CANVAS</text>
     </g>

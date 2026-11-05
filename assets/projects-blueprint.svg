@@ -47,11 +47,19 @@
       .draw { stroke-dasharray: 1400; stroke-dashoffset: 0; animation: bpDraw 2.2s cubic-bezier(.4,0,.2,1); }
       .bpLaser { animation: laserSweep 5.5s ease-in-out infinite; }
       .bpPulse { animation: bpDiode 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .rowGlow { animation: rowBorderPulse 4s ease-in-out infinite; }
+      .rg-1 { animation-delay: 0.8s; }
+      .rg-2 { animation-delay: 1.6s; }
+      .rg-3 { animation-delay: 2.4s; }
+      .rg-4 { animation-delay: 3.2s; }
+
       @keyframes bpDraw { from { stroke-dashoffset: 1400; } to { stroke-dashoffset: 0; } }
-      @keyframes laserSweep { 0% { transform: translateY(0px); opacity: 0; } 10%, 90% { opacity: .75; } 100% { transform: translateY(480px); opacity: 0; } }
+      @keyframes laserSweep { 0% { transform: translateY(0px); opacity: 0; } 10%, 90% { opacity: .8; } 100% { transform: translateY(480px); opacity: 0; } }
       @keyframes bpDiode { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .3; transform: scale(.7); } }
+      @keyframes rowBorderPulse { 0%, 100% { stroke: #16324F; } 50% { stroke: #38BDF8; stroke-opacity: .75; } }
+
       @media (prefers-reduced-motion: reduce) {
-        .draw, .bpLaser, .bpPulse { animation: none; stroke-dashoffset: 0; opacity: 1; transform: none; }
+        .draw, .bpLaser, .bpPulse, .rowGlow { animation: none; stroke-dashoffset: 0; opacity: 1; transform: none; }
       }
     </style>
   </defs>
@@ -64,6 +72,7 @@
 
   <!-- Tactical blueprint laser sweep & coordinate markings -->
   <line class="bpLaser" x1="14" y1="18" x2="1266" y2="18" stroke="url(#bpLaserG)" stroke-width="2"/>
+  <line class="bpLaser" style="animation-delay:-0.3s;opacity:0.4;" x1="14" y1="18" x2="1266" y2="18" stroke="url(#bpLaserG)" stroke-width="5"/>
   <text x="48" y="32" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#1E4A73" letter-spacing="1.5">[GRID: SEC-01 · CYBER-BLUEPRINT · ACTIVE PROTOCOL]</text>
 
   <text x="48" y="66" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="27" fill="#E2E8F0" letter-spacing="1.2">S-RANK MISSIONS</text>
@@ -71,7 +80,7 @@
   <text x="1232" y="60" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#5F7890" letter-spacing="1.6">LIVE DATA · REDRAWN NIGHTLY</text>
 
   <g>
-    <line x1="48" y1="124" x2="1232" y2="124" stroke="#16324F" stroke-width="1"/>
+    <line class="rowGlow rg-0" x1="48" y1="124" x2="1232" y2="124" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="158" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M1</text>
     <circle cx="118" cy="140" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="144" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">code-to-image-generator</text>
@@ -85,7 +94,7 @@
     <text x="880" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">HTML</tspan> · FORKS 0</text>
   </g>
   <g>
-    <line x1="48" y1="196" x2="1232" y2="196" stroke="#16324F" stroke-width="1"/>
+    <line class="rowGlow rg-1" x1="48" y1="196" x2="1232" y2="196" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="230" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M2</text>
     <circle cx="118" cy="212" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="216" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">Brainwave-Audio-Tone-Generator</text>
@@ -99,7 +108,7 @@
     <text x="880" y="230" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">Python</tspan> · FORKS 0</text>
   </g>
   <g>
-    <line x1="48" y1="268" x2="1232" y2="268" stroke="#16324F" stroke-width="1"/>
+    <line class="rowGlow rg-2" x1="48" y1="268" x2="1232" y2="268" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="302" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M3</text>
     <circle cx="118" cy="284" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="288" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">NovaPulse</text>
@@ -113,7 +122,7 @@
     <text x="880" y="302" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">JavaScript</tspan> · FORKS 1</text>
   </g>
   <g>
-    <line x1="48" y1="340" x2="1232" y2="340" stroke="#16324F" stroke-width="1"/>
+    <line class="rowGlow rg-3" x1="48" y1="340" x2="1232" y2="340" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="374" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M4</text>
     <circle cx="118" cy="356" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="360" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">The-Ultimate-Master-Study-Tracker</text>
@@ -127,7 +136,7 @@
     <text x="880" y="374" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">TypeScript</tspan> · FORKS 1</text>
   </g>
   <g>
-    <line x1="48" y1="412" x2="1232" y2="412" stroke="#16324F" stroke-width="1"/>
+    <line class="rowGlow rg-4" x1="48" y1="412" x2="1232" y2="412" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="446" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M5</text>
     <circle cx="118" cy="428" r="3" fill="#38BDF8" class="bpPulse"/>
     <text x="130" y="432" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FormForge</text>
