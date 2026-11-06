@@ -759,6 +759,106 @@ function writeDevId(stats, ranked = []) {
 }
 
 
+// Last 7 days of real commits across all public repos — used to ground the ship log.
+// Fails soft: a missing list yields a quiet-week panel, never an error that blocks the run.
+function relDayLabel(iso) {
+  const ms = Date.now() - new Date(iso).getTime();
+  const days = Math.floor(ms / 86_400_000);
+  if (days <= 0) return 'TODAY';
+  if (days === 1) return 'YESTERDAY';
+  return `${days} DAYS AGO`;
+}
+
+const BUILD_LOG = 'assets/build-log.svg';
+
+function renderBuildLog(events, stats) {
+  const cutoff = Date.now() - 7 * 86_400_000;
+  const recent = (events ?? [])
+    .filter((it) => it.commit?.author?.date && it.commit?.message)
+    .map((it) => {
+      const fullName = it.repository?.full_name || it.repository?.name || 'unknown';
+      return {
+        repo: String(fullName).replace(/^[^/]+\//, ''),
+        subject: it.commit.message.split('\n')[0].trim(),
+        date: it.commit.author.date,
+        sha: String(it.sha || '').slice(0, 7),
+      };
+    })
+    .filter((x) => new Date(x.date).getTime() >= cutoff)
+    .slice(0, 6);
+
+  const accent = ['#36BCF7', '#A855F7', '#3FB950', '#FBBF24'];
+  const rowTemplate = (row, i, y) => {
+    const color = accent[i % accent.length];
+    const subject = esc(clip(row.subject, 66));
+    const repo = esc(clip(row.repo, 26));
+    return `  <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) ${0.18 + i * 0.11}s forwards">
+    <rect x="56" y="${y}" width="3" height="30" rx="1.5" fill="${color}"/>
+    <text x="76" y="${y + 12}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="${color}">${repo}</text>
+    <text x="324" y="${y + 12}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">${subject}</text>
+    <text x="76" y="${y + 27}" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">${row.sha}</text>
+    <text x="1232" y="${y + 12}" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">${relDayLabel(row.date)}</text>
+    <line x1="56" y1="${y + 37}" x2="1240" y2="${y + 37}" stroke="#1C2128" stroke-width="1"/>
+  </g>`;
+  };
+
+  const rows = recent
+    .map((row, i) => rowTemplate(row, i, 112 + i * 34))
+    .join('\n');
+
+  const empty = recent.length === 0;
+  const body = empty
+    ? `  <text x="640" y="196" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="15" fill="#8B949E">Quiet week on the radar — infra polish, zero fake commits.</text>`
+    : rows;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 330" width="1280" height="330" role="img" aria-label="Ship log — public repositories and real commits authored in the last 7 days, regenerated nightly from the GitHub commit search API.">
+  <title>Ship log — last 7 days</title>
+  <desc>Commits authored in the last 7 days on public repositories, drawn from the GitHub commit search API by scripts/update-stats.mjs. Generated ${esc(stats.shortStamp)}.</desc>
+
+  <defs>
+    <style><![CDATA[
+  ${loadLocalFonts()}
+      @keyframes blFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+      @media (prefers-reduced-motion: reduce) { g { animation: none !important; opacity: 1 !important; } }
+    ]]></style>
+    <linearGradient id="blBg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="330">
+      <stop offset="0" stop-color="#0B0F17"/>
+      <stop offset="1" stop-color="#121826"/>
+    </linearGradient>
+    <pattern id="blDots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="330" fill="url(#blBg)"/>
+  <rect width="1280" height="330" fill="url(#blDots)"/>
+  <rect x="8" y="8" width="1264" height="314" fill="none" stroke="#232C3B" stroke-width="1.2"/>
+
+  <text x="56" y="62" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E" letter-spacing="2.6">// SHIP LOG — LAST 7 DAYS</text>
+  <text x="1232" y="62" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" fill="#4B5563" letter-spacing="1.3">SOURCE: GITHUB COMMIT SEARCH</text>
+  <line x1="56" y1="78" x2="1240" y2="78" stroke="#1C2128" stroke-width="1.5"/>
+
+${body}
+
+  <text x="56" y="310" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563" letter-spacing="1.2">GENERATED ${esc(stats.shortStamp.toUpperCase())} · REAL COMMITS ONLY · NOTHING TYPED BY HAND</text>
+</svg>
+`;
+}
+
+function writeBuildLog(events, stats) {
+  const svg = renderBuildLog(events, stats);
+  if (/\b(undefined|NaN|null)\b/.test(svg)) {
+    throw new Error('Refusing to write a ship log containing undefined/NaN/null.');
+  }
+  mkdirSync(dirname(BUILD_LOG), { recursive: true });
+  writeFileSync(BUILD_LOG, svg, 'utf8');
+  const list = (events ?? [])
+    .filter((it) => it.commit?.author?.date)
+    .slice(0, 6)
+    .map((it) => `${String(it.repository?.full_name || '').replace(/^[^/]+\//, '')}@${String(it.sha || '').slice(0, 7)}`);
+  console.log(`Wrote ${BUILD_LOG} — ${list.join(', ') || 'quiet week'}`);
+}
+
 async function main() {
   const readme = readFileSync(README, 'utf8');
   const [user, repos, commits, prs, issues] = await Promise.all([
@@ -817,10 +917,17 @@ async function main() {
   // Redraw the self-hosted spotlight card from the same live repository list.
   // Done before the early-return below, so the card still refreshes on a day
   // when the README text itself happens to be unchanged.
+  const events = await api(
+    `/search/commits?q=author:${OWNER}&sort=committer-date&per_page=12`
+  )
+    .then((d) => d.items ?? [])
+    .catch(() => []);
+
   const ranked = pickSpotlight(repos);
   writeSpotlight(ranked, stats);
   writeDevId(stats, ranked);
   writeBlueprint(pickMissions(repos), stats);
+  writeBuildLog(events, stats);
 
   const blocks = {
     HERO: [

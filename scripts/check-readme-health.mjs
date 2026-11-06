@@ -23,6 +23,7 @@ const STREAK_SVG = 'assets/streak-buddy.svg';
 const SPOTLIGHT_SVG = 'assets/repo-spotlight.svg';
 const DEV_ID_SVG = 'assets/dev-id.svg';
 const BLUEPRINT_SVG = 'assets/projects-blueprint.svg';
+const BUILD_LOG_SVG = 'assets/build-log.svg';
 const CONCURRENCY = 8;
 const ATTEMPTS = 3;
 const MIN_BYTES = 200;
@@ -249,6 +250,12 @@ function checkBlueprintCard() {
   return { ok: true, updated: result.updated, ageDays: result.ageDays };
 }
 
+function checkBuildLogCard() {
+  const result = checkGeneratedCard(BUILD_LOG_SVG);
+  if (!result.ok) return result;
+  return { ok: true, updated: result.updated, ageDays: result.ageDays };
+}
+
 async function main() {
   const markdown = readFileSync(README, 'utf8');
   const urls = extractImageUrls(markdown);
@@ -276,6 +283,7 @@ async function main() {
   const spotlight = checkSpotlightCard();
   const devId = checkDevIdCard();
   const blueprint = checkBlueprintCard();
+  const buildLog = checkBuildLogCard();
   const passed = results.length - failed.length;
   const passedLinks = linkResults.length - failedLinks.length;
 
@@ -296,6 +304,7 @@ async function main() {
     spotlight,
     devId,
     blueprint,
+    buildLog,
     results,
   };
 
@@ -324,6 +333,10 @@ async function main() {
     `${blueprint.ok ? 'OK  ' : 'FAIL'} ${String(`age ${blueprint.ageDays ?? '-'}d`).padStart(7)}  ` +
       `${BLUEPRINT_SVG} (${blueprint.ok ? blueprint.updated : blueprint.reason})`
   );
+  console.log(
+    `${buildLog.ok ? 'OK  ' : 'FAIL'} ${String(`age ${buildLog.ageDays ?? '-'}d`).padStart(7)}  ` +
+      `${BUILD_LOG_SVG} (${buildLog.ok ? buildLog.updated : buildLog.reason})`
+  );
 
   const rows = failed.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
   const linkRows = failedLinks.map((f) => `| ❌ | \`${f.url.slice(0, 110)}\` | ${f.reason} |`);
@@ -331,6 +344,7 @@ async function main() {
   const spotlightRow = spotlight.ok ? [] : [`| ❌ | \`${SPOTLIGHT_SVG}\` | ${spotlight.reason} |`];
   const devIdRow = devId.ok ? [] : [`| ❌ | \`${DEV_ID_SVG}\` | ${devId.reason} |`];
   const blueprintRow = blueprint.ok ? [] : [`| ❌ | \`${BLUEPRINT_SVG}\` | ${blueprint.reason} |`];
+  const buildLogRow = buildLog.ok ? [] : [`| ❌ | \`${BUILD_LOG_SVG}\` | ${buildLog.reason} |`];
   const summary = [
     '## 🩺 README health check',
     '',
@@ -348,10 +362,13 @@ async function main() {
     blueprint.ok
       ? `**Mission blueprint** — generated ${blueprint.updated}, ${blueprint.ageDays} day(s) old.`
       : `**Mission blueprint FAILED** — ${blueprint.reason}.`,
+    buildLog.ok
+      ? `**Ship log** — generated ${buildLog.updated}, ${buildLog.ageDays} day(s) old.`
+      : `**Ship log FAILED** — ${buildLog.reason}.`,
     '',
-    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok || !devId.ok || !blueprint.ok
-      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow, ...devIdRow, ...blueprintRow]
-      : ['✅ Every image, every link and all four generated cards on the profile are live.']),
+    ...(failed.length || failedLinks.length || !streak.ok || !spotlight.ok || !devId.ok || !blueprint.ok || !buildLog.ok
+      ? ['| Status | Target | Reason |', '|:--|:--|:--|', ...rows, ...linkRows, ...streakRow, ...spotlightRow, ...devIdRow, ...blueprintRow, ...buildLogRow]
+      : ['✅ Every image, every link and all five generated cards on the profile are live.']),
   ].join('\n');
 
   console.log(`\n${summary}`);
@@ -361,7 +378,7 @@ async function main() {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   }
 
-  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok || !devId.ok || !blueprint.ok) {
+  if (failed.length > 0 || failedLinks.length > 0 || !streak.ok || !spotlight.ok || !devId.ok || !blueprint.ok || !buildLog.ok) {
     if (failed.length > 0) {
       console.error(`::error::${failed.length} of ${results.length} README images are broken.`);
     }
@@ -379,6 +396,9 @@ async function main() {
     }
     if (!blueprint.ok) {
       console.error(`::error::Mission blueprint card is not live: ${blueprint.reason}.`);
+    }
+    if (!buildLog.ok) {
+      console.error(`::error::Ship log card is not live: ${buildLog.reason}.`);
     }
     console.error('See .github/health/latest.json for the full report.');
     process.exit(1);

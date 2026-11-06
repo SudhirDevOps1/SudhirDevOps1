@@ -27,6 +27,7 @@ const TOTAL_MAX_KB = 3500;
 // Premium Megha-grade panels (embedded woff2 art) get their own ceilings;
 // legacy lightweight assets stay capped near present size.
 const BUDGETS = new Map(Object.entries({
+  'build-log.svg': 120,
   'connect-panel.svg': 120,
   'dev-id.svg': 110,
   'hero-viewfinder.svg': 250,
