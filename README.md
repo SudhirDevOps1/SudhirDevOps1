@@ -1,8 +1,12 @@
 <div align="center">
 
-<!-- 01 · HERO VIEWFINDER HUD (1280×740) -->
+<!-- 01 · HERO VIEWFINDER HUD (1280×740) — dark/light twins -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="./assets/hero-viewfinder.svg?v=20261106-6" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-viewfinder.svg?v=20261106-6"/>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-viewfinder-light.svg?v=20261106-6"/>
+    <img src="./assets/hero-viewfinder.svg?v=20261106-6" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
+  </picture>
 </a>
 
 <br/><br/>

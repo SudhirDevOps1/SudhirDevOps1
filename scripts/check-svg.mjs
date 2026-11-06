@@ -30,6 +30,7 @@ const BUDGETS = new Map(Object.entries({
   'connect-panel.svg': 120,
   'dev-id.svg': 110,
   'hero-viewfinder.svg': 250,
+  'hero-viewfinder-light.svg': 250,
   'orbital-radar.svg': 120,
   'projects-blueprint.svg': 120,
   'signature.svg': 120,
