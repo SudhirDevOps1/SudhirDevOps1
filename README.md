@@ -2,7 +2,7 @@
 
 <!-- 01 · HERO VIEWFINDER HUD (1280×740) -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
-  <img src="./assets/hero-viewfinder.svg?v=20261105-19" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
+  <img src="./assets/hero-viewfinder.svg?v=20261106-6" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
 </a>
 
 <br/><br/>
@@ -16,22 +16,22 @@
 <br/><br/>
 
 <!-- 02 · WHAT I BUILD — SYSTEMS COMMAND COCKPIT (1280×540) -->
-<img src="./assets/what-i-build.svg?v=20261105-19" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
+<img src="./assets/what-i-build.svg?v=20261106-6" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
 
 <br/><br/>
 
 <!-- 03 · TECH ARSENAL — TACTICAL ORBITAL RADAR HUD (1280×560) -->
-<img src="./assets/orbital-radar.svg?v=20261105-19" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
+<img src="./assets/orbital-radar.svg?v=20261106-6" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
 
 <br/><br/>
 
 <!-- 04 · DEV LANYARD + LIVE TELEMETRY DASHBOARD (1280×620) — GENERATED -->
-<img src="./assets/dev-id.svg?v=20261105-19" width="100%" alt="Swinging dev lanyard ID and live field telemetry dashboard — generated nightly from the GitHub API"/>
+<img src="./assets/dev-id.svg?v=20261106-6" width="100%" alt="Swinging dev lanyard ID and live field telemetry dashboard — generated nightly from the GitHub API"/>
 
 <br/><br/>
 
 <!-- 05 · S-RANK MISSIONS — BLUEPRINT SHEET (1280×520) — GENERATED -->
-<img src="./assets/projects-blueprint.svg?v=20261105-19" width="100%" alt="Mission blueprint: five highest-impact repositories with live star counts"/>
+<img src="./assets/projects-blueprint.svg?v=20261106-6" width="100%" alt="Mission blueprint: five highest-impact repositories with live star counts"/>
 
 <br/><br/>
 
@@ -88,7 +88,7 @@
 <br/><br/>
 
 <!-- 06 · CONNECT — IDENTITY + CHANNELS (1280×460) -->
-<img src="./assets/connect-panel.svg?v=20261105-19" width="100%" alt="Pick a channel to connect with Sudhir Singh"/>
+<img src="./assets/connect-panel.svg?v=20261106-6" width="100%" alt="Pick a channel to connect with Sudhir Singh"/>
 
 <br/>
 
@@ -98,7 +98,7 @@
 
 <br/><br/>
 
-<img src="./assets/signature.svg?v=20261105-19" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
+<img src="./assets/signature.svg?v=20261106-6" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/><br/>
 
@@ -109,7 +109,7 @@
 <!-- STATS:MILESTONES:END -->
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>06 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 06/11/2026, 01:25:27 IST</sub>
+<sub>🤖 Auto-synced <strong>06 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 06/11/2026, 12:09:40 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>
