@@ -59,10 +59,17 @@ async function api(path, tries = 4) {
     const body = await res.text();
     lastError = `${path} -> HTTP ${res.status} ${body.slice(0, 160)}`;
 
-    // 403/429 = rate limit, 5xx = GitHub having a bad day. Both are worth retrying.
-    const retryable = res.status === 403 || res.status === 429 || res.status >= 500;
+    // Handle standard rate limits and GitHub Search API secondary rate limit (403 with x-ratelimit-remaining: 0)
+    const remaining = res.headers.get('x-ratelimit-remaining');
+    const retryAfter = res.headers.get('retry-after');
+    const isRateLimited = res.status === 429 || (res.status === 403 && remaining === '0');
+    const retryable = isRateLimited || res.status === 403 || res.status >= 500;
     if (!retryable) throw new Error(lastError);
-    if (attempt < tries) await sleep((res.status >= 500 ? 2000 : 5000) * attempt);
+
+    if (attempt < tries) {
+      const waitTime = retryAfter ? parseInt(retryAfter, 10) * 1000 : (res.status >= 500 ? 2000 : 5000) * attempt;
+      await sleep(waitTime);
+    }
   }
   throw new Error(`retries exhausted after ${tries} attempts: ${lastError}`);
 }
