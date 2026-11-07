@@ -7,7 +7,7 @@
 
 <br/>
 
-<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser threshold"/>
 
 <br/><br/>
 
@@ -23,7 +23,7 @@
 <br/><br/>
 
 <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C769-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C770-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &#160;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
@@ -42,7 +42,8 @@
 
 <br/><br/>
 
-<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+<!-- 01c · AUTONOMOUS CI/CD PIPELINE STREAM (1280×160) -->
+<img src="./assets/pipeline-flow.svg?v=20261107-9" width="100%" alt="Continuous Integration &amp; Deployment Stream: Source to Telemetry verification"/>
 
 <br/><br/>
 
@@ -63,7 +64,8 @@
 
 <br/><br/>
 
-<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+<!-- 03b · CLOUD INFRASTRUCTURE & ZERO-TRUST MESH (1280×120) -->
+<img src="./assets/cloud-mesh.svg?v=20261107-9" width="100%" alt="Distributed Cloud Infrastructure &amp; Zero-Trust Mesh"/>
 
 <br/><br/>
 
@@ -83,7 +85,7 @@
 <br/><br/>
 
 <!-- STATS:TABLE:START -->
-<div align="center"><sub>📦 <strong>79</strong> repositories &#160;·&#160; ⭐ <strong>44</strong> stars &#160;·&#160; 🍴 <strong>7</strong> forks &#160;·&#160; 💻 <strong>3,769</strong> commits &#160;·&#160; 🔀 <strong>46</strong> pull requests &#160;·&#160; 🐞 <strong>1</strong> issues &#160;·&#160; 👥 <strong>13</strong> followers &#160;·&#160; ✅ verified <strong>07 November 2026</strong></sub></div>
+<div align="center"><sub>📦 <strong>79</strong> repositories &#160;·&#160; ⭐ <strong>44</strong> stars &#160;·&#160; 🍴 <strong>7</strong> forks &#160;·&#160; 💻 <strong>3,770</strong> commits &#160;·&#160; 🔀 <strong>46</strong> pull requests &#160;·&#160; 🐞 <strong>1</strong> issues &#160;·&#160; 👥 <strong>13</strong> followers &#160;·&#160; ✅ verified <strong>07 November 2026</strong></sub></div>
 <!-- STATS:TABLE:END -->
 
 <sub><strong>Data Integrity Invariant:</strong> Every number is pulled directly from the GitHub REST API v3 and Search API during scheduled runs. Zero fake data.</sub>
@@ -141,7 +143,10 @@
 
 <br/><br/>
 
-<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+<!-- ANIMATED GREETING STICKER -->
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://user-images.githubusercontent.com/74038190/214644152-52f47eb3-5e31-4f47-8758-05c9468d5596.gif" width="130" alt="Hello Wave - Let's connect!"/>
+</a>
 
 <br/><br/>
 
@@ -167,7 +172,7 @@
 <!-- STATS:MILESTONES:END -->
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>07 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 07/11/2026, 14:47:04 IST</sub>
+<sub>🤖 Auto-synced <strong>07 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 07/11/2026, 14:53:36 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>

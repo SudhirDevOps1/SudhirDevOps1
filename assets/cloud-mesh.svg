@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" width="100%" height="120" role="img" aria-label="Distributed Cloud Infrastructure &amp; Zero-Trust Mesh">
+  <defs>
+    <linearGradient id="meshBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911"/>
+      <stop offset="50%" stop-color="#0a1222"/>
+      <stop offset="100%" stop-color="#05080f"/>
+    </linearGradient>
+
+    <linearGradient id="nodeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1726" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#080e18" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <style>
+      .radar-spin {
+        transform-origin: 640px 60px;
+        animation: radarSweep 10s linear infinite;
+      }
+      .beacon-blink {
+        animation: beaconBlink 2.5s ease-in-out infinite;
+      }
+      .txt-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      }
+      .txt-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      @keyframes radarSweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes beaconBlink {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #00E5FF); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .radar-spin, .beacon-blink {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="0" y="0" width="1280" height="120" rx="12" fill="url(#meshBg)" stroke="#1e293b" stroke-width="1.2"/>
+  <rect x="2" y="2" width="1276" height="116" rx="10" fill="none" stroke="#A855F7" stroke-width="0.6" stroke-opacity="0.25"/>
+
+  <!-- Center Decorative Radar Grid & Crosshairs -->
+  <g opacity="0.3">
+    <circle cx="640" cy="60" r="45" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="3 5"/>
+    <circle cx="640" cy="60" r="28" fill="none" stroke="#A855F7" stroke-width="1"/>
+    <line x1="580" y1="60" x2="700" y2="60" stroke="#00E5FF" stroke-width="0.75"/>
+    <line x1="640" y1="10" x2="640" y2="110" stroke="#00E5FF" stroke-width="0.75"/>
+  </g>
+
+  <!-- Animated Radar Sweep -->
+  <g class="radar-spin" opacity="0.4">
+    <line x1="640" y1="60" x2="685" y2="60" stroke="#00E5FF" stroke-width="2"/>
+    <polygon points="640,60 685,45 685,60" fill="#00E5FF" opacity="0.2"/>
+  </g>
+
+  <!-- ==================== PILLAR 1: GLOBAL EDGE NETWORK ==================== -->
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="270" height="80" rx="8" fill="url(#nodeBg)" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="18" cy="20" r="4.5" fill="#00E5FF" class="beacon-blink"/>
+    <text x="32" y="24" fill="#FFFFFF" font-size="12" font-weight="700" class="txt-sans">GLOBAL EDGE MESH</text>
+    <text x="250" y="22" text-anchor="end" fill="#00E5FF" font-size="8" class="txt-mono">DNS · CDN</text>
+    <text x="18" y="46" fill="#94a3b8" font-size="10" class="txt-sans">Routing: <tspan fill="#38bdf8">Anycast BGP · Cloudflare CDN</tspan></text>
+    <text x="18" y="64" fill="#10B981" font-size="9" font-weight="bold" class="txt-mono">✔ LATENCY: &lt;12ms · DDOS SHIELD</text>
+  </g>
+
+  <!-- ==================== PILLAR 2: ZERO TRUST & mTLS ==================== -->
+  <g transform="translate(330, 20)">
+    <rect x="0" y="0" width="270" height="80" rx="8" fill="url(#nodeBg)" stroke="#A855F7" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="18" cy="20" r="4.5" fill="#A855F7" class="beacon-blink"/>
+    <text x="32" y="24" fill="#FFFFFF" font-size="12" font-weight="700" class="txt-sans">ZERO TRUST SECURITY</text>
+    <text x="250" y="22" text-anchor="end" fill="#A855F7" font-size="8" class="txt-mono">TLS 1.3</text>
+    <text x="18" y="46" fill="#94a3b8" font-size="10" class="txt-sans">Protocol: <tspan fill="#c084fc">mTLS Mesh · Auto-Renew Certs</tspan></text>
+    <text x="18" y="64" fill="#A855F7" font-size="9" font-weight="bold" class="txt-mono">✔ ENCRYPTED WIRE · ZERO ACCESS</text>
+  </g>
+
+  <!-- ==================== PILLAR 3: LINUX KERNEL SYSTEMS ==================== -->
+  <g transform="translate(680, 20)">
+    <rect x="0" y="0" width="270" height="80" rx="8" fill="url(#nodeBg)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="18" cy="20" r="4.5" fill="#38bdf8" class="beacon-blink"/>
+    <text x="32" y="24" fill="#FFFFFF" font-size="12" font-weight="700" class="txt-sans">LINUX KERNEL CORE</text>
+    <text x="250" y="22" text-anchor="end" fill="#38bdf8" font-size="8" class="txt-mono">eBPF</text>
+    <text x="18" y="46" fill="#94a3b8" font-size="10" class="txt-sans">Tracing: <tspan fill="#38bdf8">cgroups v2 · Systemd · seccomp</tspan></text>
+    <text x="18" y="64" fill="#38bdf8" font-size="9" font-weight="bold" class="txt-mono">✔ KERNEL HARDENED · 100% PROD</text>
+  </g>
+
+  <!-- ==================== PILLAR 4: TERRAFORM IaC ==================== -->
+  <g transform="translate(980, 20)">
+    <rect x="0" y="0" width="270" height="80" rx="8" fill="url(#nodeBg)" stroke="#10B981" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="18" cy="20" r="4.5" fill="#10B981" class="beacon-blink"/>
+    <text x="32" y="24" fill="#FFFFFF" font-size="12" font-weight="700" class="txt-sans">TERRAFORM INFRA (IaC)</text>
+    <text x="250" y="22" text-anchor="end" fill="#10B981" font-size="8" class="txt-mono">STATE</text>
+    <text x="18" y="46" fill="#94a3b8" font-size="10" class="txt-sans">Model: <tspan fill="#34d399">Declarative · Modular · S3 Remote</tspan></text>
+    <text x="18" y="64" fill="#10B981" font-size="9" font-weight="bold" class="txt-mono">✔ DRIFT: 0 · REPRODUCIBLE</text>
+  </g>
+</svg>
