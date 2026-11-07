@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 32" width="100%" height="32" role="img" aria-label="Cybernetic Laser Divider">
+  <defs>
+    <linearGradient id="divBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#A855F7" stop-opacity="0.9"/>
+      <stop offset="85%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glowDiv" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .laser-pulse {
+        animation: laserSweep 4s ease-in-out infinite alternate;
+      }
+      .laser-pulse-rev {
+        animation: laserSweepRev 4s ease-in-out infinite alternate;
+      }
+      .beacon-glow {
+        animation: beaconPulse 2s ease-in-out infinite;
+      }
+      .text-shimmer {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        font-size: 9px;
+        letter-spacing: 2.5px;
+        fill: #38bdf8;
+        opacity: 0.85;
+      }
+
+      @keyframes laserSweep {
+        0% { transform: translateX(200px); }
+        100% { transform: translateX(880px); }
+      }
+      @keyframes laserSweepRev {
+        0% { transform: translateX(980px); }
+        100% { transform: translateX(300px); }
+      }
+      @keyframes beaconPulse {
+        0%, 100% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.35); opacity: 1; filter: drop-shadow(0 0 8px #00E5FF); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .laser-pulse, .laser-pulse-rev, .beacon-glow {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Grid Guide Lines -->
+  <line x1="80" y1="16" x2="1200" y2="16" stroke="url(#divBg)" stroke-width="1.2" stroke-dasharray="8 6"/>
+  <line x1="280" y1="16" x2="1000" y2="16" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Animated Laser Pulse Wave 1 -->
+  <g class="laser-pulse">
+    <ellipse cx="0" cy="16" rx="90" ry="2" fill="url(#laserBeam)" filter="url(#glowDiv)"/>
+    <circle cx="0" cy="16" r="2.5" fill="#FFFFFF" filter="url(#glowDiv)"/>
+  </g>
+
+  <!-- Animated Laser Pulse Wave 2 (Reverse) -->
+  <g class="laser-pulse-rev">
+    <ellipse cx="0" cy="16" rx="70" ry="1.8" fill="url(#laserBeam)" filter="url(#glowDiv)"/>
+    <circle cx="0" cy="16" r="2" fill="#00E5FF"/>
+  </g>
+
+  <!-- Center Hex Reticle Badge -->
+  <g transform="translate(640, 16)">
+    <rect x="-115" y="-10" width="230" height="20" rx="10" fill="#090d16" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="-95" cy="0" r="3.5" fill="#00E5FF" class="beacon-glow"/>
+    <circle cx="95" cy="0" r="3.5" fill="#A855F7" class="beacon-glow"/>
+    <text x="0" y="3.5" text-anchor="middle" class="text-shimmer">⚡ DEVOPS PROTOCOL // LIVE ⚡</text>
+  </g>
+</svg>

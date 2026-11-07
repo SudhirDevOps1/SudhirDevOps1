@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="100%" height="360" role="img" aria-label="DevOps Hyper-Core CI/CD Autonomous Reactor">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="reactorBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#0a101f"/>
+      <stop offset="100%" stop-color="#05080f"/>
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1726" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#080e18" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <linearGradient id="greenPulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#A855F7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="coreAura" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .spin-cw {
+        transform-origin: 640px 180px;
+        animation: spinCW 22s linear infinite;
+      }
+      .spin-ccw {
+        transform-origin: 640px 180px;
+        animation: spinCCW 15s linear infinite;
+      }
+      .spin-fast {
+        transform-origin: 640px 180px;
+        animation: spinCW 8s linear infinite;
+      }
+      .reactor-pulse {
+        animation: reactorHeartbeat 3s ease-in-out infinite;
+      }
+      .conduit-flow {
+        stroke-dasharray: 8 14;
+        animation: conduitFlow 1.8s linear infinite;
+      }
+      .conduit-flow-rev {
+        stroke-dasharray: 8 14;
+        animation: conduitFlowRev 1.8s linear infinite;
+      }
+      .led-blink-green {
+        animation: ledBlinkGreen 2s ease-in-out infinite;
+      }
+      .led-blink-cyan {
+        animation: ledBlinkCyan 2.4s ease-in-out infinite;
+      }
+      .led-blink-purple {
+        animation: ledBlinkPurple 2.2s ease-in-out infinite;
+      }
+      .txt-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+      }
+      .txt-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      @keyframes spinCW {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes spinCCW {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes reactorHeartbeat {
+        0%, 100% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 10px #00E5FF); }
+        50% { transform: scale(1.08); opacity: 1; filter: drop-shadow(0 0 25px #A855F7); }
+      }
+      @keyframes conduitFlow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -44; }
+      }
+      @keyframes conduitFlowRev {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 44; }
+      }
+      @keyframes ledBlinkGreen {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #10B981); }
+      }
+      @keyframes ledBlinkCyan {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #00E5FF); }
+      }
+      @keyframes ledBlinkPurple {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #A855F7); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .spin-cw, .spin-ccw, .spin-fast, .reactor-pulse, .conduit-flow, .conduit-flow-rev,
+        .led-blink-green, .led-blink-cyan, .led-blink-purple {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="0" y="0" width="1280" height="360" rx="16" fill="url(#reactorBg)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect x="2" y="2" width="1276" height="356" rx="14" fill="none" stroke="#00E5FF" stroke-width="0.75" stroke-opacity="0.3"/>
+
+  <!-- Top Banner / HUD Header -->
+  <g transform="translate(30, 28)">
+    <circle cx="6" cy="6" r="4" fill="#10B981" class="led-blink-green"/>
+    <text x="20" y="10" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="2" class="txt-mono">DEVOPS HYPER-CORE // AUTONOMOUS CI/CD RUNTIME REACTOR</text>
+    <text x="1220" y="10" text-anchor="end" fill="#94a3b8" font-size="10" letter-spacing="1.5" class="txt-mono">STATUS: <tspan fill="#10B981" font-weight="bold">ONLINE</tspan> · MESH: <tspan fill="#00E5FF" font-weight="bold">SYNCED</tspan> · LATENCY: <tspan fill="#A855F7">&lt;1.2ms</tspan></text>
+    <line x1="0" y1="18" x2="1220" y2="18" stroke="#1e293b" stroke-width="1"/>
+  </g>
+
+  <!-- Energy Conduits Connecting Cards to Center Reactor -->
+  <!-- Left Top Conduit -->
+  <path d="M 330 115 L 530 115 L 590 155" fill="none" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.8" class="conduit-flow"/>
+  <!-- Left Bottom Conduit -->
+  <path d="M 330 255 L 530 255 L 590 205" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.8" class="conduit-flow"/>
+  <!-- Right Top Conduit -->
+  <path d="M 950 115 L 750 115 L 690 155" fill="none" stroke="#A855F7" stroke-width="2" stroke-opacity="0.8" class="conduit-flow-rev"/>
+  <!-- Right Bottom Conduit -->
+  <path d="M 950 255 L 750 255 L 690 205" fill="none" stroke="#10B981" stroke-width="2" stroke-opacity="0.8" class="conduit-flow-rev"/>
+
+  <!-- ==================== LEFT MODULE 1: CONTAINER RUNTIME ==================== -->
+  <g transform="translate(40, 65)">
+    <rect x="0" y="0" width="290" height="110" rx="10" fill="url(#cardGrad)" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.4"/>
+    <!-- Corner Accents -->
+    <path d="M 0 14 L 0 0 L 14 0" fill="none" stroke="#00E5FF" stroke-width="2"/>
+    <path d="M 290 96 L 290 110 L 276 110" fill="none" stroke="#00E5FF" stroke-width="2"/>
+    
+    <circle cx="20" cy="22" r="5" fill="#00E5FF" class="led-blink-cyan"/>
+    <text x="34" y="26" fill="#FFFFFF" font-size="12" font-weight="700" letter-spacing="1" class="txt-sans">CONTAINER MESH</text>
+    <text x="270" y="24" text-anchor="end" fill="#00E5FF" font-size="9" class="txt-mono">OCI ENGINE</text>
+
+    <text x="20" y="52" fill="#94a3b8" font-size="11" class="txt-sans">Runtime: <tspan fill="#38bdf8" font-weight="600">Docker · Podman · containerd</tspan></text>
+    <text x="20" y="72" fill="#94a3b8" font-size="11" class="txt-sans">Isolation: <tspan fill="#e2e8f0">Namespaces · cgroups v2</tspan></text>
+    <text x="20" y="94" fill="#00E5FF" font-size="10" font-weight="600" class="txt-mono">[12 CLUSTERS ACTIVE · 0 CRASH]</text>
+  </g>
+
+  <!-- ==================== LEFT MODULE 2: K8S ORCHESTRATION ==================== -->
+  <g transform="translate(40, 200)">
+    <rect x="0" y="0" width="290" height="110" rx="10" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4"/>
+    <path d="M 0 14 L 0 0 L 14 0" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M 290 96 L 290 110 L 276 110" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+    <circle cx="20" cy="22" r="5" fill="#38bdf8" class="led-blink-cyan"/>
+    <text x="34" y="26" fill="#FFFFFF" font-size="12" font-weight="700" letter-spacing="1" class="txt-sans">KUBERNETES CONTROL</text>
+    <text x="270" y="24" text-anchor="end" fill="#38bdf8" font-size="9" class="txt-mono">K8s v1.31</text>
+
+    <text x="20" y="52" fill="#94a3b8" font-size="11" class="txt-sans">Topology: <tspan fill="#38bdf8" font-weight="600">Helm 3 · ArgoCD · Ingress NGINX</tspan></text>
+    <text x="20" y="72" fill="#94a3b8" font-size="11" class="txt-sans">Deployment: <tspan fill="#e2e8f0">Rolling · Zero-Downtime Canary</tspan></text>
+    <text x="20" y="94" fill="#38bdf8" font-size="10" font-weight="600" class="txt-mono">[AUTOSCALING: READY · REPLICAS: 100%]</text>
+  </g>
+
+  <!-- ==================== CENTER: HYPER-CORE REACTOR ==================== -->
+  <g id="centerReactor">
+    <!-- Ambient Core Glow -->
+    <circle cx="640" cy="180" r="100" fill="url(#coreGlow)"/>
+
+    <!-- Outer Degree Scale Reticle -->
+    <circle cx="640" cy="180" r="85" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="2 6"/>
+    
+    <!-- Outer Gear Ring (Spin CW) -->
+    <g class="spin-cw">
+      <circle cx="640" cy="180" r="74" fill="none" stroke="url(#cyanPurple)" stroke-width="1.8" stroke-dasharray="14 10 32 8 6 12"/>
+      <circle cx="640" cy="106" r="3.5" fill="#00E5FF" filter="url(#neonGlow)"/>
+      <circle cx="640" cy="254" r="3.5" fill="#A855F7" filter="url(#neonGlow)"/>
+      <circle cx="566" cy="180" r="3.5" fill="#10B981" filter="url(#neonGlow)"/>
+      <circle cx="714" cy="180" r="3.5" fill="#00E5FF" filter="url(#neonGlow)"/>
+    </g>
+
+    <!-- Inner Counter-Rotating Ring (Spin CCW) -->
+    <g class="spin-ccw">
+      <circle cx="640" cy="180" r="54" fill="none" stroke="#00E5FF" stroke-width="2" stroke-dasharray="35 15 5 15"/>
+      <polygon points="640,128 644,136 636,136" fill="#00E5FF"/>
+      <polygon points="640,232 644,224 636,224" fill="#A855F7"/>
+    </g>
+
+    <!-- Fast Inner Kinetic Turbine -->
+    <g class="spin-fast">
+      <circle cx="640" cy="180" r="36" fill="none" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="8 6"/>
+    </g>
+
+    <!-- Pulsing Nuclear Core Heart -->
+    <g transform="translate(640, 180)">
+      <g class="reactor-pulse">
+        <circle cx="0" cy="0" r="22" fill="#090d16" stroke="#00E5FF" stroke-width="2"/>
+        <circle cx="0" cy="0" r="14" fill="url(#cyanPurple)" filter="url(#coreAura)"/>
+        <circle cx="0" cy="0" r="7" fill="#FFFFFF"/>
+      </g>
+    </g>
+
+    <!-- Core Diagnostic Label -->
+    <text x="640" y="295" text-anchor="middle" fill="#00E5FF" font-size="11" font-weight="700" letter-spacing="2" class="txt-mono">SYNCHRONIZED MESH</text>
+    <text x="640" y="312" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="1" class="txt-mono">CORE HARMONICS: 432 Hz · ZERO DRIFT</text>
+  </g>
+
+  <!-- ==================== RIGHT MODULE 1: CI/CD AUTOMATION ==================== -->
+  <g transform="translate(950, 65)">
+    <rect x="0" y="0" width="290" height="110" rx="10" fill="url(#cardGrad)" stroke="#A855F7" stroke-width="1" stroke-opacity="0.4"/>
+    <path d="M 0 14 L 0 0 L 14 0" fill="none" stroke="#A855F7" stroke-width="2"/>
+    <path d="M 290 96 L 290 110 L 276 110" fill="none" stroke="#A855F7" stroke-width="2"/>
+
+    <circle cx="20" cy="22" r="5" fill="#A855F7" class="led-blink-purple"/>
+    <text x="34" y="26" fill="#FFFFFF" font-size="12" font-weight="700" letter-spacing="1" class="txt-sans">CI/CD AUTOMATION</text>
+    <text x="270" y="24" text-anchor="end" fill="#A855F7" font-size="9" class="txt-mono">ACTIONS CI</text>
+
+    <text x="20" y="52" fill="#94a3b8" font-size="11" class="txt-sans">Pipelines: <tspan fill="#c084fc" font-weight="600">GitHub Actions · GitOps Workflow</tspan></text>
+    <text x="20" y="72" fill="#94a3b8" font-size="11" class="txt-sans">Verification: <tspan fill="#e2e8f0">Quality Gates · XML · Parity</tspan></text>
+    <text x="20" y="94" fill="#A855F7" font-size="10" font-weight="600" class="txt-mono">[DAILY CRON: ENABLED · 100% GREEN]</text>
+  </g>
+
+  <!-- ==================== RIGHT MODULE 2: INFRASTRUCTURE AS CODE ==================== -->
+  <g transform="translate(950, 200)">
+    <rect x="0" y="0" width="290" height="110" rx="10" fill="url(#cardGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+    <path d="M 0 14 L 0 0 L 14 0" fill="none" stroke="#10B981" stroke-width="2"/>
+    <path d="M 290 96 L 290 110 L 276 110" fill="none" stroke="#10B981" stroke-width="2"/>
+
+    <circle cx="20" cy="22" r="5" fill="#10B981" class="led-blink-green"/>
+    <text x="34" y="26" fill="#FFFFFF" font-size="12" font-weight="700" letter-spacing="1" class="txt-sans">HARDENED INFRASTRUCTURE</text>
+    <text x="270" y="24" text-anchor="end" fill="#10B981" font-size="9" class="txt-mono">IaC MESH</text>
+
+    <text x="20" y="52" fill="#94a3b8" font-size="11" class="txt-sans">Stack: <tspan fill="#34d399" font-weight="600">Terraform · Linux Kernel · Bash</tspan></text>
+    <text x="20" y="72" fill="#94a3b8" font-size="11" class="txt-sans">Security: <tspan fill="#e2e8f0">TLS 1.3 · Zero Trust · AppArmor</tspan></text>
+    <text x="20" y="94" fill="#10B981" font-size="10" font-weight="600" class="txt-mono">[STATE: CONVERGED · DRIFT: 0]</text>
+  </g>
+
+  <!-- Bottom Diagnostic Footer -->
+  <g transform="translate(30, 338)">
+    <text x="0" y="10" fill="#475569" font-size="10" letter-spacing="1" class="txt-mono">CORE_ID: DEVOPS-77-3734 // AUTONOMOUS RUNTIME // ZERO FAKE DATA GUARANTEE</text>
+    <text x="1220" y="10" text-anchor="end" fill="#475569" font-size="10" letter-spacing="1" class="txt-mono">ARCHITECTURE: ARM64/x86_64 · PRODUCTION VERIFIED</text>
+  </g>
+</svg>

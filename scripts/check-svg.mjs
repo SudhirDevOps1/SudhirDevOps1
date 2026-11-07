@@ -38,6 +38,8 @@ const BUDGETS = new Map(Object.entries({
   'what-i-build.svg': 120,
   'repo-spotlight.svg': 8,
   'streak-buddy.svg': 3,
+  'cyber-divider.svg': 15,
+  'devops-reactor.svg': 50,
 }));
 
 function budgetOf(file) {

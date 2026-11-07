@@ -1,51 +1,89 @@
 <div align="center">
 
+<!-- DYNAMIC ANIMATED TYPING HEADLINE -->
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=1000&color=00E5FF&center=true&vCenter=true&width=780&lines=DevOps+%26+Cloud+Systems+Engineer;Automating+Zero-Downtime+CI%2FCD+Pipelines;Container+Mesh+%26+Kubernetes+Orchestration;Building+High-Performance+Distributed+Systems;Obsessed+with+Precision+Telemetry+%26+Zero+Fake+Data" alt="Dynamic Typing Header"/>
+</a>
+
+<br/>
+
+<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+
+<br/><br/>
+
 <!-- 01 · HERO VIEWFINDER HUD (1280×740) — dark/light twins -->
 <a href="https://github.com/SudhirDevOps1" target="_blank">
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-viewfinder.svg?v=20261107-5"/>
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-viewfinder-light.svg?v=20261107-5"/>
-    <img src="./assets/hero-viewfinder.svg?v=20261107-5" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-viewfinder.svg?v=20261107-9"/>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-viewfinder-light.svg?v=20261107-9"/>
+    <img src="./assets/hero-viewfinder.svg?v=20261107-9" width="100%" alt="Sudhir Singh — cinema viewfinder HUD: open-to-work pill, gradient name, live zsh session running the profile pipeline, code card with BUILD PASS stamp and his tool grid"/>
   </picture>
 </a>
 
 <br/><br/>
 
 <!-- STATS:HERO:START -->
-  <img src="https://img.shields.io/badge/Commits-3%2C126-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  <img src="https://img.shields.io/badge/Commits-3%2C769-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
   &#160;
   <img src="https://img.shields.io/badge/Pull_Requests-46-4ECDC4?style=for-the-badge&logo=gitkraken&logoColor=white" alt="Pull requests"/>
 <!-- STATS:HERO:END -->
 
 <br/><br/>
 
+<!-- REAL-TIME DEVELOPER WORKSTATION // CINEMA CODING GIF -->
+<a href="https://github.com/SudhirDevOps1">
+  <img src="https://user-images.githubusercontent.com/74038190/212749171-b84692a8-2b04-4e3b-93ca-ac14705da224.gif" width="560" alt="Development workstation - automated CI/CD and systems engineering"/>
+</a>
+
+<br/><br/>
+
+<!-- 01b · DEVOPS HYPER-CORE — AUTONOMOUS CI/CD REACTOR (1280×360) -->
+<img src="./assets/devops-reactor.svg?v=20261107-9" width="100%" alt="DevOps Hyper-Core CI/CD Autonomous Reactor: container runtime mesh, Kubernetes control plane, automated verification gates, and hardened IaC"/>
+
+<br/><br/>
+
+<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+
+<br/><br/>
+
 <!-- 02 · WHAT I BUILD — SYSTEMS COMMAND COCKPIT (1280×540) -->
-<img src="./assets/what-i-build.svg?v=20261107-5" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
+<img src="./assets/what-i-build.svg?v=20261107-9" width="100%" alt="Systems Engineering Command Center: local-first cockpits with audio DSP waveform, autonomous CI/CD pipelines, and hardened containerized mesh"/>
 
 <br/><br/>
 
 <!-- 03 · TECH ARSENAL — TACTICAL ORBITAL RADAR HUD (1280×560) -->
-<img src="./assets/orbital-radar.svg?v=20261107-5" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
+<img src="./assets/orbital-radar.svg?v=20261107-9" width="100%" alt="Tech arsenal: 12 production engineering tools tracked across an orbital radar HUD with real-time sweep cone and capability telemetry matrix"/>
+
+<br/><br/>
+
+<!-- INTERACTIVE ANIMATED TECH STACK (SKILL ICONS) -->
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=linux,docker,kubernetes,git,github,githubactions,bash,python,ts,js,nodejs,tailwind,vscode,powershell&theme=dark" alt="Interactive Animated Tech Stack"/>
+</a>
+
+<br/><br/>
+
+<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
 
 <br/><br/>
 
 <!-- 04 · DEV LANYARD + LIVE TELEMETRY DASHBOARD (1280×620) — GENERATED -->
-<img src="./assets/dev-id.svg?v=20261107-5" width="100%" alt="Swinging dev lanyard ID and live field telemetry dashboard — generated nightly from the GitHub API"/>
+<img src="./assets/dev-id.svg?v=20261107-9" width="100%" alt="Swinging dev lanyard ID and live field telemetry dashboard — generated nightly from the GitHub API"/>
 
 <br/><br/>
 
 <!-- 05 · S-RANK MISSIONS — BLUEPRINT SHEET (1280×520) — GENERATED -->
-<img src="./assets/projects-blueprint.svg?v=20261107-5" width="100%" alt="Mission blueprint: five highest-impact repositories with live star counts"/>
+<img src="./assets/projects-blueprint.svg?v=20261107-9" width="100%" alt="Mission blueprint: five highest-impact repositories with live star counts"/>
 
 <br/><br/>
 
 <!-- 05b · SHIP LOG — WHAT SHIPPED YESTERDAY (1280×330) — GENERATED -->
-<img src="./assets/build-log.svg?v=20261107-5" width="100%" alt="Ship log: real public commits authored in the last 7 days, regenerated nightly from the GitHub commit search API"/>
+<img src="./assets/build-log.svg?v=20261107-9" width="100%" alt="Ship log: real public commits authored in the last 7 days, regenerated nightly from the GitHub commit search API"/>
 
 <br/><br/>
 
 <!-- STATS:TABLE:START -->
-<div align="center"><sub>📦 <strong>78</strong> repositories &#160;·&#160; ⭐ <strong>44</strong> stars &#160;·&#160; 🍴 <strong>7</strong> forks &#160;·&#160; 💻 <strong>3,126</strong> commits &#160;·&#160; 🔀 <strong>46</strong> pull requests &#160;·&#160; 🐞 <strong>1</strong> issues &#160;·&#160; 👥 <strong>13</strong> followers &#160;·&#160; ✅ verified <strong>07 November 2026</strong></sub></div>
+<div align="center"><sub>📦 <strong>79</strong> repositories &#160;·&#160; ⭐ <strong>44</strong> stars &#160;·&#160; 🍴 <strong>7</strong> forks &#160;·&#160; 💻 <strong>3,769</strong> commits &#160;·&#160; 🔀 <strong>46</strong> pull requests &#160;·&#160; 🐞 <strong>1</strong> issues &#160;·&#160; 👥 <strong>13</strong> followers &#160;·&#160; ✅ verified <strong>07 November 2026</strong></sub></div>
 <!-- STATS:TABLE:END -->
 
 <sub><strong>Data Integrity Invariant:</strong> Every number is pulled directly from the GitHub REST API v3 and Search API during scheduled runs. Zero fake data.</sub>
@@ -72,7 +110,7 @@
 
 <a href="https://github.com/SudhirDevOps1?tab=repositories">
 <!-- STATS:REPOS:START -->
-  <img src="https://img.shields.io/badge/Browse_All_Repositories-78_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
+  <img src="https://img.shields.io/badge/Browse_All_Repositories-79_Projects-36BCF7?style=for-the-badge&logo=github&logoColor=white" alt="All Repos"/>
 <!-- STATS:REPOS:END -->
 </a>
 
@@ -98,13 +136,17 @@
 
 <!-- 07 · STREAK BUDDY — REAL-TIME CONTRIBUTION CADENCE (620×200) -->
 <a href="https://github.com/SudhirDevOps1">
-  <img src="./assets/streak-buddy.svg?v=20261107-5" width="620" alt="Contribution streak: verified live via GitHub GraphQL API"/>
+  <img src="./assets/streak-buddy.svg?v=20261107-9" width="620" alt="Contribution streak: verified live via GitHub GraphQL API"/>
 </a>
 
 <br/><br/>
 
+<img src="./assets/cyber-divider.svg?v=20261107-9" width="100%" alt="Cybernetic laser divider"/>
+
+<br/><br/>
+
 <!-- 06 · CONNECT — IDENTITY + CHANNELS (1280×460) -->
-<img src="./assets/connect-panel.svg?v=20261107-5" width="100%" alt="Pick a channel to connect with Sudhir Singh"/>
+<img src="./assets/connect-panel.svg?v=20261107-9" width="100%" alt="Pick a channel to connect with Sudhir Singh"/>
 
 <br/>
 
@@ -114,7 +156,7 @@
 
 <br/><br/>
 
-<img src="./assets/signature.svg?v=20261107-5" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
+<img src="./assets/signature.svg?v=20261107-9" width="520" alt="Sudhir Singh — signed, sudo ship_it with passion, zero fake data"/>
 
 <br/><br/>
 
@@ -125,7 +167,7 @@
 <!-- STATS:MILESTONES:END -->
 
 <!-- STATS:SYNC:START -->
-<sub>🤖 Auto-synced <strong>07 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 07/11/2026, 11:25:56 IST</sub>
+<sub>🤖 Auto-synced <strong>07 November 2026</strong> &bull; every number above pulled live from the GitHub API &bull; last run 07/11/2026, 14:47:04 IST</sub>
 <!-- STATS:SYNC:END -->
 
 </div>
