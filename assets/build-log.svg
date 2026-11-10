@@ -42,49 +42,49 @@
 
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.18s forwards">
     <rect x="56" y="112" width="3" height="30" rx="1.5" fill="#36BCF7"/>
-    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">FlowTrack-Pro</text>
-    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci(dependabot): enforce atomic CodeQL grouping and block major br…</text>
-    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">3846f32</text>
+    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">recast</text>
+    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs: enterprise-grade README and documentation set</text>
+    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">de9b699</text>
     <text x="1232" y="124" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="149" x2="1240" y2="149" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.29s forwards">
     <rect x="56" y="146" width="3" height="30" rx="1.5" fill="#A855F7"/>
-    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">FlowTrack-Pro</text>
-    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci: synchronize github/codeql-action to 4.39.3 and modernize tsco…</text>
-    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">a91ca22</text>
+    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">recast</text>
+    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs(status): record the per-file SHA preview and the mobile stic…</text>
+    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">a579803</text>
     <text x="1232" y="158" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="183" x2="1240" y2="183" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.4s forwards">
     <rect x="56" y="180" width="3" height="30" rx="1.5" fill="#3FB950"/>
     <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">recast</text>
-    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(settings): Diagnostics section with Copy diagnostics bundle</text>
-    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">822721e</text>
+    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(website): per-file SHA-256 preview and a mobile sticky downl…</text>
+    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">bfb36ec</text>
     <text x="1232" y="192" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="217" x2="1240" y2="217" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.51s forwards">
     <rect x="56" y="214" width="3" height="30" rx="1.5" fill="#FBBF24"/>
     <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">recast</text>
-    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs(status): record the P0 capture-hardening state honestly</text>
-    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">525a145</text>
+    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(website): drop the unused failed flag from the release state</text>
+    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">a3359c2</text>
     <text x="1232" y="226" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="251" x2="1240" y2="251" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.62s forwards">
     <rect x="56" y="248" width="3" height="30" rx="1.5" fill="#36BCF7"/>
     <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">recast</text>
-    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">test(capture): the encoder fallback chain can never escape a raw…</text>
-    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">223124f</text>
+    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(website): lift the muted label colour to AA contrast</text>
+    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">c8be647</text>
     <text x="1232" y="260" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="285" x2="1240" y2="285" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.73s forwards">
     <rect x="56" y="282" width="3" height="30" rx="1.5" fill="#A855F7"/>
     <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">recast</text>
-    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(capture): root-cause the Windows &apos;Not supported&apos; recording fa…</text>
-    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">0ed43d4</text>
+    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs(status): v0.1.2 is released and the website download UX is v…</text>
+    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">2302665</text>
     <text x="1232" y="294" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="319" x2="1240" y2="319" stroke="#1C2128" stroke-width="1"/>
   </g>
