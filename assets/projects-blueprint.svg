@@ -125,8 +125,8 @@
     <line class="rowGlow rg-3" x1="48" y1="340" x2="1232" y2="340" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="374" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M4</text>
     <circle cx="118" cy="356" r="3" fill="#38BDF8" class="bpPulse"/>
-    <text x="130" y="360" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FlowTrack-Pro</text>
-    <text x="130" y="380" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">🚀 FlowTrack Pro: Local-first productivity &amp; study tracker ecosystem. A…</text>
+    <text x="130" y="360" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FormForge</text>
+    <text x="130" y="380" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">No description yet — the code speaks first.</text>
 
     <rect x="880" y="348" width="356" height="12" rx="6" fill="#0E2233"/>
     <rect x="880" y="348" width="85" height="12" rx="6" fill="url(#bpBarG)"/>
@@ -139,8 +139,8 @@
     <line class="rowGlow rg-4" x1="48" y1="412" x2="1232" y2="412" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="446" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M5</text>
     <circle cx="118" cy="428" r="3" fill="#38BDF8" class="bpPulse"/>
-    <text x="130" y="432" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FormForge</text>
-    <text x="130" y="452" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">No description yet — the code speaks first.</text>
+    <text x="130" y="432" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FlowTrack-Pro</text>
+    <text x="130" y="452" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">🚀 FlowTrack Pro: Local-first productivity &amp; study tracker ecosystem. A…</text>
 
     <rect x="880" y="420" width="356" height="12" rx="6" fill="#0E2233"/>
     <rect x="880" y="420" width="85" height="12" rx="6" fill="url(#bpBarG)"/>
