@@ -42,49 +42,49 @@
 
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.18s forwards">
     <rect x="56" y="112" width="3" height="30" rx="1.5" fill="#36BCF7"/>
-    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">recast</text>
-    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci: drop unused err binding in audio-mixer blob-URL fallback (lin…</text>
-    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">ccf5658</text>
+    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">SudhirDevOps1</text>
+    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(calendar): refresh 3D contribution calendar</text>
+    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">3a18df8</text>
     <text x="1232" y="124" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="149" x2="1240" y2="149" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.29s forwards">
     <rect x="56" y="146" width="3" height="30" rx="1.5" fill="#A855F7"/>
-    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">recast</text>
-    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(recorder): anchor capture clock to epoch, exclude toolbar, an…</text>
-    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">b3a08bb</text>
+    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">SudhirDevOps1</text>
+    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(stats): daily profile telemetry sync [skip ci]</text>
+    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">67428d2</text>
     <text x="1232" y="158" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="183" x2="1240" y2="183" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.4s forwards">
     <rect x="56" y="180" width="3" height="30" rx="1.5" fill="#3FB950"/>
     <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">recast</text>
-    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(packaging): add dist:msi script</text>
-    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">79229ba</text>
+    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci: drop unused err binding in audio-mixer blob-URL fallback (lin…</text>
+    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">ccf5658</text>
     <text x="1232" y="192" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="217" x2="1240" y2="217" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.51s forwards">
     <rect x="56" y="214" width="3" height="30" rx="1.5" fill="#FBBF24"/>
     <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">recast</text>
-    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(packaging): add local NSIS build command dist:nsis</text>
-    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">44b5e9f</text>
+    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(recorder): anchor capture clock to epoch, exclude toolbar, an…</text>
+    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">b3a08bb</text>
     <text x="1232" y="226" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="251" x2="1240" y2="251" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.62s forwards">
     <rect x="56" y="248" width="3" height="30" rx="1.5" fill="#36BCF7"/>
     <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">recast</text>
-    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(editor): add interactive frame cropping, webcam bubble contr…</text>
-    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">a354c9b</text>
+    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(packaging): add dist:msi script</text>
+    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">79229ba</text>
     <text x="1232" y="260" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="285" x2="1240" y2="285" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.73s forwards">
     <rect x="56" y="282" width="3" height="30" rx="1.5" fill="#A855F7"/>
     <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">recast</text>
-    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(editor): fix cursor loading and zoom camera viewport bounds</text>
-    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">cd62c7d</text>
+    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(packaging): add local NSIS build command dist:nsis</text>
+    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">44b5e9f</text>
     <text x="1232" y="294" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="319" x2="1240" y2="319" stroke="#1C2128" stroke-width="1"/>
   </g>
