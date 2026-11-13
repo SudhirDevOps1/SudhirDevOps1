@@ -111,7 +111,7 @@
     <line class="rowGlow rg-2" x1="48" y1="268" x2="1232" y2="268" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="302" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M3</text>
     <circle cx="118" cy="284" r="3" fill="#38BDF8" class="bpPulse"/>
-    <text x="130" y="288" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">NovaPulse</text>
+    <text x="130" y="288" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FormForge</text>
     <text x="130" y="308" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">No description yet — the code speaks first.</text>
 
     <rect x="880" y="276" width="356" height="12" rx="6" fill="#0E2233"/>
@@ -119,13 +119,13 @@
     <text x="880" y="274" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">STARS</text>
     <text x="1236" y="287" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" font-weight="700" fill="#FBBF24">2</text>
     <circle cx="1157" cy="282" r="4.2" fill="#FBBF24"/>
-    <text x="880" y="302" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">JavaScript</tspan> · FORKS 1</text>
+    <text x="880" y="302" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">TypeScript</tspan> · FORKS 1</text>
   </g>
   <g>
     <line class="rowGlow rg-3" x1="48" y1="340" x2="1232" y2="340" stroke="#16324F" stroke-width="1.2"/>
     <text x="56" y="374" font-family="'Archivo Black', 'Futura Black', sans-serif" font-size="21" fill="#38BDF8" letter-spacing="1.5">M4</text>
     <circle cx="118" cy="356" r="3" fill="#38BDF8" class="bpPulse"/>
-    <text x="130" y="360" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">FormForge</text>
+    <text x="130" y="360" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13.5" font-weight="700" fill="#E2E8F0">NovaPulse</text>
     <text x="130" y="380" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#7A8699">No description yet — the code speaks first.</text>
 
     <rect x="880" y="348" width="356" height="12" rx="6" fill="#0E2233"/>
@@ -133,7 +133,7 @@
     <text x="880" y="346" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">STARS</text>
     <text x="1236" y="359" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" font-weight="700" fill="#FBBF24">2</text>
     <circle cx="1157" cy="354" r="4.2" fill="#FBBF24"/>
-    <text x="880" y="374" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">TypeScript</tspan> · FORKS 1</text>
+    <text x="880" y="374" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" fill="#5F7890" letter-spacing="1.1">LANG  <tspan fill="#38BDF8">JavaScript</tspan> · FORKS 1</text>
   </g>
   <g>
     <line class="rowGlow rg-4" x1="48" y1="412" x2="1232" y2="412" stroke="#16324F" stroke-width="1.2"/>
