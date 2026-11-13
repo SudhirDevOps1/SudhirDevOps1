@@ -28,8 +28,14 @@ function runStep(name, script) {
 // 1. Run SVG quality gate
 runStep('SVG Quality Gate', 'scripts/check-svg.mjs');
 
-// 2. Run README health check
-runStep('README & Link Health Gate', 'scripts/check-readme-health.mjs');
+// 2. Run README health check. Network-dependent, so it is skipped with --offline:
+// the daily stats job must never lose its commit because github.com answered 502.
+const OFFLINE = process.argv.includes('--offline');
+if (OFFLINE) {
+  console.log('\n⏭  [SKIP] README & Link Health Gate (offline mode)');
+} else {
+  runStep('README & Link Health Gate', 'scripts/check-readme-health.mjs');
+}
 
 // 3. Cross-file Data Parity Check
 console.log('\n▶ [STEP] Cross-File Telemetry Parity Check...');

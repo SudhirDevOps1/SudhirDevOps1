@@ -26,6 +26,11 @@ const BLUEPRINT_SVG = 'assets/projects-blueprint.svg';
 const BUILD_LOG_SVG = 'assets/build-log.svg';
 const CONCURRENCY = 8;
 const ATTEMPTS = 3;
+// GitHub's own HTML pages answer 502/504 under load often enough that a single
+// bad second must never be reported as a dead link. Transient failures get a
+// longer ladder before they are allowed to turn the profile red.
+const RETRYABLE_ATTEMPTS = 5;
+const RETRYABLE_BACKOFF_MS = 2500;
 const MIN_BYTES = 200;
 // The daily stats job rewrites the streak card, so it should never be older
 // than a couple of days. Anything beyond this means the job silently stopped.
@@ -84,26 +89,32 @@ async function checkOnce(url) {
   const looksSvg = body.trimStart().startsWith('<svg') || body.includes('<svg');
   const isImage = /^image\//i.test(type) || looksSvg;
 
-  if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
+  if (!res.ok) return { ok: false, reason: `HTTP ${res.status}`, retryable: res.status >= 500 };
   if (!isImage) return { ok: false, reason: `not an image (${type || 'unknown'})` };
   if (body.length < MIN_BYTES) return { ok: false, reason: `body too small (${body.length} bytes)` };
 
   const marker = ERROR_MARKERS.find((m) => body.includes(m));
-  if (marker) return { ok: false, reason: `error card: "${marker}"` };
+  if (marker) return { ok: false, reason: `error card: "${marker}"`, retryable: true };
 
   return { ok: true, bytes: body.length, type: type || 'svg' };
 }
 
 async function checkWithRetry(url) {
-  let last = { ok: false, reason: 'never attempted' };
-  for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
+  let last = { ok: false, reason: 'never attempted', retryable: true };
+  for (let attempt = 1; attempt <= RETRYABLE_ATTEMPTS; attempt++) {
     try {
       last = await checkOnce(url);
       if (last.ok) return last;
     } catch (error) {
-      last = { ok: false, reason: error.name === 'TimeoutError' ? 'timeout' : String(error.message).slice(0, 90) };
+      last = {
+        ok: false,
+        reason: error.name === 'TimeoutError' ? 'timeout' : String(error.message).slice(0, 90),
+        retryable: true,
+      };
     }
-    if (attempt < ATTEMPTS) await sleep(1500 * attempt);
+    const budget = last.retryable ? RETRYABLE_ATTEMPTS : ATTEMPTS;
+    if (attempt >= budget) break;
+    if (attempt < budget) await sleep(RETRYABLE_BACKOFF_MS * attempt);
   }
   return last;
 }
@@ -120,12 +131,16 @@ async function checkLinkOnce(url) {
       redirect: 'follow',
     });
   } catch (error) {
-    return { ok: false, reason: error.name === 'TimeoutError' ? 'timeout' : String(error.message).slice(0, 90) };
+    return {
+      ok: false,
+      reason: error.name === 'TimeoutError' ? 'timeout' : String(error.message).slice(0, 90),
+      retryable: true,
+    };
   }
 
   if (res.status === 404 || res.status === 410) return { ok: false, reason: `HTTP ${res.status} (dead link)` };
   if (BOT_BLOCKED.has(res.status)) return { ok: true, status: res.status, skipped: 'bot-blocked' };
-  if (res.status >= 500) return { ok: false, reason: `HTTP ${res.status} (server error)` };
+  if (res.status >= 500) return { ok: false, reason: `HTTP ${res.status} (server error)`, retryable: true };
   if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
 
   // A soft 404: the host answers 200 but the page says the target is gone.
@@ -142,11 +157,13 @@ async function checkLinkOnce(url) {
 }
 
 async function checkLinkWithRetry(url) {
-  let last = { ok: false, reason: 'never attempted' };
-  for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
+  let last = { ok: false, reason: 'never attempted', retryable: true };
+  for (let attempt = 1; attempt <= RETRYABLE_ATTEMPTS; attempt++) {
     last = await checkLinkOnce(url);
     if (last.ok) return last;
-    if (attempt < ATTEMPTS) await sleep(1500 * attempt);
+    const budget = last.retryable ? RETRYABLE_ATTEMPTS : ATTEMPTS;
+    if (attempt >= budget) break;
+    await sleep(RETRYABLE_BACKOFF_MS * attempt);
   }
   return last;
 }

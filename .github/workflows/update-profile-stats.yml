@@ -41,8 +41,8 @@ jobs:
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: node scripts/update-streak.mjs
 
-      - name: Verify all SVG assets, links, and data parity
-        run: node scripts/verify-all.mjs
+      - name: Verify SVG quality and data parity offline (this gates the commit)
+        run: node scripts/verify-all.mjs --offline
 
       - name: Commit refreshed README and cards
         run: |
@@ -68,3 +68,9 @@ jobs:
             echo "::error::Could not push refreshed stats after 3 attempts"
             exit 1
           fi
+
+      # Runs after the commit already landed, so a transient github.com 502/504
+      # can turn this job yellow but can never cost the day its commit.
+      - name: Verify live links and card freshness (advisory, after the commit)
+        continue-on-error: true
+        run: node scripts/check-readme-health.mjs
