@@ -42,49 +42,49 @@
 
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.18s forwards">
     <rect x="56" y="112" width="3" height="30" rx="1.5" fill="#36BCF7"/>
-    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">FocusNest</text>
-    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">Merge pull request #19 from SudhirDevOps1/release-please--branche…</text>
-    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">ac477bd</text>
+    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">KingdomLudo</text>
+    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(ci): set node environment for sqlite test, bump agp to 8.9.1…</text>
+    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">4dc7e0d</text>
     <text x="1232" y="124" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="149" x2="1240" y2="149" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.29s forwards">
     <rect x="56" y="146" width="3" height="30" rx="1.5" fill="#A855F7"/>
-    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">FocusNest</text>
-    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: upgrade KSP to 2.3.6, add dynamic README metrics badges &amp; r…</text>
-    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">a2816e9</text>
+    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">KingdomLudo</text>
+    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(android): add @capacitor/android, sync android assets, and fi…</text>
+    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">3ae8c04</text>
     <text x="1232" y="158" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="183" x2="1240" y2="183" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.4s forwards">
     <rect x="56" y="180" width="3" height="30" rx="1.5" fill="#3FB950"/>
-    <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">FocusNest</text>
-    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: complete FocusNest improvement, design system &amp; Android 11…</text>
-    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">fec9436</text>
+    <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">KingdomLudo</text>
+    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(workflows): rely on hosted android sdk, isolate node tests in…</text>
+    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">461b2bd</text>
     <text x="1232" y="192" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="217" x2="1240" y2="217" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.51s forwards">
     <rect x="56" y="214" width="3" height="30" rx="1.5" fill="#FBBF24"/>
-    <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">FocusNest</text>
-    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(ci): point Robolectric dependency resolver to Maven Central v…</text>
-    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">95fdec2</text>
+    <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">KingdomLudo</text>
+    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix: unignore src/data and commit game characters, themes, and i1…</text>
+    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">3dc4369</text>
     <text x="1232" y="226" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="251" x2="1240" y2="251" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.62s forwards">
     <rect x="56" y="248" width="3" height="30" rx="1.5" fill="#36BCF7"/>
-    <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">FocusNest</text>
-    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(test): configure Robolectric Maven Central repo url to preven…</text>
-    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">5f75ccc</text>
+    <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">KingdomLudo</text>
+    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(ci): migrate workflows to pnpm, fix actions syntax and update…</text>
+    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">9d9cd72</text>
     <text x="1232" y="260" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="285" x2="1240" y2="285" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.73s forwards">
     <rect x="56" y="282" width="3" height="30" rx="1.5" fill="#A855F7"/>
-    <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">FocusNest</text>
-    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: purge aistudio clutter, implement version.json engine &amp; mod…</text>
-    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">bdd43f3</text>
+    <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">KingdomLudo</text>
+    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: KingdomLudo AAA 3D fantasy island, Supabase Auth &amp; Cloudfla…</text>
+    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">a9739aa</text>
     <text x="1232" y="294" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="319" x2="1240" y2="319" stroke="#1C2128" stroke-width="1"/>
   </g>
