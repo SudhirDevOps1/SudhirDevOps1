@@ -42,49 +42,49 @@
 
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.18s forwards">
     <rect x="56" y="112" width="3" height="30" rx="1.5" fill="#36BCF7"/>
-    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">atlas-skill</text>
-    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci: use runner temp dir for project setup smoke test</text>
-    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">3d08691</text>
+    <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">drishti-browser-ai</text>
+    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(extension): support contenteditable rich-text editors (Slate/…</text>
+    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">9fba2e4</text>
     <text x="1232" y="124" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="149" x2="1240" y2="149" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.29s forwards">
     <rect x="56" y="146" width="3" height="30" rx="1.5" fill="#A855F7"/>
     <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">atlas-skill</text>
-    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs: add agent team usage guide to README</text>
-    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">50b61f5</text>
+    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">test: derive installed skill file count from the source folder</text>
+    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">d794e80</text>
     <text x="1232" y="158" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="183" x2="1240" y2="183" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.4s forwards">
     <rect x="56" y="180" width="3" height="30" rx="1.5" fill="#3FB950"/>
     <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">atlas-skill</text>
-    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: add approval-first project setup CLI</text>
-    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">ee86ed2</text>
+    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs: add Drishti one-prompt install, audit plan and browser/MCP…</text>
+    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">5c3ec94</text>
     <text x="1232" y="192" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="217" x2="1240" y2="217" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.51s forwards">
     <rect x="56" y="214" width="3" height="30" rx="1.5" fill="#FBBF24"/>
-    <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">atlas-skill</text>
-    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: add 15-role ATLAS sub-agent team for OpenCode and Antigravi…</text>
-    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">69094ab</text>
+    <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">drishti-browser-ai</text>
+    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs(setup): add 1-prompt AI auto-install &amp; auto-token generation…</text>
+    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">d825ec0</text>
     <text x="1232" y="226" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="251" x2="1240" y2="251" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.62s forwards">
     <rect x="56" y="248" width="3" height="30" rx="1.5" fill="#36BCF7"/>
-    <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">atlas-skill</text>
-    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs: record installed skill and MCP stack in handoff</text>
-    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">5284dfe</text>
+    <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">drishti-browser-ai</text>
+    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat: Drishti Browser AI v0.1.0 PRO — Autonomous MCP Browser Plat…</text>
+    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">ec1ac8c</text>
     <text x="1232" y="260" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="285" x2="1240" y2="285" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.73s forwards">
     <rect x="56" y="282" width="3" height="30" rx="1.5" fill="#A855F7"/>
-    <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">atlas-skill</text>
-    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">docs: fix namespaced vercel skill names in stack guide</text>
-    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">40a06c2</text>
+    <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">SudhirDevOps1</text>
+    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(calendar): refresh 3D contribution calendar</text>
+    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">de643da</text>
     <text x="1232" y="294" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="319" x2="1240" y2="319" stroke="#1C2128" stroke-width="1"/>
   </g>
