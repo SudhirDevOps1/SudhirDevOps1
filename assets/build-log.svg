@@ -43,48 +43,48 @@
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.18s forwards">
     <rect x="56" y="112" width="3" height="30" rx="1.5" fill="#36BCF7"/>
     <text x="76" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">drishti-browser-ai</text>
-    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(release): sync v0.1.3 SSOT version surfaces and release CI…</text>
-    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">c5df821</text>
+    <text x="324" y="124" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(mcp): add browser_evaluate/read/grep, fix auth_fail startup…</text>
+    <text x="76" y="139" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">8de4433</text>
     <text x="1232" y="124" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="149" x2="1240" y2="149" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.29s forwards">
     <rect x="56" y="146" width="3" height="30" rx="1.5" fill="#A855F7"/>
-    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">drishti-browser-ai</text>
-    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci(release): sync derived SSOT version surfaces on release-please…</text>
-    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">fe46950</text>
+    <text x="76" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">SudhirDevOps1</text>
+    <text x="324" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(calendar): refresh 3D contribution calendar</text>
+    <text x="76" y="173" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">4920edf</text>
     <text x="1232" y="158" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="183" x2="1240" y2="183" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.4s forwards">
     <rect x="56" y="180" width="3" height="30" rx="1.5" fill="#3FB950"/>
-    <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">drishti-browser-ai</text>
-    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(web-showcase): add stageshow hero demo, bento grid, and poli…</text>
-    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">5d1fe4a</text>
+    <text x="76" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#3FB950">SudhirDevOps1</text>
+    <text x="324" y="192" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(stats): daily profile telemetry sync [skip ci]</text>
+    <text x="76" y="207" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">6a04107</text>
     <text x="1232" y="192" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="217" x2="1240" y2="217" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.51s forwards">
     <rect x="56" y="214" width="3" height="30" rx="1.5" fill="#FBBF24"/>
     <text x="76" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#FBBF24">drishti-browser-ai</text>
-    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">Update print statement from &apos;Hello&apos; to &apos;Goodbye&apos; (#5)</text>
-    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">3ff2227</text>
+    <text x="324" y="226" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">chore(release): sync v0.1.3 SSOT version surfaces and release CI…</text>
+    <text x="76" y="241" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">c5df821</text>
     <text x="1232" y="226" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="251" x2="1240" y2="251" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.62s forwards">
     <rect x="56" y="248" width="3" height="30" rx="1.5" fill="#36BCF7"/>
     <text x="76" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#36BCF7">drishti-browser-ai</text>
-    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(branding): add Drishti SVG brand suite, R1-R5 visual fixes,…</text>
-    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">7ac5777</text>
+    <text x="324" y="260" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">ci(release): sync derived SSOT version surfaces on release-please…</text>
+    <text x="76" y="275" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">fe46950</text>
     <text x="1232" y="260" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="285" x2="1240" y2="285" stroke="#1C2128" stroke-width="1"/>
   </g>
   <g opacity="0" style="animation: blFade .45s cubic-bezier(.2,.8,.2,1) 0.73s forwards">
     <rect x="56" y="282" width="3" height="30" rx="1.5" fill="#A855F7"/>
     <text x="76" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="700" fill="#A855F7">drishti-browser-ai</text>
-    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">fix(extension): release v0.1.2 with visual control polish, real C…</text>
-    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">2632dc7</text>
+    <text x="324" y="294" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#C9D1D9">feat(web-showcase): add stageshow hero demo, bento grid, and poli…</text>
+    <text x="76" y="309" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" fill="#4B5563">5d1fe4a</text>
     <text x="1232" y="294" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B949E">TODAY</text>
     <line x1="56" y1="319" x2="1240" y2="319" stroke="#1C2128" stroke-width="1"/>
   </g>
